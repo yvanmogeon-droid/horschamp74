@@ -1,0 +1,17 @@
+backend:
+  name: github
+  repo: yvanmogeon-droid/horschamp74
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "breves"
+    label: "Brèves du jour"
+    folder: "_breves"
+    create: true
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Contenu", name: "body", widget: "markdown"}
