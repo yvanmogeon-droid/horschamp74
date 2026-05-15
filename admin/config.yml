@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: yvanmogeon-droid/horschamp74
+  name: git-gateway
   branch: main
 
 media_folder: "images"
