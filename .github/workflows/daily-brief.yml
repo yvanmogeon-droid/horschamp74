@@ -1,0 +1,29 @@
+name: Hors Champ 74 — Brève quotidienne
+
+on:
+  schedule:
+    - cron: '45 5 * * *'
+  workflow_dispatch:
+
+jobs:
+  daily-brief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install axios xml2js
+
+      - name: Run daily brief script
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: node scripts/daily-brief.js
