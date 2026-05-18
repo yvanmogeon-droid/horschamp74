@@ -4,6 +4,8 @@ const xml2js = require('xml2js');
 const RSS_URL = 'https://rss.app/feeds/_G5YovYqc7NASlxR5.xml';
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_REPO = 'yvanmogeon-droid/horschamp74';
 const DESTINATAIRE = 'yvan.mogeon@gmail.com';
 const EXPEDITEUR = 'onboarding@resend.dev';
 
@@ -30,7 +32,6 @@ async function fetchRSS() {
     headers: { 'User-Agent': 'HorsChamp74-Bot/1.0' }
   });
   console.log('📦 Status HTTP:', response.status);
-  console.log('📝 Début contenu:', response.data.substring(0, 300));
   const parser = new xml2js.Parser();
   const result = await parser.parseStringPromise(response.data);
   const items = result.rss.channel[0].item || [];
@@ -74,6 +75,40 @@ async function callClaude(userMessage) {
   return texte;
 }
 
+async function publishToSite(breve) {
+  console.log('📄 Publication sur le site...');
+  const lignes = breve.split('\n').filter(l => l.trim());
+  const titre = lignes[0] || 'Brève Hors Champ 74';
+  const corps = lignes.slice(1).join('\n').trim();
+
+  const now = new Date();
+  const dateISO = now.toISOString().replace('Z', '+02:00').slice(0, 19) + '.000+02:00';
+  const slug = titre.toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .slice(0, 50);
+  const filename = `_breves/${now.toISOString().slice(0, 10)}-${slug}.md`;
+
+  const contenu = `---\ntitle: "${titre}"\ndate: ${dateISO}\n---\n\n${corps}`;
+  const contentBase64 = Buffer.from(contenu).toString('base64');
+
+  const response = await axios.put(
+    `https://api.github.com/repos/${GITHUB_REPO}/contents/${filename}`,
+    {
+      message: `Brève automatique du ${now.toLocaleDateString('fr-FR')}`,
+      content: contentBase64,
+    },
+    {
+      headers: {
+        'Authorization': `Bearer ${GITHUB_TOKEN}`,
+        'Content-Type': 'application/json',
+      },
+      timeout: 15000,
+    }
+  );
+  console.log(`✅ Publié : ${filename}`);
+}
+
 async function sendEmail(breve) {
   console.log('📧 Envoi du mail via Resend...');
   const lignes = breve.split('\n').filter(l => l.trim());
@@ -93,7 +128,7 @@ async function sendEmail(breve) {
     </div>
   `;
 
-  const response = await axios.post(
+  await axios.post(
     'https://api.resend.com/emails',
     {
       from: EXPEDITEUR,
@@ -110,7 +145,7 @@ async function sendEmail(breve) {
       timeout: 15000,
     }
   );
-  console.log(`✅ Mail envoyé — ID : ${response.data.id}`);
+  console.log('✅ Mail envoyé');
 }
 
 async function main() {
@@ -123,9 +158,10 @@ async function main() {
     const userMessage = buildUserMessage(articles);
     const breve = await callClaude(userMessage);
     if (breve.toUpperCase().includes('AUCUN SUJET')) {
-      console.log('ℹ️ Claude : AUCUN SUJET — pas de mail envoyé.');
+      console.log('ℹ️ Claude : AUCUN SUJET — arrêt.');
       process.exit(0);
     }
+    await publishToSite(breve);
     await sendEmail(breve);
     console.log('🎉 Workflow terminé avec succès.');
   } catch (err) {
