@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>{{ title }} — Hors Champ 74</title>
+<meta name="description" content="{{ title }} — Hors Champ 74, l'info Haute-Savoie sans filtre.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --noir: #1a1714;
+  --encre: #2c2825;
+  --terre: #8B3A1A;
+  --rouge: #C4522A;
+  --creme: #faf7f2;
+  --sable: #f5f0e8;
+  --gris: #7a736b;
+  --gris-clair: #c8c0b4;
+  --bordure: #ddd5c8;
+  --max: 720px;
+}
+body {
+  background: var(--creme);
+  color: var(--encre);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* ── HEADER ── */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: var(--creme);
+  border-bottom: 1px solid var(--bordure);
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.h-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.h-logo span {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--encre);
+}
+.h-logo span em { font-style: normal; color: var(--rouge); }
+nav { display: flex; align-items: center; gap: 28px; }
+nav a {
+  font-size: 12px; font-weight: 400; letter-spacing: 0.5px;
+  text-transform: uppercase; color: var(--gris);
+  text-decoration: none; transition: color 0.2s;
+}
+nav a:hover { color: var(--rouge); }
+.nav-btn {
+  background: var(--rouge) !important;
+  color: white !important;
+  padding: 7px 18px;
+  border-radius: 2px;
+}
+.nav-btn:hover { background: var(--terre) !important; }
+
+/* ── ARTICLE ── */
+.article-wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 120px 24px 80px;
+}
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.article-date {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gris-clair);
+}
+.article-category {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border: 1px solid currentColor;
+}
+.cat-pollution { color: var(--terre); }
+.cat-dechets { color: var(--gris); }
+.cat-animaux { color: #4a7c59; }
+.cat-good-news { color: #C4522A; }
+.cat-montagne { color: #2c5f7c; }
+.cat-curieux { color: #8b6914; }
+.cat-default { color: var(--gris); }
+
+h1.article-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 32px;
+  color: var(--encre);
+}
+
+.article-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 32px;
+  border-radius: 2px;
+  display: block;
+}
+
+.article-body {
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--encre);
+}
+.article-body p {
+  margin-bottom: 20px;
+}
+.article-body p:first-of-type {
+  font-size: 19px;
+  color: var(--noir);
+  font-weight: 400;
+}
+
+/* ── RETOUR ── */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--rouge);
+  text-decoration: none;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--bordure);
+  width: 100%;
+  transition: gap 0.2s;
+}
+.back-link:hover { gap: 14px; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--sable);
+  padding: 48px 24px;
+  text-align: center;
+  border-top: 1px solid var(--bordure);
+  margin-top: 64px;
+}
+footer p {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gris);
+  margin-bottom: 8px;
+}
+footer a {
+  color: var(--rouge);
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="h-logo">
+    <span>HORS CHAMP <em>74</em></span>
+  </a>
+  <nav>
+    <a href="/fil.html">LE FIL</a>
+    <a href="/coupgueule.html">COUP DE GUEULE</a>
+    <a href="/" class="nav-btn">SIGNALER →</a>
+  </nav>
+</header>
+
+<article class="article-wrap">
+  <div class="article-meta">
+    <span class="article-date">{{ date | dateFR }}</span>
+    {% if category %}
+      <span class="article-category cat-{{ category }}">{{ category }}</span>
+    {% else %}
+      <span class="article-category cat-default">Brève</span>
+    {% endif %}
+  </div>
+
+  <h1 class="article-title">{{ title }}</h1>
+
+  {% if image %}
+    <img src="{{ image }}" alt="{{ title }}" class="article-image">
+  {% endif %}
+
+  <div class="article-body">
+    {{ content | safe }}
+  </div>
+
+  <a href="/fil.html" class="back-link">← Retour au fil</a>
+</article>
+
+<footer>
+  <p>HORS CHAMP 74 · Haute-Savoie · 2026</p>
+  <p><a href="/">horschamp74.fr</a></p>
+</footer>
+
+</body>
+</html>
