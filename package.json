@@ -1,0 +1,17 @@
+{
+  "name": "horschamp74",
+  "version": "1.0.0",
+  "description": "Hors Champ 74 — site et brèves quotidiennes",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "brief": "node scripts/daily-brief.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
