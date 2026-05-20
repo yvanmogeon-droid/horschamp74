@@ -1,0 +1,16 @@
+# Configuration Netlify pour Hors Champ 74
+# Eleventy génère le site dans _site/ et Netlify sert ce dossier
+
+[build]
+  command = "npm install && npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Redirections — l'ancien lien fil.html reste accessible
+# (utile parce que les mails Resend déjà envoyés pointent dessus)
+[[redirects]]
+  from = "/fil"
+  to = "/fil.html"
+  status = 301
