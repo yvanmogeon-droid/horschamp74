@@ -1,5 +1,1 @@
-{
-  "layout": "layouts/breve.njk",
-  "tags": ["breve"],
-  "permalink": "/breves/{{ page.fileSlug }}/"
-}
+{}
