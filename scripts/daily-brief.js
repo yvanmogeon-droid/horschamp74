@@ -1,7 +1,11 @@
 const axios = require('axios');
 const xml2js = require('xml2js');
 
-const RSS_URL = 'https://rss.app/feeds/_G5YovYqc7NASlxR5.xml';
+const RSS_URLS = [
+  'https://news.google.com/rss/search?q=Haute-Savoie+pollution+déchets+animaux&hl=fr&gl=FR&ceid=FR:fr',
+  'https://news.google.com/rss/search?q=Haute-Savoie+nature+montagne+environnement&hl=fr&gl=FR&ceid=FR:fr',
+  'https://news.google.com/rss/search?q=Haute-Savoie&hl=fr&gl=FR&ceid=FR:fr',
+];
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
@@ -30,28 +34,38 @@ RUBRIQUE: <mot>
 où <mot> est obligatoirement l'un de ces six choix : pollution | dechets | animaux | good-news | montagne | curieux
 Choisis la rubrique la plus pertinente. Pas d'autre texte sur cette ligne.`;
 
-// ─── fetchRSS ────────────────────────────────────────────────────────────────
 async function fetchRSS() {
-  console.log('📡 Récupération du flux RSS...');
-  const response = await axios.get(RSS_URL, {
-    timeout: 15000,
-    headers: { 'User-Agent': 'HorsChamp74-Bot/1.0' }
+  console.log('📡 Récupération des flux RSS Google News...');
+  let allItems = [];
+  for (const url of RSS_URLS) {
+    try {
+      const response = await axios.get(url, {
+        timeout: 15000,
+        headers: { 'User-Agent': 'Mozilla/5.0' }
+      });
+      const parser = new xml2js.Parser();
+      const result = await parser.parseStringPromise(response.data);
+      const items = result.rss.channel[0].item || [];
+      allItems = allItems.concat(items);
+    } catch (e) {
+      console.log('⚠️ Flux ignoré :', url, e.message);
+    }
+  }
+  // Dédoublonnage par titre
+  const seen = new Set();
+  allItems = allItems.filter(item => {
+    const titre = item.title?.[0] || '';
+    if (seen.has(titre)) return false;
+    seen.add(titre);
+    return true;
   });
-  console.log('🔴 Status HTTP:', response.status);
-  const parser = new xml2js.Parser();
-  const result = await parser.parseStringPromise(response.data);
-  const items = result.rss.channel[0].item || [];
-  console.log(`✅ ${items.length} articles récupérés`);
-  return items.slice(0, 20).map(item => {
-    // Extraction image depuis <media:content url="..."> ou <media:thumbnail url="...">
+  console.log(`✅ ${allItems.length} articles récupérés au total`);
+  return allItems.slice(0, 20).map(item => {
     let image = '';
     const mediaContent = item['media:content'];
     const mediaThumbnail = item['media:thumbnail'];
-    if (mediaContent && mediaContent[0] && mediaContent[0]['$'] && mediaContent[0]['$'].url) {
-      image = mediaContent[0]['$'].url;
-    } else if (mediaThumbnail && mediaThumbnail[0] && mediaThumbnail[0]['$'] && mediaThumbnail[0]['$'].url) {
-      image = mediaThumbnail[0]['$'].url;
-    }
+    if (mediaContent?.[0]?.['$']?.url) image = mediaContent[0]['$'].url;
+    else if (mediaThumbnail?.[0]?.['$']?.url) image = mediaThumbnail[0]['$'].url;
     return {
       titre: item.title?.[0] || '',
       description: item.description?.[0] || '',
