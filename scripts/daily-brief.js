@@ -34,6 +34,7 @@ RUBRIQUE: <mot>
 où <mot> est obligatoirement l'un de ces six choix : pollution | dechets | animaux | good-news | montagne | curieux
 Choisis la rubrique la plus pertinente. Pas d'autre texte sur cette ligne.`;
 
+// ─── fetchRSS ─────────────────────────────────────────────────────────────────
 async function fetchRSS() {
   console.log('📡 Récupération des flux RSS Google News...');
   let allItems = [];
@@ -51,7 +52,6 @@ async function fetchRSS() {
       console.log('⚠️ Flux ignoré :', url, e.message);
     }
   }
-  // Dédoublonnage par titre
   const seen = new Set();
   allItems = allItems.filter(item => {
     const titre = item.title?.[0] || '';
@@ -110,15 +110,14 @@ async function callClaude(userMessage) {
 }
 
 // ─── parseBreve ───────────────────────────────────────────────────────────────
-// Sépare le texte brut de Claude en { breve (sans la ligne RUBRIQUE), category }
 function parseBreve(texte) {
   const lignes = texte.split('\n');
-  let category = 'curieux'; // fallback
+  let category = 'curieux';
   const lignesFiltrees = lignes.filter(l => {
     const m = l.match(/^RUBRIQUE\s*:\s*(\S+)/i);
     if (m) {
       category = m[1].toLowerCase().trim();
-      return false; // on retire cette ligne du corps
+      return false;
     }
     return true;
   });
@@ -126,37 +125,38 @@ function parseBreve(texte) {
   return { breve, category };
 }
 
-// ─── publishToSite ────────────────────────────────────────────────────────────
-// Retourne le slug pour que sendEmail puisse construire le lien correct
-async function publishToSite(breve, category, image) {
-  console.log('📤 Publication sur le site...');
-  const lignes = breve.split('\n').filter(l => l.trim());
-  const titre = lignes[0] || 'Brève Hors Champ 74';
-  const corps = lignes.slice(1).join('\n').trim();
+// ─── githubGet ────────────────────────────────────────────────────────────────
+// Lit un fichier GitHub et retourne { content, sha } ou null si inexistant
+async function githubGet(path) {
+  try {
+    const res = await axios.get(
+      `https://api.github.com/repos/${GITHUB_REPO}/contents/${path}`,
+      {
+        headers: {
+          'Authorization': `Bearer ${GITHUB_TOKEN}`,
+          'Content-Type': 'application/json',
+        },
+        timeout: 15000,
+      }
+    );
+    const content = Buffer.from(res.data.content, 'base64').toString('utf-8');
+    return { content, sha: res.data.sha };
+  } catch (e) {
+    if (e.response?.status === 404) return null;
+    throw e;
+  }
+}
 
-  const now = new Date();
-  const dateISO = now.toISOString().replace('Z', '+02:00').slice(0, 19) + '.000+02:00';
-  const datePrefix = now.toISOString().slice(0, 10); // YYYY-MM-DD
-
-  const slug = titre.toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // retire accents
-    .replace(/[^a-z0-9\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .slice(0, 50);
-
-  const filename = `_breves/${datePrefix}-${slug}.md`;
-
-  // Frontmatter enrichi Phase 2
-  const imageField = image ? `\nimage: "${image}"` : '';
-  const contenu = `---\ntitle: "${titre}"\ndate: ${dateISO}\ncategory: ${category}${imageField}\n---\n\n${corps}`;
-  const contentBase64 = Buffer.from(contenu).toString('base64');
-
+// ─── githubPut ────────────────────────────────────────────────────────────────
+async function githubPut(path, content, message, sha) {
+  const body = {
+    message,
+    content: Buffer.from(content).toString('base64'),
+  };
+  if (sha) body.sha = sha;
   await axios.put(
-    `https://api.github.com/repos/${GITHUB_REPO}/contents/${filename}`,
-    {
-      message: `Brève automatique du ${now.toLocaleDateString('fr-FR')}`,
-      content: contentBase64,
-    },
+    `https://api.github.com/repos/${GITHUB_REPO}/contents/${path}`,
+    body,
     {
       headers: {
         'Authorization': `Bearer ${GITHUB_TOKEN}`,
@@ -165,7 +165,64 @@ async function publishToSite(breve, category, image) {
       timeout: 15000,
     }
   );
-  console.log(`✅ Publié : ${filename}`);
+}
+
+// ─── publishToSite ────────────────────────────────────────────────────────────
+async function publishToSite(breve, category, image) {
+  console.log('📤 Publication de la brève...');
+  const lignes = breve.split('\n').filter(l => l.trim());
+  const titre = lignes[0] || 'Brève Hors Champ 74';
+  const corps = lignes.slice(1).join('\n').trim();
+  const extrait = corps.replace(/\n/g, ' ').slice(0, 160);
+
+  const now = new Date();
+  const dateISO = now.toISOString().replace('Z', '+02:00').slice(0, 19) + '.000+02:00';
+  const datePrefix = now.toISOString().slice(0, 10);
+
+  const slug = titre.toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .slice(0, 50);
+
+  const filename = `_breves/${datePrefix}-${slug}.md`;
+  const imageField = image ? `\nimage: "${image}"` : '';
+  const contenu = `---\ntitle: "${titre}"\ndate: ${dateISO}\ncategory: ${category}${imageField}\n---\n\n${corps}`;
+
+  await githubPut(filename, contenu, `Brève automatique du ${now.toLocaleDateString('fr-FR')}`);
+  console.log(`✅ Brève publiée : ${filename}`);
+
+  // ─── Mise à jour de breves.json ───────────────────────────────────────────
+  console.log('📋 Mise à jour de breves.json...');
+  const existing = await githubGet('breves.json');
+  let breves = [];
+  if (existing) {
+    try { breves = JSON.parse(existing.content); } catch (e) { breves = []; }
+  }
+
+  // Ajouter la nouvelle brève en tête
+  breves.unshift({
+    titre,
+    slug,
+    date: dateISO,
+    datePrefix,
+    category,
+    image: image || '',
+    extrait,
+    url: `/breves/${datePrefix}-${slug}/`,
+  });
+
+  // Garder les 60 dernières brèves max
+  breves = breves.slice(0, 60);
+
+  await githubPut(
+    'breves.json',
+    JSON.stringify(breves, null, 2),
+    `MAJ breves.json — ${now.toLocaleDateString('fr-FR')}`,
+    existing?.sha
+  );
+  console.log('✅ breves.json mis à jour');
+
   return { slug, datePrefix };
 }
 
@@ -176,10 +233,7 @@ async function sendEmail(breve, image, slug, datePrefix) {
   const titre = lignes[0] || 'Brève Hors Champ 74';
   const corps = lignes.slice(1).join('\n').trim();
   const dateStr = new Date().toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' });
-
-  // Lien correct vers la brève (Phase 2 fix)
   const lienBreve = `https://horschamp74.fr/breves/${datePrefix}-${slug}/`;
-
   const imageBlock = image
     ? `<img src="${image}" alt="" style="width:100%; max-height:240px; object-fit:cover; border-radius:4px; margin-bottom:16px;">`
     : '';
@@ -197,8 +251,7 @@ async function sendEmail(breve, image, slug, datePrefix) {
     </div>
     <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
     <small style="color: #aaa;">horschamp74.fr — Haute-Savoie, sans filtre</small>
-  </div>
-`;
+  </div>`;
 
   await axios.post(
     'https://api.resend.com/emails',
@@ -228,25 +281,16 @@ async function main() {
       console.log('⚠️ Flux RSS vide — arrêt.');
       process.exit(0);
     }
-
-    // Récupère l'image du premier article pertinent (on la passe à Claude pour info
-    // mais la sélection reste textuelle — image = celle de l'article retenu si dispo)
     const userMessage = buildUserMessage(articles);
     const texteRaw = await callClaude(userMessage);
-
     if (texteRaw.toUpperCase().includes('AUCUN SUJET')) {
       console.log('ℹ️ Claude : AUCUN SUJET — arrêt.');
       process.exit(0);
     }
-
     const { breve, category } = parseBreve(texteRaw);
-
-    // Image : on prend celle du premier article qui en a une
     const image = articles.find(a => a.image)?.image || '';
-
     const { slug, datePrefix } = await publishToSite(breve, category, image);
     await sendEmail(breve, image, slug, datePrefix);
-
     console.log('🎉 Workflow terminé avec succès.');
   } catch (err) {
     console.error('❌ Erreur :', err.response?.data || err.message);
