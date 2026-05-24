@@ -23,27 +23,46 @@ Deuxième paragraphe : pourquoi c'est intéressant ou important pour les habitan
 
 Chute : une question ou une observation piquante. 1 phrase.
 
-Total : 120 à 150 mots. Pas de commentaire avant ou après la brève.`;
+Total : 120 à 150 mots. Pas de commentaire avant ou après la brève.
 
+RUBRIQUE : À la toute fin de ta réponse, après la brève, ajoute une ligne exactement ainsi :
+RUBRIQUE: <mot>
+où <mot> est obligatoirement l'un de ces six choix : pollution | dechets | animaux | good-news | montagne | curieux
+Choisis la rubrique la plus pertinente. Pas d'autre texte sur cette ligne.`;
+
+// ─── fetchRSS ────────────────────────────────────────────────────────────────
 async function fetchRSS() {
   console.log('📡 Récupération du flux RSS...');
   const response = await axios.get(RSS_URL, {
     timeout: 15000,
     headers: { 'User-Agent': 'HorsChamp74-Bot/1.0' }
   });
-  console.log('📦 Status HTTP:', response.status);
+  console.log('🔴 Status HTTP:', response.status);
   const parser = new xml2js.Parser();
   const result = await parser.parseStringPromise(response.data);
   const items = result.rss.channel[0].item || [];
   console.log(`✅ ${items.length} articles récupérés`);
-  return items.slice(0, 20).map(item => ({
-    titre: item.title?.[0] || '',
-    description: item.description?.[0] || '',
-    lien: item.link?.[0] || '',
-    date: item.pubDate?.[0] || '',
-  }));
+  return items.slice(0, 20).map(item => {
+    // Extraction image depuis <media:content url="..."> ou <media:thumbnail url="...">
+    let image = '';
+    const mediaContent = item['media:content'];
+    const mediaThumbnail = item['media:thumbnail'];
+    if (mediaContent && mediaContent[0] && mediaContent[0]['$'] && mediaContent[0]['$'].url) {
+      image = mediaContent[0]['$'].url;
+    } else if (mediaThumbnail && mediaThumbnail[0] && mediaThumbnail[0]['$'] && mediaThumbnail[0]['$'].url) {
+      image = mediaThumbnail[0]['$'].url;
+    }
+    return {
+      titre: item.title?.[0] || '',
+      description: item.description?.[0] || '',
+      lien: item.link?.[0] || '',
+      date: item.pubDate?.[0] || '',
+      image,
+    };
+  });
 }
 
+// ─── buildUserMessage ─────────────────────────────────────────────────────────
 function buildUserMessage(articles) {
   const articlesText = articles.map((a, i) =>
     `--- Article ${i + 1} ---\nTitre : ${a.titre}\nDate : ${a.date}\nDescription : ${a.description}\nLien : ${a.lien}`
@@ -51,6 +70,7 @@ function buildUserMessage(articles) {
   return `Voici les articles du flux RSS Hors Champ 74 de ce matin :\n\n${articlesText}`;
 }
 
+// ─── callClaude ───────────────────────────────────────────────────────────────
 async function callClaude(userMessage) {
   console.log('🤖 Appel Claude Haiku...');
   const response = await axios.post(
@@ -75,24 +95,49 @@ async function callClaude(userMessage) {
   return texte;
 }
 
-async function publishToSite(breve) {
-  console.log('📄 Publication sur le site...');
+// ─── parseBreve ───────────────────────────────────────────────────────────────
+// Sépare le texte brut de Claude en { breve (sans la ligne RUBRIQUE), category }
+function parseBreve(texte) {
+  const lignes = texte.split('\n');
+  let category = 'curieux'; // fallback
+  const lignesFiltrees = lignes.filter(l => {
+    const m = l.match(/^RUBRIQUE\s*:\s*(\S+)/i);
+    if (m) {
+      category = m[1].toLowerCase().trim();
+      return false; // on retire cette ligne du corps
+    }
+    return true;
+  });
+  const breve = lignesFiltrees.join('\n').trim();
+  return { breve, category };
+}
+
+// ─── publishToSite ────────────────────────────────────────────────────────────
+// Retourne le slug pour que sendEmail puisse construire le lien correct
+async function publishToSite(breve, category, image) {
+  console.log('📤 Publication sur le site...');
   const lignes = breve.split('\n').filter(l => l.trim());
   const titre = lignes[0] || 'Brève Hors Champ 74';
   const corps = lignes.slice(1).join('\n').trim();
 
   const now = new Date();
   const dateISO = now.toISOString().replace('Z', '+02:00').slice(0, 19) + '.000+02:00';
+  const datePrefix = now.toISOString().slice(0, 10); // YYYY-MM-DD
+
   const slug = titre.toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // retire accents
     .replace(/[^a-z0-9\s-]/g, '')
     .replace(/\s+/g, '-')
     .slice(0, 50);
-  const filename = `_breves/${now.toISOString().slice(0, 10)}-${slug}.md`;
 
-  const contenu = `---\ntitle: "${titre}"\ndate: ${dateISO}\n---\n\n${corps}`;
+  const filename = `_breves/${datePrefix}-${slug}.md`;
+
+  // Frontmatter enrichi Phase 2
+  const imageField = image ? `\nimage: "${image}"` : '';
+  const contenu = `---\ntitle: "${titre}"\ndate: ${dateISO}\ncategory: ${category}${imageField}\n---\n\n${corps}`;
   const contentBase64 = Buffer.from(contenu).toString('base64');
 
-  const response = await axios.put(
+  await axios.put(
     `https://api.github.com/repos/${GITHUB_REPO}/contents/${filename}`,
     {
       message: `Brève automatique du ${now.toLocaleDateString('fr-FR')}`,
@@ -107,26 +152,39 @@ async function publishToSite(breve) {
     }
   );
   console.log(`✅ Publié : ${filename}`);
+  return { slug, datePrefix };
 }
 
-async function sendEmail(breve) {
+// ─── sendEmail ────────────────────────────────────────────────────────────────
+async function sendEmail(breve, image, slug, datePrefix) {
   console.log('📧 Envoi du mail via Resend...');
   const lignes = breve.split('\n').filter(l => l.trim());
   const titre = lignes[0] || 'Brève Hors Champ 74';
   const corps = lignes.slice(1).join('\n').trim();
   const dateStr = new Date().toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' });
 
+  // Lien correct vers la brève (Phase 2 fix)
+  const lienBreve = `https://horschamp74.fr/breves/${datePrefix}-${slug}/`;
+
+  const imageBlock = image
+    ? `<img src="${image}" alt="" style="width:100%; max-height:240px; object-fit:cover; border-radius:4px; margin-bottom:16px;">`
+    : '';
+
   const htmlBody = `
-    <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-      <div style="border-left: 4px solid #2d6a4f; padding-left: 16px; margin-bottom: 20px;">
-        <small style="color: #888; text-transform: uppercase; letter-spacing: 1px;">Hors Champ 74 — Brève du ${dateStr}</small>
-      </div>
+  <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+    <div style="border-left: 4px solid #2d6a4f; padding-left: 16px; margin-bottom: 20px;">
+      <small style="color: #888; text-transform: uppercase; letter-spacing: 1px;">Hors Champ 74 — Brève du ${dateStr}</small>
       <h1 style="font-size: 22px; line-height: 1.3; color: #1a1a1a;">${titre}</h1>
-      <div style="font-size: 16px; line-height: 1.7; color: #333; white-space: pre-line;">${corps}</div>
-      <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
-      <small style="color: #aaa;">horschamp74.fr — Haute-Savoie, sans filtre</small>
     </div>
-  `;
+    ${imageBlock}
+    <div style="font-size: 16px; line-height: 1.7; color: #333; white-space: pre-line;">${corps}</div>
+    <div style="margin-top: 24px;">
+      <a href="${lienBreve}" style="display:inline-block; background:#2d6a4f; color:#fff; padding:10px 20px; border-radius:4px; text-decoration:none; font-size:14px;">Lire l'article complet →</a>
+    </div>
+    <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
+    <small style="color: #aaa;">horschamp74.fr — Haute-Savoie, sans filtre</small>
+  </div>
+`;
 
   await axios.post(
     'https://api.resend.com/emails',
@@ -148,6 +206,7 @@ async function sendEmail(breve) {
   console.log('✅ Mail envoyé');
 }
 
+// ─── main ─────────────────────────────────────────────────────────────────────
 async function main() {
   try {
     const articles = await fetchRSS();
@@ -155,14 +214,25 @@ async function main() {
       console.log('⚠️ Flux RSS vide — arrêt.');
       process.exit(0);
     }
+
+    // Récupère l'image du premier article pertinent (on la passe à Claude pour info
+    // mais la sélection reste textuelle — image = celle de l'article retenu si dispo)
     const userMessage = buildUserMessage(articles);
-    const breve = await callClaude(userMessage);
-    if (breve.toUpperCase().includes('AUCUN SUJET')) {
+    const texteRaw = await callClaude(userMessage);
+
+    if (texteRaw.toUpperCase().includes('AUCUN SUJET')) {
       console.log('ℹ️ Claude : AUCUN SUJET — arrêt.');
       process.exit(0);
     }
-    await publishToSite(breve);
-    await sendEmail(breve);
+
+    const { breve, category } = parseBreve(texteRaw);
+
+    // Image : on prend celle du premier article qui en a une
+    const image = articles.find(a => a.image)?.image || '';
+
+    const { slug, datePrefix } = await publishToSite(breve, category, image);
+    await sendEmail(breve, image, slug, datePrefix);
+
     console.log('🎉 Workflow terminé avec succès.');
   } catch (err) {
     console.error('❌ Erreur :', err.response?.data || err.message);
