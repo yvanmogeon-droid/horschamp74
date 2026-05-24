@@ -32,8 +32,11 @@ Total : 120 à 150 mots. Pas de commentaire avant ou après la brève.
 RUBRIQUE : À la toute fin de ta réponse, après la brève, ajoute une ligne exactement ainsi :
 RUBRIQUE: <mot>
 où <mot> est obligatoirement l'un de ces six choix : pollution | dechets | animaux | good-news | montagne | curieux
-Choisis la rubrique la plus pertinente. Pas d'autre texte sur cette ligne.`;
+Choisis la rubrique la plus pertinente. Pas d'autre texte sur cette ligne.
 
+SOURCE : À la toute fin, après RUBRIQUE, ajoute une ligne exactement ainsi :
+SOURCE: <nom>
+où <nom> est le nom court du média source de l'article choisi (ex: Le Dauphiné, France 3, France Bleu, Le Messager...). Pas d'autre texte sur cette ligne.`;
 // ─── fetchRSS ─────────────────────────────────────────────────────────────────
 async function fetchRSS() {
   console.log('📡 Récupération des flux RSS Google News...');
