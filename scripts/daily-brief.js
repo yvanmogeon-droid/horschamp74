@@ -173,7 +173,7 @@ async function publishToSite(breve, category, image) {
   const lignes = breve.split('\n').filter(l => l.trim());
   const titre = lignes[0] || 'Brève Hors Champ 74';
   const corps = lignes.slice(1).join('\n').trim();
-  const extrait = corps.replace(/\n/g, ' ').slice(0, 160);
+  const extrait = corps.replace(/\n/g, ' ').slice(0, 300);
 
   const now = new Date();
   const dateISO = now.toISOString().replace('Z', '+02:00').slice(0, 19) + '.000+02:00';
