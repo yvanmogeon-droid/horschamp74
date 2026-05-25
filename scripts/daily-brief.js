@@ -36,7 +36,11 @@ Choisis la rubrique la plus pertinente. Pas d'autre texte sur cette ligne.
 
 SOURCE : À la toute fin, après RUBRIQUE, ajoute une ligne exactement ainsi :
 SOURCE: <nom>
-où <nom> est le nom court du média source de l'article choisi (ex: Le Dauphiné, France 3, France Bleu, Le Messager...). Pas d'autre texte sur cette ligne.`;
+SOURCE: <nom>
+où <nom> est le nom court du média source de l'article choisi (ex: Le Dauphiné, France 3, France Bleu, Le Messager...). Pas d'autre texte sur cette ligne.
+
+ARTICLE: <numéro>
+où <numéro> est le numéro de l'article que tu as choisi (ex: ARTICLE: 3). Pas d'autre texte sur cette ligne.`;
 // ─── fetchRSS ─────────────────────────────────────────────────────────────────
 async function fetchRSS() {
   console.log('📡 Récupération des flux RSS Google News...');
@@ -116,16 +120,19 @@ async function callClaude(userMessage) {
 function parseBreve(texte) {
   const lignes = texte.split('\n');
   let category = 'curieux';
-  let source = '';
+let source = '';
+  let articleIndex = -1;
   const lignesFiltrees = lignes.filter(l => {
     const mRub = l.match(/^RUBRIQUE\s*:\s*(\S+)/i);
     if (mRub) { category = mRub[1].toLowerCase().trim(); return false; }
-    const mSrc = l.match(/^SOURCE\s*:\s*(.+)/i);
+   const mSrc = l.match(/^SOURCE\s*:\s*(.+)/i);
     if (mSrc) { source = mSrc[1].trim(); return false; }
+    const mArt = l.match(/^ARTICLE\s*:\s*(\d+)/i);
+    if (mArt) { articleIndex = parseInt(mArt[1], 10) - 1; return false; }
     return true;
   });
   const breve = lignesFiltrees.join('\n').trim();
-  return { breve, category, source };
+  return { breve, category, source, articleIndex };
 }
 
 // ─── githubGet ────────────────────────────────────────────────────────────────
@@ -292,8 +299,9 @@ async function main() {
       console.log('ℹ️ Claude : AUCUN SUJET — arrêt.');
       process.exit(0);
     }
-   const { breve, category, source } = parseBreve(texteRaw);
-    const image = articles.find(a => a.image)?.image || '';
+  const { breve, category, source, articleIndex } = parseBreve(texteRaw);
+    const articleChoisi = articleIndex >= 0 ? articles[articleIndex] : articles.find(a => a.image);
+    const image = articleChoisi?.image || '';
     const { slug, datePrefix } = await publishToSite(breve, category, source, image);
     await sendEmail(breve, image, slug, datePrefix);
     console.log('🎉 Workflow terminé avec succès.');
