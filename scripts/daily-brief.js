@@ -116,16 +116,16 @@ async function callClaude(userMessage) {
 function parseBreve(texte) {
   const lignes = texte.split('\n');
   let category = 'curieux';
+  let source = '';
   const lignesFiltrees = lignes.filter(l => {
-    const m = l.match(/^RUBRIQUE\s*:\s*(\S+)/i);
-    if (m) {
-      category = m[1].toLowerCase().trim();
-      return false;
-    }
+    const mRub = l.match(/^RUBRIQUE\s*:\s*(\S+)/i);
+    if (mRub) { category = mRub[1].toLowerCase().trim(); return false; }
+    const mSrc = l.match(/^SOURCE\s*:\s*(.+)/i);
+    if (mSrc) { source = mSrc[1].trim(); return false; }
     return true;
   });
   const breve = lignesFiltrees.join('\n').trim();
-  return { breve, category };
+  return { breve, category, source };
 }
 
 // ─── githubGet ────────────────────────────────────────────────────────────────
@@ -171,7 +171,7 @@ async function githubPut(path, content, message, sha) {
 }
 
 // ─── publishToSite ────────────────────────────────────────────────────────────
-async function publishToSite(breve, category, image) {
+async function publishToSite(breve, category, source, image) {
   console.log('📤 Publication de la brève...');
   const lignes = breve.split('\n').filter(l => l.trim());
   const titre = lignes[0] || 'Brève Hors Champ 74';
@@ -189,8 +189,9 @@ async function publishToSite(breve, category, image) {
     .slice(0, 50);
 
   const filename = `_breves/${datePrefix}-${slug}.md`;
-  const imageField = image ? `\nimage: "${image}"` : '';
-  const contenu = `---\ntitle: "${titre}"\ndate: ${dateISO}\ncategory: ${category}${imageField}\n---\n\n${corps}`;
+ const imageField = image ? `\nimage: "${image}"` : '';
+  const sourceField = source ? `\nsource: "${source}"` : '';
+  const contenu = `---\ntitle: "${titre}"\ndate: ${dateISO}\ncategory: ${category}${sourceField}${imageField}\n---\n\n${corps}`;
 
   await githubPut(filename, contenu, `Brève automatique du ${now.toLocaleDateString('fr-FR')}`);
   console.log(`✅ Brève publiée : ${filename}`);
@@ -204,12 +205,13 @@ async function publishToSite(breve, category, image) {
   }
 
   // Ajouter la nouvelle brève en tête
-  breves.unshift({
+ breves.unshift({
     titre,
     slug,
     date: dateISO,
     datePrefix,
     category,
+    source: source || '',
     image: image || '',
     extrait,
     url: `/breves/${datePrefix}-${slug}/`,
@@ -290,9 +292,9 @@ async function main() {
       console.log('ℹ️ Claude : AUCUN SUJET — arrêt.');
       process.exit(0);
     }
-    const { breve, category } = parseBreve(texteRaw);
+   const { breve, category, source } = parseBreve(texteRaw);
     const image = articles.find(a => a.image)?.image || '';
-    const { slug, datePrefix } = await publishToSite(breve, category, image);
+    const { slug, datePrefix } = await publishToSite(breve, category, source, image);
     await sendEmail(breve, image, slug, datePrefix);
     console.log('🎉 Workflow terminé avec succès.');
   } catch (err) {
