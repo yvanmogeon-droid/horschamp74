@@ -36,11 +36,11 @@ Choisis la rubrique la plus pertinente. Pas d'autre texte sur cette ligne.
 
 SOURCE : À la toute fin, après RUBRIQUE, ajoute une ligne exactement ainsi :
 SOURCE: <nom>
-SOURCE: <nom>
 où <nom> est le nom court du média source de l'article choisi (ex: Le Dauphiné, France 3, France Bleu, Le Messager...). Pas d'autre texte sur cette ligne.
 
 ARTICLE: <numéro>
 où <numéro> est le numéro de l'article que tu as choisi (ex: ARTICLE: 3). Pas d'autre texte sur cette ligne.`;
+
 // ─── fetchRSS ─────────────────────────────────────────────────────────────────
 async function fetchRSS() {
   console.log('📡 Récupération des flux RSS Google News...');
@@ -120,12 +120,12 @@ async function callClaude(userMessage) {
 function parseBreve(texte) {
   const lignes = texte.split('\n');
   let category = 'curieux';
-let source = '';
+  let source = '';
   let articleIndex = -1;
   const lignesFiltrees = lignes.filter(l => {
     const mRub = l.match(/^RUBRIQUE\s*:\s*(\S+)/i);
     if (mRub) { category = mRub[1].toLowerCase().trim(); return false; }
-   const mSrc = l.match(/^SOURCE\s*:\s*(.+)/i);
+    const mSrc = l.match(/^SOURCE\s*:\s*(.+)/i);
     if (mSrc) { source = mSrc[1].trim(); return false; }
     const mArt = l.match(/^ARTICLE\s*:\s*(\d+)/i);
     if (mArt) { articleIndex = parseInt(mArt[1], 10) - 1; return false; }
@@ -136,7 +136,6 @@ let source = '';
 }
 
 // ─── githubGet ────────────────────────────────────────────────────────────────
-// Lit un fichier GitHub et retourne { content, sha } ou null si inexistant
 async function githubGet(path) {
   try {
     const res = await axios.get(
@@ -177,6 +176,23 @@ async function githubPut(path, content, message, sha) {
   );
 }
 
+// ─── getSlotDuJour ────────────────────────────────────────────────────────────
+// Retourne le slug déterministe : YYYY-MM-DD-a ou YYYY-MM-DD-b
+// - 0 brève du jour → -a
+// - 1 brève du jour → -b
+// - 2+ brèves du jour → écrase -b (retourne -b + sha existant)
+async function getSlotDuJour(datePrefix) {
+  const slotA = `_breves/${datePrefix}-a.md`;
+  const slotB = `_breves/${datePrefix}-b.md`;
+  const existA = await githubGet(slotA);
+  if (!existA) return { filename: slotA, slug: `${datePrefix}-a`, sha: null };
+  const existB = await githubGet(slotB);
+  if (!existB) return { filename: slotB, slug: `${datePrefix}-b`, sha: null };
+  // 2 brèves déjà publiées → écrase -b
+  console.log('⚠️ 2 brèves déjà publiées aujourd\'hui — écrasement de -b');
+  return { filename: slotB, slug: `${datePrefix}-b`, sha: existB.sha };
+}
+
 // ─── publishToSite ────────────────────────────────────────────────────────────
 async function publishToSite(breve, category, source, image) {
   console.log('📤 Publication de la brève...');
@@ -189,18 +205,14 @@ async function publishToSite(breve, category, source, image) {
   const dateISO = now.toISOString().replace('Z', '+02:00').slice(0, 19) + '.000+02:00';
   const datePrefix = now.toISOString().slice(0, 10);
 
-  const slug = titre.toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .slice(0, 50);
+  // Slug déterministe — ne dépend JAMAIS du titre
+  const { filename, slug, sha: existingSha } = await getSlotDuJour(datePrefix);
 
-  const filename = `_breves/${datePrefix}-${slug}.md`;
- const imageField = image ? `\nimage: "${image}"` : '';
+  const imageField = image ? `\nimage: "${image}"` : '';
   const sourceField = source ? `\nsource: "${source}"` : '';
   const contenu = `---\ntitle: "${titre}"\ndate: ${dateISO}\ncategory: ${category}${sourceField}${imageField}\n---\n\n${corps}`;
 
-  await githubPut(filename, contenu, `Brève automatique du ${now.toLocaleDateString('fr-FR')}`);
+  await githubPut(filename, contenu, `Brève automatique du ${now.toLocaleDateString('fr-FR')}`, existingSha);
   console.log(`✅ Brève publiée : ${filename}`);
 
   // ─── Mise à jour de breves.json ───────────────────────────────────────────
@@ -211,8 +223,7 @@ async function publishToSite(breve, category, source, image) {
     try { breves = JSON.parse(existing.content); } catch (e) { breves = []; }
   }
 
-  // Ajouter la nouvelle brève en tête
- breves.unshift({
+  const nouvelleEntree = {
     titre,
     slug,
     date: dateISO,
@@ -221,8 +232,12 @@ async function publishToSite(breve, category, source, image) {
     source: source || '',
     image: image || '',
     extrait,
-    url: `/breves/${datePrefix}-${slug}/`,
-  });
+    url: `/breves/${slug}/`,
+  };
+
+  // Dédoublonner : retirer toute entrée avec le même slug avant d'insérer
+  breves = breves.filter(b => b.slug !== slug);
+  breves.unshift(nouvelleEntree);
 
   // Garder les 60 dernières brèves max
   breves = breves.slice(0, 60);
@@ -245,7 +260,7 @@ async function sendEmail(breve, image, slug, datePrefix) {
   const titre = lignes[0] || 'Brève Hors Champ 74';
   const corps = lignes.slice(1).join('\n').trim();
   const dateStr = new Date().toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' });
-  const lienBreve = `https://horschamp74.fr/breves/${datePrefix}-${slug}/`;
+  const lienBreve = `https://horschamp74.fr/breves/${slug}/`;
   const imageBlock = image
     ? `<img src="${image}" alt="" style="width:100%; max-height:240px; object-fit:cover; border-radius:4px; margin-bottom:16px;">`
     : '';
@@ -299,7 +314,7 @@ async function main() {
       console.log('ℹ️ Claude : AUCUN SUJET — arrêt.');
       process.exit(0);
     }
-  const { breve, category, source, articleIndex } = parseBreve(texteRaw);
+    const { breve, category, source, articleIndex } = parseBreve(texteRaw);
     const articleChoisi = articleIndex >= 0 ? articles[articleIndex] : articles.find(a => a.image);
     const image = articleChoisi?.image || '';
     const { slug, datePrefix } = await publishToSite(breve, category, source, image);
