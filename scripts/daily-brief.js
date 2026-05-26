@@ -9,6 +9,7 @@ const RSS_URLS = [
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const UNSPLASH_ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY;
 const GITHUB_REPO = 'yvanmogeon-droid/horschamp74';
 const DESTINATAIRE = 'yvan.mogeon@gmail.com';
 const EXPEDITEUR = 'onboarding@resend.dev';
@@ -36,10 +37,13 @@ Choisis la rubrique la plus pertinente. Pas d'autre texte sur cette ligne.
 
 SOURCE : À la toute fin, après RUBRIQUE, ajoute une ligne exactement ainsi :
 SOURCE: <nom>
-où <nom> est le nom court du média source de l'article choisi (ex: Le Dauphiné, France 3, France Bleu, Le Messager...). Pas d'autre texte sur cette ligne.
+où <nom> est le nom court du média source (ex: Le Dauphiné, France 3, France Bleu, Le Messager...). Pas d'autre texte sur cette ligne.
+
+IMAGE_QUERY: <termes>
+où <termes> est une courte requête en anglais (3-5 mots) pour trouver une photo illustrant la brève sur Unsplash. Ex: "river pollution mountain", "wild animal rescue", "forest trail hiking". Pas d'autre texte sur cette ligne.
 
 ARTICLE: <numéro>
-où <numéro> est le numéro de l'article que tu as choisi (ex: ARTICLE: 3). Pas d'autre texte sur cette ligne.`;
+où <numéro> est le numéro de l'article choisi. Pas d'autre texte sur cette ligne.`;
 
 // ─── fetchRSS ─────────────────────────────────────────────────────────────────
 async function fetchRSS() {
@@ -122,17 +126,45 @@ function parseBreve(texte) {
   let category = 'curieux';
   let source = '';
   let articleIndex = -1;
+  let imageQuery = '';
   const lignesFiltrees = lignes.filter(l => {
     const mRub = l.match(/^RUBRIQUE\s*:\s*(\S+)/i);
     if (mRub) { category = mRub[1].toLowerCase().trim(); return false; }
     const mSrc = l.match(/^SOURCE\s*:\s*(.+)/i);
     if (mSrc) { source = mSrc[1].trim(); return false; }
+    const mImg = l.match(/^IMAGE_QUERY\s*:\s*(.+)/i);
+    if (mImg) { imageQuery = mImg[1].trim(); return false; }
     const mArt = l.match(/^ARTICLE\s*:\s*(\d+)/i);
     if (mArt) { articleIndex = parseInt(mArt[1], 10) - 1; return false; }
     return true;
   });
   const breve = lignesFiltrees.join('\n').trim();
-  return { breve, category, source, articleIndex };
+  return { breve, category, source, articleIndex, imageQuery };
+}
+
+// ─── fetchUnsplashImage ───────────────────────────────────────────────────────
+async function fetchUnsplashImage(query) {
+  if (!UNSPLASH_ACCESS_KEY || !query) return '';
+  try {
+    console.log(`🖼️ Recherche image Unsplash : "${query}"...`);
+    const res = await axios.get('https://api.unsplash.com/photos/random', {
+      params: {
+        query,
+        orientation: 'landscape',
+        content_filter: 'high',
+      },
+      headers: {
+        Authorization: `Client-ID ${UNSPLASH_ACCESS_KEY}`,
+      },
+      timeout: 10000,
+    });
+    const url = res.data?.urls?.regular || '';
+    console.log(`✅ Image trouvée : ${url.slice(0, 60)}...`);
+    return url;
+  } catch (e) {
+    console.log('⚠️ Unsplash indisponible :', e.message);
+    return '';
+  }
 }
 
 // ─── githubGet ────────────────────────────────────────────────────────────────
@@ -141,10 +173,7 @@ async function githubGet(path) {
     const res = await axios.get(
       `https://api.github.com/repos/${GITHUB_REPO}/contents/${path}`,
       {
-        headers: {
-          'Authorization': `Bearer ${GITHUB_TOKEN}`,
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Authorization': `Bearer ${GITHUB_TOKEN}` },
         timeout: 15000,
       }
     );
@@ -167,20 +196,13 @@ async function githubPut(path, content, message, sha) {
     `https://api.github.com/repos/${GITHUB_REPO}/contents/${path}`,
     body,
     {
-      headers: {
-        'Authorization': `Bearer ${GITHUB_TOKEN}`,
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Authorization': `Bearer ${GITHUB_TOKEN}`, 'Content-Type': 'application/json' },
       timeout: 15000,
     }
   );
 }
 
 // ─── getSlotDuJour ────────────────────────────────────────────────────────────
-// Retourne le slug déterministe : YYYY-MM-DD-a ou YYYY-MM-DD-b
-// - 0 brève du jour → -a
-// - 1 brève du jour → -b
-// - 2+ brèves du jour → écrase -b (retourne -b + sha existant)
 async function getSlotDuJour(datePrefix) {
   const slotA = `_breves/${datePrefix}-a.md`;
   const slotB = `_breves/${datePrefix}-b.md`;
@@ -188,7 +210,6 @@ async function getSlotDuJour(datePrefix) {
   if (!existA) return { filename: slotA, slug: `${datePrefix}-a`, sha: null };
   const existB = await githubGet(slotB);
   if (!existB) return { filename: slotB, slug: `${datePrefix}-b`, sha: null };
-  // 2 brèves déjà publiées → écrase -b
   console.log('⚠️ 2 brèves déjà publiées aujourd\'hui — écrasement de -b');
   return { filename: slotB, slug: `${datePrefix}-b`, sha: existB.sha };
 }
@@ -205,7 +226,6 @@ async function publishToSite(breve, category, source, image) {
   const dateISO = now.toISOString().replace('Z', '+02:00').slice(0, 19) + '.000+02:00';
   const datePrefix = now.toISOString().slice(0, 10);
 
-  // Slug déterministe — ne dépend JAMAIS du titre
   const { filename, slug, sha: existingSha } = await getSlotDuJour(datePrefix);
 
   const imageField = image ? `\nimage: "${image}"` : '';
@@ -215,7 +235,7 @@ async function publishToSite(breve, category, source, image) {
   await githubPut(filename, contenu, `Brève automatique du ${now.toLocaleDateString('fr-FR')}`, existingSha);
   console.log(`✅ Brève publiée : ${filename}`);
 
-  // ─── Mise à jour de breves.json ───────────────────────────────────────────
+  // Mise à jour breves.json
   console.log('📋 Mise à jour de breves.json...');
   const existing = await githubGet('breves.json');
   let breves = [];
@@ -224,22 +244,13 @@ async function publishToSite(breve, category, source, image) {
   }
 
   const nouvelleEntree = {
-    titre,
-    slug,
-    date: dateISO,
-    datePrefix,
-    category,
-    source: source || '',
-    image: image || '',
-    extrait,
+    titre, slug, date: dateISO, datePrefix, category,
+    source: source || '', image: image || '', extrait,
     url: `/breves/${slug}/`,
   };
 
-  // Dédoublonner : retirer toute entrée avec le même slug avant d'insérer
   breves = breves.filter(b => b.slug !== slug);
   breves.unshift(nouvelleEntree);
-
-  // Garder les 60 dernières brèves max
   breves = breves.slice(0, 60);
 
   await githubPut(
@@ -250,11 +261,11 @@ async function publishToSite(breve, category, source, image) {
   );
   console.log('✅ breves.json mis à jour');
 
-  return { slug, datePrefix };
+  return { slug, datePrefix, titre, corps };
 }
 
 // ─── sendEmail ────────────────────────────────────────────────────────────────
-async function sendEmail(breve, image, slug, datePrefix) {
+async function sendEmail(breve, image, slug) {
   console.log('📧 Envoi du mail via Resend...');
   const lignes = breve.split('\n').filter(l => l.trim());
   const titre = lignes[0] || 'Brève Hors Champ 74';
@@ -262,22 +273,22 @@ async function sendEmail(breve, image, slug, datePrefix) {
   const dateStr = new Date().toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' });
   const lienBreve = `https://horschamp74.fr/breves/${slug}/`;
   const imageBlock = image
-    ? `<img src="${image}" alt="" style="width:100%; max-height:240px; object-fit:cover; border-radius:4px; margin-bottom:16px;">`
+    ? `<img src="${image}" alt="" style="width:100%; max-height:280px; object-fit:cover; border-radius:4px; margin-bottom:20px;">`
     : '';
 
   const htmlBody = `
-  <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-    <div style="border-left: 4px solid #2d6a4f; padding-left: 16px; margin-bottom: 20px;">
-      <small style="color: #888; text-transform: uppercase; letter-spacing: 1px;">Hors Champ 74 — Brève du ${dateStr}</small>
-      <h1 style="font-size: 22px; line-height: 1.3; color: #1a1a1a;">${titre}</h1>
+  <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; padding: 24px; background:#faf7f2;">
+    <div style="border-left: 3px solid #C4522A; padding-left: 16px; margin-bottom: 24px;">
+      <small style="color: #7a736b; text-transform: uppercase; letter-spacing: 1px; font-size:11px;">Hors Champ 74 — ${dateStr}</small>
+      <h1 style="font-size: 22px; line-height: 1.3; color: #1a1714; margin-top:8px;">${titre}</h1>
     </div>
     ${imageBlock}
-    <div style="font-size: 16px; line-height: 1.7; color: #333; white-space: pre-line;">${corps}</div>
-    <div style="margin-top: 24px;">
-      <a href="${lienBreve}" style="display:inline-block; background:#2d6a4f; color:#fff; padding:10px 20px; border-radius:4px; text-decoration:none; font-size:14px;">Lire l'article complet →</a>
+    <div style="font-size: 16px; line-height: 1.75; color: #2c2825; white-space: pre-line;">${corps}</div>
+    <div style="margin-top: 28px;">
+      <a href="${lienBreve}" style="display:inline-block; background:#C4522A; color:#fff; padding:11px 22px; border-radius:2px; text-decoration:none; font-size:13px; letter-spacing:0.5px;">Lire la brève complète →</a>
     </div>
-    <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
-    <small style="color: #aaa;">horschamp74.fr — Haute-Savoie, sans filtre</small>
+    <hr style="border: none; border-top: 1px solid #ddd5c8; margin: 32px 0 16px;">
+    <small style="color: #c8c0b4; font-size:11px;">horschamp74.fr — Haute-Savoie, sans filtre</small>
   </div>`;
 
   await axios.post(
@@ -290,10 +301,7 @@ async function sendEmail(breve, image, slug, datePrefix) {
       text: breve,
     },
     {
-      headers: {
-        'Authorization': `Bearer ${RESEND_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Authorization': `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
       timeout: 15000,
     }
   );
@@ -304,21 +312,30 @@ async function sendEmail(breve, image, slug, datePrefix) {
 async function main() {
   try {
     const articles = await fetchRSS();
-    if (articles.length === 0) {
-      console.log('⚠️ Flux RSS vide — arrêt.');
-      process.exit(0);
-    }
+    if (articles.length === 0) { console.log('⚠️ Flux RSS vide — arrêt.'); process.exit(0); }
+
     const userMessage = buildUserMessage(articles);
     const texteRaw = await callClaude(userMessage);
+
     if (texteRaw.toUpperCase().includes('AUCUN SUJET')) {
       console.log('ℹ️ Claude : AUCUN SUJET — arrêt.');
       process.exit(0);
     }
-    const { breve, category, source, articleIndex } = parseBreve(texteRaw);
+
+    const { breve, category, source, articleIndex, imageQuery } = parseBreve(texteRaw);
+
+    // Image : 1) RSS si disponible, 2) Unsplash avec la query de Claude, 3) vide
+    let image = '';
     const articleChoisi = articleIndex >= 0 ? articles[articleIndex] : articles.find(a => a.image);
-    const image = articleChoisi?.image || '';
-    const { slug, datePrefix } = await publishToSite(breve, category, source, image);
-    await sendEmail(breve, image, slug, datePrefix);
+    if (articleChoisi?.image) {
+      image = articleChoisi.image;
+      console.log('🖼️ Image depuis RSS');
+    } else if (imageQuery) {
+      image = await fetchUnsplashImage(imageQuery);
+    }
+
+    const { slug } = await publishToSite(breve, category, source, image);
+    await sendEmail(breve, image, slug);
     console.log('🎉 Workflow terminé avec succès.');
   } catch (err) {
     console.error('❌ Erreur :', err.response?.data || err.message);
