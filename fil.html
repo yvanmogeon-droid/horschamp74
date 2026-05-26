@@ -4,9 +4,11 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Le fil — Hors Champ 74</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Toutes les brèves Hors Champ 74 — Haute-Savoie, en continu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
   --noir: #1a1714;
   --encre: #2c2825;
@@ -19,192 +21,216 @@
   --bordure: #ddd5c8;
   --max: 800px;
 }
+html { scroll-behavior: smooth; }
 body {
   background: var(--creme);
   color: var(--encre);
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
   line-height: 1.6;
+  overflow-x: hidden;
 }
+
+/* ── HEADER ── */
 header {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  background: var(--creme);
+  background: rgba(250,247,242,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--bordure);
   height: 58px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 24px;
 }
-.h-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-.h-logo span {
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
-  font-size: 18px;
-  color: var(--encre);
-}
+.h-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.h-logo span { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 18px; color: var(--encre); }
 .h-logo span em { font-style: normal; color: var(--rouge); }
-nav { display: flex; align-items: center; gap: 28px; }
-nav a {
-  font-size: 12px; font-weight: 400; letter-spacing: 0.5px;
-  text-transform: uppercase; color: var(--gris);
-  text-decoration: none;
-}
-nav a:hover { color: var(--rouge); }
+nav { display: flex; align-items: center; gap: 24px; }
+nav a { font-size: 11px; font-weight: 400; letter-spacing: 0.8px; text-transform: uppercase; color: var(--gris); text-decoration: none; transition: color 0.2s; }
+nav a:hover, nav a.actif { color: var(--rouge); }
+.nav-btn { background: var(--rouge) !important; color: white !important; padding: 7px 16px !important; border-radius: 2px; }
+.nav-btn:hover { background: var(--terre) !important; }
 
+/* ── PAGE ── */
 .fil-page { padding-top: 58px; }
-.fil-page-inner {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 64px 32px;
-}
-.fil-page-titre {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(36px, 5vw, 56px);
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-.fil-page-sous {
-  font-size: 15px;
-  color: var(--gris);
-  margin-bottom: 48px;
-}
-.filtres {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 48px;
-  padding-bottom: 32px;
+.fil-hero {
+  background: var(--sable);
   border-bottom: 1px solid var(--bordure);
 }
+.fil-hero-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 64px 48px 48px;
+}
+.fil-hero-titre {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 5.5vw, 60px);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--noir);
+  margin-bottom: 12px;
+}
+.fil-hero-sous {
+  font-size: 14px;
+  color: var(--gris);
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+/* ── FILTRES ── */
+.filtres {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
 .filtre {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 500;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  padding: 6px 16px;
+  padding: 7px 16px;
   border: 1px solid var(--bordure);
   background: none;
   cursor: pointer;
   color: var(--gris);
-  transition: all 0.2s;
+  transition: all 0.18s;
+  border-radius: 1px;
 }
-.filtre:hover, .filtre.actif {
+.filtre:hover { border-color: var(--encre); color: var(--encre); }
+.filtre.actif {
   background: var(--encre);
   color: var(--creme);
   border-color: var(--encre);
 }
+
+/* ── LISTE ── */
+.fil-body {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 48px 80px;
+}
 #liste-breves { list-style: none; }
 .article {
-  padding: 28px 0;
+  padding: 32px 0;
   border-bottom: 1px solid var(--bordure);
+  cursor: pointer;
+  transition: padding-left 0.2s;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
+.article:hover { padding-left: 8px; }
 .article:last-child { border-bottom: none; }
-.art-meta {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 12px;
-}
-.art-date {
-  font-size: 10px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--gris-clair);
-}
-.art-tag {
-  font-size: 9px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  padding: 3px 10px;
-  border: 1px solid currentColor;
-}
+.art-meta { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; flex-wrap: wrap; }
+.art-date { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gris-clair); }
+.art-tag { font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 10px; border: 1px solid currentColor; }
+.art-source { font-size: 10px; color: var(--gris-clair); letter-spacing: 0.3px; }
 .t-pollution { color: var(--terre); }
 .t-dechets { color: var(--gris); }
 .t-animaux { color: #4a7c59; }
 .t-good-news { color: #2d6a4f; }
 .t-montagne { color: #3a5f8a; }
 .t-curieux { color: #7a5c8a; }
-.art-titre {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.25;
-  margin-bottom: 10px;
-}
-.art-extrait {
-  font-size: 13px;
-  color: var(--gris);
-  line-height: 1.6;
-  margin-bottom: 16px;
-}
-.art-lire {
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--rouge);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: gap 0.2s;
-}
+.art-titre { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; line-height: 1.22; margin-bottom: 10px; color: var(--noir); }
+.art-extrait { font-size: 13px; color: var(--gris); line-height: 1.65; margin-bottom: 14px; }
+.art-lire { font-size: 11px; font-weight: 500; color: var(--rouge); text-decoration: none; display: inline-flex; align-items: center; gap: 7px; transition: gap 0.2s; }
 .art-lire:hover { gap: 12px; }
-#message-vide {
-  color: var(--gris);
-  font-style: italic;
-  padding: 40px 0;
-  display: none;
+#message-vide { color: var(--gris-clair); font-style: italic; padding: 48px 0; font-size: 14px; display: none; }
+
+/* ── COMPTEUR ── */
+.fil-compteur {
+  font-size: 11px;
+  color: var(--gris-clair);
+  letter-spacing: 0.5px;
+  padding: 20px 0 8px;
+  border-bottom: 1px solid var(--bordure);
+  margin-bottom: 0;
 }
+
+/* ── FOOTER ── */
 footer {
   background: var(--encre);
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding: 40px 20px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 40px 24px;
   text-align: center;
 }
-.f-copy { font-size: 11px; color: rgba(250,247,242,0.25); }
+.f-copy { font-size: 11px; color: rgba(250,247,242,0.2); }
+footer a { color: var(--rouge); text-decoration: none; font-size: 11px; }
+
+/* ── SKELETON ── */
+.skeleton { background: linear-gradient(90deg, var(--bordure) 25%, var(--sable) 50%, var(--bordure) 75%); background-size: 200% 100%; animation: shimmer 1.4s infinite; border-radius: 2px; }
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+.skel-article { padding: 32px 0; border-bottom: 1px solid var(--bordure); }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+.art-fade { animation: fadeUp 0.4s ease both; }
+
+@media (max-width: 700px) {
+  nav { display: none; }
+  .fil-hero-inner, .fil-body { padding-left: 20px; padding-right: 20px; }
+}
 </style>
 </head>
 <body>
 
 <header>
   <a href="index.html" class="h-logo">
-    <span>Hors <em>Champ</em> 74</span>
+    <span>HORS CHAMP <em>74</em></span>
   </a>
   <nav>
     <a href="index.html">Accueil</a>
-    <a href="fil.html">Le fil</a>
+    <a href="fil.html" class="actif">Le fil</a>
+    <a href="https://tally.so/r/68AXVY" target="_blank" class="nav-btn">Signaler →</a>
   </nav>
 </header>
 
 <div class="fil-page">
-  <div class="fil-page-inner">
-    <h1 class="fil-page-titre">Le fil</h1>
-    <p class="fil-page-sous">Tout ce qu'on a vu, signalé, raconté. Haute-Savoie, en continu.</p>
-
-    <div class="filtres">
-      <button class="filtre actif" data-cat="tout">Tout</button>
-      <button class="filtre" data-cat="pollution">Pollution</button>
-      <button class="filtre" data-cat="dechets">Déchets</button>
-      <button class="filtre" data-cat="animaux">Animaux</button>
-      <button class="filtre" data-cat="good-news">Good News</button>
-      <button class="filtre" data-cat="montagne">Montagne & Nature</button>
-      <button class="filtre" data-cat="curieux">Le coin des curieux</button>
+  <div class="fil-hero">
+    <div class="fil-hero-inner">
+      <h1 class="fil-hero-titre">Le fil</h1>
+      <p class="fil-hero-sous">Tout ce qu'on a vu, signalé, raconté. Haute-Savoie, en continu.</p>
+      <div class="filtres">
+        <button class="filtre actif" data-cat="tout">Tout</button>
+        <button class="filtre" data-cat="pollution">Pollution</button>
+        <button class="filtre" data-cat="dechets">Déchets</button>
+        <button class="filtre" data-cat="animaux">Animaux</button>
+        <button class="filtre" data-cat="good-news">Good News</button>
+        <button class="filtre" data-cat="montagne">Montagne & Nature</button>
+        <button class="filtre" data-cat="curieux">Curieux</button>
+      </div>
     </div>
+  </div>
 
-    <ul id="liste-breves"></ul>
+  <div class="fil-body">
+    <div id="fil-compteur" class="fil-compteur" style="display:none"></div>
+    <ul id="liste-breves">
+      <li class="skel-article">
+        <div class="skeleton" style="height:11px;width:25%;margin-bottom:14px"></div>
+        <div class="skeleton" style="height:26px;width:72%;margin-bottom:10px"></div>
+        <div class="skeleton" style="height:13px;width:92%;margin-bottom:6px"></div>
+        <div class="skeleton" style="height:13px;width:60%"></div>
+      </li>
+      <li class="skel-article">
+        <div class="skeleton" style="height:11px;width:25%;margin-bottom:14px"></div>
+        <div class="skeleton" style="height:26px;width:65%;margin-bottom:10px"></div>
+        <div class="skeleton" style="height:13px;width:88%"></div>
+      </li>
+      <li class="skel-article" style="border-bottom:none">
+        <div class="skeleton" style="height:11px;width:25%;margin-bottom:14px"></div>
+        <div class="skeleton" style="height:26px;width:75%;margin-bottom:10px"></div>
+        <div class="skeleton" style="height:13px;width:80%"></div>
+      </li>
+    </ul>
     <p id="message-vide">Aucune brève dans cette rubrique pour l'instant.</p>
   </div>
 </div>
 
 <footer>
-  <p class="f-copy">© 2026 Hors Champ 74 — Haute-Savoie, sans filtre</p>
+  <p class="f-copy">© 2026 Hors Champ 74 — <a href="index.html">horschamp74.fr</a></p>
 </footer>
 
 <script>
@@ -218,8 +244,12 @@ const LABELS = {
 };
 
 function formatDate(dateStr) {
-  const d = new Date(dateStr);
-  return d.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' });
+  if (!dateStr) return '';
+  try {
+    return new Date(dateStr).toLocaleDateString('fr-FR', {
+      weekday: 'long', day: 'numeric', month: 'long'
+    });
+  } catch(e) { return dateStr; }
 }
 
 let toutesBreves = [];
@@ -228,6 +258,8 @@ let filtreActif = 'tout';
 function afficher() {
   const liste = document.getElementById('liste-breves');
   const msgVide = document.getElementById('message-vide');
+  const compteur = document.getElementById('fil-compteur');
+
   const breves = filtreActif === 'tout'
     ? toutesBreves
     : toutesBreves.filter(b => b.category === filtreActif);
@@ -235,22 +267,35 @@ function afficher() {
   if (breves.length === 0) {
     liste.innerHTML = '';
     msgVide.style.display = 'block';
+    compteur.style.display = 'none';
     return;
   }
   msgVide.style.display = 'none';
-  liste.innerHTML = breves.map(b => `
-    <li class="article" data-cat="${b.category}">
-      <div class="art-meta">
-        <span class="art-date">${formatDate(b.date)}</span>
-        <span class="art-tag t-${b.category}">${LABELS[b.category] || b.category}</span>
-      </div>
-      <h2 class="art-titre">${b.titre}</h2>
-      <p class="art-extrait">${b.extrait}</p>
-      <a class="art-lire" href="${b.url}">Lire la brève →</a>
-    </li>
-  `).join('');
+  compteur.style.display = 'block';
+  compteur.textContent = breves.length + ' brève' + (breves.length > 1 ? 's' : '');
+
+  liste.innerHTML = breves.map((b, i) => {
+    const catClass = 't-' + (b.category || 'curieux');
+    const label = LABELS[b.category] || b.category || 'Brève';
+    const sourceHtml = b.source
+      ? `<span class="art-source">· ${b.source}</span>`
+      : '';
+    return `
+      <li class="article art-fade" style="animation-delay:${Math.min(i, 6) * 0.06}s" onclick="location.href='${b.url}'">
+        <div class="art-meta">
+          <span class="art-date">${formatDate(b.date)}</span>
+          <span class="art-tag ${catClass}">${label}</span>
+          ${sourceHtml}
+        </div>
+        <h2 class="art-titre">${b.titre}</h2>
+        <p class="art-extrait">${b.extrait}</p>
+        <a class="art-lire" href="${b.url}">Lire la brève →</a>
+      </li>
+    `;
+  }).join('');
 }
 
+// Gestion filtres
 document.querySelectorAll('.filtre').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filtre').forEach(b => b.classList.remove('actif'));
@@ -260,18 +305,33 @@ document.querySelectorAll('.filtre').forEach(btn => {
   });
 });
 
-// Chargement de breves.json
+// Filtre depuis URL ?cat=...
+function applyUrlFilter() {
+  const params = new URLSearchParams(window.location.search);
+  const cat = params.get('cat');
+  if (cat) {
+    const btn = document.querySelector(`.filtre[data-cat="${cat}"]`);
+    if (btn) {
+      document.querySelectorAll('.filtre').forEach(b => b.classList.remove('actif'));
+      btn.classList.add('actif');
+      filtreActif = cat;
+    }
+  }
+}
+
+// Chargement depuis breves.json
 fetch('breves.json?v=' + Date.now())
-  .then(r => r.json())
+  .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
   .then(data => {
     toutesBreves = data;
+    applyUrlFilter();
     afficher();
   })
   .catch(() => {
     document.getElementById('message-vide').style.display = 'block';
     document.getElementById('message-vide').textContent = 'Impossible de charger les brèves.';
+    document.getElementById('liste-breves').innerHTML = '';
   });
 </script>
-
 </body>
 </html>
