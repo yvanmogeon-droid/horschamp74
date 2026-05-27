@@ -165,6 +165,7 @@ async function fetchUnsplashImage(query) {
       timeout: 10000,
     });
     const url = res.data?.urls?.regular || '';
+    if (!url) { console.log('⚠️ Unsplash : aucune image trouvée'); return ''; }
     console.log(`✅ Image trouvée : ${url.slice(0, 60)}...`);
     return url;
   } catch (e) {
@@ -344,7 +345,7 @@ async function main() {
       process.exit(0);
     }
 
-    const { breve, category, source, articleIndex, imageQuery } = parseBreve(texteRaw);
+    const { breve, category, source, articleIndex, imageQuery, lieu } = parseBreve(texteRaw);
 
     // Image : 1) RSS si disponible, 2) Unsplash avec la query de Claude, 3) vide
     let image = '';
@@ -354,6 +355,14 @@ async function main() {
       console.log('🖼️ Image depuis RSS');
     } else if (imageQuery) {
       image = await fetchUnsplashImage(imageQuery);
+      // Fallback si Unsplash ne trouve rien avec la query précise
+      if (!image) {
+        const fallbackQueries = ['nature haute-savoie mountain', 'french alps landscape', 'mountain nature france'];
+        for (const q of fallbackQueries) {
+          image = await fetchUnsplashImage(q);
+          if (image) break;
+        }
+      }
     }
 
     const { slug, dateISO, titreBreve } = await publishToSite(breve, category, source, image, lieu);
