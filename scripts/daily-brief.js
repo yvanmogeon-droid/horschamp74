@@ -42,6 +42,9 @@ où <nom> est le nom court du média source (ex: Le Dauphiné, France 3, France 
 IMAGE_QUERY: <termes>
 où <termes> est une courte requête en anglais (3-5 mots) pour trouver une photo illustrant la brève sur Unsplash. Ex: "river pollution mountain", "wild animal rescue", "forest trail hiking". Pas d'autre texte sur cette ligne.
 
+LIEU: <commune>
+où <commune> est le nom exact de la commune ou du secteur géographique mentionné dans la brève (ex: Bonneville, Cluses, Annecy, Vallée de l'Arve). Si aucun lieu précis, écrire: Haute-Savoie. Pas d'autre texte sur cette ligne.
+
 ARTICLE: <numéro>
 où <numéro> est le numéro de l'article choisi. Pas d'autre texte sur cette ligne.`;
 
@@ -127,6 +130,7 @@ function parseBreve(texte) {
   let source = '';
   let articleIndex = -1;
   let imageQuery = '';
+  let lieu = 'Haute-Savoie';
   const lignesFiltrees = lignes.filter(l => {
     const mRub = l.match(/^RUBRIQUE\s*:\s*(\S+)/i);
     if (mRub) { category = mRub[1].toLowerCase().trim(); return false; }
@@ -134,12 +138,14 @@ function parseBreve(texte) {
     if (mSrc) { source = mSrc[1].trim(); return false; }
     const mImg = l.match(/^IMAGE_QUERY\s*:\s*(.+)/i);
     if (mImg) { imageQuery = mImg[1].trim(); return false; }
+    const mLieu = l.match(/^LIEU\s*:\s*(.+)/i);
+    if (mLieu) { lieu = mLieu[1].trim(); return false; }
     const mArt = l.match(/^ARTICLE\s*:\s*(\d+)/i);
     if (mArt) { articleIndex = parseInt(mArt[1], 10) - 1; return false; }
     return true;
   });
   const breve = lignesFiltrees.join('\n').trim();
-  return { breve, category, source, articleIndex, imageQuery };
+  return { breve, category, source, articleIndex, imageQuery, lieu };
 }
 
 // ─── fetchUnsplashImage ───────────────────────────────────────────────────────
@@ -215,7 +221,23 @@ async function getSlotDuJour(datePrefix) {
 }
 
 // ─── publishToSite ────────────────────────────────────────────────────────────
-async function publishToSite(breve, category, source, image) {
+async function updateSignalements(slug, titre, lieu, date, url) {
+  try {
+    const existing = await githubGet('signalements.json');
+    let sigs = [];
+    if (existing) { try { sigs = JSON.parse(existing.content); } catch(e) { sigs = []; } }
+    sigs = sigs.filter(s => s.slug !== slug);
+    sigs.unshift({ slug, titre, lieu, date, url });
+    sigs = sigs.slice(0, 200);
+    await githubPut('signalements.json', JSON.stringify(sigs, null, 2),
+      `MAJ signalements.json — ${lieu}`, existing?.sha);
+    console.log('✅ signalements.json mis à jour —', lieu);
+  } catch(e) {
+    console.log('⚠️ signalements.json non mis à jour:', e.message);
+  }
+}
+
+async function publishToSite(breve, category, source, image, lieu) {
   console.log('📤 Publication de la brève...');
   const lignes = breve.split('\n').filter(l => l.trim());
   const titre = lignes[0] || 'Brève Hors Champ 74';
@@ -334,7 +356,8 @@ async function main() {
       image = await fetchUnsplashImage(imageQuery);
     }
 
-    const { slug } = await publishToSite(breve, category, source, image);
+    const { slug, dateISO, titreBreve } = await publishToSite(breve, category, source, image, lieu);
+    await updateSignalements(slug, titreBreve, lieu, dateISO, `/breves/${slug}/`);
     await sendEmail(breve, image, slug);
     console.log('🎉 Workflow terminé avec succès.');
   } catch (err) {
