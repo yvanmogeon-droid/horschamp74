@@ -141,6 +141,14 @@ footer{background:var(--encre);border-top:1px solid rgba(255,255,255,.06)}
 .f-links a{font-size:11px;color:rgba(250,247,242,.2);text-decoration:none;transition:color .2s}
 .f-links a:hover{color:rgba(250,247,242,.5)}
 
+
+/* CARTE LEAFLET */
+.leaflet-container { font-family: 'DM Sans', sans-serif; }
+.carte-popup-titre { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; color: #1a1714; margin-bottom: 4px; }
+.carte-popup-meta { font-size: 11px; color: #7a736b; letter-spacing: .5px; }
+.carte-popup-extrait { font-size: 12px; color: #2c2825; margin-top: 6px; line-height: 1.5; }
+.carte-popup-lien { font-size: 11px; color: #C4522A; text-decoration: none; display: inline-block; margin-top: 8px; }
+
 /* SKELETON */
 .skeleton{background:linear-gradient(90deg,var(--bordure) 25%,var(--sable) 50%,var(--bordure) 75%);background-size:200% 100%;animation:shimmer 1.4s infinite;border-radius:2px}
 @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
@@ -251,38 +259,12 @@ footer{background:var(--encre);border-top:1px solid rgba(255,255,255,.06)}
     <p class="carte-sub">Chaque signalement laisse un point sur la carte. Au fil des mois, ça dessine une photographie du territoire que personne d'autre n'a.</p>
     <p class="carte-note">On ne dénonce rien. On constate. On documente. Et on agit quand on peut.</p>
     <div class="stats">
+      <div><div class="stat-n" id="stat-breves">—</div><div class="stat-l">Brèves publiées</div></div>
       <div><div class="stat-n" id="stat-signalements">—</div><div class="stat-l">Signalements</div></div>
-      <div><div class="stat-n">7</div><div class="stat-l">Brèves publiées</div></div>
     </div>
-    <div class="carte-svg-wrap">
-      <svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
-        <rect width="800" height="360" fill="#faf7f2"/>
-        <text x="400" y="24" font-family="DM Sans,sans-serif" font-size="11" fill="#c8c0b4" text-anchor="middle" letter-spacing="2">HAUTE-SAVOIE — SIGNALEMENTS</text>
-        <text x="630" y="70" font-family="DM Sans,sans-serif" font-size="12" fill="#7a736b" font-style="italic">Cluses</text>
-        <text x="220" y="200" font-family="DM Sans,sans-serif" font-size="12" fill="#7a736b" font-style="italic">Bonneville</text>
-        <text x="490" y="230" font-family="DM Sans,sans-serif" font-size="12" fill="#7a736b" font-style="italic">Sallanches</text>
-        <text x="60" y="300" font-family="DM Sans,sans-serif" font-size="12" fill="#7a736b" font-style="italic">Annemasse</text>
-        <text x="680" y="320" font-family="DM Sans,sans-serif" font-size="12" fill="#7a736b" font-style="italic">Chamonix</text>
-        <text x="340" y="310" font-family="DM Sans,sans-serif" font-size="12" fill="#7a736b" font-style="italic">Megève</text>
-        <circle cx="620" cy="88" r="18" fill="#C4522A" fill-opacity=".12" stroke="#C4522A" stroke-opacity=".3" stroke-width="1"/>
-        <circle cx="620" cy="88" r="6" fill="#C4522A" fill-opacity=".5"/>
-        <circle cx="400" cy="155" r="13" fill="#C4522A" fill-opacity=".1" stroke="#C4522A" stroke-opacity=".2" stroke-width="1"/>
-        <circle cx="400" cy="155" r="5" fill="#C4522A" fill-opacity=".4"/>
-        <circle cx="480" cy="195" r="15" fill="#C4522A" fill-opacity=".12" stroke="#C4522A" stroke-opacity=".25" stroke-width="1"/>
-        <circle cx="480" cy="195" r="5" fill="#C4522A" fill-opacity=".4"/>
-        <circle cx="300" cy="220" r="11" fill="#C4522A" fill-opacity=".1" stroke="#C4522A" stroke-opacity=".2" stroke-width="1"/>
-        <circle cx="300" cy="220" r="4" fill="#C4522A" fill-opacity=".35"/>
-        <circle cx="530" cy="280" r="14" fill="#C4522A" fill-opacity=".12" stroke="#C4522A" stroke-opacity=".25" stroke-width="1"/>
-        <circle cx="530" cy="280" r="5" fill="#C4522A" fill-opacity=".4"/>
-        <circle cx="160" cy="265" r="10" fill="#C4522A" fill-opacity=".1" stroke="#C4522A" stroke-opacity=".2" stroke-width="1"/>
-        <circle cx="160" cy="265" r="4" fill="#C4522A" fill-opacity=".35"/>
-        <circle cx="680" cy="210" r="20" fill="#C4522A" fill-opacity=".15" stroke="#C4522A" stroke-opacity=".3" stroke-width="1"/>
-        <circle cx="680" cy="210" r="7" fill="#C4522A" fill-opacity=".5"/>
-        <circle cx="350" cy="290" r="9" fill="#C4522A" fill-opacity=".1" stroke="#C4522A" stroke-opacity=".2" stroke-width="1"/>
-        <circle cx="350" cy="290" r="3" fill="#C4522A" fill-opacity=".35"/>
-        <text x="800" y="355" font-family="DM Sans,sans-serif" font-size="9" fill="#ddd5c8" text-anchor="end">Signalements via Tally</text>
-      </svg>
-    </div>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"><\/script>
+    <div id="carte-leaflet" style="height:420px;border:1px solid var(--bordure);border-radius:2px;z-index:1"></div>
   </div>
 </section>
 
@@ -385,6 +367,84 @@ fetch('breves.json?v='+Date.now())
     document.getElementById('breve-contenu').innerHTML='<p style="color:var(--gris-clair);font-style:italic">Impossible de charger les brèves.</p>';
     document.getElementById('fil-contenu').innerHTML='';
   });
+
+// CARTE LEAFLET
+const LIEUX_HAUTE_SAVOIE = {
+  'annecy': [45.8992, 6.1294],
+  'annemasse': [46.1956, 6.2344],
+  'bonneville': [46.0789, 6.4078],
+  'cluses': [46.0614, 6.5786],
+  'sallanches': [45.9369, 6.6347],
+  'chamonix': [45.9237, 6.8694],
+  'thonon': [46.3705, 6.4764],
+  'thonon-les-bains': [46.3705, 6.4764],
+  'evian': [46.4012, 6.5912],
+  'evian-les-bains': [46.4012, 6.5912],
+  'megeve': [45.8567, 6.6175],
+  'saint-gervais': [45.8914, 6.7097],
+  'morzine': [46.1789, 6.7092],
+  'taninges': [46.1044, 6.5883],
+  'rumilly': [45.8683, 5.9439],
+  'la-roche-sur-foron': [46.0672, 6.3114],
+  'scionzier': [46.0558, 6.5467],
+  'marignier': [46.0858, 6.5017],
+  'contamine-sur-arve': [46.1192, 6.3572],
+  'haute-savoie': [45.9, 6.4],
+};
+
+function extractLieu(titre, extrait) {
+  const txt = (titre + ' ' + extrait).toLowerCase();
+  for (const [lieu, coords] of Object.entries(LIEUX_HAUTE_SAVOIE)) {
+    if (txt.includes(lieu.replace(/-/g, ' ')) || txt.includes(lieu)) {
+      return { nom: lieu, coords };
+    }
+  }
+  return null;
+}
+
+function initCarte(breves) {
+  const el = document.getElementById('carte-leaflet');
+  if (!el) return;
+
+  const map = L.map('carte-leaflet', { zoomControl: true, scrollWheelZoom: false }).setView([45.95, 6.4], 9);
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '© OpenStreetMap © CARTO',
+    subdomains: 'abcd', maxZoom: 16
+  }).addTo(map);
+
+  const iconRouge = L.divIcon({
+    html: '<div style="width:14px;height:14px;background:#C4522A;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.3)"></div>',
+    className: '', iconSize: [14, 14], iconAnchor: [7, 7]
+  });
+
+  let nb = 0;
+  breves.forEach(b => {
+    const lieu = extractLieu(b.titre || '', b.extrait || '');
+    if (!lieu) return;
+    nb++;
+    const marker = L.marker(lieu.coords, { icon: iconRouge }).addTo(map);
+    marker.bindPopup(`
+      <div style="min-width:200px">
+        <div class="carte-popup-titre">${b.titre}</div>
+        <div class="carte-popup-meta">${new Date(b.date).toLocaleDateString('fr-FR', {day:'numeric',month:'long'})}</div>
+        <div class="carte-popup-extrait">${(b.extrait||'').slice(0,120)}…</div>
+        <a class="carte-popup-lien" href="${b.url}">Lire la brève →</a>
+      </div>
+    `);
+  });
+
+  // Stats
+  const statB = document.getElementById('stat-breves');
+  const statS = document.getElementById('stat-signalements');
+  if (statB) statB.textContent = breves.length;
+  if (statS) statS.textContent = nb > 0 ? nb : '—';
+
+  if (nb === 0) {
+    el.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--gris-clair);font-style:italic;font-size:14px">Les points apparaîtront au fil des brèves géolocalisées.</div>';
+  }
+}
+
 </script>
 </body>
 </html>
