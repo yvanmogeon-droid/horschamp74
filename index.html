@@ -8,193 +8,556 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --noir:#1a1714;--encre:#2c2825;--terre:#8B3A1A;--rouge:#C4522A;
-  --creme:#faf7f2;--sable:#f5f0e8;--gris:#7a736b;--gris-clair:#c8c0b4;
-  --bordure:#ddd5c8;--max:800px;
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --noir: #1a1714;
+  --encre: #2c2825;
+  --terre: #8B3A1A;
+  --rouge: #C4522A;
+  --creme: #faf7f2;
+  --sable: #f5f0e8;
+  --gris: #7a736b;
+  --gris-clair: #c8c0b4;
+  --bordure: #ddd5c8;
+  --max: 800px;
 }
-html{scroll-behavior:smooth}
-body{background:var(--creme);color:var(--encre);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.6;overflow-x:hidden}
 
-/* HEADER */
-header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,247,242,0.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--bordure);height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 24px}
-.h-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.h-logo img{height:38px;width:38px;object-fit:cover;border-radius:3px}
-.h-logo span{font-family:'Playfair Display',serif;font-weight:900;font-size:18px;color:var(--encre)}
-.h-logo span em{font-style:normal;color:var(--rouge)}
-nav{display:flex;align-items:center;gap:24px}
-nav a{font-size:11px;font-weight:400;letter-spacing:.8px;text-transform:uppercase;color:var(--gris);text-decoration:none;transition:color .2s}
-nav a:hover{color:var(--rouge)}
-.nav-btn{background:var(--rouge)!important;color:white!important;padding:7px 16px!important;border-radius:2px}
-.nav-btn:hover{background:var(--terre)!important}
+html { scroll-behavior: smooth; }
 
-/* HERO */
-.hero{padding-top:58px;border-bottom:1px solid var(--bordure)}
-.hero-inner{max-width:var(--max);margin:0 auto;padding:80px 48px 72px}
-.hero-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:32px}
-.hero-dot{width:6px;height:6px;border-radius:50%;background:var(--rouge);animation:pulse 2.5s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
-.hero-tag{font-size:10px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--rouge)}
-.hero-img-wrap{margin-bottom:40px}
-.hero-img-wrap img{width:100%;max-width:480px;height:auto;display:block;border-radius:3px}
-.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(48px,7vw,78px);font-weight:400;line-height:1.08;margin-bottom:24px;color:var(--noir)}
-.hero-h1 em{font-style:italic;color:var(--rouge)}
-.hero-sub{font-size:15px;color:var(--gris);line-height:1.75;max-width:520px;margin-bottom:40px}
-.pilliers{display:flex;gap:20px;flex-wrap:wrap}
-.pill{font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--gris);display:flex;align-items:center;gap:8px}
-.pill::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--rouge);opacity:.6}
-
-/* SECTION LABEL */
-.section-label{font-size:10px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gris);display:flex;align-items:center;gap:16px;margin-bottom:40px}
-.section-label::after{content:'';flex:1;height:1px;background:var(--bordure)}
-
-/* BREVE DU JOUR */
-.breve-section{background:var(--sable);border-bottom:1px solid var(--bordure)}
-.breve-inner{max-width:var(--max);margin:0 auto;padding:72px 48px}
-.breve-img{width:100%;max-height:280px;object-fit:cover;border-radius:2px;margin-bottom:24px;display:block}
-.breve-meta{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
-.breve-date{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--rouge)}
-.breve-cat{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border:1px solid currentColor}
-.breve-source-badge{font-size:10px;color:var(--gris-clair);letter-spacing:.3px}
-.breve-titre{font-family:'Playfair Display',serif;font-size:clamp(30px,4.5vw,52px);font-weight:700;line-height:1.12;margin-bottom:20px;color:var(--noir)}
-.breve-chapeau{font-size:15px;color:var(--gris);line-height:1.75;padding-left:18px;border-left:2px solid var(--rouge);margin-bottom:28px;max-width:580px}
-.lire-plus{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:500;letter-spacing:.5px;color:var(--encre);text-decoration:none;transition:gap .25s}
-.lire-plus:hover{gap:16px}
-.lire-plus .arr{color:var(--rouge)}
-
-/* ABSURDE */
-.abs-section{border-bottom:1px solid var(--bordure)}
-.abs-inner{max-width:var(--max);margin:0 auto;padding:80px 48px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.abs-texte h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:700;line-height:1.2;margin-bottom:16px}
-.abs-sub{font-size:14px;color:var(--gris);line-height:1.7;margin-bottom:8px}
-.abs-ital{font-size:13px;font-style:italic;color:var(--gris-clair)}
-.abs-card{border:1px solid var(--encre);padding:48px 36px;text-align:center;position:relative}
-.abs-card::before,.abs-card::after{content:'';position:absolute;width:16px;height:16px;border-color:var(--rouge);border-style:solid}
-.abs-card::before{top:-1px;left:-1px;border-width:2px 0 0 2px}
-.abs-card::after{bottom:-1px;right:-1px;border-width:0 2px 2px 0}
-.abs-num{font-family:'Playfair Display',serif;font-size:clamp(56px,9vw,88px);font-weight:900;line-height:1;margin-bottom:8px}
-.abs-ctx{font-size:12px;color:var(--gris);line-height:1.5;margin-bottom:24px}
-.abs-comp{font-family:'Playfair Display',serif;font-size:18px;font-style:italic;color:var(--rouge);line-height:1.4}
-
-/* FIL */
-.fil-section{border-bottom:1px solid var(--bordure)}
-.fil-inner{max-width:var(--max);margin:0 auto;padding:72px 48px}
-.fil-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:44px}
-.fil-titre{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--noir)}
-.voir-tout{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gris);text-decoration:none;transition:color .2s}
-.voir-tout:hover{color:var(--rouge)}
-.article{padding:28px 0;border-bottom:1px solid var(--bordure);cursor:pointer;transition:padding-left .2s}
-.article:hover{padding-left:8px}
-.article:last-child{border-bottom:none}
-.art-meta{display:flex;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
-.art-date{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gris-clair)}
-.art-tag{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border:1px solid currentColor}
-.art-source{font-size:10px;color:var(--gris-clair)}
-.t-pollution{color:var(--terre)}.t-dechets{color:var(--gris)}.t-animaux{color:#4a7c59}.t-good-news{color:#2d6a4f}.t-montagne{color:#3a5f8a}.t-curieux{color:#7a5c8a}
-.art-titre{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;line-height:1.25;margin-bottom:8px;color:var(--noir)}
-.art-extrait{font-size:13px;color:var(--gris);line-height:1.65;margin-bottom:12px}
-.art-lire{font-size:11px;font-weight:500;color:var(--rouge);text-decoration:none;display:inline-flex;align-items:center;gap:7px;transition:gap .2s}
-.art-lire:hover{gap:12px}
-
-/* CARTE */
-.carte-section{background:var(--sable);border-bottom:1px solid var(--bordure)}
-.carte-inner{max-width:var(--max);margin:0 auto;padding:80px 48px}
-.carte-titre{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,50px);font-weight:400;line-height:1.15;margin-bottom:16px;margin-top:24px}
-.carte-titre em{font-style:italic;color:var(--rouge)}
-.carte-sub{font-size:14px;color:var(--gris);line-height:1.7;margin-bottom:8px}
-.carte-note{font-size:13px;font-style:italic;color:var(--gris-clair);margin-bottom:40px}
-.stats{display:flex;gap:48px;padding-top:24px;border-top:1px solid var(--bordure);margin-bottom:36px}
-.stat-n{font-family:'Playfair Display',serif;font-size:44px;font-weight:900;line-height:1;margin-bottom:4px}
-.stat-l{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gris-clair)}
-.carte-svg-wrap{border:1px solid var(--bordure);background:var(--creme);padding:24px}
-.carte-svg-wrap svg{width:100%;height:auto}
-
-/* AGIR */
-.agir-section{background:var(--encre);color:var(--creme);border-bottom:1px solid rgba(255,255,255,.06)}
-.agir-inner{max-width:var(--max);margin:0 auto;padding:96px 48px}
-.agir-label{font-size:10px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:rgba(250,247,242,.35);margin-bottom:28px;display:flex;align-items:center;gap:16px}
-.agir-label::after{content:'';flex:1;height:1px;background:rgba(255,255,255,.08)}
-.agir-titre{font-family:'Playfair Display',serif;font-size:clamp(36px,5.5vw,64px);font-weight:400;line-height:1.1;margin-bottom:18px}
-.agir-titre em{font-style:italic;color:var(--rouge)}
-.agir-sub{font-size:14px;color:rgba(250,247,242,.45);line-height:1.75;margin-bottom:52px;max-width:500px}
-.actions{display:flex;flex-direction:column;gap:1px}
-.action{background:rgba(255,255,255,.03);padding:36px 32px;transition:background .2s,padding-left .2s;border-left:2px solid transparent}
-.action:hover{background:rgba(255,255,255,.06);padding-left:40px;border-left-color:var(--rouge)}
-.action-titre{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--creme);margin-bottom:10px}
-.action-txt{font-size:13px;color:rgba(250,247,242,.45);line-height:1.7;margin-bottom:16px}
-.action-lien{font-size:11px;font-weight:500;color:var(--rouge);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:gap .2s}
-.action-lien:hover{gap:14px}
-
-/* FOOTER */
-footer{background:var(--encre);border-top:1px solid rgba(255,255,255,.06)}
-.footer-inner{max-width:var(--max);margin:0 auto;padding:56px 48px 36px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px}
-.f-logo{font-family:'Playfair Display',serif;font-weight:900;font-size:18px;color:var(--creme);margin-bottom:6px}
-.f-base{font-size:12px;font-style:italic;color:rgba(250,247,242,.3);line-height:1.5}
-.f-geo{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(250,247,242,.15);margin-top:6px}
-.f-col h4{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(250,247,242,.3);margin-bottom:16px}
-.f-col a{display:block;font-size:13px;color:rgba(250,247,242,.5);text-decoration:none;margin-bottom:10px;transition:color .2s}
-.f-col a:hover{color:var(--creme)}
-.footer-bottom{max-width:var(--max);margin:0 auto;padding:20px 48px 32px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center}
-.f-copy{font-size:11px;color:rgba(250,247,242,.2)}
-.f-links{display:flex;gap:20px}
-.f-links a{font-size:11px;color:rgba(250,247,242,.2);text-decoration:none;transition:color .2s}
-.f-links a:hover{color:rgba(250,247,242,.5)}
-
-
-/* CARTE LEAFLET */
-.leaflet-container { font-family: 'DM Sans', sans-serif; }
-.carte-popup-titre { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; color: #1a1714; margin-bottom: 4px; }
-.carte-popup-meta { font-size: 11px; color: #7a736b; letter-spacing: .5px; }
-.carte-popup-extrait { font-size: 12px; color: #2c2825; margin-top: 6px; line-height: 1.5; }
-.carte-popup-lien { font-size: 11px; color: #C4522A; text-decoration: none; display: inline-block; margin-top: 8px; }
-
-/* SKELETON */
-.skeleton{background:linear-gradient(90deg,var(--bordure) 25%,var(--sable) 50%,var(--bordure) 75%);background-size:200% 100%;animation:shimmer 1.4s infinite;border-radius:2px}
-@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
-@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-.fade-in{animation:fadeUp .55s ease both}
-.d1{animation-delay:.1s}.d2{animation-delay:.22s}.d3{animation-delay:.34s}
-
-@media(max-width:700px){
-  nav{display:none}
-  .hero-inner,.breve-inner,.abs-inner,.fil-inner,.carte-inner,.agir-inner,.footer-inner,.footer-bottom{padding-left:20px;padding-right:20px}
-  .abs-inner{grid-template-columns:1fr;gap:32px}
-  .footer-inner{grid-template-columns:1fr 1fr;gap:28px}
-  .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+body {
+  background: var(--creme);
+  color: var(--encre);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
+
+/* ── HEADER ── */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(250,247,242,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--bordure);
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+.h-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.h-logo span {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--encre);
+  letter-spacing: -0.3px;
+}
+.h-logo span em { font-style: normal; color: var(--rouge); }
+nav { display: flex; align-items: center; gap: 24px; }
+nav a {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--gris);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+nav a:hover { color: var(--rouge); }
+.nav-btn {
+  background: var(--rouge) !important;
+  color: white !important;
+  padding: 7px 16px !important;
+  border-radius: 2px;
+  letter-spacing: 0.5px !important;
+}
+.nav-btn:hover { background: var(--terre) !important; }
+
+/* ── HERO ── */
+.hero {
+  padding-top: 58px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: var(--bordure);
+}
+.hero-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 100px 48px 88px;
+  position: relative;
+}
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+.hero-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--rouge);
+  animation: pulse 2.5s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+.hero-tag {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--rouge);
+}
+.hero-h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(48px, 7vw, 78px);
+  font-weight: 400;
+  line-height: 1.08;
+  margin-bottom: 28px;
+  color: var(--noir);
+}
+.hero-h1 em {
+  font-style: italic;
+  color: var(--rouge);
+}
+.hero-sub {
+  font-size: 15px;
+  color: var(--gris);
+  line-height: 1.75;
+  max-width: 520px;
+  margin-bottom: 44px;
+}
+.pilliers {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.pill {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gris);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pill::before {
+  content: '';
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--rouge);
+  opacity: 0.6;
+}
+
+/* ── BRÈVE DU JOUR ── */
+.breve-section {
+  background: var(--sable);
+  border-bottom: 1px solid var(--bordure);
+}
+.breve-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 72px 48px;
+}
+.section-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gris);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--bordure);
+}
+.breve-date {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--rouge);
+  margin-bottom: 18px;
+}
+.breve-category-badge {
+  display: inline-block;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border: 1px solid currentColor;
+  margin-bottom: 18px;
+  margin-left: 12px;
+  vertical-align: middle;
+}
+.breve-titre {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 4.5vw, 52px);
+  font-weight: 700;
+  line-height: 1.12;
+  margin-bottom: 24px;
+  color: var(--noir);
+}
+.breve-chapeau {
+  font-size: 15px;
+  color: var(--gris);
+  line-height: 1.75;
+  padding-left: 18px;
+  border-left: 2px solid var(--rouge);
+  margin-bottom: 32px;
+  max-width: 580px;
+}
+.breve-source {
+  font-size: 11px;
+  color: var(--gris-clair);
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+}
+.breve-source strong {
+  color: var(--gris);
+  font-weight: 500;
+}
+.lire-plus {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--encre);
+  text-decoration: none;
+  transition: gap 0.25s ease;
+}
+.lire-plus:hover { gap: 16px; }
+.lire-plus .arr { color: var(--rouge); }
+
+/* ── SKELETON ── */
+.skeleton {
+  background: linear-gradient(90deg, var(--bordure) 25%, var(--sable) 50%, var(--bordure) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: 2px;
+}
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── FIL DE LA SEMAINE ── */
+.fil-section {
+  border-bottom: 1px solid var(--bordure);
+}
+.fil-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 72px 48px;
+}
+.fil-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 48px;
+}
+.fil-titre {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--noir);
+}
+.voir-tout {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gris);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.voir-tout:hover { color: var(--rouge); }
+.article {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--bordure);
+  cursor: pointer;
+  transition: padding-left 0.2s;
+}
+.article:hover { padding-left: 8px; }
+.article:last-child { border-bottom: none; }
+.art-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+.art-date {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gris-clair);
+}
+.art-tag {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border: 1px solid currentColor;
+}
+.t-pollution { color: var(--terre); }
+.t-dechets { color: var(--gris); }
+.t-animaux { color: #4a7c59; }
+.t-good-news { color: #2d6a4f; }
+.t-montagne { color: #3a5f8a; }
+.t-curieux { color: #7a5c8a; }
+.art-titre {
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 8px;
+  color: var(--noir);
+}
+.art-extrait {
+  font-size: 13px;
+  color: var(--gris);
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+.art-lire {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--rouge);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: gap 0.2s;
+}
+.art-lire:hover { gap: 12px; }
+.no-articles {
+  padding: 40px 0;
+  color: var(--gris-clair);
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* ── AGIR ── */
+.agir-section {
+  background: var(--encre);
+  color: var(--creme);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.agir-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 96px 48px;
+}
+.agir-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(250,247,242,0.35);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.agir-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+}
+.agir-titre {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 5.5vw, 64px);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.agir-titre em {
+  font-style: italic;
+  color: var(--rouge);
+}
+.agir-sub {
+  font-size: 14px;
+  color: rgba(250,247,242,0.45);
+  line-height: 1.75;
+  margin-bottom: 56px;
+  max-width: 500px;
+}
+.actions { display: flex; flex-direction: column; gap: 1px; }
+.action {
+  background: rgba(255,255,255,0.03);
+  padding: 36px 32px;
+  transition: background 0.2s, padding-left 0.2s;
+  border-left: 2px solid transparent;
+}
+.action:hover {
+  background: rgba(255,255,255,0.06);
+  padding-left: 40px;
+  border-left-color: var(--rouge);
+}
+.action-titre {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--creme);
+  margin-bottom: 10px;
+}
+.action-txt {
+  font-size: 13px;
+  color: rgba(250,247,242,0.45);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+.action-lien {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--rouge);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.2s;
+}
+.action-lien:hover { gap: 14px; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--encre);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.footer-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 56px 48px 36px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+.f-logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--creme);
+  margin-bottom: 6px;
+}
+.f-base {
+  font-size: 12px;
+  font-style: italic;
+  color: rgba(250,247,242,0.3);
+  line-height: 1.5;
+}
+.f-geo {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(250,247,242,0.15);
+  margin-top: 6px;
+}
+.f-col h4 {
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(250,247,242,0.3);
+  margin-bottom: 16px;
+}
+.f-col a {
+  display: block;
+  font-size: 13px;
+  color: rgba(250,247,242,0.5);
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color 0.2s;
+}
+.f-col a:hover { color: var(--creme); }
+.footer-bottom {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 20px 48px 32px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.f-copy { font-size: 11px; color: rgba(250,247,242,0.2); }
+.f-links { display: flex; gap: 20px; }
+.f-links a {
+  font-size: 11px;
+  color: rgba(250,247,242,0.2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.f-links a:hover { color: rgba(250,247,242,0.5); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 700px) {
+  nav { display: none; }
+  .hero-inner, .breve-inner, .fil-inner, .agir-inner, .footer-inner, .footer-bottom { padding-left: 20px; padding-right: 20px; }
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .fil-header { margin-bottom: 28px; }
+}
+
+/* ── FADE-IN À L'ENTRÉE ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeUp 0.55s ease both; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.22s; }
+.delay-3 { animation-delay: 0.34s; }
+.delay-4 { animation-delay: 0.46s; }
 </style>
 </head>
 <body>
 
 <header>
   <a href="index.html" class="h-logo">
-    <img src="assets/logo.jpg" alt="Hors Champ 74">
     <span>HORS <em>CHAMP</em> 74</span>
   </a>
   <nav>
     <a href="fil.html">Le fil</a>
-    <a href="goodnews.html">Good news</a>
-    <a href="montagne.html">Montagne</a>
-    <a href="curieux.html">Curieux</a>
-    <a href="coupgueule.html">Coup de gueule</a>
+    <a href="fil.html?cat=good-news">Good news</a>
+    <a href="fil.html?cat=montagne">Montagne</a>
+    <a href="fil.html?cat=curieux">Curieux</a>
     <a href="https://tally.so/r/68AXVY" target="_blank" class="nav-btn">Signaler →</a>
   </nav>
 </header>
 
 <!-- HERO -->
-<section class="hero fade-in">
-  <div class="hero-inner">
+<section style="border-bottom:1px solid var(--bordure)">
+  <div class="hero-inner fade-in">
     <div class="hero-eyebrow">
       <span class="hero-dot"></span>
       <span class="hero-tag">Haute-Savoie · depuis 2026</span>
     </div>
-    <div class="hero-img-wrap">
-      <img src="assets/logo.jpg" alt="Hors Champ 74">
-    </div>
-    <h1 class="hero-h1 d1">Le regard s'arrête.<br>Nous, <em>on continue.</em></h1>
-    <p class="hero-sub d2">Le média local sur ce que personne ne traite en Haute-Savoie. Pollution. Déchets. Animaux. Sans filtre, sans complaisance.</p>
-    <div class="pilliers d3">
+    <h1 class="hero-h1 delay-1">Le regard s'arrête.<br>Nous, <em>on continue.</em></h1>
+    <p class="hero-sub delay-2">Le média local sur ce que personne ne traite en Haute-Savoie. Pollution. Déchets. Animaux. Sans filtre, sans complaisance.</p>
+    <div class="pilliers delay-3">
       <div class="pill">Pollution</div>
       <div class="pill">Déchets</div>
       <div class="pill">Animaux</div>
@@ -205,33 +568,15 @@ footer{background:var(--encre);border-top:1px solid rgba(255,255,255,.06)}
   </div>
 </section>
 
-<!-- BREVE DU JOUR -->
+<!-- BRÈVE DU JOUR -->
 <section class="breve-section">
   <div class="breve-inner">
     <div class="section-label">La brève du jour</div>
     <div id="breve-contenu">
-      <div class="skeleton" style="height:220px;margin-bottom:24px"></div>
       <div class="skeleton" style="height:14px;width:20%;margin-bottom:20px"></div>
-      <div class="skeleton" style="height:48px;width:85%;margin-bottom:18px"></div>
-      <div class="skeleton" style="height:15px;width:100%;margin-bottom:8px"></div>
-      <div class="skeleton" style="height:15px;width:72%"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ABSURDE DU JOUR -->
-<section class="abs-section">
-  <div class="abs-inner">
-    <div class="abs-texte">
-      <div class="section-label" style="margin-bottom:24px">Le chiffre</div>
-      <h2>Ce que les chiffres<br>ne disent pas fort</h2>
-      <p class="abs-sub" style="margin-top:16px">Un chiffre local. Une réalité qu'on préfère ne pas voir. Une comparaison qui met les pieds dans le plat.</p>
-      <p class="abs-ital">Mis à jour chaque semaine.</p>
-    </div>
-    <div class="abs-card">
-      <div class="abs-num" style="color:var(--rouge)">147</div>
-      <div class="abs-ctx">dépôts sauvages recensés<br>en Haute-Savoie en 2025</div>
-      <div class="abs-comp">= 3 bennes de 30m³<br>par semaine</div>
+      <div class="skeleton" style="height:52px;width:85%;margin-bottom:20px"></div>
+      <div class="skeleton" style="height:16px;width:100%;margin-bottom:8px"></div>
+      <div class="skeleton" style="height:16px;width:75%"></div>
     </div>
   </div>
 </section>
@@ -244,27 +589,18 @@ footer{background:var(--encre);border-top:1px solid rgba(255,255,255,.06)}
       <a href="fil.html" class="voir-tout">Tout voir →</a>
     </div>
     <div id="fil-contenu">
-      <div class="article"><div class="skeleton" style="height:12px;width:28%;margin-bottom:12px"></div><div class="skeleton" style="height:24px;width:70%;margin-bottom:10px"></div><div class="skeleton" style="height:13px;width:88%"></div></div>
-      <div class="article"><div class="skeleton" style="height:12px;width:28%;margin-bottom:12px"></div><div class="skeleton" style="height:24px;width:65%;margin-bottom:10px"></div><div class="skeleton" style="height:13px;width:75%"></div></div>
-      <div class="article" style="border-bottom:none"><div class="skeleton" style="height:12px;width:28%;margin-bottom:12px"></div><div class="skeleton" style="height:24px;width:72%"></div></div>
+      <div class="article">
+        <div class="skeleton" style="height:12px;width:28%;margin-bottom:12px"></div>
+        <div class="skeleton" style="height:26px;width:70%;margin-bottom:10px"></div>
+        <div class="skeleton" style="height:13px;width:90%;margin-bottom:6px"></div>
+        <div class="skeleton" style="height:13px;width:65%"></div>
+      </div>
+      <div class="article">
+        <div class="skeleton" style="height:12px;width:28%;margin-bottom:12px"></div>
+        <div class="skeleton" style="height:26px;width:70%;margin-bottom:10px"></div>
+        <div class="skeleton" style="height:13px;width:90%"></div>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- CARTE -->
-<section class="carte-section">
-  <div class="carte-inner">
-    <div class="section-label">La carte</div>
-    <h2 class="carte-titre">La carte <em>des angles morts</em></h2>
-    <p class="carte-sub">Chaque signalement laisse un point sur la carte. Au fil des mois, ça dessine une photographie du territoire que personne d'autre n'a.</p>
-    <p class="carte-note">On ne dénonce rien. On constate. On documente. Et on agit quand on peut.</p>
-    <div class="stats">
-      <div><div class="stat-n" id="stat-breves">—</div><div class="stat-l">Brèves publiées</div></div>
-      <div><div class="stat-n" id="stat-signalements">—</div><div class="stat-l">Signalements</div></div>
-    </div>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"><\/script>
-    <div id="carte-leaflet" style="height:420px;border:1px solid var(--bordure);border-radius:2px;z-index:1"></div>
   </div>
 </section>
 
@@ -275,10 +611,26 @@ footer{background:var(--encre);border-top:1px solid rgba(255,255,255,.06)}
     <h2 class="agir-titre">On agit là où<br>le regard <em>s'arrête.</em></h2>
     <p class="agir-sub">Tu peux lire. Tu peux signaler. Tu peux râler. Tu peux venir.<br>Tout est possible. Rien n'est obligatoire.</p>
     <div class="actions">
-      <div class="action"><h3 class="action-titre">Signaler quelque chose</h3><p class="action-txt">Un dépôt en bord de route, un animal en détresse, une rivière qui change de couleur. Tu décris, on traite. Si c'est dans notre périmètre, ça part au vote.</p><a href="https://tally.so/r/68AXVY" target="_blank" class="action-lien">Faire un signalement →</a></div>
-      <div class="action"><h3 class="action-titre">Pousser un coup de gueule</h3><p class="action-txt">Ce qui t'agace autour de chez toi. Tu écris, on relit, on anonymise, on publie le vendredi. Pas d'attaque nominative. Juste la parole brute.</p><a href="coupgueule.html" class="action-lien">Écrire un coup de gueule →</a></div>
-      <div class="action"><h3 class="action-titre">Venir une fois</h3><p class="action-txt">Une action terrain par mois. Tu viens quand tu veux, deux heures suffisent. Pas d'engagement, pas de cotisation.</p><a href="#" class="action-lien">Voir la prochaine action →</a></div>
-      <div class="action"><h3 class="action-titre">Partager une good news</h3><p class="action-txt">Un problème résolu, un beau geste, une victoire locale. Les bonnes nouvelles méritent aussi d'être racontées.</p><a href="https://tally.so/r/68AXVY" target="_blank" class="action-lien">Partager une bonne nouvelle →</a></div>
+      <div class="action">
+        <h3 class="action-titre">Signaler quelque chose</h3>
+        <p class="action-txt">Un dépôt en bord de route, un animal en détresse, une rivière qui change de couleur. Tu décris, on traite. Si c'est dans notre périmètre, ça part au vote.</p>
+        <a href="https://tally.so/r/68AXVY" target="_blank" class="action-lien">Faire un signalement →</a>
+      </div>
+      <div class="action">
+        <h3 class="action-titre">Pousser un coup de gueule</h3>
+        <p class="action-txt">Ce qui t'agace autour de chez toi, ce qui mérite d'être dit. Tu écris, on relit, on anonymise, on publie le vendredi. Pas d'attaque nominative. Juste la parole brute.</p>
+        <a href="#" class="action-lien">Écrire un coup de gueule →</a>
+      </div>
+      <div class="action">
+        <h3 class="action-titre">Venir une fois</h3>
+        <p class="action-txt">Une action terrain par mois. Tu viens quand tu veux, deux heures suffisent. Pas d'engagement, pas de cotisation, pas d'assemblée générale obligatoire.</p>
+        <a href="#" class="action-lien">Voir la prochaine action →</a>
+      </div>
+      <div class="action">
+        <h3 class="action-titre">Partager une good news</h3>
+        <p class="action-txt">Un problème résolu, un beau geste, une victoire locale. On ne parle pas que de ce qui va mal. Les bonnes nouvelles méritent aussi d'être racontées.</p>
+        <a href="https://tally.so/r/68AXVY" target="_blank" class="action-lien">Partager une bonne nouvelle →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -294,16 +646,15 @@ footer{background:var(--encre);border-top:1px solid rgba(255,255,255,.06)}
     <div class="f-col">
       <h4>Le site</h4>
       <a href="fil.html">Le fil</a>
-      <a href="goodnews.html">Good news</a>
-      <a href="montagne.html">Montagne & Nature</a>
-      <a href="curieux.html">Le coin des curieux</a>
-      <a href="coupgueule.html">Coup de gueule</a>
+      <a href="fil.html?cat=good-news">Good news</a>
+      <a href="fil.html?cat=montagne">Montagne & Nature</a>
+      <a href="fil.html?cat=curieux">Le coin des curieux</a>
     </div>
     <div class="f-col">
       <h4>Agir</h4>
       <a href="https://tally.so/r/68AXVY" target="_blank">Signaler</a>
       <a href="#">Venir une fois</a>
-      <a href="coupgueule.html">Coup de gueule</a>
+      <a href="#">Coup de gueule</a>
     </div>
     <div class="f-col">
       <h4>À propos</h4>
@@ -314,137 +665,98 @@ footer{background:var(--encre);border-top:1px solid rgba(255,255,255,.06)}
   </div>
   <div class="footer-bottom">
     <span class="f-copy">© 2026 Hors Champ 74 · Association en construction</span>
-    <div class="f-links"><a href="#">Mentions légales</a><a href="#">Charte éditoriale</a></div>
+    <div class="f-links">
+      <a href="#">Mentions légales</a>
+      <a href="#">Charte éditoriale</a>
+    </div>
   </div>
 </footer>
 
 <script>
-const LABELS={pollution:'Pollution',dechets:'Déchets',animaux:'Animaux','good-news':'Good News',montagne:'Montagne & Nature',curieux:'Curieux'};
-function fmtDate(d){if(!d)return'';try{return new Date(d).toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'})}catch(e){return d}}
+const LABELS = {
+  pollution: 'Pollution',
+  dechets: 'Déchets',
+  animaux: 'Animaux',
+  'good-news': 'Good News',
+  montagne: 'Montagne & Nature',
+  curieux: 'Curieux',
+};
 
-function afficherBreve(b){
-  const el=document.getElementById('breve-contenu');
-  if(!b){el.innerHTML='<p style="color:var(--gris-clair);font-style:italic;padding:20px 0">Aucune brève publiée pour l\'instant.</p>';return}
-  const cat=b.category||'curieux';
-  const imgHtml=b.image?`<img src="${b.image}" alt="" class="breve-img">`:'';
-  const srcHtml=b.source?`<span class="breve-source-badge">· ${b.source}</span>`:'';
-  el.innerHTML=`
-    ${imgHtml}
-    <div class="breve-meta">
-      <span class="breve-date">${fmtDate(b.date)}</span>
-      <span class="breve-cat t-${cat}">${LABELS[cat]||cat}</span>
-      ${srcHtml}
+function formatDate(dateStr) {
+  if (!dateStr) return '';
+  try {
+    return new Date(dateStr).toLocaleDateString('fr-FR', {
+      weekday: 'long', day: 'numeric', month: 'long'
+    });
+  } catch(e) { return dateStr; }
+}
+
+function afficherBreve(b) {
+  const el = document.getElementById('breve-contenu');
+  if (!b) {
+    el.innerHTML = '<div class="no-articles">Aucune brève publiée pour l\'instant.</div>';
+    return;
+  }
+  const catClass = 't-' + (b.category || 'curieux');
+  const label = LABELS[b.category] || b.category || 'Brève';
+  const sourceHtml = b.source
+    ? `<div class="breve-source">Source : <strong>${b.source}</strong></div>`
+    : '';
+  el.innerHTML = `
+    <div>
+      <span class="breve-date">${formatDate(b.date)}</span>
+      <span class="breve-category-badge ${catClass}">${label}</span>
     </div>
     <h2 class="breve-titre">${b.titre}</h2>
     <div class="breve-chapeau">${b.extrait}</div>
-    <a href="${b.url}" class="lire-plus">Lire la brève complète <span class="arr">→</span></a>`;
+    ${sourceHtml}
+    <a href="${b.url}" class="lire-plus">Lire la brève complète <span class="arr">→</span></a>
+  `;
 }
 
-function afficherFil(breves){
-  const el=document.getElementById('fil-contenu');
-  if(!breves.length){el.innerHTML='<p style="color:var(--gris-clair);font-style:italic;padding:20px 0">Le fil est vide pour l\'instant.</p>';return}
-  el.innerHTML=breves.map(b=>{
-    const cat=b.category||'curieux';
-    const srcHtml=b.source?`<span class="art-source">· ${b.source}</span>`:'';
-    return`<div class="article" onclick="location.href='${b.url}'">
-      <div class="art-meta"><span class="art-date">${fmtDate(b.date)}</span><span class="art-tag t-${cat}">${LABELS[cat]||cat}</span>${srcHtml}</div>
-      <h3 class="art-titre">${b.titre}</h3>
-      <p class="art-extrait">${b.extrait}</p>
-      <a class="art-lire" href="${b.url}">Lire →</a>
-    </div>`;
+function afficherFil(breves) {
+  const el = document.getElementById('fil-contenu');
+  if (!breves.length) {
+    el.innerHTML = '<div class="no-articles">Le fil est vide pour l\'instant.</div>';
+    return;
+  }
+  el.innerHTML = breves.map(b => {
+    const catClass = 't-' + (b.category || 'curieux');
+    const label = LABELS[b.category] || b.category || 'Brève';
+    return `
+      <div class="article" onclick="location.href='${b.url}'">
+        <div class="art-meta">
+          <span class="art-date">${formatDate(b.date)}</span>
+          <span class="art-tag ${catClass}">${label}</span>
+        </div>
+        <h3 class="art-titre">${b.titre}</h3>
+        <p class="art-extrait">${b.extrait}</p>
+        <a class="art-lire" href="${b.url}">Lire la brève →</a>
+      </div>
+    `;
   }).join('');
 }
 
-fetch('breves.json?v='+Date.now())
-  .then(r=>{if(!r.ok)throw new Error(r.status);return r.json()})
-  .then(data=>{
-    afficherBreve(data[0]||null);
-    afficherFil(data.slice(1,5));
-    const el=document.getElementById('stat-signalements');
-    if(el)el.textContent=data.length;
+// Chargement depuis breves.json (pas d'appel API GitHub)
+fetch('breves.json?v=' + Date.now())
+  .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+  .then(data => {
+    afficherBreve(data[0] || null);
+    afficherFil(data.slice(1, 5));
   })
-  .catch(()=>{
-    document.getElementById('breve-contenu').innerHTML='<p style="color:var(--gris-clair);font-style:italic">Impossible de charger les brèves.</p>';
-    document.getElementById('fil-contenu').innerHTML='';
+  .catch(err => {
+    console.error('Erreur chargement brèves:', err);
+    document.getElementById('breve-contenu').innerHTML =
+      '<div class="no-articles">Impossible de charger les brèves.</div>';
+    document.getElementById('fil-contenu').innerHTML = '';
   });
 
-// CARTE LEAFLET
-const LIEUX_HAUTE_SAVOIE = {
-  'annecy': [45.8992, 6.1294],
-  'annemasse': [46.1956, 6.2344],
-  'bonneville': [46.0789, 6.4078],
-  'cluses': [46.0614, 6.5786],
-  'sallanches': [45.9369, 6.6347],
-  'chamonix': [45.9237, 6.8694],
-  'thonon': [46.3705, 6.4764],
-  'thonon-les-bains': [46.3705, 6.4764],
-  'evian': [46.4012, 6.5912],
-  'evian-les-bains': [46.4012, 6.5912],
-  'megeve': [45.8567, 6.6175],
-  'saint-gervais': [45.8914, 6.7097],
-  'morzine': [46.1789, 6.7092],
-  'taninges': [46.1044, 6.5883],
-  'rumilly': [45.8683, 5.9439],
-  'la-roche-sur-foron': [46.0672, 6.3114],
-  'scionzier': [46.0558, 6.5467],
-  'marignier': [46.0858, 6.5017],
-  'contamine-sur-arve': [46.1192, 6.3572],
-  'haute-savoie': [45.9, 6.4],
-};
-
-function extractLieu(titre, extrait) {
-  const txt = (titre + ' ' + extrait).toLowerCase();
-  for (const [lieu, coords] of Object.entries(LIEUX_HAUTE_SAVOIE)) {
-    if (txt.includes(lieu.replace(/-/g, ' ')) || txt.includes(lieu)) {
-      return { nom: lieu, coords };
-    }
-  }
-  return null;
-}
-
-function initCarte(breves) {
-  const el = document.getElementById('carte-leaflet');
-  if (!el) return;
-
-  const map = L.map('carte-leaflet', { zoomControl: true, scrollWheelZoom: false }).setView([45.95, 6.4], 9);
-
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '© OpenStreetMap © CARTO',
-    subdomains: 'abcd', maxZoom: 16
-  }).addTo(map);
-
-  const iconRouge = L.divIcon({
-    html: '<div style="width:14px;height:14px;background:#C4522A;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.3)"></div>',
-    className: '', iconSize: [14, 14], iconAnchor: [7, 7]
+// Filtres nav depuis fil.html?cat=...
+document.querySelectorAll('nav a[href^="fil.html?cat"]').forEach(a => {
+  a.addEventListener('click', e => {
+    // laisse la nav normale se faire
   });
-
-  let nb = 0;
-  breves.forEach(b => {
-    const lieu = extractLieu(b.titre || '', b.extrait || '');
-    if (!lieu) return;
-    nb++;
-    const marker = L.marker(lieu.coords, { icon: iconRouge }).addTo(map);
-    marker.bindPopup(`
-      <div style="min-width:200px">
-        <div class="carte-popup-titre">${b.titre}</div>
-        <div class="carte-popup-meta">${new Date(b.date).toLocaleDateString('fr-FR', {day:'numeric',month:'long'})}</div>
-        <div class="carte-popup-extrait">${(b.extrait||'').slice(0,120)}…</div>
-        <a class="carte-popup-lien" href="${b.url}">Lire la brève →</a>
-      </div>
-    `);
-  });
-
-  // Stats
-  const statB = document.getElementById('stat-breves');
-  const statS = document.getElementById('stat-signalements');
-  if (statB) statB.textContent = breves.length;
-  if (statS) statS.textContent = nb > 0 ? nb : '—';
-
-  if (nb === 0) {
-    el.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--gris-clair);font-style:italic;font-size:14px">Les points apparaîtront au fil des brèves géolocalisées.</div>';
-  }
-}
-
+});
 </script>
 </body>
 </html>
