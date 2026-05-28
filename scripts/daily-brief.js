@@ -8,7 +8,7 @@ const RSS_URLS = [
 ];
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_TOKEN = process.env.GH_PAT || process.env.GITHUB_TOKEN;
 const UNSPLASH_ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY;
 const GITHUB_REPO = 'yvanmogeon-droid/horschamp74';
 const DESTINATAIRE = 'yvan.mogeon@gmail.com';
