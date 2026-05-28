@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>La carte — Hors Champ 74</title>
+<meta name="description" content="La carte des signalements et brèves Hors Champ 74 en Haute-Savoie.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --noir:#1a1714;--encre:#2c2825;--terre:#8B3A1A;--rouge:#C4522A;
+  --creme:#faf7f2;--sable:#f5f0e8;--gris:#7a736b;--gris-clair:#c8c0b4;
+  --bordure:#ddd5c8;
+}
+html,body{height:100%;overflow:hidden}
+body{background:var(--creme);color:var(--encre);font-family:'DM Sans',sans-serif;font-weight:300;display:flex;flex-direction:column}
+
+header{flex-shrink:0;background:rgba(250,247,242,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--bordure);height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;z-index:1000}
+.h-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.h-logo img{height:36px;width:36px;object-fit:cover;border-radius:3px}
+.h-logo span{font-family:'Playfair Display',serif;font-weight:900;font-size:18px;color:var(--encre)}
+.h-logo span em{font-style:normal;color:var(--rouge)}
+nav{display:flex;align-items:center;gap:20px}
+nav a{font-size:11px;font-weight:400;letter-spacing:.8px;text-transform:uppercase;color:var(--gris);text-decoration:none;transition:color .2s}
+nav a:hover,nav a.actif{color:var(--rouge)}
+.nav-btn{background:var(--rouge)!important;color:white!important;padding:7px 16px!important;border-radius:2px}
+
+.carte-wrap{flex:1;display:flex;flex-direction:column;overflow:hidden}
+.carte-header{flex-shrink:0;background:var(--sable);border-bottom:1px solid var(--bordure);padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.carte-titre{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--noir)}
+.carte-titre em{font-style:italic;color:var(--rouge)}
+.carte-stats{display:flex;gap:32px}
+.stat{text-align:center}
+.stat-n{font-family:'Playfair Display',serif;font-size:28px;font-weight:900;line-height:1;color:var(--rouge)}
+.stat-l{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gris-clair);margin-top:2px}
+
+.filtres{flex-shrink:0;background:var(--creme);border-bottom:1px solid var(--bordure);padding:10px 32px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.filtre{font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border:1px solid var(--bordure);background:none;cursor:pointer;color:var(--gris);transition:all .18s;border-radius:1px}
+.filtre:hover{border-color:var(--encre);color:var(--encre)}
+.filtre.actif{background:var(--encre);color:var(--creme);border-color:var(--encre)}
+
+#map{flex:1;z-index:1}
+
+.leaflet-popup-content-wrapper{border-radius:2px;box-shadow:0 2px 12px rgba(0,0,0,.12)}
+.leaflet-popup-content{margin:14px 16px;font-family:'DM Sans',sans-serif}
+.pop-titre{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--noir);margin-bottom:4px;line-height:1.3}
+.pop-meta{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--gris-clair);margin-bottom:8px}
+.pop-extrait{font-size:12px;color:var(--gris);line-height:1.6;margin-bottom:10px}
+.pop-lien{font-size:11px;font-weight:500;color:var(--rouge);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.pop-lien:hover{gap:10px}
+
+.vide-msg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:2;pointer-events:none}
+.vide-msg p{font-size:14px;font-style:italic;color:var(--gris-clair)}
+
+@media(max-width:700px){
+  nav{display:none}
+  .carte-header{flex-direction:column;align-items:flex-start;gap:12px;padding:16px 20px}
+  .filtres{padding:10px 20px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="h-logo">
+    <img src="assets/logo.jpg" alt="Hors Champ 74">
+    <span>HORS <em>CHAMP</em> 74</span>
+  </a>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="fil.html">Le fil</a>
+    <a href="carte.html" class="actif">La carte</a>
+    <a href="https://tally.so/r/68AXVY" target="_blank" class="nav-btn">Signaler →</a>
+  </nav>
+</header>
+
+<div class="carte-wrap">
+  <div class="carte-header">
+    <div>
+      <h1 class="carte-titre">La carte <em>des angles morts</em></h1>
+      <p style="font-size:12px;color:var(--gris-clair);margin-top:4px">Chaque brève géolocalisée laisse un point. Clique pour lire.</p>
+    </div>
+    <div class="carte-stats">
+      <div class="stat"><div class="stat-n" id="stat-points">—</div><div class="stat-l">Points</div></div>
+      <div class="stat"><div class="stat-n" id="stat-breves">—</div><div class="stat-l">Brèves</div></div>
+    </div>
+  </div>
+
+  <div class="filtres">
+    <button class="filtre actif" data-cat="tout">Tout</button>
+    <button class="filtre" data-cat="pollution">Pollution</button>
+    <button class="filtre" data-cat="dechets">Déchets</button>
+    <button class="filtre" data-cat="animaux">Animaux</button>
+    <button class="filtre" data-cat="good-news">Good News</button>
+    <button class="filtre" data-cat="montagne">Montagne</button>
+    <button class="filtre" data-cat="curieux">Curieux</button>
+  </div>
+
+  <div id="map"></div>
+</div>
+
+<script>
+const LABELS={pollution:'Pollution',dechets:'Déchets',animaux:'Animaux','good-news':'Good News',montagne:'Montagne & Nature',curieux:'Curieux'};
+const COULEURS={pollution:'#8B3A1A',dechets:'#7a736b',animaux:'#4a7c59','good-news':'#2d6a4f',montagne:'#3a5f8a',curieux:'#7a5c8a'};
+
+const LIEUX={
+  'annecy':[45.8992,6.1294],'annecy-le-vieux':[45.9117,6.1503],
+  'annemasse':[46.1956,6.2344],'bonneville':[46.0789,6.4078],
+  'cluses':[46.0614,6.5786],'sallanches':[45.9369,6.6347],
+  'chamonix':[45.9237,6.8694],'thonon':[46.3705,6.4764],
+  'thonon-les-bains':[46.3705,6.4764],'evian':[46.4012,6.5912],
+  'evian-les-bains':[46.4012,6.5912],'megeve':[45.8567,6.6175],
+  'saint-gervais':[45.8914,6.7097],'morzine':[46.1789,6.7092],
+  'taninges':[46.1044,6.5883],'rumilly':[45.8683,5.9439],
+  'la-roche-sur-foron':[46.0672,6.3114],'scionzier':[46.0558,6.5467],
+  'marignier':[46.0858,6.5017],'contamine':[46.1192,6.3572],
+  'argentiere':[45.9783,6.9231],'les-houches':[45.8939,6.7981],
+  'passy':[45.9158,6.6928],'flumet':[45.8183,6.5247],
+  'saint-jean-de-sixt':[45.9267,6.4103],'la-clusaz':[45.9044,6.4236],
+  'saint-nicolas-de-veroce':[45.8669,6.7147],'combloux':[45.8928,6.6517],
+  'hauteluce':[45.7997,6.5567],'beaufort':[45.7267,6.5719],
+  'haute-savoie':[45.9,6.4]
+};
+
+function extractLieu(titre, extrait) {
+  const txt = (titre + ' ' + extrait).toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+  for (const [lieu, coords] of Object.entries(LIEUX)) {
+    const normalized = lieu.replace(/-/g,' ');
+    if (txt.includes(normalized) || txt.includes(lieu)) {
+      return {nom:lieu, coords};
+    }
+  }
+  return null;
+}
+
+function fmtDate(d){
+  if(!d)return'';
+  try{return new Date(d).toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'})}
+  catch(e){return d}
+}
+
+function makeIcon(cat) {
+  const c = COULEURS[cat] || '#C4522A';
+  return L.divIcon({
+    html:`<div style="width:16px;height:16px;background:${c};border-radius:50%;border:2px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.3)"></div>`,
+    className:'', iconSize:[16,16], iconAnchor:[8,8]
+  });
+}
+
+// Carte
+const map = L.map('map', {zoomControl:true, scrollWheelZoom:true}).setView([45.95,6.4], 9);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+  attribution:'© OpenStreetMap © CARTO',
+  subdomains:'abcd', maxZoom:17
+}).addTo(map);
+
+let toutesBreves = [];
+let markers = [];
+let filtreActif = 'tout';
+
+function afficherMarkers() {
+  markers.forEach(m => map.removeLayer(m));
+  markers = [];
+
+  const breves = filtreActif === 'tout'
+    ? toutesBreves
+    : toutesBreves.filter(b => b.category === filtreActif);
+
+  let nbPoints = 0;
+  breves.forEach(b => {
+    const lieu = extractLieu(b.titre || '', b.extrait || '');
+    if (!lieu) return;
+    nbPoints++;
+    const cat = b.category || 'curieux';
+    const marker = L.marker(lieu.coords, {icon: makeIcon(cat)}).addTo(map);
+    const imgHtml = b.image
+      ? `<img src="${b.image}" style="width:100%;height:100px;object-fit:cover;margin-bottom:10px;border-radius:2px">`
+      : '';
+    marker.bindPopup(`
+      <div style="min-width:220px;max-width:260px">
+        ${imgHtml}
+        <div class="pop-meta">${fmtDate(b.date)} · ${LABELS[cat]||cat}</div>
+        <div class="pop-titre">${b.titre}</div>
+        <div class="pop-extrait">${(b.extrait||'').slice(0,120)}…</div>
+        <a class="pop-lien" href="${b.url}">Lire la brève →</a>
+      </div>
+    `, {maxWidth:280});
+    markers.push(marker);
+  });
+
+  document.getElementById('stat-points').textContent = nbPoints || '—';
+  document.getElementById('stat-breves').textContent = toutesBreves.length || '—';
+}
+
+// Filtres
+document.querySelectorAll('.filtre').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filtre').forEach(b => b.classList.remove('actif'));
+    btn.classList.add('actif');
+    filtreActif = btn.dataset.cat;
+    afficherMarkers();
+  });
+});
+
+// Chargement
+fetch('breves.json?v=' + Date.now())
+  .then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
+  .then(data => {
+    toutesBreves = data;
+    afficherMarkers();
+  })
+  .catch(err => {
+    console.error('Erreur chargement brèves:', err);
+  });
+</script>
+</body>
+</html>
