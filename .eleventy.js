@@ -13,6 +13,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("goodnews.html");
   eleventyConfig.addPassthroughCopy("montagne.html");
   eleventyConfig.addPassthroughCopy("fil.html");
+  eleventyConfig.addPassthroughCopy("carte.html");
+  eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("signalements.json");
   eleventyConfig.addPassthroughCopy("breves.json");
   // Dossier admin (Decap CMS) — copié tel quel
   eleventyConfig.addPassthroughCopy("admin");
