@@ -541,7 +541,6 @@ footer {
   </a>
   <nav>
     <a href="fil.html">Le fil</a>
-    <a href="carte.html">La carte</a>
     <a href="fil.html?cat=good-news">Good news</a>
     <a href="fil.html?cat=montagne">Montagne</a>
     <a href="fil.html?cat=curieux">Curieux</a>
@@ -605,23 +604,6 @@ footer {
   </div>
 </section>
 
-<!-- CARTE -->
-<section style="background:var(--sable);border-bottom:1px solid var(--bordure)">
-  <div style="max-width:800px;margin:0 auto;padding:72px 48px">
-    <div style="font-size:10px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gris);display:flex;align-items:center;gap:16px;margin-bottom:32px">La carte <span style="flex:1;height:1px;background:var(--bordure);display:block"></span></div>
-    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:700;line-height:1.15;margin-bottom:12px;color:var(--noir)">La carte <em style="font-style:italic;color:var(--rouge)">des angles morts</em></h2>
-    <p style="font-size:14px;color:var(--gris);line-height:1.7;margin-bottom:8px">Chaque brève géolocalisée laisse un point. Clique pour lire l'article.</p>
-    <p style="font-size:12px;font-style:italic;color:var(--gris-clair);margin-bottom:28px">On ne dénonce rien. On constate. On documente.</p>
-    <div style="display:flex;gap:40px;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--bordure)">
-      <div><div id="carte-stat-pts" style="font-family:'Playfair Display',serif;font-size:40px;font-weight:900;line-height:1;color:var(--rouge)">—</div><div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gris-clair);margin-top:4px">Points</div></div>
-      <div><div id="carte-stat-breves" style="font-family:'Playfair Display',serif;font-size:40px;font-weight:900;line-height:1;color:var(--rouge)">—</div><div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gris-clair);margin-top:4px">Brèves</div></div>
-    </div>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"><\/script>
-    <div id="carte-map" style="height:380px;border:1px solid var(--bordure);border-radius:2px"></div>
-  </div>
-</section>
-
 <!-- AGIR -->
 <section class="agir-section">
   <div class="agir-inner">
@@ -664,7 +646,6 @@ footer {
     <div class="f-col">
       <h4>Le site</h4>
       <a href="fil.html">Le fil</a>
-    <a href="carte.html">La carte</a>
       <a href="fil.html?cat=good-news">Good news</a>
       <a href="fil.html?cat=montagne">Montagne & Nature</a>
       <a href="fil.html?cat=curieux">Le coin des curieux</a>
@@ -757,14 +738,18 @@ function afficherFil(breves) {
 }
 
 // Chargement depuis breves.json (pas d'appel API GitHub)
-const BREVES_DATA = [{"titre": "LE LAC D'ANNECY BOUFFE DES PNEUS", "slug": "2026-05-29-a", "date": "2026-05-29T08:58:03.000+02:00", "datePrefix": "2026-05-29", "category": "pollution", "source": "Reporterre", "image": "https://images.unsplash.com/photo-1759581184096-cde459a10395?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAwNDUwODN8&ixlib=rb-4.1.0&q=80&w=1080", "extrait": "Les particules fines des pneus de voiture finissent dans le lac d'Annecy. Une pollution silencieuse mais massive : chaque freinage, chaque virage relâche des microplastiques qui s'échappent des routes et des parkings pour contaminer l'eau. C'est une réalité dérangeante que personne ne voit arriver. ", "url": "/breves/2026-05-29-a/"}, {"titre": "LAC D'ANNECY POLLUÉ PAR LES PNEUS DE VOITURE", "slug": "2026-05-28-b", "date": "2026-05-28T16:30:17.000+02:00", "datePrefix": "2026-05-28", "category": "pollution", "source": "Reporterre, le média de l'écologie", "image": "https://images.unsplash.com/photo-1550007488-acbcd2b1be4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk5ODU4MTd8&ixlib=rb-4.1.0&q=80&w=1080", "extrait": "Les microparticules issues de l'abrasion des pneumatiques finissent dans le lac d'Annecy. Une pollution insidieuse, produite simplement par le freinage et l'usure des pneus lors de la circulation routière. Les chercheurs alertent : c'est l'une des sources majeures de contamination plastique des lacs", "url": "/breves/2026-05-28-b/"}, {"titre": "LAC D'ANNECY : LES PNEUS NOUS EMPOISONNENT", "slug": "2026-05-28-a", "date": "2026-05-28T09:04:54.000+02:00", "datePrefix": "2026-05-28", "category": "pollution", "source": "Reporterre", "image": "https://images.unsplash.com/photo-1580115037899-6723b3da64f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk5NTkwOTR8&ixlib=rb-4.1.0&q=80&w=1080", "extrait": "Des microparticules d'abrasion des pneus de voitures s'accumulent dans le lac d'Annecy. Une contamination silencieuse mais massive qui atteint désormais les eaux — et probablement la chaîne alimentaire aquatique. C'est une forme de pollution que personne ne voit, mais qui s'installe. Ce que les habi", "url": "/breves/2026-05-28-a/"}, {"titre": "ADOLESCENTE, ELLE SAUVE LES ANIMAUX ABANDONNÉS", "slug": "2026-05-27-a", "date": "2026-05-27T19:01:43.000+02:00", "datePrefix": "2026-05-27", "category": "animaux", "source": "France 3 Régions", "image": "https://images.unsplash.com/photo-1580329127084-7fb80575f5d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk5MDg1MDN8&ixlib=rb-4.1.0&q=80&w=1080", "extrait": "À 17 ans, une jeune fille haut-savoyarde gère un refuge pour animaux maltraités ou jetés à la rue. Des lapins retrouvés dans des sacs poubelle, des créatures en détresse — elle les recueille, les soigne, leur redonne une chance. Un engagement personnel qui crie ce qu'on ne dit jamais assez : nos déc", "url": "/breves/2026-05-27-a/"}, {"titre": "RIVIÈRES DE HAUTE-SAVOIE : UN DÉSASTRE DE DÉCHETS", "slug": "rivieres-de-haute-savoie-un-desastre-de-dechets", "date": "2026-05-25T09:40:29.000+02:00", "datePrefix": "2026-05-25", "category": "pollution", "source": "TF1 Info", "image": "https://images.unsplash.com/photo-1663764617546-1b694b3dfc8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk4NjEyNTZ8&ixlib=rb-4.1.0&q=80&w=1080", "extrait": "Les rivières de Haute-Savoie croulent sous les montagnes de déchets. Une vidéo TF1 a documenté l'ampleur du désastre en avril 2023, mettant en lumière une pollution massive qui « déchire le cœur » des riverains et des environnementalistes. C'est un problème qui touche directement la qualité de vie l", "url": "/breves/2026-05-25-rivieres-de-haute-savoie-un-desastre-de-dechets/"}];
-(function(){
-  afficherBreve(BREVES_DATA[0]||null);
-  afficherFil(BREVES_DATA.slice(1,5));
-  const el=document.getElementById('stat-signalements');
-  if(el) el.textContent=BREVES_DATA.length;
-  setTimeout(()=>{ if(typeof initCartePage==='function') initCartePage(BREVES_DATA); }, 400);
-})();
+fetch('breves.json?v=' + Date.now())
+  .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+  .then(data => {
+    afficherBreve(data[0] || null);
+    afficherFil(data.slice(1, 5));
+  })
+  .catch(err => {
+    console.error('Erreur chargement brèves:', err);
+    document.getElementById('breve-contenu').innerHTML =
+      '<div class="no-articles">Impossible de charger les brèves.</div>';
+    document.getElementById('fil-contenu').innerHTML = '';
+  });
 
 // Filtres nav depuis fil.html?cat=...
 document.querySelectorAll('nav a[href^="fil.html?cat"]').forEach(a => {
@@ -772,58 +757,6 @@ document.querySelectorAll('nav a[href^="fil.html?cat"]').forEach(a => {
     // laisse la nav normale se faire
   });
 });
-
-// ── CARTE LEAFLET ──────────────────────────────────────────────────────────
-const LIEUX_HS = {
-  'annecy':[45.8992,6.1294],'annecy-le-vieux':[45.9117,6.1503],
-  'annemasse':[46.1956,6.2344],'bonneville':[46.0789,6.4078],
-  'cluses':[46.0614,6.5786],'sallanches':[45.9369,6.6347],
-  'chamonix':[45.9237,6.8694],'thonon':[46.3705,6.4764],
-  'thonon-les-bains':[46.3705,6.4764],'evian':[46.4012,6.5912],
-  'evian-les-bains':[46.4012,6.5912],'megeve':[45.8567,6.6175],
-  'saint-gervais':[45.8914,6.7097],'morzine':[46.1789,6.7092],
-  'taninges':[46.1044,6.5883],'rumilly':[45.8683,5.9439],
-  'la-roche-sur-foron':[46.0672,6.3114],'scionzier':[46.0558,6.5467],
-  'marignier':[46.0858,6.5017],'passy':[45.9158,6.6928],
-  'flumet':[45.8183,6.5247],'beaufort':[45.7267,6.5719],
-  'haute-savoie':[45.95,6.4],'lac-d-annecy':[45.83,6.17],
-  'lac d\'annecy':[45.83,6.17]
-};
-const COULEURS_C={pollution:'#8B3A1A',dechets:'#7a736b',animaux:'#4a7c59','good-news':'#2d6a4f',montagne:'#3a5f8a',curieux:'#7a5c8a'};
-
-function extractLieuCarte(titre, extrait) {
-  const txt = (titre+' '+extrait).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-  for (const [l, coords] of Object.entries(LIEUX_HS)) {
-    if (txt.includes(l.replace(/-/g,' '))) return coords;
-  }
-  return null;
-}
-
-function initCartePage(breves) {
-  const el = document.getElementById('carte-map');
-  if (!el || !window.L) return;
-  const map = L.map('carte-map', {scrollWheelZoom:false, zoomControl:true}).setView([45.95,6.4], 9);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution:'© OpenStreetMap © CARTO', subdomains:'abcd', maxZoom:16
-  }).addTo(map);
-  let nb = 0;
-  breves.forEach(b => {
-    const coords = extractLieuCarte(b.titre||'', b.extrait||'');
-    if (!coords) return;
-    nb++;
-    const cat = b.category||'curieux';
-    const c = COULEURS_C[cat]||'#C4522A';
-    const icon = L.divIcon({html:`<div style="width:14px;height:14px;background:${c};border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.3)"></div>`,className:'',iconSize:[14,14],iconAnchor:[7,7]});
-    const imgHtml = b.image ? `<img src="${b.image}" style="width:100%;height:90px;object-fit:cover;margin-bottom:8px;border-radius:2px">` : '';
-    L.marker(coords, {icon}).addTo(map).bindPopup(`<div style="min-width:200px">${imgHtml}<div style="font-size:10px;color:#7a736b;margin-bottom:4px">${new Date(b.date).toLocaleDateString('fr-FR',{day:'numeric',month:'long'})}</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:#1a1714;margin-bottom:6px">${b.titre}</div><div style="font-size:11px;color:#7a736b;margin-bottom:8px">${(b.extrait||'').slice(0,100)}…</div><a href="${b.url}" style="font-size:11px;color:#C4522A;text-decoration:none;font-weight:500">Lire →</a></div>`, {maxWidth:260});
-  });
-  const sp = document.getElementById('carte-stat-pts');
-  const sb = document.getElementById('carte-stat-breves');
-  if (sp) sp.textContent = nb || '—';
-  if (sb) sb.textContent = breves.length || '—';
-  if (nb === 0) el.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#c8c0b4;font-style:italic;font-size:13px">Les points apparaîtront au fil des brèves géolocalisées.</div>';
-}
-
 </script>
 </body>
 </html>
