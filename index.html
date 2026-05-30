@@ -7,6 +7,8 @@
 <meta name="description" content="Le média local sur ce que personne ne traite en Haute-Savoie. Pollution. Déchets. Animaux. Sans filtre.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
@@ -635,6 +637,17 @@ footer {
   </div>
 </section>
 
+<!-- CARTE -->
+<section style="border-top:1px solid var(--bordure);background:var(--sable)">
+  <div style="max-width:var(--max);margin:0 auto;padding:72px 24px">
+    <div style="font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gris);margin-bottom:16px">La carte</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.15;color:var(--noir);margin-bottom:10px">La carte <em style="font-style:italic;color:var(--rouge)">des angles morts</em></h2>
+    <p style="font-size:14px;color:var(--gris);line-height:1.7;margin-bottom:24px">Chaque brève géolocalisée laisse un point sur la carte. Clique pour lire.</p>
+    <div id="hc-map" style="height:420px;border:1px solid var(--bordure);border-radius:2px;background:var(--creme)"></div>
+    <div id="hc-map-vide" style="font-size:13px;font-style:italic;color:var(--gris-clair);margin-top:12px;display:none">Les points apparaîtront au fil des brèves géolocalisées.</div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
@@ -737,12 +750,81 @@ function afficherFil(breves) {
   }).join('');
 }
 
+// ── CARTE ──
+var LIEUX_HS = {
+  'annecy':[45.8992,6.1294],'annecy-le-vieux':[45.9117,6.1503],
+  'annemasse':[46.1956,6.2344],'bonneville':[46.0789,6.4078],
+  'cluses':[46.0614,6.5786],'sallanches':[45.9369,6.6347],
+  'chamonix':[45.9237,6.8694],'thonon':[46.3705,6.4764],
+  'thonon-les-bains':[46.3705,6.4764],'evian':[46.4012,6.5912],
+  'evian-les-bains':[46.4012,6.5912],'megeve':[45.8567,6.6175],
+  'saint-gervais':[45.8914,6.7097],'morzine':[46.1789,6.7092],
+  'taninges':[46.1044,6.5883],'rumilly':[45.8683,5.9439],
+  'la-roche-sur-foron':[46.0672,6.3114],'scionzier':[46.0558,6.5467],
+  'marignier':[46.0858,6.5017],'passy':[45.9158,6.6928],
+  'flumet':[45.8183,6.5247],'beaufort':[45.7267,6.5719],
+  'la clusaz':[45.9044,6.4236],'le grand-bornand':[45.9419,6.4283],
+  'haute-savoie':[45.95,6.4]
+};
+var COULEURS_CAT = {pollution:'#8B3A1A',dechets:'#7a736b',animaux:'#4a7c59','good-news':'#2d6a4f',montagne:'#3a5f8a',curieux:'#7a5c8a'};
+
+function trouverLieu(b) {
+  var hay = ((b.lieu || '') + ' ' + (b.titre || '') + ' ' + (b.extrait || ''))
+    .toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  for (var cle in LIEUX_HS) {
+    var mot = cle.replace(/-/g, ' ');
+    if (hay.indexOf(mot) !== -1) return LIEUX_HS[cle];
+  }
+  return null;
+}
+
+function renderCarte(breves, essai) {
+  essai = essai || 0;
+  var el = document.getElementById('hc-map');
+  if (!el) return;
+  if (typeof L === 'undefined') {
+    if (essai < 20) { setTimeout(function(){ renderCarte(breves, essai + 1); }, 250); }
+    return;
+  }
+  var map = L.map('hc-map', { scrollWheelZoom: false }).setView([45.95, 6.4], 9);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '\u00a9 OpenStreetMap \u00a9 CARTO', subdomains: 'abcd', maxZoom: 16
+  }).addTo(map);
+
+  var n = 0;
+  breves.forEach(function(b) {
+    var coords = trouverLieu(b);
+    if (!coords) return;
+    n++;
+    var cat = b.category || 'curieux';
+    var couleur = COULEURS_CAT[cat] || '#C4522A';
+    var icon = L.divIcon({
+      html: '<div style="width:15px;height:15px;background:' + couleur + ';border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35)"></div>',
+      className: '', iconSize: [15, 15], iconAnchor: [7, 7]
+    });
+    var img = b.image ? '<img src="' + b.image + '" style="width:100%;height:90px;object-fit:cover;border-radius:2px;margin-bottom:8px">' : '';
+    var html = '<div style="min-width:200px;max-width:240px">' + img +
+      '<div style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#c8c0b4;margin-bottom:4px">' + formatDate(b.date) + '</div>' +
+      '<div style="font-family:Playfair Display,serif;font-size:14px;font-weight:700;color:#1a1714;line-height:1.3;margin-bottom:6px">' + (b.titre || '') + '</div>' +
+      '<div style="font-size:11px;color:#7a736b;line-height:1.5;margin-bottom:8px">' + ((b.extrait || '').slice(0, 110)) + '\u2026</div>' +
+      '<a href="' + b.url + '" style="font-size:11px;font-weight:500;color:#C4522A;text-decoration:none">Lire la br\u00e8ve \u2192</a></div>';
+    L.marker(coords, { icon: icon }).addTo(map).bindPopup(html, { maxWidth: 260 });
+  });
+
+  if (n === 0) {
+    var vide = document.getElementById('hc-map-vide');
+    if (vide) vide.style.display = 'block';
+  }
+  setTimeout(function(){ map.invalidateSize(); }, 200);
+}
+
 // Chargement depuis breves.json (pas d'appel API GitHub)
 fetch('breves.json?v=' + Date.now())
   .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
   .then(data => {
     afficherBreve(data[0] || null);
     afficherFil(data.slice(1, 5));
+    try { renderCarte(data); } catch (e) { console.error('Carte:', e); }
   })
   .catch(err => {
     console.error('Erreur chargement brèves:', err);
