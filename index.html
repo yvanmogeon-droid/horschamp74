@@ -757,18 +757,14 @@ function afficherFil(breves) {
 }
 
 // Chargement depuis breves.json (pas d'appel API GitHub)
-fetch('breves.json?v=' + Date.now())
-  .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-  .then(data => {
-    afficherBreve(data[0] || null);
-    afficherFil(data.slice(1, 5));
-  })
-  .catch(err => {
-    console.error('Erreur chargement brèves:', err);
-    document.getElementById('breve-contenu').innerHTML =
-      '<div class="no-articles">Impossible de charger les brèves.</div>';
-    document.getElementById('fil-contenu').innerHTML = '';
-  });
+const BREVES_DATA = [{"titre": "LE LAC D'ANNECY BOUFFE DES PNEUS", "slug": "2026-05-29-a", "date": "2026-05-29T08:58:03.000+02:00", "datePrefix": "2026-05-29", "category": "pollution", "source": "Reporterre", "image": "https://images.unsplash.com/photo-1759581184096-cde459a10395?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAwNDUwODN8&ixlib=rb-4.1.0&q=80&w=1080", "extrait": "Les particules fines des pneus de voiture finissent dans le lac d'Annecy. Une pollution silencieuse mais massive : chaque freinage, chaque virage relâche des microplastiques qui s'échappent des routes et des parkings pour contaminer l'eau. C'est une réalité dérangeante que personne ne voit arriver. ", "url": "/breves/2026-05-29-a/"}, {"titre": "LAC D'ANNECY POLLUÉ PAR LES PNEUS DE VOITURE", "slug": "2026-05-28-b", "date": "2026-05-28T16:30:17.000+02:00", "datePrefix": "2026-05-28", "category": "pollution", "source": "Reporterre, le média de l'écologie", "image": "https://images.unsplash.com/photo-1550007488-acbcd2b1be4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk5ODU4MTd8&ixlib=rb-4.1.0&q=80&w=1080", "extrait": "Les microparticules issues de l'abrasion des pneumatiques finissent dans le lac d'Annecy. Une pollution insidieuse, produite simplement par le freinage et l'usure des pneus lors de la circulation routière. Les chercheurs alertent : c'est l'une des sources majeures de contamination plastique des lacs", "url": "/breves/2026-05-28-b/"}, {"titre": "LAC D'ANNECY : LES PNEUS NOUS EMPOISONNENT", "slug": "2026-05-28-a", "date": "2026-05-28T09:04:54.000+02:00", "datePrefix": "2026-05-28", "category": "pollution", "source": "Reporterre", "image": "https://images.unsplash.com/photo-1580115037899-6723b3da64f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk5NTkwOTR8&ixlib=rb-4.1.0&q=80&w=1080", "extrait": "Des microparticules d'abrasion des pneus de voitures s'accumulent dans le lac d'Annecy. Une contamination silencieuse mais massive qui atteint désormais les eaux — et probablement la chaîne alimentaire aquatique. C'est une forme de pollution que personne ne voit, mais qui s'installe. Ce que les habi", "url": "/breves/2026-05-28-a/"}, {"titre": "ADOLESCENTE, ELLE SAUVE LES ANIMAUX ABANDONNÉS", "slug": "2026-05-27-a", "date": "2026-05-27T19:01:43.000+02:00", "datePrefix": "2026-05-27", "category": "animaux", "source": "France 3 Régions", "image": "https://images.unsplash.com/photo-1580329127084-7fb80575f5d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk5MDg1MDN8&ixlib=rb-4.1.0&q=80&w=1080", "extrait": "À 17 ans, une jeune fille haut-savoyarde gère un refuge pour animaux maltraités ou jetés à la rue. Des lapins retrouvés dans des sacs poubelle, des créatures en détresse — elle les recueille, les soigne, leur redonne une chance. Un engagement personnel qui crie ce qu'on ne dit jamais assez : nos déc", "url": "/breves/2026-05-27-a/"}, {"titre": "RIVIÈRES DE HAUTE-SAVOIE : UN DÉSASTRE DE DÉCHETS", "slug": "rivieres-de-haute-savoie-un-desastre-de-dechets", "date": "2026-05-25T09:40:29.000+02:00", "datePrefix": "2026-05-25", "category": "pollution", "source": "TF1 Info", "image": "https://images.unsplash.com/photo-1663764617546-1b694b3dfc8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk4NjEyNTZ8&ixlib=rb-4.1.0&q=80&w=1080", "extrait": "Les rivières de Haute-Savoie croulent sous les montagnes de déchets. Une vidéo TF1 a documenté l'ampleur du désastre en avril 2023, mettant en lumière une pollution massive qui « déchire le cœur » des riverains et des environnementalistes. C'est un problème qui touche directement la qualité de vie l", "url": "/breves/2026-05-25-rivieres-de-haute-savoie-un-desastre-de-dechets/"}];
+(function(){
+  afficherBreve(BREVES_DATA[0]||null);
+  afficherFil(BREVES_DATA.slice(1,5));
+  const el=document.getElementById('stat-signalements');
+  if(el) el.textContent=BREVES_DATA.length;
+  setTimeout(()=>{ if(typeof initCartePage==='function') initCartePage(BREVES_DATA); }, 400);
+})();
 
 // Filtres nav depuis fil.html?cat=...
 document.querySelectorAll('nav a[href^="fil.html?cat"]').forEach(a => {
