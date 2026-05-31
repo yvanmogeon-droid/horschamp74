@@ -2,9 +2,15 @@ const axios = require('axios');
 const xml2js = require('xml2js');
 
 const RSS_URLS = [
-  'https://news.google.com/rss/search?q=Haute-Savoie+pollution+déchets+animaux&hl=fr&gl=FR&ceid=FR:fr',
-  'https://news.google.com/rss/search?q=Haute-Savoie+nature+montagne+environnement&hl=fr&gl=FR&ceid=FR:fr',
-  'https://news.google.com/rss/search?q=Haute-Savoie&hl=fr&gl=FR&ceid=FR:fr',
+  // Sujets variés en requêtes séparées pour éviter qu'un seul sujet domine le flux
+  'https://news.google.com/rss/search?q=Haute-Savoie+animaux&hl=fr&gl=FR&ceid=FR:fr',
+  'https://news.google.com/rss/search?q=Haute-Savoie+montagne+sentier&hl=fr&gl=FR&ceid=FR:fr',
+  'https://news.google.com/rss/search?q=Haute-Savoie+rivière+lac&hl=fr&gl=FR&ceid=FR:fr',
+  'https://news.google.com/rss/search?q=Haute-Savoie+déchets+propreté&hl=fr&gl=FR&ceid=FR:fr',
+  'https://news.google.com/rss/search?q=Haute-Savoie+forêt+biodiversité&hl=fr&gl=FR&ceid=FR:fr',
+  'https://news.google.com/rss/search?q=Haute-Savoie+agriculture+alpage&hl=fr&gl=FR&ceid=FR:fr',
+  'https://news.google.com/rss/search?q=Annecy+OR+Chamonix+OR+Thonon+environnement&hl=fr&gl=FR&ceid=FR:fr',
+  'https://news.google.com/rss/search?q=Haute-Savoie+initiative+OR+solidarité+OR+bénévole&hl=fr&gl=FR&ceid=FR:fr',
 ];
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
@@ -51,7 +57,8 @@ où <numéro> est le numéro de l'article choisi. Pas d'autre texte sur cette li
 // ─── fetchRSS ─────────────────────────────────────────────────────────────────
 async function fetchRSS() {
   console.log('📡 Récupération des flux RSS Google News...');
-  let allItems = [];
+  // On récupère chaque flux séparément pour pouvoir les entrelacer ensuite
+  const fluxParSource = [];
   for (const url of RSS_URLS) {
     try {
       const response = await axios.get(url, {
@@ -61,9 +68,19 @@ async function fetchRSS() {
       const parser = new xml2js.Parser();
       const result = await parser.parseStringPromise(response.data);
       const items = result.rss.channel[0].item || [];
-      allItems = allItems.concat(items);
+      fluxParSource.push(items.slice(0, 6)); // max 6 par thème
     } catch (e) {
       console.log('⚠️ Flux ignoré :', url, e.message);
+      fluxParSource.push([]);
+    }
+  }
+  // Entrelacement round-robin : 1er de chaque flux, puis 2e de chaque flux, etc.
+  // Garantit que tous les thèmes sont représentés, pas seulement le premier.
+  let allItems = [];
+  const maxLen = Math.max(0, ...fluxParSource.map(f => f.length));
+  for (let i = 0; i < maxLen; i++) {
+    for (const flux of fluxParSource) {
+      if (flux[i]) allItems.push(flux[i]);
     }
   }
   const seen = new Set();
@@ -73,8 +90,8 @@ async function fetchRSS() {
     seen.add(titre);
     return true;
   });
-  console.log(`✅ ${allItems.length} articles récupérés au total`);
-  return allItems.slice(0, 20).map(item => {
+  console.log(`✅ ${allItems.length} articles récupérés au total (${fluxParSource.length} sources entrelacées)`);
+  return allItems.slice(0, 24).map(item => {
     let image = '';
     const mediaContent = item['media:content'];
     const mediaThumbnail = item['media:thumbnail'];
