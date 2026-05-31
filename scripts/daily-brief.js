@@ -90,12 +90,33 @@ async function fetchRSS() {
   });
 }
 
+// ─── fetchBrevesPubliees ───────────────────────────────────────────────────────
+async function fetchBrevesPubliees() {
+  try {
+    const url = `https://raw.githubusercontent.com/${GITHUB_REPO}/main/breves.json?t=${Date.now()}`;
+    const res = await axios.get(url, { timeout: 15000 });
+    const breves = Array.isArray(res.data) ? res.data : JSON.parse(res.data);
+    // On garde les 8 dernières pour le contexte anti-répétition
+    return breves.slice(0, 8).map(b => ({ titre: b.titre || '', extrait: b.extrait || '' }));
+  } catch (e) {
+    console.log('⚠️ Impossible de lire les brèves publiées :', e.message);
+    return [];
+  }
+}
+
 // ─── buildUserMessage ─────────────────────────────────────────────────────────
-function buildUserMessage(articles) {
+function buildUserMessage(articles, dejaPublie) {
   const articlesText = articles.map((a, i) =>
     `--- Article ${i + 1} ---\nTitre : ${a.titre}\nDate : ${a.date}\nDescription : ${a.description}\nLien : ${a.lien}`
   ).join('\n\n');
-  return `Voici les articles du flux RSS Hors Champ 74 de ce matin :\n\n${articlesText}`;
+
+  let histo = '';
+  if (dejaPublie && dejaPublie.length) {
+    const liste = dejaPublie.map((b, i) => `${i + 1}. ${b.titre} — ${b.extrait}`).join('\n');
+    histo = `\n\n=== DÉJÀ PUBLIÉ CES DERNIERS JOURS (À NE PAS REPRENDRE) ===\n${liste}\n=== FIN DÉJÀ PUBLIÉ ===\n\nRÈGLE ABSOLUE : choisis un article dont le SUJET est différent de tout ce qui est listé ci-dessus. Même lieu OK, mais l'angle et le fait doivent être nouveaux. Si TOUS les articles du flux redisent un sujet déjà publié ci-dessus, réponds UNIQUEMENT : AUCUN SUJET.`;
+  }
+
+  return `Voici les articles du flux RSS Hors Champ 74 de ce matin :\n\n${articlesText}${histo}`;
 }
 
 // ─── callClaude ───────────────────────────────────────────────────────────────
@@ -337,7 +358,10 @@ async function main() {
     const articles = await fetchRSS();
     if (articles.length === 0) { console.log('⚠️ Flux RSS vide — arrêt.'); process.exit(0); }
 
-    const userMessage = buildUserMessage(articles);
+    const dejaPublie = await fetchBrevesPubliees();
+    console.log(`📚 ${dejaPublie.length} brèves déjà publiées chargées (anti-répétition)`);
+
+    const userMessage = buildUserMessage(articles, dejaPublie);
     const texteRaw = await callClaude(userMessage);
 
     if (texteRaw.toUpperCase().includes('AUCUN SUJET')) {
