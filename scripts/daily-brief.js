@@ -307,6 +307,7 @@ async function publishToSite(breve, category, source, image, lieu) {
   const nouvelleEntree = {
     titre, slug, date: dateISO, datePrefix, category,
     source: source || '', image: image || '', extrait,
+    lieu: lieu || '',
     url: `/breves/${slug}/`,
   };
 
