@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
 <title>Hors Champ 74 — Haute-Savoie, sans filtre</title>
 <meta name="description" content="Le média local sur ce que personne ne traite en Haute-Savoie. Pollution. Déchets. Animaux. Sans filtre.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,6 +66,15 @@ header {
   color: var(--encre);
   letter-spacing: -0.3px;
 }
+.hero-illu {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 36px;
+  border-radius: 10px;
+  border: 1px solid var(--bordure);
+}
+.h-logo img { height: 38px; width: 38px; object-fit: cover; border-radius: 3px; }
 .h-logo span em { font-style: normal; color: var(--rouge); }
 nav { display: flex; align-items: center; gap: 24px; }
 nav a {
@@ -539,6 +551,7 @@ footer {
 
 <header>
   <a href="index.html" class="h-logo">
+    <img src="assets/logo-160.jpg" alt="Hors Champ 74"/>
     <span>HORS <em>CHAMP</em> 74</span>
   </a>
   <nav>
@@ -553,6 +566,7 @@ footer {
 <!-- HERO -->
 <section style="border-bottom:1px solid var(--bordure)">
   <div class="hero-inner fade-in">
+    <img src="assets/logo-600.jpg" alt="Hors Champ 74 — la nature dans le cadre, les dégradations hors champ" class="hero-illu"/>
     <div class="hero-eyebrow">
       <span class="hero-dot"></span>
       <span class="hero-tag">Haute-Savoie · depuis 2026</span>
