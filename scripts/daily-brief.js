@@ -122,12 +122,38 @@ async function fetchBrevesPubliees() {
     const url = `https://raw.githubusercontent.com/${GITHUB_REPO}/main/breves.json?t=${Date.now()}`;
     const res = await axios.get(url, { timeout: 15000 });
     const breves = Array.isArray(res.data) ? res.data : JSON.parse(res.data);
-    // On garde les 8 dernières pour le contexte anti-répétition
-    return breves.slice(0, 8).map(b => ({ titre: b.titre || '', extrait: b.extrait || '' }));
+    // On garde les 15 dernières pour le contexte anti-répétition
+    return breves.slice(0, 15).map(b => ({ titre: b.titre || '', extrait: b.extrait || '' }));
   } catch (e) {
     console.log('⚠️ Impossible de lire les brèves publiées :', e.message);
     return [];
   }
+}
+
+// ─── Anti-doublon déterministe (le modèle ne voit jamais les sujets déjà traités) ──
+const MOTS_VIDES = new Set(['dans','pour','avec','plus','leur','leurs','cette','sont','tout','tous','toute','toutes','apres','avant','chez','sans','sous','entre','vers','elle','elles','nous','vous','mais','donc','alors','aussi','comme','etre','fait','faire','deux','trois','haute','savoie','auvergne','rhone','alpes','france','region','annecy']);
+function jetons(s) {
+  return new Set(String(s).toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .split(' ')
+    .filter(w => w.length >= 5 && !MOTS_VIDES.has(w)));
+}
+function filtrerDoublons(articles, dejaPublie) {
+  const refs = dejaPublie.map((b, i) => ({ set: jetons(b.titre + ' ' + b.extrait), recente: i < 5 }));
+  return articles.filter(a => {
+    const t = jetons(a.titre + ' ' + a.description);
+    for (const r of refs) {
+      let commun = 0;
+      for (const w of t) if (r.set.has(w)) commun++;
+      // ≥3 mots significatifs en commun = même sujet ; ≥2 si la brève a moins de ~5 jours
+      if (commun >= 3 || (commun >= 2 && r.recente)) {
+        console.log(`🚫 Doublon écarté : ${(a.titre || '').slice(0, 70)}`);
+        return false;
+      }
+    }
+    return true;
+  });
 }
 
 // ─── buildUserMessage ─────────────────────────────────────────────────────────
@@ -388,7 +414,11 @@ async function main() {
     const dejaPublie = await fetchBrevesPubliees();
     console.log(`📚 ${dejaPublie.length} brèves déjà publiées chargées (anti-répétition)`);
 
-    const userMessage = buildUserMessage(articles, dejaPublie);
+    const candidats = filtrerDoublons(articles, dejaPublie);
+    console.log(`🧹 Anti-doublon : ${articles.length - candidats.length} article(s) écarté(s), ${candidats.length} restant(s)`);
+    if (candidats.length === 0) { console.log('ℹ️ Tous les articles redisent du déjà-publié — arrêt propre.'); process.exit(0); }
+
+    const userMessage = buildUserMessage(candidats, dejaPublie);
     const texteRaw = await callClaude(userMessage);
 
     if (texteRaw.toUpperCase().includes('AUCUN SUJET')) {
