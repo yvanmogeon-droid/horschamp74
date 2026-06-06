@@ -11,6 +11,15 @@ const RSS_URLS = [
   'https://news.google.com/rss/search?q=Haute-Savoie+agriculture+alpage&hl=fr&gl=FR&ceid=FR:fr',
   'https://news.google.com/rss/search?q=Annecy+OR+Chamonix+OR+Thonon+environnement&hl=fr&gl=FR&ceid=FR:fr',
   'https://news.google.com/rss/search?q=Haute-Savoie+initiative+OR+solidarité+OR+bénévole&hl=fr&gl=FR&ceid=FR:fr',
+  // ── Extension AURA + nouvelles rubriques (décision 04/06/2026) ──
+  'https://news.google.com/rss/search?q=Léman+OR+Annecy+OR+Bourget+lac+eau&hl=fr&gl=FR&ceid=FR:fr',
+  'https://news.google.com/rss/search?q=Auvergne-Rhône-Alpes+eau+sécheresse+OR+nappe&hl=fr&gl=FR&ceid=FR:fr',
+  'https://news.google.com/rss/search?q=Auvergne-Rhône-Alpes+énergie+barrage+OR+hydrogène+OR+solaire&hl=fr&gl=FR&ceid=FR:fr',
+  'https://news.google.com/rss/search?q=Alpes+glacier+OR+climat+OR+enneigement&hl=fr&gl=FR&ceid=FR:fr',
+  'https://news.google.com/rss/search?q=Auvergne-Rhône-Alpes+intelligence+artificielle+OR+data+center&hl=fr&gl=FR&ceid=FR:fr',
+  'https://news.google.com/rss/search?q=Léman+Express+OR+frontaliers+transport&hl=fr&gl=FR&ceid=FR:fr',
+  'https://news.google.com/rss/search?q=Auvergne-Rhône-Alpes+train+OR+vélo+OR+covoiturage&hl=fr&gl=FR&ceid=FR:fr',
+  'https://news.google.com/rss/search?q=Savoie+OR+Isère+OR+Ain+environnement+OR+pollution&hl=fr&gl=FR&ceid=FR:fr',
 ];
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
@@ -20,9 +29,9 @@ const GITHUB_REPO = 'yvanmogeon-droid/horschamp74';
 const DESTINATAIRE = 'yvan.mogeon@gmail.com';
 const EXPEDITEUR = 'onboarding@resend.dev';
 
-const PROMPT_REDACTIONNEL = `Tu es le rédacteur du média local 'Hors Champ 74' en Haute-Savoie. Ton ton est direct, piquant, détaché, jamais complaisant, jamais moralisateur. Tu écris pour des gens du coin, pas pour des élus.
+const PROMPT_REDACTIONNEL = `Tu es le rédacteur du média local 'Hors Champ 74'. Son territoire : la région Auvergne-Rhône-Alpes, regardée depuis la Haute-Savoie — « La région, vue du 74 ». Ton ton est direct, piquant, détaché, jamais complaisant, jamais moralisateur. Tu écris pour des gens du coin, pas pour des élus.
 
-MISSION : Parcours ce flux et trouve UN article qui touche à l'un de ces sujets larges en Haute-Savoie : environnement, nature, montagne, faune, pollution, déchets, propreté, recyclage, animaux, eau, rivières, forêts, agriculture, biodiversité, météo, ou tout sujet touchant au vivant et au territoire. Sois généreux : un fait divers impliquant un animal, une décision de mairie sur la propreté, un événement nature, un sentier dégradé, une espèce observée, une rivière surveillée — tout ça compte. Si vraiment RIEN ne touche à ces thèmes, réponds UNIQUEMENT : AUCUN SUJET.
+MISSION : Parcours ce flux et trouve UN article qui touche à l'un de ces sujets larges en Auvergne-Rhône-Alpes — à pertinence égale, priorité à la Haute-Savoie et aux Pays de Savoie : environnement, nature, montagne, faune, pollution, déchets, propreté, recyclage, animaux, rivières, forêts, agriculture, biodiversité, météo ; eau (lacs, Léman, nappes, sécheresse, neige artificielle) ; énergie et climat (barrages, hydrogène, solaire, glaciers, rénovation) ; technologies et IA UNIQUEMENT quand elles touchent le territoire (capteurs environnementaux, data centers et leur consommation d'eau ou d'énergie, IA de prévision montagne, startups locales — jamais de tech hors-sol ou d'actu produit mondiale) ; mobilité (Léman Express, frontaliers, trains, vélo, covoiturage) ; ou tout sujet touchant au vivant et au territoire. Sois généreux : un fait divers impliquant un animal, une décision de mairie sur la propreté, un événement nature, un sentier dégradé, une espèce observée, une rivière surveillée — tout ça compte. Si vraiment RIEN ne touche à ces thèmes, réponds UNIQUEMENT : AUCUN SUJET.
 
 SINON, rédige une brève dans cette structure exacte :
 
@@ -38,7 +47,7 @@ Total : 120 à 150 mots. Pas de commentaire avant ou après la brève.
 
 RUBRIQUE : À la toute fin de ta réponse, après la brève, ajoute une ligne exactement ainsi :
 RUBRIQUE: <mot>
-où <mot> est obligatoirement l'un de ces six choix : pollution | dechets | animaux | good-news | montagne | curieux
+où <mot> est obligatoirement l'un de ces dix choix : pollution | dechets | animaux | good-news | montagne | curieux | eau | energie | tech-ia | mobilite
 Choisis la rubrique la plus pertinente. Pas d'autre texte sur cette ligne.
 
 SOURCE : À la toute fin, après RUBRIQUE, ajoute une ligne exactement ainsi :
@@ -49,7 +58,7 @@ IMAGE_QUERY: <termes>
 où <termes> est une courte requête en anglais (3-5 mots) pour trouver une photo illustrant la brève sur Unsplash. Ex: "river pollution mountain", "wild animal rescue", "forest trail hiking". Pas d'autre texte sur cette ligne.
 
 LIEU: <commune>
-où <commune> est le nom exact de la commune ou du secteur géographique mentionné dans la brève (ex: Bonneville, Cluses, Annecy, Vallée de l'Arve). Si aucun lieu précis, écrire: Haute-Savoie. Pas d'autre texte sur cette ligne.
+où <commune> est le nom exact de la commune ou du secteur géographique mentionné dans la brève (ex: Bonneville, Cluses, Annecy, Vallée de l'Arve). Si aucun lieu précis, écrire le département concerné, sinon: Auvergne-Rhône-Alpes. Pas d'autre texte sur cette ligne.
 
 ARTICLE: <numéro>
 où <numéro> est le numéro de l'article choisi. Pas d'autre texte sur cette ligne.`;
