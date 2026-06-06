@@ -1,0 +1,68 @@
+name: ✍️ Publier une brève (manuelle)
+
+on:
+  workflow_dispatch:
+    inputs:
+      titre:
+        description: 'Titre de la brève (sera mis en MAJUSCULES)'
+        required: true
+        type: string
+      texte:
+        description: 'Texte — sépare les paragraphes par une barre |'
+        required: true
+        type: string
+      rubrique:
+        description: 'Rubrique'
+        required: true
+        type: choice
+        options:
+          - pollution
+          - dechets
+          - animaux
+          - good-news
+          - montagne
+          - curieux
+          - eau
+          - energie
+          - tech-ia
+          - mobilite
+      lieu:
+        description: 'Commune ou secteur (optionnel — alimente la carte)'
+        required: false
+        type: string
+      source:
+        description: 'Source'
+        required: false
+        default: 'Hors Champ 74'
+        type: string
+      image_url:
+        description: "URL d'une image (optionnel)"
+        required: false
+        type: string
+
+jobs:
+  publier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install axios
+
+      - name: Publier la brève
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+          TITRE: ${{ inputs.titre }}
+          TEXTE: ${{ inputs.texte }}
+          RUBRIQUE: ${{ inputs.rubrique }}
+          LIEU: ${{ inputs.lieu }}
+          SOURCE: ${{ inputs.source }}
+          IMAGE_URL: ${{ inputs.image_url }}
+        run: node scripts/breve-manuelle.js
