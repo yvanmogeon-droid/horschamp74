@@ -139,6 +139,10 @@ nav a:hover, nav a.actif { color: var(--rouge); }
 .t-good-news { color: #2d6a4f; }
 .t-montagne { color: #3a5f8a; }
 .t-curieux { color: #7a5c8a; }
+.t-eau { color: #1d7a9c; }
+.t-energie { color: #c2701e; }
+.t-tech-ia { color: #5a5fa8; }
+.t-mobilite { color: #8a4a4a; }
 .art-titre { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; line-height: 1.22; margin-bottom: 10px; color: var(--noir); }
 .art-extrait { font-size: 13px; color: var(--gris); line-height: 1.65; margin-bottom: 14px; }
 .art-lire { font-size: 11px; font-weight: 500; color: var(--rouge); text-decoration: none; display: inline-flex; align-items: center; gap: 7px; transition: gap 0.2s; }
@@ -207,6 +211,10 @@ footer a { color: var(--rouge); text-decoration: none; font-size: 11px; }
         <button class="filtre" data-cat="good-news">Good News</button>
         <button class="filtre" data-cat="montagne">Montagne & Nature</button>
         <button class="filtre" data-cat="curieux">Curieux</button>
+        <button class="filtre" data-cat="eau">Eau</button>
+        <button class="filtre" data-cat="energie">Énergie & climat</button>
+        <button class="filtre" data-cat="tech-ia">Tech & IA</button>
+        <button class="filtre" data-cat="mobilite">Mobilité</button>
       </div>
     </div>
   </div>
@@ -247,6 +255,10 @@ const LABELS = {
   'good-news': 'Good News',
   montagne: 'Montagne & Nature',
   curieux: 'Curieux',
+  eau: 'Eau',
+  energie: 'Énergie & climat',
+  'tech-ia': 'Tech & IA',
+  mobilite: 'Mobilité',
 };
 
 function formatDate(dateStr) {
