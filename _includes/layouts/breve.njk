@@ -206,13 +206,17 @@ footer a {
     {{ content | safe }}
   </div>
 
-  <a href="/fil.html" class="back-link">← Retour au fil</a>
-</article>
-
-<footer>
-  <p>HORS CHAMP 74 · Haute-Savoie · 2026</p>
-  <p><a href="/">horschamp74.fr</a></p>
-</footer>
-
-</body>
-</html>
+  <!-- Réactions des lecteurs (Cusdis — modérées avant publication) -->
+  <section style="margin-top:56px;padding-top:32px;border-top:1px solid #e5ded2">
+    <h2 style="font-family:'Playfair Display',serif;font-size:24px;margin-bottom:6px">Réagir</h2>
+    <p style="font-size:13px;color:#8a8378;margin-bottom:20px">Pas besoin de compte. Les réactions sont relues avant publication.</p>
+    <div id="cusdis_thread"
+      data-host="https://cusdis.com"
+      data-app-id="e4e3d434-5dc7-455a-9414-090db3cc2159"
+      data-page-id="{{ page.fileSlug }}"
+      data-page-url="https://horschamp74.fr{{ page.url }}"
+      data-page-title="{{ title }}"
+    ></div>
+    <script defer src="https://cusdis.com/js/widget/lang/fr.js"></script>
+    <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+  </section>
