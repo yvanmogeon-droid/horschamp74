@@ -760,6 +760,19 @@ function afficherFil(breves) {
   }).join('');
 }
 
+// Chargement depuis breves.json (pas d'appel API GitHub)
+fetch('breves.json?v=' + Date.now())
+  .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+  .then(data => {
+    afficherBreve(data[0] || null);
+    afficherFil(data.slice(1, 5));
+  })
+  .catch(err => {
+    console.error('Erreur chargement brèves:', err);
+    document.getElementById('breve-contenu').innerHTML =
+      '<div class="no-articles">Impossible de charger les brèves.</div>';
+    document.getElementById('fil-contenu').innerHTML = '';
+  });
 </script>
 </body>
 </html>
