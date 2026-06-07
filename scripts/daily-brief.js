@@ -43,7 +43,8 @@ Deuxième paragraphe : pourquoi c'est intéressant ou important pour les habitan
 
 Chute : une question ou une observation piquante. 1 phrase.
 
-Total : 120 à 150 mots. Pas de commentaire avant ou après la brève.
+Troisième paragraphe (optionnel) : le contexte, l'historique ou la suite attendue, si l'article source le permet. Maximum 3 phrases. Ne jamais inventer pour remplir.
+Total : 180 à 250 mots. Pas de commentaire avant ou après la brève.
 
 RUBRIQUE : À la toute fin de ta réponse, après la brève, ajoute une ligne exactement ainsi :
 RUBRIQUE: <mot>
