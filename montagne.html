@@ -425,7 +425,6 @@ footer { background: var(--encre); border-top: 1px solid rgba(255,255,255,0.08);
   </a>
   <nav>
     <a href="fil.html">Le fil</a>
-    <a href="#">La carte</a>
     <a href="coupgueule.html">Coup de gueule</a>
     <a href="https://tally.so/r/68AXVY" target="_blank" class="nav-btn">Signaler →</a>
   </nav>
@@ -435,19 +434,29 @@ footer { background: var(--encre); border-top: 1px solid rgba(255,255,255,0.08);
     <h1 class="page-titre">Montagne & Nature</h1>
     <p class="page-sous">La beauté du territoire. La faune, la flore, les paysages de Haute-Savoie qu'on veut préserver.</p>
     
-    <div class="article">
-      <div class="art-meta"><span class="art-date">Jeudi 8 Mai</span><span class="art-tag" style="color:#1a6b5a">Montagne & Nature</span></div>
-      <h3 class="art-titre">Le retour du gypaète barbu sur les crêtes du Bargy</h3>
-      <p class="art-extrait">Disparu depuis 150 ans, il a été aperçu deux fois ce printemps. Le plus grand oiseau des Alpes est de retour chez lui.</p>
-      <a href="#" class="art-lire">Lire →</a>
-    </div>
-    <div class="article">
-      <div class="art-meta"><span class="art-date">Lundi 5 Mai</span><span class="art-tag" style="color:#1a6b5a">Montagne & Nature</span></div>
-      <h3 class="art-titre">La gentiane jaune fleurit 3 semaines plus tôt qu'en 2010</h3>
-      <p class="art-extrait">Les botanistes du Conservatoire botanique alpin l'ont noté. Le calendrier de la montagne change.</p>
-      <a href="#" class="art-lire">Lire →</a>
-    </div>
-
+    <div id="liste-breves"><p style="color:var(--gris-clair);font-style:italic;font-size:14px">Chargement…</p></div>
+<script>
+fetch('breves.json?v=' + Date.now())
+  .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+  .then(function(data){
+    var breves = data.filter(function(b){ return b.category === 'montagne'; });
+    var el = document.getElementById('liste-breves');
+    if (!breves.length) { el.innerHTML = '<p style="color:var(--gris-clair);font-style:italic;font-size:14px">Aucune brève Montagne & Nature pour l'instant.</p>'; return; }
+    el.innerHTML = breves.map(function(b){
+      var d = '';
+      try { d = new Date(b.date).toLocaleDateString('fr-FR', {weekday:'long', day:'numeric', month:'long'}); } catch(e) { d = b.date || ''; }
+      return '<div class="article" onclick="location.href=\'' + b.url + '\'">' +
+        '<div class="art-meta"><span class="art-date">' + d + '</span>' +
+        '<span class="art-tag" style="color:#3a5f8a">Montagne & Nature</span></div>' +
+        '<h3 class="art-titre">' + b.titre + '</h3>' +
+        '<p class="art-extrait">' + (b.extrait || '') + '</p>' +
+        '<a class="art-lire" href="' + b.url + '">Lire la brève →</a></div>';
+    }).join('');
+  })
+  .catch(function(e){
+    document.getElementById('liste-breves').innerHTML = '<p style="color:var(--gris-clair);font-style:italic;font-size:14px">Impossible de charger les brèves.</p>';
+  });
+</script>
   </div>
 </div>
 <footer>
@@ -460,8 +469,7 @@ footer { background: var(--encre); border-top: 1px solid rgba(255,255,255,0.08);
     <div class="f-col">
       <h4>Le site</h4>
       <a href="fil.html">Le fil</a>
-      <a href="#">La carte</a>
-      <a href="goodnews.html">Good news</a>
+        <a href="goodnews.html">Good news</a>
       <a href="montagne.html">Montagne & Nature</a>
       <a href="curieux.html">Le coin des curieux</a>
       <a href="coupgueule.html">Coup de gueule</a>
@@ -469,24 +477,15 @@ footer { background: var(--encre); border-top: 1px solid rgba(255,255,255,0.08);
     <div class="f-col">
       <h4>Agir</h4>
       <a href="https://tally.so/r/68AXVY" target="_blank">Signaler</a>
-      <a href="#">Venir une fois</a>
-      <a href="#">Où signaler quoi ?</a>
-      <a href="#">Pack de survie légale</a>
+      <a href="https://tally.so/r/68AXVY" target="_blank">Venir une fois</a>
     </div>
     <div class="f-col">
       <h4>À propos</h4>
-      <a href="#">Notre méthode</a>
-      <a href="#">Notre neutralité</a>
-      <a href="#">Contact</a>
-      <a href="#">Newsletter</a>
     </div>
   </div>
   <div class="footer-bottom">
     <span class="f-copy">© 2026 Hors Champ · Association en construction</span>
     <div class="f-links">
-      <a href="#">Mentions légales</a>
-      <a href="#">RGPD</a>
-      <a href="#">Charte éditoriale</a>
     </div>
   </div>
 </footer>

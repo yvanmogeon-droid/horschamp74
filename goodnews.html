@@ -425,7 +425,6 @@ footer { background: var(--encre); border-top: 1px solid rgba(255,255,255,0.08);
   </a>
   <nav>
     <a href="fil.html">Le fil</a>
-    <a href="#">La carte</a>
     <a href="coupgueule.html">Coup de gueule</a>
     <a href="https://tally.so/r/68AXVY" target="_blank" class="nav-btn">Signaler →</a>
   </nav>
@@ -435,19 +434,30 @@ footer { background: var(--encre); border-top: 1px solid rgba(255,255,255,0.08);
     <h1 class="page-titre">Good news</h1>
     <p class="page-sous">Les victoires locales. Ce qui a été résolu, nettoyé, sauvé. Parce qu'on ne parle pas que de ce qui va mal.</p>
     
-    <div class="article">
-      <div class="art-meta"><span class="art-date">Vendredi 9 Mai</span><span class="art-tag" style="color:#2d6a4f">Good news</span></div>
-      <h3 class="art-titre">Le dépôt sauvage de Scientrier nettoyé en 3 heures</h3>
-      <p class="art-extrait">4 bénévoles, une matinée, 2 tonnes de déchets en moins. La commune a fourni la benne. Preuve que ça marche.</p>
-      <a href="#" class="art-lire">Lire →</a>
-    </div>
-    <div class="article">
-      <div class="art-meta"><span class="art-date">Mardi 6 Mai</span><span class="art-tag" style="color:#2d6a4f">Good news</span></div>
-      <h3 class="art-titre">La loutre est de retour sur le Foron</h3>
-      <p class="art-extrait">Absente depuis 30 ans, elle a été filmée deux fois en avril. Signe que la qualité de l'eau s'améliore.</p>
-      <a href="#" class="art-lire">Lire →</a>
-    </div>
-    <br>
+    <div id="liste-breves"><p style="color:var(--gris-clair);font-style:italic;font-size:14px">Chargement…</p></div>
+<script>
+fetch('breves.json?v=' + Date.now())
+  .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+  .then(function(data){
+    var breves = data.filter(function(b){ return b.category === 'good-news'; });
+    var el = document.getElementById('liste-breves');
+    if (!breves.length) { el.innerHTML = '<p style="color:var(--gris-clair);font-style:italic;font-size:14px">Aucune good news publiée pour l'instant — la première arrive bientôt.</p>'; return; }
+    el.innerHTML = breves.map(function(b){
+      var d = '';
+      try { d = new Date(b.date).toLocaleDateString('fr-FR', {weekday:'long', day:'numeric', month:'long'}); } catch(e) { d = b.date || ''; }
+      return '<div class="article" onclick="location.href=\'' + b.url + '\'">' +
+        '<div class="art-meta"><span class="art-date">' + d + '</span>' +
+        '<span class="art-tag" style="color:#2d6a4f">Good news</span></div>' +
+        '<h3 class="art-titre">' + b.titre + '</h3>' +
+        '<p class="art-extrait">' + (b.extrait || '') + '</p>' +
+        '<a class="art-lire" href="' + b.url + '">Lire la brève →</a></div>';
+    }).join('');
+  })
+  .catch(function(e){
+    document.getElementById('liste-breves').innerHTML = '<p style="color:var(--gris-clair);font-style:italic;font-size:14px">Impossible de charger les brèves.</p>';
+  });
+</script>
+<br>
     <a href="https://tally.so/r/68AXVY" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:var(--rouge);color:white;padding:14px 28px;font-size:14px;font-weight:500;text-decoration:none;">Partager une bonne nouvelle →</a>
 
   </div>
@@ -462,8 +472,7 @@ footer { background: var(--encre); border-top: 1px solid rgba(255,255,255,0.08);
     <div class="f-col">
       <h4>Le site</h4>
       <a href="fil.html">Le fil</a>
-      <a href="#">La carte</a>
-      <a href="goodnews.html">Good news</a>
+        <a href="goodnews.html">Good news</a>
       <a href="montagne.html">Montagne & Nature</a>
       <a href="curieux.html">Le coin des curieux</a>
       <a href="coupgueule.html">Coup de gueule</a>
@@ -471,24 +480,15 @@ footer { background: var(--encre); border-top: 1px solid rgba(255,255,255,0.08);
     <div class="f-col">
       <h4>Agir</h4>
       <a href="https://tally.so/r/68AXVY" target="_blank">Signaler</a>
-      <a href="#">Venir une fois</a>
-      <a href="#">Où signaler quoi ?</a>
-      <a href="#">Pack de survie légale</a>
+      <a href="https://tally.so/r/68AXVY" target="_blank">Venir une fois</a>
     </div>
     <div class="f-col">
       <h4>À propos</h4>
-      <a href="#">Notre méthode</a>
-      <a href="#">Notre neutralité</a>
-      <a href="#">Contact</a>
-      <a href="#">Newsletter</a>
     </div>
   </div>
   <div class="footer-bottom">
     <span class="f-copy">© 2026 Hors Champ · Association en construction</span>
     <div class="f-links">
-      <a href="#">Mentions légales</a>
-      <a href="#">RGPD</a>
-      <a href="#">Charte éditoriale</a>
     </div>
   </div>
 </footer>
