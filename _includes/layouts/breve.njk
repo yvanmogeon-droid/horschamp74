@@ -206,6 +206,55 @@ footer a {
     {{ content | safe }}
   </div>
 
+
+  <!-- J'aime -->
+  <div style="margin-top:44px;padding-top:28px;border-top:1px solid var(--bordure);display:flex;align-items:center;gap:14px">
+    <button id="like-btn" type="button" aria-pressed="false"
+      style="display:inline-flex;align-items:center;gap:9px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.5px;color:var(--rouge);background:transparent;border:1px solid var(--rouge);border-radius:2px;padding:10px 20px;cursor:pointer;transition:background 0.2s,color 0.2s">
+      <span id="like-heart">♡</span> <span id="like-label">J'aime</span>
+    </button>
+    <span id="like-count" style="font-size:13px;color:var(--gris)"></span>
+  </div>
+  <script>
+  (function(){
+    var slug = "{{ page.url }}".replace(/[^a-zA-Z0-9-]+/g, "-").replace(/^-+|-+$/g, "");
+    var base = "https://api.counterapi.dev/v1/horschamp74/like-" + slug;
+    var key = "hc-like-" + slug;
+    var btn = document.getElementById("like-btn");
+    var heart = document.getElementById("like-heart");
+    var label = document.getElementById("like-label");
+    var countEl = document.getElementById("like-count");
+    var count = 0;
+    function isLiked(){ try { return localStorage.getItem(key) === "1"; } catch(e){ return false; } }
+    function setLiked(v){ try { v ? localStorage.setItem(key,"1") : localStorage.removeItem(key); } catch(e){} }
+    function render(){
+      var liked = isLiked();
+      heart.textContent = liked ? "\u2665" : "\u2661";
+      label.textContent = liked ? "Merci !" : "J'aime";
+      btn.setAttribute("aria-pressed", liked ? "true" : "false");
+      btn.style.background = liked ? "var(--rouge)" : "transparent";
+      btn.style.color = liked ? "#fff" : "var(--rouge)";
+      countEl.textContent = count > 0 ? (count + (count > 1 ? " personnes aiment cette br\u00e8ve" : " personne aime cette br\u00e8ve")) : "";
+    }
+    fetch(base).then(function(r){ return r.ok ? r.json() : {count:0}; })
+      .then(function(d){ count = d.count || 0; render(); })
+      .catch(function(){ render(); });
+    btn.addEventListener("click", function(){
+      var liked = isLiked();
+      var url = base + (liked ? "/down" : "/up");
+      btn.disabled = true;
+      fetch(url).then(function(r){ return r.ok ? r.json() : null; })
+        .then(function(d){
+          if (d && typeof d.count === "number") { count = d.count; }
+          else { count = Math.max(0, count + (liked ? -1 : 1)); }
+          setLiked(!liked); render();
+        })
+        .catch(function(){})
+        .then(function(){ btn.disabled = false; });
+    });
+  })();
+  </script>
+
   <!-- Réactions des lecteurs (Cusdis — modérées avant publication) -->
   <section style="margin-top:56px;padding-top:32px;border-top:1px solid #e5ded2">
     <h2 style="font-family:'Playfair Display',serif;font-size:24px;margin-bottom:6px">Réagir</h2>
@@ -220,3 +269,9 @@ footer a {
     <script defer src="https://cusdis.com/js/widget/lang/fr.js"></script>
     <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
   </section>
+
+  <a href="/fil.html" class="back-link">&larr; Toutes les br&egrave;ves</a>
+</article>
+
+</body>
+</html>
