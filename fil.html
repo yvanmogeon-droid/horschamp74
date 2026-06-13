@@ -181,6 +181,16 @@ footer a { color: var(--rouge); text-decoration: none; font-size: 11px; }
   nav { display: none; }
   .fil-hero-inner, .fil-body { padding-left: 20px; padding-right: 20px; }
 }
+
+/* — Menu mobile (hamburger) — */
+.burger{display:none;background:none;border:0;padding:6px;margin:0;font-size:26px;line-height:1;color:var(--encre);cursor:pointer}
+@media (max-width: 700px){
+  .burger{display:block}
+  header nav{position:fixed;top:58px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--creme);border-bottom:1px solid var(--bordure);padding:8px 24px 18px;box-shadow:0 10px 22px rgba(0,0,0,.08)}
+  header.nav-open nav{display:flex}
+  header nav a{padding:13px 2px;border-bottom:1px solid var(--bordure);width:100%}
+  header nav a.nav-btn{margin-top:12px;border-bottom:0;justify-content:center}
+}
 </style>
 </head>
 <body>
@@ -195,6 +205,7 @@ footer a { color: var(--rouge); text-decoration: none; font-size: 11px; }
     <a href="fil.html" class="actif">Le fil</a>
     <a href="https://tally.so/r/68AXVY" target="_blank" class="nav-btn">Signaler →</a>
   </nav>
+  <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" onclick="var h=this.closest('header');var o=h.classList.toggle('nav-open');this.setAttribute('aria-expanded',o)">&#9776;</button>
 </header>
 
 <div class="fil-page">
