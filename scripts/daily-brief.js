@@ -1,6 +1,5 @@
 const axios = require('axios');
 const xml2js = require('xml2js');
-
 const RSS_URLS = [
   // Sujets variés en requêtes séparées pour éviter qu'un seul sujet domine le flux
   'https://news.google.com/rss/search?q=Haute-Savoie+animaux&hl=fr&gl=FR&ceid=FR:fr',
@@ -28,42 +27,35 @@ const UNSPLASH_ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY;
 const GITHUB_REPO = 'yvanmogeon-droid/horschamp74';
 const DESTINATAIRE = 'yvan.mogeon@gmail.com';
 const EXPEDITEUR = 'onboarding@resend.dev';
-
-const PROMPT_REDACTIONNEL = `Tu es le rédacteur du média local 'Hors Champ 74'. Son territoire : la région Auvergne-Rhône-Alpes, regardée depuis la Haute-Savoie — « La région, vue du 74 ». Ton ton est direct, piquant, détaché, jamais complaisant, jamais moralisateur. Tu écris pour des gens du coin, pas pour des élus.
-
-MISSION : Parcours ce flux et trouve UN article qui touche à l'un de ces sujets larges en Auvergne-Rhône-Alpes — à pertinence égale, priorité à la Haute-Savoie et aux Pays de Savoie : environnement, nature, montagne, faune, pollution, déchets, propreté, recyclage, animaux, rivières, forêts, agriculture, biodiversité, météo ; eau (lacs, Léman, nappes, sécheresse, neige artificielle) ; énergie et climat (barrages, hydrogène, solaire, glaciers, rénovation) ; technologies et IA UNIQUEMENT quand elles touchent le territoire (capteurs environnementaux, data centers et leur consommation d'eau ou d'énergie, IA de prévision montagne, startups locales — jamais de tech hors-sol ou d'actu produit mondiale) ; mobilité (Léman Express, frontaliers, trains, vélo, covoiturage) ; ou tout sujet touchant au vivant et au territoire. Sois généreux : un fait divers impliquant un animal, une décision de mairie sur la propreté, un événement nature, un sentier dégradé, une espèce observée, une rivière surveillée — tout ça compte. Si vraiment RIEN ne touche à ces thèmes, réponds UNIQUEMENT : AUCUN SUJET.
-
-SINON, rédige une brève dans cette structure exacte :
-
-TITRE (en majuscules, percutant, max 10 mots)
-
-Premier paragraphe : le fait brut, où, quoi, qui. Maximum 3 phrases.
-
-Deuxième paragraphe : pourquoi c'est intéressant ou important pour les habitants. Maximum 2 phrases.
-
-Chute : une question ou une observation piquante. 1 phrase.
-
-Troisième paragraphe (optionnel) : le contexte, l'historique ou la suite attendue, si l'article source le permet. Maximum 3 phrases. Ne jamais inventer pour remplir.
-Total : 180 à 250 mots. Pas de commentaire avant ou après la brève.
-
+const PROMPT_REDACTIONNEL = `Tu es le rédacteur en chef de 'Hors Champ 74', un média local qui regarde l'Auvergne-Rhône-Alpes depuis la Haute-Savoie — « La région, vue du 74 ». Ton style : direct, vif, un brin frondeur, jamais complaisant, jamais moralisateur, jamais institutionnel. Tu écris pour les gens du coin, pas pour les élus.
+MISSION : Parcours ce flux et choisis UN article qui touche à l'un de ces sujets en Auvergne-Rhône-Alpes — à pertinence égale, priorité à la Haute-Savoie et aux Pays de Savoie : environnement, nature, montagne, faune, pollution, déchets, propreté, recyclage, animaux, rivières, forêts, agriculture, biodiversité, météo ; eau (lacs, Léman, nappes, sécheresse, neige artificielle) ; énergie et climat (barrages, hydrogène, solaire, glaciers, rénovation) ; technologies et IA UNIQUEMENT quand elles touchent le territoire (capteurs environnementaux, data centers et leur consommation d'eau ou d'énergie, IA de prévision montagne, startups locales — jamais de tech hors-sol ni d'actu produit mondiale) ; mobilité (Léman Express, frontaliers, trains, vélo, covoiturage) ; ou tout sujet touchant au vivant et au territoire. Sois généreux : un fait divers avec un animal, une décision de mairie, un sentier dégradé, une espèce observée, une rivière surveillée — tout ça compte. À pertinence égale, choisis l'article qui offre l'angle le plus singulier, pas le plus officiel. Si vraiment RIEN ne touche à ces thèmes, réponds UNIQUEMENT : AUCUN SUJET.
+LE TITRE (1re ligne, le plus important) :
+- Il doit donner envie de cliquer sans mentir. Crée une tension, une question ou une image dans la tête du lecteur.
+- Toujours du concret : un lieu précis, un chiffre, un détail surprenant, un contraste. Jamais de titre passe-partout (proscrire "Le frelon asiatique en Haute-Savoie", "La pollution inquiète").
+- Bannis les mots fades : "important", "préoccupant", "à savoir", "inquiétude", "focus", "zoom".
+- Verbe vivant, au présent. 6 à 10 mots. UNE seule idée.
+- Écris-le en MAJUSCULES. Ne donne qu'UN seul titre, ta meilleure version, jamais de variantes.
+LE CORPS — original, jamais une dépêche recopiée :
+- Ne paraphrase jamais l'agence. Cherche l'angle que les autres n'ont pas vu, le détail qu'ils ont zappé.
+- Ouvre par une accroche vivante : une scène, un chiffre fort, un détail concret. JAMAIS par "Selon...", "Ce mardi...", "À l'occasion de...".
+- Ancre dans le terrain : une commune, un témoin, une conséquence palpable pour les gens d'ici. Le fil rouge, c'est toujours « et nous, dans le coin, ça change quoi ? ».
+- Termine sur une chute qui pique : une question ou une observation qui reste en tête.
+- Bannis les transitions molles ("par ailleurs", "en effet", "il convient de", "force est de constater").
+- 180 à 250 mots. Tu peux t'écarter d'un plan rigide tant que ça reste nerveux et clair. Ne jamais inventer pour remplir : si la source ne le dit pas, tu ne le dis pas.
+- Pas de commentaire avant ni après la brève.
 RUBRIQUE : À la toute fin de ta réponse, après la brève, ajoute une ligne exactement ainsi :
 RUBRIQUE: <mot>
 où <mot> est obligatoirement l'un de ces dix choix : pollution | dechets | animaux | good-news | montagne | curieux | eau | energie | tech-ia | mobilite
 Choisis la rubrique la plus pertinente. Pas d'autre texte sur cette ligne.
-
 SOURCE : À la toute fin, après RUBRIQUE, ajoute une ligne exactement ainsi :
 SOURCE: <nom>
 où <nom> est le nom court du média source (ex: Le Dauphiné, France 3, France Bleu, Le Messager...). Pas d'autre texte sur cette ligne.
-
 IMAGE_QUERY: <termes>
 où <termes> est une courte requête en anglais (3-5 mots) pour trouver une photo illustrant la brève sur Unsplash. Ex: "river pollution mountain", "wild animal rescue", "forest trail hiking". Pas d'autre texte sur cette ligne.
-
 LIEU: <commune>
 où <commune> est le nom exact de la commune ou du secteur géographique mentionné dans la brève (ex: Bonneville, Cluses, Annecy, Vallée de l'Arve). Si aucun lieu précis, écrire le département concerné, sinon: Auvergne-Rhône-Alpes. Pas d'autre texte sur cette ligne.
-
 ARTICLE: <numéro>
 où <numéro> est le numéro de l'article choisi. Pas d'autre texte sur cette ligne.`;
-
 // ─── fetchRSS ─────────────────────────────────────────────────────────────────
 async function fetchRSS() {
   console.log('📡 Récupération des flux RSS Google News...');
@@ -116,7 +108,6 @@ async function fetchRSS() {
     };
   });
 }
-
 // ─── fetchBrevesPubliees ───────────────────────────────────────────────────────
 async function fetchBrevesPubliees() {
   try {
@@ -130,12 +121,11 @@ async function fetchBrevesPubliees() {
     return [];
   }
 }
-
 // ─── Anti-doublon déterministe (le modèle ne voit jamais les sujets déjà traités) ──
 const MOTS_VIDES = new Set(['dans','pour','avec','plus','leur','leurs','cette','sont','tout','tous','toute','toutes','apres','avant','chez','sans','sous','entre','vers','elle','elles','nous','vous','mais','donc','alors','aussi','comme','etre','fait','faire','deux','trois','haute','savoie','auvergne','rhone','alpes','france','region','annecy']);
 function jetons(s) {
   return new Set(String(s).toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
     .replace(/[^a-z0-9]+/g, ' ')
     .split(' ')
     .filter(w => w.length >= 5 && !MOTS_VIDES.has(w)));
@@ -156,29 +146,25 @@ function filtrerDoublons(articles, dejaPublie) {
     return true;
   });
 }
-
 // ─── buildUserMessage ─────────────────────────────────────────────────────────
 function buildUserMessage(articles, dejaPublie) {
   const articlesText = articles.map((a, i) =>
     `--- Article ${i + 1} ---\nTitre : ${a.titre}\nDate : ${a.date}\nDescription : ${a.description}\nLien : ${a.lien}`
   ).join('\n\n');
-
   let histo = '';
   if (dejaPublie && dejaPublie.length) {
     const liste = dejaPublie.map((b, i) => `${i + 1}. ${b.titre} — ${b.extrait}`).join('\n');
     histo = `\n\n=== DÉJÀ PUBLIÉ CES DERNIERS JOURS (À NE PAS REPRENDRE) ===\n${liste}\n=== FIN DÉJÀ PUBLIÉ ===\n\nRÈGLE ABSOLUE : choisis un article dont le SUJET est différent de tout ce qui est listé ci-dessus. Même lieu OK, mais l'angle et le fait doivent être nouveaux. Si TOUS les articles du flux redisent un sujet déjà publié ci-dessus, réponds UNIQUEMENT : AUCUN SUJET.`;
   }
-
   return `Voici les articles du flux RSS Hors Champ 74 de ce matin :\n\n${articlesText}${histo}`;
 }
-
 // ─── callClaude ───────────────────────────────────────────────────────────────
 async function callClaude(userMessage) {
-  console.log('🤖 Appel Claude Haiku...');
+  console.log('🤖 Appel Claude Sonnet...');
   const response = await axios.post(
     'https://api.anthropic.com/v1/messages',
     {
-      model: 'claude-haiku-4-5-20251001',
+      model: 'claude-sonnet-4-6',
       max_tokens: 1024,
       system: PROMPT_REDACTIONNEL,
       messages: [{ role: 'user', content: userMessage }],
@@ -196,7 +182,6 @@ async function callClaude(userMessage) {
   console.log('📝 Réponse Claude :\n' + texte);
   return texte;
 }
-
 // ─── parseBreve ───────────────────────────────────────────────────────────────
 function parseBreve(texte) {
   const lignes = texte.split('\n');
@@ -221,7 +206,6 @@ function parseBreve(texte) {
   const breve = lignesFiltrees.join('\n').trim();
   return { breve, category, source, articleIndex, imageQuery, lieu };
 }
-
 // ─── fetchUnsplashImage ───────────────────────────────────────────────────────
 async function fetchUnsplashImage(query) {
   if (!UNSPLASH_ACCESS_KEY || !query) return '';
@@ -247,7 +231,6 @@ async function fetchUnsplashImage(query) {
     return '';
   }
 }
-
 // ─── githubGet ────────────────────────────────────────────────────────────────
 async function githubGet(path) {
   try {
@@ -265,7 +248,6 @@ async function githubGet(path) {
     throw e;
   }
 }
-
 // ─── githubPut ────────────────────────────────────────────────────────────────
 async function githubPut(path, content, message, sha) {
   const body = {
@@ -282,7 +264,6 @@ async function githubPut(path, content, message, sha) {
     }
   );
 }
-
 // ─── getSlotDuJour ────────────────────────────────────────────────────────────
 async function getSlotDuJour(datePrefix) {
   const slotA = `_breves/${datePrefix}-a.md`;
@@ -294,7 +275,6 @@ async function getSlotDuJour(datePrefix) {
   console.log('⚠️ 2 brèves déjà publiées aujourd\'hui — écrasement de -b');
   return { filename: slotB, slug: `${datePrefix}-b`, sha: existB.sha };
 }
-
 // ─── publishToSite ────────────────────────────────────────────────────────────
 async function updateSignalements(slug, titre, lieu, date, url) {
   try {
@@ -311,27 +291,21 @@ async function updateSignalements(slug, titre, lieu, date, url) {
     console.log('⚠️ signalements.json non mis à jour:', e.message);
   }
 }
-
 async function publishToSite(breve, category, source, image, lieu) {
   console.log('📤 Publication de la brève...');
   const lignes = breve.split('\n').filter(l => l.trim());
   const titre = lignes[0] || 'Brève Hors Champ 74';
   const corps = lignes.slice(1).join('\n').trim();
   const extrait = corps.replace(/\n/g, ' ').slice(0, 300);
-
   const now = new Date();
   const dateISO = now.toISOString().replace('Z', '+02:00').slice(0, 19) + '.000+02:00';
   const datePrefix = now.toISOString().slice(0, 10);
-
   const { filename, slug, sha: existingSha } = await getSlotDuJour(datePrefix);
-
   const imageField = image ? `\nimage: "${image}"` : '';
   const sourceField = source ? `\nsource: "${source}"` : '';
   const contenu = `---\ntitle: "${titre}"\ndate: ${dateISO}\ncategory: ${category}${sourceField}${imageField}\n---\n\n${corps}`;
-
   await githubPut(filename, contenu, `Brève automatique du ${now.toLocaleDateString('fr-FR')}`, existingSha);
   console.log(`✅ Brève publiée : ${filename}`);
-
   // Mise à jour breves.json
   console.log('📋 Mise à jour de breves.json...');
   const existing = await githubGet('breves.json');
@@ -339,18 +313,15 @@ async function publishToSite(breve, category, source, image, lieu) {
   if (existing) {
     try { breves = JSON.parse(existing.content); } catch (e) { breves = []; }
   }
-
   const nouvelleEntree = {
     titre, slug, date: dateISO, datePrefix, category,
     source: source || '', image: image || '', extrait,
     lieu: lieu || '',
     url: `/breves/${slug}/`,
   };
-
   breves = breves.filter(b => b.slug !== slug);
   breves.unshift(nouvelleEntree);
   breves = breves.slice(0, 60);
-
   await githubPut(
     'breves.json',
     JSON.stringify(breves, null, 2),
@@ -358,10 +329,11 @@ async function publishToSite(breve, category, source, image, lieu) {
     existing?.sha
   );
   console.log('✅ breves.json mis à jour');
-
-  return { slug, datePrefix, titre, corps };
+  // FIX : on retourne dateISO et titre pour que main() les passe correctement
+  // à updateSignalements (avant, main destructurait dateISO/titreBreve qui
+  // n'existaient pas → titre et date vides dans signalements.json).
+  return { slug, datePrefix, titre, corps, dateISO };
 }
-
 // ─── sendEmail ────────────────────────────────────────────────────────────────
 async function sendEmail(breve, image, slug) {
   console.log('📧 Envoi du mail via Resend...');
@@ -373,7 +345,6 @@ async function sendEmail(breve, image, slug) {
   const imageBlock = image
     ? `<img src="${image}" alt="" style="width:100%; max-height:280px; object-fit:cover; border-radius:4px; margin-bottom:20px;">`
     : '';
-
   const htmlBody = `
   <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; padding: 24px; background:#faf7f2;">
     <div style="border-left: 3px solid #C4522A; padding-left: 16px; margin-bottom: 24px;">
@@ -388,7 +359,6 @@ async function sendEmail(breve, image, slug) {
     <hr style="border: none; border-top: 1px solid #ddd5c8; margin: 32px 0 16px;">
     <small style="color: #c8c0b4; font-size:11px;">horschamp74.fr — Haute-Savoie, sans filtre</small>
   </div>`;
-
   await axios.post(
     'https://api.resend.com/emails',
     {
@@ -405,30 +375,23 @@ async function sendEmail(breve, image, slug) {
   );
   console.log('✅ Mail envoyé');
 }
-
 // ─── main ─────────────────────────────────────────────────────────────────────
 async function main() {
   try {
     const articles = await fetchRSS();
     if (articles.length === 0) { console.log('⚠️ Flux RSS vide — arrêt.'); process.exit(0); }
-
     const dejaPublie = await fetchBrevesPubliees();
     console.log(`📚 ${dejaPublie.length} brèves déjà publiées chargées (anti-répétition)`);
-
     const candidats = filtrerDoublons(articles, dejaPublie);
     console.log(`🧹 Anti-doublon : ${articles.length - candidats.length} article(s) écarté(s), ${candidats.length} restant(s)`);
     if (candidats.length === 0) { console.log('ℹ️ Tous les articles redisent du déjà-publié — arrêt propre.'); process.exit(0); }
-
     const userMessage = buildUserMessage(candidats, dejaPublie);
     const texteRaw = await callClaude(userMessage);
-
     if (texteRaw.toUpperCase().includes('AUCUN SUJET')) {
       console.log('ℹ️ Claude : AUCUN SUJET — arrêt.');
       process.exit(0);
     }
-
     const { breve, category, source, articleIndex, imageQuery, lieu } = parseBreve(texteRaw);
-
     // Image : 1) RSS si disponible, 2) Unsplash avec la query de Claude, 3) vide
     let image = '';
     const articleChoisi = articleIndex >= 0 ? articles[articleIndex] : articles.find(a => a.image);
@@ -446,9 +409,10 @@ async function main() {
         }
       }
     }
-
-    const { slug, dateISO, titreBreve } = await publishToSite(breve, category, source, image, lieu);
-    await updateSignalements(slug, titreBreve, lieu, dateISO, `/breves/${slug}/`);
+    // FIX : on destructure les noms réellement retournés par publishToSite
+    // (slug, titre, dateISO) au lieu de slug/dateISO/titreBreve (undefined).
+    const { slug, titre, dateISO } = await publishToSite(breve, category, source, image, lieu);
+    await updateSignalements(slug, titre, lieu, dateISO, `/breves/${slug}/`);
     await sendEmail(breve, image, slug);
     console.log('🎉 Workflow terminé avec succès.');
   } catch (err) {
@@ -456,5 +420,4 @@ async function main() {
     process.exit(1);
   }
 }
-
 main();
