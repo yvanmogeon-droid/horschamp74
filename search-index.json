@@ -1,0 +1,101 @@
+[{
+"title": "La pierre plantée dans la forêt",
+"question": "Que signifie cette marque ?",
+"category": "Marque",
+"status": "ACTIVE",
+"statusLabel": "En cours",
+"coldCase": false,
+"location": "",
+"tags": ["borne","frontiere","savoie","gravure"],
+"url": "/enquete/borne-frontiere-sarde/"
+},{
+"title": "Le désert lunaire face au Mont-Blanc",
+"question": "Qu'est-ce que c'est ?",
+"category": "Phénomène",
+"status": "ACTIVE",
+"statusLabel": "En cours",
+"coldCase": false,
+"location": "",
+"tags": ["lapiaz","calcaire","fossiles","plate"],
+"url": "/enquete/desert-de-plate/"
+},{
+"title": "Les pas gravés dans la dalle, à 2 400 m",
+"question": "Qu'est-ce qui s'est passé ici ?",
+"category": "Scène",
+"status": "ACTIVE",
+"statusLabel": "En cours",
+"coldCase": false,
+"location": "",
+"tags": ["empreintes","trias","dalle","emosson"],
+"url": "/enquete/empreintes-vieux-emosson/"
+},{
+"title": "La forteresse qui n'a jamais tiré un coup de canon",
+"question": "Qu'est-ce que cette ruine ?",
+"category": "Structure",
+"status": "ACTIVE",
+"statusLabel": "En cours",
+"coldCase": false,
+"location": "",
+"tags": ["forts","esseillon","maurienne","sardaigne"],
+"url": "/enquete/barriere-esseillon/"
+},{
+"title": "Le « four » caché dans la falaise du Mont-Blanc",
+"question": "Qu'est-ce que c'est ?",
+"category": "Phénomène",
+"status": "ACTIVE",
+"statusLabel": "En cours",
+"coldCase": false,
+"location": "",
+"tags": ["cristaux","quartz","cristalliers","mont-blanc"],
+"url": "/enquete/four-cristaux-mont-blanc/"
+},{
+"title": "L'oiseau de 3 mètres qui mange des os",
+"question": "Qu'est-ce que c'est ?",
+"category": "Phénomène",
+"status": "ACTIVE",
+"statusLabel": "En cours",
+"coldCase": false,
+"location": "",
+"tags": ["rapace","gypaete","faune","alpes"],
+"url": "/enquete/gypaete-barbu-bargy/"
+},{
+"title": "Pourquoi cette petite ville a fabriqué des montres",
+"question": "Qu'est-ce qui s'est passé ici ?",
+"category": "Scène",
+"status": "ACTIVE",
+"statusLabel": "En cours",
+"coldCase": false,
+"location": "",
+"tags": ["cluses","horlogerie","decolletage","industrie"],
+"url": "/enquete/ecole-horlogerie-cluses/"
+},{
+"title": "Le nom qui veut dire « fermé »",
+"question": "Où est-ce ?",
+"category": "Lieu",
+"status": "ACTIVE",
+"statusLabel": "En cours",
+"coldCase": false,
+"location": "",
+"tags": ["cluses","toponymie","arve"],
+"url": "/enquete/nom-cluses-clusa/"
+},{
+"title": "Les trous parfaitement ronds dans la roche du torrent",
+"question": "Qu'est-ce que c'est ?",
+"category": "Phénomène",
+"status": "ACTIVE",
+"statusLabel": "En cours",
+"coldCase": false,
+"location": "",
+"tags": ["torrent","erosion","giffre"],
+"url": "/enquete/marmites-de-geants-tines/"
+},{
+"title": "Les creux ronds au sommet du gros rocher",
+"question": "Qu'est-ce que c'est ?",
+"category": "Phénomène",
+"status": "ACTIVE",
+"statusLabel": "En cours",
+"coldCase": false,
+"location": "",
+"tags": ["rocher","cupules","prehistoire"],
+"url": "/enquete/pierre-du-diable-cupules/"
+}]

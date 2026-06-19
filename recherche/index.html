@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recherche — Astrolabis</title>
+
+  
+  
+  
+  
+  <meta name="description" content="Astrolabis — la mémoire du réel. Une bibliothèque vivante de mystères réels, documentés et résolus.">
+  <meta property="og:title" content="Recherche">
+  <meta property="og:description" content="Astrolabis — la mémoire du réel. Une bibliothèque vivante de mystères réels, documentés et résolus.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://yvanmogeon-droid.github.io/astrolabis/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#B85C00">
+
+  <link rel="icon" href="/astrolabis/assets/favicon-32.png" sizes="32x32">
+  <link rel="icon" href="/astrolabis/assets/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/astrolabis/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/astrolabis/assets/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/astrolabis/assets/css/astrolabis.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="/astrolabis/"><img class="logo-mark" src="/astrolabis/assets/logo-medallion.png" alt="" width="40" height="40"><span>Astrolabis</span></a>
+    <nav class="site-nav" aria-label="Principale">
+      <a href="/astrolabis/enquetes/">Les enquêtes</a>
+      <a href="/astrolabis/cold-cases/">Cold cases</a>
+      <a href="/astrolabis/resolutions/">Résolutions</a>
+      <a href="/astrolabis/deposer/">Déposer</a>
+    </nav>
+    <form action="/astrolabis/recherche/" method="get" role="search">
+      <input type="search" name="q" placeholder="Quelqu'un a déjà rencontré ça ?" aria-label="Rechercher une enquête">
+    </form>
+  </header>
+
+  <main>
+    <section class="wrap" style="padding-top:40px;">
+  <h1 class="section-titre" style="margin-top:0;">Quelqu'un a déjà rencontré ça ?</h1>
+  <p style="color:var(--texte-doux);">La recherche est la porte d'entrée d'Astrolabis : on vérifie si un mystère a déjà été documenté.</p>
+  <div class="recherche-zone"><input type="search" id="q" placeholder="Mot-clé, thème, lieu, tag..." aria-label="Rechercher"></div>
+  <p class="compteur-resultats" id="compteur"></p>
+  <div class="grille" id="resultats-recherche"></div>
+</section>
+<script>
+(function () {
+  var input = document.getElementById("q");
+  var sortie = document.getElementById("resultats-recherche");
+  var compteur = document.getElementById("compteur");
+  var data = [];
+  fetch("/search-index.json").then(function (r) { return r.json(); }).then(function (j) {
+    data = j;
+    var p = new URLSearchParams(location.search).get("q");
+    if (p) { input.value = p; rechercher(p); }
+  });
+  function norm(s) { return (s || "").toString().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); }
+  function rechercher(q) {
+    q = norm(q).trim();
+    if (!q) { sortie.innerHTML = ""; compteur.textContent = ""; return; }
+    var res = data.filter(function (e) {
+      var hay = norm([e.title, e.question, e.category, e.location, e.statusLabel, (e.tags || []).join(" ")].join(" "));
+      return q.split(/\s+/).every(function (m) { return hay.indexOf(m) !== -1; });
+    });
+    compteur.textContent = res.length + (res.length > 1 ? " résultats" : " résultat");
+    sortie.innerHTML = res.map(function (e) {
+      return '<div class="carte"><a href="' + e.url + '"><div class="carte-body">' +
+        '<div class="theme">' + e.category + (e.location ? " · " + e.location : "") + '</div>' +
+        '<div class="question">' + e.question + '</div>' +
+        '<span class="statut">' + e.statusLabel + (e.coldCase ? " · Cold case" : "") + '</span>' +
+        '</div></a></div>';
+    }).join("");
+  }
+  input.addEventListener("input", function () { rechercher(input.value); });
+})();
+</script>
+
+  </main>
+
+  <footer class="site-footer">
+    <img class="logo-mark" src="/astrolabis/assets/logo-medallion.png" alt="" width="32" height="32">
+    Astrolabis — la mémoire du réel. Mille hypothèses. Une preuve fait foi.
+  </footer>
+</body>
+</html>

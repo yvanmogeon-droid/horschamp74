@@ -1,0 +1,219 @@
+/* astrolabis.css — Charte parchemin (charte actee le 15/06/2026)
+   Fond parchemin chaud clair + accent terracotta unique #B85C00. Titres serif Fraunces.
+   Principe : l'attention va au contenu, jamais a l'interface. Ca doit respirer. */
+
+:root {
+  --bg: #e7dac1;
+  --bg-2: #f6efe0;
+  --bg-3: #efe6d2;
+  --texte: #2b231a;
+  --texte-doux: #6f6451;
+  --texte-faible: #998a72;
+  --accent: #B85C00;
+  --accent-clair: #cf6a10;
+  --ligne: #d8c8a7;
+
+  /* couleurs de statut : UNIQUEMENT sur les pastilles, la ou elles informent */
+  --vert: #2e9e5e;
+  --jaune: #bf8f2a;
+  --blanc-statut: #8a7d6e;
+
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --max: 760px;
+  --max-large: 1080px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--texte);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent-clair); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; display: block; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.2; }
+
+:focus-visible { outline: 2px solid var(--accent-clair); outline-offset: 2px; border-radius: 2px; }
+
+/* ---- En-tete minimal ---- */
+.site-header { border-bottom: 1px solid var(--ligne); padding: 18px 24px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.logo { font-family: var(--serif); font-size: 1.4rem; color: var(--accent); letter-spacing: 0.5px; }
+.logo:hover { text-decoration: none; }
+.site-nav { display: flex; gap: 18px; font-size: 0.92rem; }
+.site-nav a { color: var(--texte-doux); }
+.site-nav a:hover { color: var(--texte); text-decoration: none; }
+.site-header form { margin-left: auto; }
+.site-header input[type="search"] { background: var(--bg-2); border: 1px solid var(--ligne); color: var(--texte); padding: 8px 12px; border-radius: 4px; font-size: 0.9rem; min-width: 200px; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.wrap-large { max-width: var(--max-large); margin: 0 auto; padding: 0 24px; }
+
+/* ---- Pastilles de statut ---- */
+.statut { display: inline-flex; align-items: center; gap: 7px; font-size: 0.85rem; color: var(--texte-doux); }
+.dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+.dot-vert { background: var(--vert); animation: pulse 2.6s ease-in-out infinite; }
+.dot-jaune { background: var(--jaune); }
+.dot-blanc { background: var(--blanc-statut); }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+/* ---- Accueil : enquete du moment ---- */
+.hero { padding: 56px 0 36px; }
+.hero .baseline { font-family: var(--serif); font-size: 1.05rem; color: var(--texte-doux); margin: 0 0 30px; }
+.moment { background: var(--bg-2); border: 1px solid var(--ligne); border-radius: 8px; overflow: hidden; }
+.moment img { width: 100%; height: 360px; object-fit: cover; }
+.moment .moment-body { padding: 26px 28px 30px; }
+.moment .question { font-family: var(--serif); font-size: 1.7rem; margin: 6px 0 14px; }
+.compteurs { display: flex; gap: 26px; color: var(--texte-faible); font-size: 0.9rem; margin: 16px 0; flex-wrap: wrap; }
+.compteurs b { color: var(--texte); font-weight: 600; }
+.aucune-trouvee { color: var(--texte-doux); font-style: italic; margin: 10px 0 18px; }
+
+.btn { display: inline-block; background: var(--accent); color: #fff; padding: 11px 22px; border-radius: 4px; font-size: 0.95rem; border: none; cursor: pointer; }
+.btn:hover { background: var(--accent-clair); text-decoration: none; }
+.btn-ghost { background: transparent; border: 1px solid var(--ligne); color: var(--texte-doux); }
+.btn-ghost:hover { background: var(--bg-3); color: var(--texte); }
+
+/* ---- Grille d'enquetes ---- */
+.section-titre { font-size: 1.5rem; margin: 48px 0 18px; }
+.grille { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.carte { background: var(--bg-2); border: 1px solid var(--ligne); border-radius: 8px; overflow: hidden; transition: border-color 0.25s ease; }
+.carte:hover { border-color: var(--accent); }
+.carte a { color: inherit; }
+.carte a:hover { text-decoration: none; }
+.carte img { width: 100%; height: 180px; object-fit: cover; }
+.carte .carte-body { padding: 16px 18px 18px; }
+.carte .theme { font-size: 0.75rem; letter-spacing: 0.8px; text-transform: uppercase; color: var(--texte-faible); }
+.carte .question { font-family: var(--serif); font-size: 1.15rem; margin: 6px 0 12px; color: var(--texte); }
+
+/* ---- Filtres ---- */
+.filtres { margin: 26px 0; display: flex; flex-direction: column; gap: 12px; }
+.filtre-rangee { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.filtre-rangee .lab { font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; color: var(--texte-faible); margin-right: 6px; }
+.chip { background: var(--bg-2); border: 1px solid var(--ligne); color: var(--texte-doux); padding: 6px 13px; border-radius: 999px; font-size: 0.85rem; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+.compteur-resultats { color: var(--texte-faible); font-size: 0.85rem; margin: 14px 0; }
+
+/* ---- Page-dossier : 6 blocs ---- */
+.dossier { padding: 40px 0 80px; }
+.dossier .bloc { margin: 0 0 56px; }
+.dossier .bloc-num { font-size: 0.75rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 10px; }
+.dossier h1 { font-size: 2.1rem; margin: 4px 0 16px; }
+.dossier .meta { color: var(--texte-faible); font-size: 0.9rem; display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 22px; }
+.dossier .photo-grande { border-radius: 8px; width: 100%; max-height: 520px; object-fit: cover; margin: 18px 0; }
+.dossier h2 { font-size: 1.45rem; margin: 0 0 16px; }
+
+.timeline { border-left: 2px solid var(--ligne); padding-left: 22px; }
+.timeline .evt { margin-bottom: 20px; }
+.timeline .evt .quand { color: var(--texte-faible); font-size: 0.82rem; }
+
+.hypos { list-style: none; padding: 0; }
+.hypos li { background: var(--bg-2); border: 1px solid var(--ligne); border-radius: 6px; padding: 14px 16px; margin-bottom: 10px; }
+.hypos .h-statut { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.6px; color: var(--texte-faible); }
+.hypos .auteur { color: var(--texte-faible); font-size: 0.82rem; font-style: italic; }
+
+.preuve { background: var(--bg-2); border: 1px solid var(--ligne); border-radius: 8px; padding: 22px 24px; }
+.preuve .couche { margin-bottom: 18px; }
+.preuve .couche:last-child { margin-bottom: 0; }
+.preuve .couche-lab { font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; color: var(--texte-faible); margin-bottom: 8px; }
+.preuve-types { display: flex; flex-wrap: wrap; gap: 8px; }
+.preuve-types .tag { background: var(--bg-3); border-radius: 4px; padding: 4px 10px; font-size: 0.85rem; color: var(--texte-doux); }
+.fiabilite { font-family: var(--serif); font-size: 1.2rem; }
+.justification { color: var(--texte-doux); }
+
+.revelation { font-size: 1.08rem; line-height: 1.8; }
+.sources-ref { margin-top: 24px; color: var(--texte-faible); font-size: 0.9rem; }
+
+.contributeurs { display: flex; flex-wrap: wrap; gap: 16px; }
+.contributeurs .c { background: var(--bg-2); border: 1px solid var(--ligne); border-radius: 6px; padding: 12px 16px; }
+.contributeurs .c .role { font-size: 0.78rem; color: var(--texte-faible); display: block; }
+
+.appel-contrib { background: var(--bg-2); border: 1px dashed var(--ligne); border-radius: 8px; padding: 32px 28px; text-align: center; }
+.appel-contrib p { font-family: var(--serif); font-size: 1.25rem; color: var(--texte-doux); margin: 0 0 20px; }
+
+.site-footer { border-top: 1px solid var(--ligne); margin-top: 60px; padding: 30px 24px; color: var(--texte-faible); font-size: 0.85rem; text-align: center; }
+
+.recherche-zone input[type="search"] { width: 100%; font-size: 1.05rem; padding: 14px 16px; background: var(--bg-2); border: 1px solid var(--ligne); color: var(--texte); border-radius: 6px; }
+#resultats-recherche { margin-top: 24px; }
+
+.err { padding: 80px 0; text-align: center; }
+.err h1 { font-size: 3rem; color: var(--accent); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .moment img { height: 240px; }
+  .dossier h1 { font-size: 1.6rem; }
+  .site-header { gap: 12px; }
+  .site-header form { margin-left: 0; width: 100%; }
+  .site-header input[type="search"] { width: 100%; }
+}
+
+
+/* ---- Accroche d'accueil (coiffe la baseline) ---- */
+.hero .accroche { font-family: var(--serif); font-weight: 600; font-size: 2rem; line-height: 1.12; color: var(--texte); margin: 0 0 6px; }
+.hero .baseline { margin-top: 0; }
+.appel-contrib .appel-sous { font-family: var(--sans); font-size: 0.92rem; color: var(--texte-faible); font-style: normal; margin: -8px 0 18px; }
+
+/* ---- Logo medaillon (en-tete + pied) ---- */
+.logo { display: inline-flex; align-items: center; gap: 10px; }
+.logo-mark { width: 40px; height: 40px; border-radius: 50%; display: block; }
+.site-footer .logo-mark { width: 32px; height: 32px; margin: 0 auto 8px; opacity: 0.9; }
+
+/* ---- Accueil : exploration par menus deroulants (18/06) ---- */
+.explore-intro { font-size: 1.05rem; color: var(--texte-doux); margin: 40px 0 18px; }
+.selecteurs { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 6px; }
+.sel { display: flex; flex-direction: column; gap: 6px; font-size: 0.78rem; letter-spacing: 0.6px; text-transform: uppercase; color: var(--texte-faible); }
+.sel select { font-family: var(--sans); font-size: 1rem; color: var(--texte); background: var(--bg-2); border: 1px solid var(--ligne); border-radius: 6px; padding: 11px 14px; min-width: 240px; cursor: pointer; }
+.sel select:hover { border-color: var(--accent); }
+.explore-prompt { color: var(--texte-faible); font-style: italic; margin: 22px 0 30px; }
+.liste-resultats { list-style: none; padding: 0; margin: 18px 0 0; border-top: 1px solid var(--ligne); }
+.liste-resultats .res-item a { display: flex; align-items: center; gap: 16px; padding: 16px 4px; border-bottom: 1px solid var(--ligne); color: inherit; }
+.liste-resultats .res-item a:hover { background: var(--bg-3); text-decoration: none; }
+.res-type { font-size: 0.72rem; letter-spacing: 0.8px; text-transform: uppercase; color: var(--texte-faible); min-width: 96px; }
+.res-titre { font-family: var(--serif); font-size: 1.12rem; color: var(--texte); flex: 1; }
+.tout-voir { text-align: center; margin: 44px 0 12px; }
+.tout-voir a { color: var(--texte-faible); font-size: 0.9rem; }
+.tout-voir a:hover { color: var(--accent); }
+
+/* ---- Registre d'hypothèses (V1 interactive) ---- */
+.registre { margin-top: 8px; }
+.hyp-vide { color: var(--texte-faible); font-style: italic; }
+.hyp-carte { background: var(--bg-2); border: 1px solid var(--ligne); border-radius: 8px; padding: 16px 18px; margin: 12px 0; }
+.hyp-haut { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 8px; flex-wrap: wrap; }
+.hyp-statut { font-size: 0.72rem; letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--ligne); color: var(--texte-doux); }
+.hyp-statut.s-piste_serieuse { color: var(--vert); border-color: var(--vert); }
+.hyp-statut.s-contestee { color: var(--jaune); border-color: var(--jaune); }
+.hyp-statut.s-ecartee { color: var(--texte-faible); }
+.hyp-meta { font-size: 0.85rem; color: var(--texte-faible); }
+.hyp-texte { margin: 6px 0; }
+.hyp-src { font-size: 0.85rem; color: var(--texte-doux); margin: 4px 0 8px; }
+.hyp-soutenir { background: transparent; border: 1px solid var(--ligne); color: var(--texte-doux); padding: 5px 12px; border-radius: 999px; font-size: 0.82rem; cursor: pointer; }
+.hyp-soutenir:hover { border-color: var(--accent); color: var(--accent); }
+.hyp-form-wrap { margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--ligne); }
+.hyp-form-wrap h3 { font-family: var(--serif); font-size: 1.2rem; margin: 0 0 4px; }
+.hyp-note { color: var(--texte-faible); font-size: 0.9rem; margin: 0 0 16px; }
+#hyp-form label { display: block; margin-bottom: 14px; font-size: 0.92rem; color: var(--texte-doux); }
+#hyp-form textarea, #hyp-form input[type="text"] { width: 100%; margin-top: 6px; background: var(--bg-2); border: 1px solid var(--ligne); border-radius: 6px; padding: 10px 12px; font-family: var(--sans); font-size: 1rem; color: var(--texte); box-sizing: border-box; }
+#hyp-form .hyp-consent { display: flex; align-items: flex-start; gap: 8px; }
+#hyp-form .hyp-consent input { margin-top: 3px; width: auto; }
+.hyp-msg { margin-top: 12px; font-size: 0.9rem; }
+.hyp-msg.ok { color: var(--vert); }
+.hyp-msg.err { color: #b3402a; }
+
+/* ---- Page de modération ---- */
+#login-form label { display:block; margin-bottom:14px; font-size:0.92rem; color:var(--texte-doux); }
+#login-form input { width:100%; margin-top:6px; background:var(--bg-2); border:1px solid var(--ligne); border-radius:6px; padding:10px 12px; font-size:1rem; box-sizing:border-box; }
+.mod-actions { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
+.mod-actions .btn, .mod-actions .btn-ghost { padding:7px 14px; font-size:0.85rem; }

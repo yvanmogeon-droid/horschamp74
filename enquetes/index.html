@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Les enquêtes — Astrolabis</title>
+
+  
+  
+  
+  
+  <meta name="description" content="Astrolabis — la mémoire du réel. Une bibliothèque vivante de mystères réels, documentés et résolus.">
+  <meta property="og:title" content="Les enquêtes">
+  <meta property="og:description" content="Astrolabis — la mémoire du réel. Une bibliothèque vivante de mystères réels, documentés et résolus.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://yvanmogeon-droid.github.io/astrolabis/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#B85C00">
+
+  <link rel="icon" href="/astrolabis/assets/favicon-32.png" sizes="32x32">
+  <link rel="icon" href="/astrolabis/assets/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/astrolabis/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/astrolabis/assets/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/astrolabis/assets/css/astrolabis.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="/astrolabis/"><img class="logo-mark" src="/astrolabis/assets/logo-medallion.png" alt="" width="40" height="40"><span>Astrolabis</span></a>
+    <nav class="site-nav" aria-label="Principale">
+      <a href="/astrolabis/enquetes/">Les enquêtes</a>
+      <a href="/astrolabis/cold-cases/">Cold cases</a>
+      <a href="/astrolabis/resolutions/">Résolutions</a>
+      <a href="/astrolabis/deposer/">Déposer</a>
+    </nav>
+    <form action="/astrolabis/recherche/" method="get" role="search">
+      <input type="search" name="q" placeholder="Quelqu'un a déjà rencontré ça ?" aria-label="Rechercher une enquête">
+    </form>
+  </header>
+
+  <main>
+    
+<section class="wrap-large" style="padding-top:40px;">
+  <h1 class="section-titre" style="margin-top:0;">Les enquêtes</h1>
+
+  <div class="filtres" id="filtres">
+    <div class="filtre-rangee" data-axe="sujet">
+      <span class="lab">Sujet</span>
+      <button class="chip" data-val="" aria-pressed="true">Tous</button>
+      <button class="chip" data-val="Montagne" aria-pressed="false">Montagne</button><button class="chip" data-val="Géologie" aria-pressed="false">Géologie</button><button class="chip" data-val="Histoire &amp; patrimoine" aria-pressed="false">Histoire &amp; patrimoine</button><button class="chip" data-val="Architecture" aria-pressed="false">Architecture</button><button class="chip" data-val="Faune &amp; nature" aria-pressed="false">Faune &amp; nature</button><button class="chip" data-val="Archéologie" aria-pressed="false">Archéologie</button><button class="chip" data-val="Autre" aria-pressed="false">Autre</button>
+    </div>
+    <div class="filtre-rangee" data-axe="theme">
+      <span class="lab">Type</span>
+      <button class="chip" data-val="" aria-pressed="true">Tous</button>
+      <button class="chip" data-val="Objet" aria-pressed="false">Objet</button><button class="chip" data-val="Structure" aria-pressed="false">Structure</button><button class="chip" data-val="Macro" aria-pressed="false">Macro</button><button class="chip" data-val="Marque" aria-pressed="false">Marque</button><button class="chip" data-val="Lieu" aria-pressed="false">Lieu</button><button class="chip" data-val="Phenomene" aria-pressed="false">Phénomène</button><button class="chip" data-val="Scene" aria-pressed="false">Scène</button><button class="chip" data-val="Autre" aria-pressed="false">Autre</button>
+    </div>
+    <div class="filtre-rangee" data-axe="statut">
+      <span class="lab">Statut</span>
+      <button class="chip" data-val="" aria-pressed="true">Tous</button>
+      <button class="chip" data-val="ACTIVE" aria-pressed="false">En cours</button><button class="chip" data-val="IN_REVIEW" aria-pressed="false">En vérification</button><button class="chip" data-val="RESOLVED" aria-pressed="false">Classés</button>
+    </div>
+  </div>
+  <p class="compteur-resultats" id="compteur"></p>
+
+  <div class="grille" id="grille">
+    
+
+<div class="carte" data-theme="Marque" data-statut="ACTIVE" data-sujets="Histoire &amp; patrimoine,Montagne">
+  <a href="/astrolabis/enquete/borne-frontiere-sarde/">
+    
+    <div class="carte-body">
+      <div class="theme">Marque</div>
+      <div class="question">La pierre plantée dans la forêt</div>
+      
+<span class="statut"><span class="dot dot-vert"></span>En cours</span>
+
+    </div>
+  </a>
+</div>
+
+
+<div class="carte" data-theme="Phenomene" data-statut="ACTIVE" data-sujets="Géologie,Montagne">
+  <a href="/astrolabis/enquete/desert-de-plate/">
+    
+    <div class="carte-body">
+      <div class="theme">Phénomène</div>
+      <div class="question">Le désert lunaire face au Mont-Blanc</div>
+      
+<span class="statut"><span class="dot dot-vert"></span>En cours</span>
+
+    </div>
+  </a>
+</div>
+
+
+<div class="carte" data-theme="Scene" data-statut="ACTIVE" data-sujets="Géologie,Montagne">
+  <a href="/astrolabis/enquete/empreintes-vieux-emosson/">
+    
+    <div class="carte-body">
+      <div class="theme">Scène</div>
+      <div class="question">Les pas gravés dans la dalle, à 2 400 m</div>
+      
+<span class="statut"><span class="dot dot-vert"></span>En cours</span>
+
+    </div>
+  </a>
+</div>
+
+
+<div class="carte" data-theme="Structure" data-statut="ACTIVE" data-sujets="Architecture,Histoire &amp; patrimoine">
+  <a href="/astrolabis/enquete/barriere-esseillon/">
+    
+    <div class="carte-body">
+      <div class="theme">Structure</div>
+      <div class="question">La forteresse qui n&#39;a jamais tiré un coup de canon</div>
+      
+<span class="statut"><span class="dot dot-vert"></span>En cours</span>
+
+    </div>
+  </a>
+</div>
+
+
+<div class="carte" data-theme="Phenomene" data-statut="ACTIVE" data-sujets="Géologie,Montagne">
+  <a href="/astrolabis/enquete/four-cristaux-mont-blanc/">
+    
+    <div class="carte-body">
+      <div class="theme">Phénomène</div>
+      <div class="question">Le « four » caché dans la falaise du Mont-Blanc</div>
+      
+<span class="statut"><span class="dot dot-vert"></span>En cours</span>
+
+    </div>
+  </a>
+</div>
+
+
+<div class="carte" data-theme="Phenomene" data-statut="ACTIVE" data-sujets="Faune &amp; nature,Montagne">
+  <a href="/astrolabis/enquete/gypaete-barbu-bargy/">
+    
+    <div class="carte-body">
+      <div class="theme">Phénomène</div>
+      <div class="question">L&#39;oiseau de 3 mètres qui mange des os</div>
+      
+<span class="statut"><span class="dot dot-vert"></span>En cours</span>
+
+    </div>
+  </a>
+</div>
+
+
+<div class="carte" data-theme="Scene" data-statut="ACTIVE" data-sujets="Histoire &amp; patrimoine,Architecture">
+  <a href="/astrolabis/enquete/ecole-horlogerie-cluses/">
+    
+    <div class="carte-body">
+      <div class="theme">Scène</div>
+      <div class="question">Pourquoi cette petite ville a fabriqué des montres</div>
+      
+<span class="statut"><span class="dot dot-vert"></span>En cours</span>
+
+    </div>
+  </a>
+</div>
+
+
+<div class="carte" data-theme="Lieu" data-statut="ACTIVE" data-sujets="Histoire &amp; patrimoine">
+  <a href="/astrolabis/enquete/nom-cluses-clusa/">
+    
+    <div class="carte-body">
+      <div class="theme">Lieu</div>
+      <div class="question">Le nom qui veut dire « fermé »</div>
+      
+<span class="statut"><span class="dot dot-vert"></span>En cours</span>
+
+    </div>
+  </a>
+</div>
+
+
+<div class="carte" data-theme="Phenomene" data-statut="ACTIVE" data-sujets="Géologie,Montagne">
+  <a href="/astrolabis/enquete/marmites-de-geants-tines/">
+    
+    <div class="carte-body">
+      <div class="theme">Phénomène</div>
+      <div class="question">Les trous parfaitement ronds dans la roche du torrent</div>
+      
+<span class="statut"><span class="dot dot-vert"></span>En cours</span>
+
+    </div>
+  </a>
+</div>
+
+
+<div class="carte" data-theme="Phenomene" data-statut="ACTIVE" data-sujets="Archéologie,Montagne">
+  <a href="/astrolabis/enquete/pierre-du-diable-cupules/">
+    
+    <div class="carte-body">
+      <div class="theme">Phénomène</div>
+      <div class="question">Les creux ronds au sommet du gros rocher</div>
+      
+<span class="statut"><span class="dot dot-vert"></span>En cours</span>
+
+    </div>
+  </a>
+</div>
+
+  </div>
+</section>
+
+<script>
+(function () {
+  var etat = { sujet: "", theme: "", statut: "" };
+  var grille = document.getElementById("grille");
+  var compteur = document.getElementById("compteur");
+  var cartes = Array.prototype.slice.call(grille.querySelectorAll(".carte"));
+  function appliquer() {
+    var n = 0;
+    cartes.forEach(function (c) {
+      var sujets = (c.getAttribute("data-sujets") || "").split(",");
+      var ok = (!etat.sujet || sujets.indexOf(etat.sujet) !== -1)
+            && (!etat.theme || c.dataset.theme === etat.theme)
+            && (!etat.statut || c.dataset.statut === etat.statut);
+      c.style.display = ok ? "" : "none";
+      if (ok) n++;
+    });
+    compteur.textContent = n + (n > 1 ? " résultats" : " résultat");
+  }
+  document.querySelectorAll("#filtres .filtre-rangee").forEach(function (rangee) {
+    var axe = rangee.dataset.axe;
+    rangee.querySelectorAll(".chip").forEach(function (chip) {
+      chip.addEventListener("click", function () {
+        rangee.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-pressed", "false"); });
+        chip.setAttribute("aria-pressed", "true");
+        etat[axe] = chip.dataset.val; appliquer();
+      });
+    });
+  });
+  appliquer();
+})();
+</script>
+
+  </main>
+
+  <footer class="site-footer">
+    <img class="logo-mark" src="/astrolabis/assets/logo-medallion.png" alt="" width="32" height="32">
+    Astrolabis — la mémoire du réel. Mille hypothèses. Une preuve fait foi.
+  </footer>
+</body>
+</html>

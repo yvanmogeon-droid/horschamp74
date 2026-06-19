@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modération — Astrolabis</title>
+
+  
+  
+  
+  
+  <meta name="description" content="Astrolabis — la mémoire du réel. Une bibliothèque vivante de mystères réels, documentés et résolus.">
+  <meta property="og:title" content="Modération">
+  <meta property="og:description" content="Astrolabis — la mémoire du réel. Une bibliothèque vivante de mystères réels, documentés et résolus.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://yvanmogeon-droid.github.io/astrolabis/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#B85C00">
+
+  <link rel="icon" href="/astrolabis/assets/favicon-32.png" sizes="32x32">
+  <link rel="icon" href="/astrolabis/assets/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/astrolabis/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/astrolabis/assets/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/astrolabis/assets/css/astrolabis.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="/astrolabis/"><img class="logo-mark" src="/astrolabis/assets/logo-medallion.png" alt="" width="40" height="40"><span>Astrolabis</span></a>
+    <nav class="site-nav" aria-label="Principale">
+      <a href="/astrolabis/enquetes/">Les enquêtes</a>
+      <a href="/astrolabis/cold-cases/">Cold cases</a>
+      <a href="/astrolabis/resolutions/">Résolutions</a>
+      <a href="/astrolabis/deposer/">Déposer</a>
+    </nav>
+    <form action="/astrolabis/recherche/" method="get" role="search">
+      <input type="search" name="q" placeholder="Quelqu'un a déjà rencontré ça ?" aria-label="Rechercher une enquête">
+    </form>
+  </header>
+
+  <main>
+    <section class="wrap" style="padding-top:40px;">
+  <h1 class="section-titre" style="margin-top:0;">Modération des hypothèses</h1>
+
+  <div id="login-box">
+    <p style="color:var(--texte-doux);">Connecte-toi pour valider les hypothèses déposées.</p>
+    <form id="login-form" style="max-width:360px;">
+      <label>Adresse e-mail<input type="email" name="email" required=""></label>
+      <label>Mot de passe<input type="password" name="password" required=""></label>
+      <button class="btn" type="submit">Se connecter</button>
+      <p id="login-msg" class="hyp-msg" hidden=""></p>
+    </form>
+  </div>
+
+  <div id="mod-box" hidden="">
+    <p style="color:var(--texte-doux);">Connecté. <button id="logout" class="hyp-soutenir">Se déconnecter</button></p>
+    <div id="mod-filtres" class="filtre-rangee">
+      <button class="chip" data-f="pending" aria-pressed="true">En attente</button>
+      <button class="chip" data-f="all" aria-pressed="false">Toutes</button>
+    </div>
+    <div id="mod-liste"><p class="hyp-vide">Chargement…</p></div>
+  </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/astrolabis/assets/js/moderation.js"></script>
+
+  </main>
+
+  <footer class="site-footer">
+    <img class="logo-mark" src="/astrolabis/assets/logo-medallion.png" alt="" width="32" height="32">
+    Astrolabis — la mémoire du réel. Mille hypothèses. Une preuve fait foi.
+  </footer>
+</body>
+</html>
