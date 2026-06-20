@@ -1,217 +1,788 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Astrolabis</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 
-  
-  
-  
-  
-  <meta name="description" content="Astrolabis — la mémoire du réel. Une bibliothèque vivante de mystères réels, documentés et résolus.">
-  <meta property="og:title" content="Astrolabis">
-  <meta property="og:description" content="Astrolabis — la mémoire du réel. Une bibliothèque vivante de mystères réels, documentés et résolus.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://yvanmogeon-droid.github.io/astrolabis/assets/og-default.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#B85C00">
+<title>Hors Champ 74 — Haute-Savoie, sans filtre</title>
+<meta name="description" content="Le média local sur ce que personne ne traite en Haute-Savoie. Pollution. Déchets. Animaux. Sans filtre.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --noir: #1a1714;
+  --encre: #2c2825;
+  --terre: #8B3A1A;
+  --rouge: #C4522A;
+  --creme: #faf7f2;
+  --sable: #f5f0e8;
+  --gris: #7a736b;
+  --gris-clair: #c8c0b4;
+  --bordure: #ddd5c8;
+  --max: 800px;
+}
 
-  <link rel="icon" href="/astrolabis/assets/favicon-32.png" sizes="32x32">
-  <link rel="icon" href="/astrolabis/assets/favicon.ico" sizes="any">
-  <link rel="apple-touch-icon" href="/astrolabis/assets/apple-touch-icon.png">
-  <link rel="manifest" href="/astrolabis/assets/site.webmanifest">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/astrolabis/assets/css/astrolabis.css">
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--creme);
+  color: var(--encre);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── HEADER ── */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(250,247,242,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--bordure);
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+.h-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.h-logo span {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--encre);
+  letter-spacing: -0.3px;
+}
+.hero-illu {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 36px;
+  border-radius: 10px;
+  border: 1px solid var(--bordure);
+}
+.h-logo img { height: 38px; width: 38px; object-fit: cover; border-radius: 3px; }
+.h-logo span em { font-style: normal; color: var(--rouge); }
+nav { display: flex; align-items: center; gap: 24px; }
+nav a {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--gris);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+nav a:hover { color: var(--rouge); }
+.nav-btn {
+  background: var(--rouge) !important;
+  color: white !important;
+  padding: 7px 16px !important;
+  border-radius: 2px;
+  letter-spacing: 0.5px !important;
+}
+.nav-btn:hover { background: var(--terre) !important; }
+
+/* ── HERO ── */
+.hero {
+  padding-top: 58px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: var(--bordure);
+}
+.hero-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 100px 48px 88px;
+  position: relative;
+}
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+.hero-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--rouge);
+  animation: pulse 2.5s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+.hero-tag {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--rouge);
+}
+.hero-h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(48px, 7vw, 78px);
+  font-weight: 400;
+  line-height: 1.08;
+  margin-bottom: 28px;
+  color: var(--noir);
+}
+.hero-h1 em {
+  font-style: italic;
+  color: var(--rouge);
+}
+.hero-sub {
+  font-size: 15px;
+  color: var(--gris);
+  line-height: 1.75;
+  max-width: 520px;
+  margin-bottom: 44px;
+}
+.pilliers {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.pill {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gris);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pill::before {
+  content: '';
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--rouge);
+  opacity: 0.6;
+}
+
+/* ── BRÈVE DU JOUR ── */
+.breve-section {
+  background: var(--sable);
+  border-bottom: 1px solid var(--bordure);
+}
+.breve-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 72px 48px;
+}
+.section-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gris);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--bordure);
+}
+.breve-date {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--rouge);
+  margin-bottom: 18px;
+}
+.breve-category-badge {
+  display: inline-block;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border: 1px solid currentColor;
+  margin-bottom: 18px;
+  margin-left: 12px;
+  vertical-align: middle;
+}
+.breve-titre {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 4.5vw, 52px);
+  font-weight: 700;
+  line-height: 1.12;
+  margin-bottom: 24px;
+  color: var(--noir);
+}
+.breve-chapeau {
+  font-size: 15px;
+  color: var(--gris);
+  line-height: 1.75;
+  padding-left: 18px;
+  border-left: 2px solid var(--rouge);
+  margin-bottom: 32px;
+  max-width: 580px;
+}
+.breve-source {
+  font-size: 11px;
+  color: var(--gris-clair);
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+}
+.breve-source strong {
+  color: var(--gris);
+  font-weight: 500;
+}
+.lire-plus {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--encre);
+  text-decoration: none;
+  transition: gap 0.25s ease;
+}
+.lire-plus:hover { gap: 16px; }
+.lire-plus .arr { color: var(--rouge); }
+
+/* ── SKELETON ── */
+.skeleton {
+  background: linear-gradient(90deg, var(--bordure) 25%, var(--sable) 50%, var(--bordure) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: 2px;
+}
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── FIL DE LA SEMAINE ── */
+.fil-section {
+  border-bottom: 1px solid var(--bordure);
+}
+.fil-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 72px 48px;
+}
+.fil-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 48px;
+}
+.fil-titre {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--noir);
+}
+.voir-tout {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gris);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.voir-tout:hover { color: var(--rouge); }
+.article {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--bordure);
+  cursor: pointer;
+  transition: padding-left 0.2s;
+}
+.article:hover { padding-left: 8px; }
+.article:last-child { border-bottom: none; }
+.art-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+.art-date {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gris-clair);
+}
+.art-tag {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border: 1px solid currentColor;
+}
+.t-pollution { color: var(--terre); }
+.t-dechets { color: var(--gris); }
+.t-animaux { color: #4a7c59; }
+.t-good-news { color: #2d6a4f; }
+.t-montagne { color: #3a5f8a; }
+.t-curieux { color: #7a5c8a; }
+.t-eau { color: #1d7a9c; }
+.t-energie { color: #c2701e; }
+.t-tech-ia { color: #5a5fa8; }
+.t-mobilite { color: #8a4a4a; }
+.art-titre {
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 8px;
+  color: var(--noir);
+}
+.art-extrait {
+  font-size: 13px;
+  color: var(--gris);
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+.art-lire {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--rouge);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: gap 0.2s;
+}
+.art-lire:hover { gap: 12px; }
+.no-articles {
+  padding: 40px 0;
+  color: var(--gris-clair);
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* ── AGIR ── */
+.agir-section {
+  background: var(--encre);
+  color: var(--creme);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.agir-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 96px 48px;
+}
+.agir-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(250,247,242,0.35);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.agir-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+}
+.agir-titre {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 5.5vw, 64px);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.agir-titre em {
+  font-style: italic;
+  color: var(--rouge);
+}
+.agir-sub {
+  font-size: 14px;
+  color: rgba(250,247,242,0.45);
+  line-height: 1.75;
+  margin-bottom: 56px;
+  max-width: 500px;
+}
+.actions { display: flex; flex-direction: column; gap: 1px; }
+.action {
+  background: rgba(255,255,255,0.03);
+  padding: 36px 32px;
+  transition: background 0.2s, padding-left 0.2s;
+  border-left: 2px solid transparent;
+}
+.action:hover {
+  background: rgba(255,255,255,0.06);
+  padding-left: 40px;
+  border-left-color: var(--rouge);
+}
+.action-titre {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--creme);
+  margin-bottom: 10px;
+}
+.action-txt {
+  font-size: 13px;
+  color: rgba(250,247,242,0.45);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+.action-lien {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--rouge);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.2s;
+}
+.action-lien:hover { gap: 14px; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--encre);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.footer-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 56px 48px 36px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+.f-logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--creme);
+  margin-bottom: 6px;
+}
+.f-base {
+  font-size: 12px;
+  font-style: italic;
+  color: rgba(250,247,242,0.3);
+  line-height: 1.5;
+}
+.f-geo {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(250,247,242,0.15);
+  margin-top: 6px;
+}
+.f-col h4 {
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(250,247,242,0.3);
+  margin-bottom: 16px;
+}
+.f-col a {
+  display: block;
+  font-size: 13px;
+  color: rgba(250,247,242,0.5);
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color 0.2s;
+}
+.f-col a:hover { color: var(--creme); }
+.footer-bottom {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 20px 48px 32px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.f-copy { font-size: 11px; color: rgba(250,247,242,0.2); }
+.f-links { display: flex; gap: 20px; }
+.f-links a {
+  font-size: 11px;
+  color: rgba(250,247,242,0.2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.f-links a:hover { color: rgba(250,247,242,0.5); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 700px) {
+  nav { display: none; }
+  .hero-inner, .breve-inner, .fil-inner, .agir-inner, .footer-inner, .footer-bottom { padding-left: 20px; padding-right: 20px; }
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .fil-header { margin-bottom: 28px; }
+}
+
+/* ── FADE-IN À L'ENTRÉE ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeUp 0.55s ease both; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.22s; }
+.delay-3 { animation-delay: 0.34s; }
+.delay-4 { animation-delay: 0.46s; }
+
+/* — Menu mobile (hamburger) — */
+.burger{display:none;background:none;border:0;padding:6px;margin:0;font-size:26px;line-height:1;color:var(--encre);cursor:pointer}
+@media (max-width: 700px){
+  .burger{display:block}
+  header nav{position:fixed;top:58px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--creme);border-bottom:1px solid var(--bordure);padding:8px 24px 18px;box-shadow:0 10px 22px rgba(0,0,0,.08)}
+  header.nav-open nav{display:flex}
+  header nav a{padding:13px 2px;border-bottom:1px solid var(--bordure);width:100%}
+  header nav a.nav-btn{margin-top:12px;border-bottom:0;justify-content:center}
+}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <a class="logo" href="/astrolabis/"><img class="logo-mark" src="/astrolabis/assets/logo-medallion.png" alt="" width="40" height="40"><span>Astrolabis</span></a>
-    <nav class="site-nav" aria-label="Principale">
-      <a href="/astrolabis/enquetes/">Les enquêtes</a>
-      <a href="/astrolabis/cold-cases/">Cold cases</a>
-      <a href="/astrolabis/resolutions/">Résolutions</a>
-      <a href="/astrolabis/deposer/">Déposer</a>
-    </nav>
-    <form action="/astrolabis/recherche/" method="get" role="search">
-      <input type="search" name="q" placeholder="Quelqu'un a déjà rencontré ça ?" aria-label="Rechercher une enquête">
-    </form>
-  </header>
 
-  <main>
-    
+<header>
+  <a href="index.html" class="h-logo">
+    <img src="assets/logo-160.jpg" alt="Hors Champ 74"/>
+    <span>HORS <em>CHAMP</em> 74</span>
+  </a>
+  <nav>
+    <a href="fil.html">Le fil</a>
+    <a href="fil.html?cat=good-news">Good news</a>
+    <a href="fil.html?cat=montagne">Montagne</a>
+    <a href="fil.html?cat=curieux">Curieux</a>
+    <a href="fil.html?cat=tech-ia">Tech & IA</a>
+    <a href="https://tally.so/r/68AXVY" target="_blank" class="nav-btn">Signaler →</a>
+  </nav>
+  <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" onclick="var h=this.closest('header');var o=h.classList.toggle('nav-open');this.setAttribute('aria-expanded',o)">&#9776;</button>
+</header>
 
-<section class="hero wrap-large">
-  <p class="accroche">Tout mystère mérite une mémoire.</p>
-  <p class="baseline">Mille hypothèses. Une preuve fait foi.</p>
-</section>
-
-<section class="wrap-large">
-  <p class="explore-intro">Par où commencer ? Choisis un sujet, puis un type — les enquêtes correspondantes s'affichent.</p>
-
-  <div class="selecteurs">
-    <label class="sel">
-      <span>Sujet</span>
-      <select id="sel-sujet">
-        <option value="">— Choisir un sujet —</option>
-        <option value="Montagne">Montagne</option><option value="Géologie">Géologie</option><option value="Histoire &amp; patrimoine">Histoire &amp; patrimoine</option><option value="Architecture">Architecture</option><option value="Faune &amp; nature">Faune &amp; nature</option><option value="Archéologie">Archéologie</option><option value="Autre">Autre</option>
-      </select>
-    </label>
-    <label class="sel">
-      <span>Type</span>
-      <select id="sel-type">
-        <option value="">— Choisir un type —</option>
-        <option value="Objet">Objet</option><option value="Structure">Structure</option><option value="Macro">Macro</option><option value="Marque">Marque</option><option value="Lieu">Lieu</option><option value="Phenomene">Phénomène</option><option value="Scene">Scène</option><option value="Autre">Autre</option>
-      </select>
-    </label>
+<!-- HERO -->
+<section style="border-bottom:1px solid var(--bordure)">
+  <div class="hero-inner fade-in">
+    <img src="assets/logo-600.jpg" alt="Hors Champ 74 — la nature dans le cadre, les dégradations hors champ" class="hero-illu"/>
+    <div class="hero-eyebrow">
+      <span class="hero-dot"></span>
+      <span class="hero-tag">La région, vue du 74 · depuis 2026</span>
+    </div>
+    <h1 class="hero-h1 delay-1">Le regard s'arrête.<br>Nous, <em>on continue.</em></h1>
+    <p class="hero-sub delay-2">Le média local sur ce que personne ne traite, en Haute-Savoie et dans la région. Pollution. Déchets. Animaux. Eau. Énergie. Tech. Mobilité. Sans filtre, sans complaisance.</p>
+    <div class="pilliers delay-3">
+      <div class="pill">Pollution</div>
+      <div class="pill">Déchets</div>
+      <div class="pill">Animaux</div>
+      <div class="pill">Good news</div>
+      <div class="pill">Montagne & Nature</div>
+      <div class="pill">Le coin des curieux</div>
+    </div>
   </div>
-
-  <p class="explore-prompt" id="prompt">Choisis un sujet ou un type ci-dessus pour afficher les enquêtes.</p>
-  <p class="compteur-resultats" id="compteur" hidden=""></p>
-
-  <ul class="liste-resultats" id="resultats">
-    
-    <li class="res-item" data-theme="Marque" data-statut="ACTIVE" data-sujets="Histoire &amp; patrimoine,Montagne" hidden="">
-      <a href="/astrolabis/enquete/borne-frontiere-sarde/">
-        <span class="res-type">Marque</span>
-        <span class="res-titre">La pierre plantée dans la forêt</span>
-        
-<span class="statut"><span class="dot dot-vert"></span>En cours</span>
-
-      </a>
-    </li>
-    
-    <li class="res-item" data-theme="Phenomene" data-statut="ACTIVE" data-sujets="Géologie,Montagne" hidden="">
-      <a href="/astrolabis/enquete/desert-de-plate/">
-        <span class="res-type">Phénomène</span>
-        <span class="res-titre">Le désert lunaire face au Mont-Blanc</span>
-        
-<span class="statut"><span class="dot dot-vert"></span>En cours</span>
-
-      </a>
-    </li>
-    
-    <li class="res-item" data-theme="Scene" data-statut="ACTIVE" data-sujets="Géologie,Montagne" hidden="">
-      <a href="/astrolabis/enquete/empreintes-vieux-emosson/">
-        <span class="res-type">Scène</span>
-        <span class="res-titre">Les pas gravés dans la dalle, à 2 400 m</span>
-        
-<span class="statut"><span class="dot dot-vert"></span>En cours</span>
-
-      </a>
-    </li>
-    
-    <li class="res-item" data-theme="Structure" data-statut="ACTIVE" data-sujets="Architecture,Histoire &amp; patrimoine" hidden="">
-      <a href="/astrolabis/enquete/barriere-esseillon/">
-        <span class="res-type">Structure</span>
-        <span class="res-titre">La forteresse qui n&#39;a jamais tiré un coup de canon</span>
-        
-<span class="statut"><span class="dot dot-vert"></span>En cours</span>
-
-      </a>
-    </li>
-    
-    <li class="res-item" data-theme="Phenomene" data-statut="ACTIVE" data-sujets="Géologie,Montagne" hidden="">
-      <a href="/astrolabis/enquete/four-cristaux-mont-blanc/">
-        <span class="res-type">Phénomène</span>
-        <span class="res-titre">Le « four » caché dans la falaise du Mont-Blanc</span>
-        
-<span class="statut"><span class="dot dot-vert"></span>En cours</span>
-
-      </a>
-    </li>
-    
-    <li class="res-item" data-theme="Phenomene" data-statut="ACTIVE" data-sujets="Faune &amp; nature,Montagne" hidden="">
-      <a href="/astrolabis/enquete/gypaete-barbu-bargy/">
-        <span class="res-type">Phénomène</span>
-        <span class="res-titre">L&#39;oiseau de 3 mètres qui mange des os</span>
-        
-<span class="statut"><span class="dot dot-vert"></span>En cours</span>
-
-      </a>
-    </li>
-    
-    <li class="res-item" data-theme="Scene" data-statut="ACTIVE" data-sujets="Histoire &amp; patrimoine,Architecture" hidden="">
-      <a href="/astrolabis/enquete/ecole-horlogerie-cluses/">
-        <span class="res-type">Scène</span>
-        <span class="res-titre">Pourquoi cette petite ville a fabriqué des montres</span>
-        
-<span class="statut"><span class="dot dot-vert"></span>En cours</span>
-
-      </a>
-    </li>
-    
-    <li class="res-item" data-theme="Lieu" data-statut="ACTIVE" data-sujets="Histoire &amp; patrimoine" hidden="">
-      <a href="/astrolabis/enquete/nom-cluses-clusa/">
-        <span class="res-type">Lieu</span>
-        <span class="res-titre">Le nom qui veut dire « fermé »</span>
-        
-<span class="statut"><span class="dot dot-vert"></span>En cours</span>
-
-      </a>
-    </li>
-    
-    <li class="res-item" data-theme="Phenomene" data-statut="ACTIVE" data-sujets="Géologie,Montagne" hidden="">
-      <a href="/astrolabis/enquete/marmites-de-geants-tines/">
-        <span class="res-type">Phénomène</span>
-        <span class="res-titre">Les trous parfaitement ronds dans la roche du torrent</span>
-        
-<span class="statut"><span class="dot dot-vert"></span>En cours</span>
-
-      </a>
-    </li>
-    
-    <li class="res-item" data-theme="Phenomene" data-statut="ACTIVE" data-sujets="Archéologie,Montagne" hidden="">
-      <a href="/astrolabis/enquete/pierre-du-diable-cupules/">
-        <span class="res-type">Phénomène</span>
-        <span class="res-titre">Les creux ronds au sommet du gros rocher</span>
-        
-<span class="statut"><span class="dot dot-vert"></span>En cours</span>
-
-      </a>
-    </li>
-    
-  </ul>
-
-  <p class="tout-voir"><a href="/astrolabis/enquetes/">Tout voir</a></p>
 </section>
+
+<!-- BRÈVE DU JOUR -->
+<section class="breve-section">
+  <div class="breve-inner">
+    <div class="section-label">La brève du jour</div>
+    <div id="breve-contenu">
+      <div class="skeleton" style="height:14px;width:20%;margin-bottom:20px"></div>
+      <div class="skeleton" style="height:52px;width:85%;margin-bottom:20px"></div>
+      <div class="skeleton" style="height:16px;width:100%;margin-bottom:8px"></div>
+      <div class="skeleton" style="height:16px;width:75%"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FIL DE LA SEMAINE -->
+<section class="fil-section">
+  <div class="fil-inner">
+    <div class="fil-header">
+      <h2 class="fil-titre">Le fil de la semaine</h2>
+      <a href="fil.html" class="voir-tout">Tout voir →</a>
+    </div>
+    <div id="fil-contenu">
+      <div class="article">
+        <div class="skeleton" style="height:12px;width:28%;margin-bottom:12px"></div>
+        <div class="skeleton" style="height:26px;width:70%;margin-bottom:10px"></div>
+        <div class="skeleton" style="height:13px;width:90%;margin-bottom:6px"></div>
+        <div class="skeleton" style="height:13px;width:65%"></div>
+      </div>
+      <div class="article">
+        <div class="skeleton" style="height:12px;width:28%;margin-bottom:12px"></div>
+        <div class="skeleton" style="height:26px;width:70%;margin-bottom:10px"></div>
+        <div class="skeleton" style="height:13px;width:90%"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGIR -->
+<section class="agir-section">
+  <div class="agir-inner">
+    <div class="agir-label">Passer à l'acte</div>
+    <h2 class="agir-titre">On agit là où<br>le regard <em>s'arrête.</em></h2>
+    <p class="agir-sub">Tu peux lire. Tu peux signaler. Tu peux râler. Tu peux venir.<br>Tout est possible. Rien n'est obligatoire.</p>
+    <div class="actions">
+      <div class="action">
+        <h3 class="action-titre">Signaler quelque chose</h3>
+        <p class="action-txt">Un dépôt en bord de route, un animal en détresse, une rivière qui change de couleur. Tu décris, on traite. Si c'est dans notre périmètre, ça part au vote.</p>
+        <a href="https://tally.so/r/68AXVY" target="_blank" class="action-lien">Faire un signalement →</a>
+      </div>
+      <div class="action">
+        <h3 class="action-titre">Pousser un coup de gueule</h3>
+        <p class="action-txt">Ce qui t'agace autour de chez toi, ce qui mérite d'être dit. Tu écris, on relit, on anonymise, on publie le vendredi. Pas d'attaque nominative. Juste la parole brute.</p>
+        <a href="coupgueule.html" class="action-lien">Écrire un coup de gueule →</a>
+      </div>
+      <div class="action">
+        <h3 class="action-titre">Venir une fois</h3>
+        <p class="action-txt">Une action terrain par mois. Tu viens quand tu veux, deux heures suffisent. Pas d'engagement, pas de cotisation, pas d'assemblée générale obligatoire.</p>
+        <a href="https://tally.so/r/68AXVY" target="_blank" class="action-lien">Être prévenu de la prochaine action →</a>
+      </div>
+      <div class="action">
+        <h3 class="action-titre">Partager une good news</h3>
+        <p class="action-txt">Un problème résolu, un beau geste, une victoire locale. On ne parle pas que de ce qui va mal. Les bonnes nouvelles méritent aussi d'être racontées.</p>
+        <a href="https://tally.so/r/68AXVY" target="_blank" class="action-lien">Partager une bonne nouvelle →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="f-logo">HORS CHAMP 74</div>
+      <div class="f-base">On agit là où le regard s'arrête.</div>
+      <div class="f-geo">Haute-Savoie · 2026</div>
+    </div>
+    <div class="f-col">
+      <h4>Le site</h4>
+      <a href="fil.html">Le fil</a>
+      <a href="fil.html?cat=good-news">Good news</a>
+      <a href="fil.html?cat=montagne">Montagne & Nature</a>
+      <a href="fil.html?cat=curieux">Le coin des curieux</a>
+    </div>
+    <div class="f-col">
+      <h4>Agir</h4>
+      <a href="https://tally.so/r/68AXVY" target="_blank">Signaler</a>
+      <a href="https://tally.so/r/68AXVY" target="_blank">Venir une fois</a>
+      <a href="coupgueule.html">Coup de gueule</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">© 2026 Hors Champ 74 · Association en construction</span>
+  </div>
+</footer>
 
 <script>
-(function () {
-  var selS = document.getElementById("sel-sujet");
-  var selT = document.getElementById("sel-type");
-  var items = Array.prototype.slice.call(document.querySelectorAll("#resultats .res-item"));
-  var prompt = document.getElementById("prompt");
-  var compteur = document.getElementById("compteur");
-  function appliquer() {
-    var su = selS.value, ty = selT.value;
-    if (!su && !ty) {
-      items.forEach(function (i) { i.hidden = true; });
-      prompt.hidden = false; compteur.hidden = true; return;
-    }
-    prompt.hidden = true; compteur.hidden = false;
-    var n = 0;
-    items.forEach(function (i) {
-      var sujets = (i.getAttribute("data-sujets") || "").split(",");
-      var okS = !su || sujets.indexOf(su) !== -1;
-      var okT = !ty || i.getAttribute("data-theme") === ty;
-      var ok = okS && okT; i.hidden = !ok; if (ok) n++;
+const LABELS = {
+  pollution: 'Pollution',
+  dechets: 'Déchets',
+  animaux: 'Animaux',
+  'good-news': 'Good News',
+  montagne: 'Montagne & Nature',
+  curieux: 'Curieux',
+  eau: 'Eau',
+  energie: 'Énergie & climat',
+  'tech-ia': 'Tech & IA',
+  mobilite: 'Mobilité',
+};
+
+function formatDate(dateStr) {
+  if (!dateStr) return '';
+  try {
+    return new Date(dateStr).toLocaleDateString('fr-FR', {
+      weekday: 'long', day: 'numeric', month: 'long'
     });
-    compteur.textContent = n + (n > 1 ? " enquêtes" : " enquête");
+  } catch(e) { return dateStr; }
+}
+
+function afficherBreve(b) {
+  const el = document.getElementById('breve-contenu');
+  if (!b) {
+    el.innerHTML = '<div class="no-articles">Aucune brève publiée pour l\'instant.</div>';
+    return;
   }
-  selS.addEventListener("change", appliquer);
-  selT.addEventListener("change", appliquer);
-  appliquer();
-})();
+  const catClass = 't-' + (b.category || 'curieux');
+  const label = LABELS[b.category] || b.category || 'Brève';
+  const sourceHtml = b.source
+    ? `<div class="breve-source">Source : <strong>${b.source}</strong></div>`
+    : '';
+  el.innerHTML = `
+    <div>
+      <span class="breve-date">${formatDate(b.date)}</span>
+      <span class="breve-category-badge ${catClass}">${label}</span>
+    </div>
+    <h2 class="breve-titre">${b.titre}</h2>
+    <div class="breve-chapeau">${b.extrait}</div>
+    ${sourceHtml}
+    <a href="${b.url}" class="lire-plus">Lire la brève complète <span class="arr">→</span></a>
+  `;
+}
+
+function afficherFil(breves) {
+  const el = document.getElementById('fil-contenu');
+  if (!breves.length) {
+    el.innerHTML = '<div class="no-articles">Le fil est vide pour l\'instant.</div>';
+    return;
+  }
+  el.innerHTML = breves.map(b => {
+    const catClass = 't-' + (b.category || 'curieux');
+    const label = LABELS[b.category] || b.category || 'Brève';
+    return `
+      <div class="article" onclick="location.href='${b.url}'">
+        <div class="art-meta">
+          <span class="art-date">${formatDate(b.date)}</span>
+          <span class="art-tag ${catClass}">${label}</span>
+        </div>
+        <h3 class="art-titre">${b.titre}</h3>
+        <p class="art-extrait">${b.extrait}</p>
+        <a class="art-lire" href="${b.url}">Lire la brève →</a>
+      </div>
+    `;
+  }).join('');
+}
+
+// Chargement depuis breves.json (pas d'appel API GitHub)
+fetch('breves.json?v=' + Date.now())
+  .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+  .then(data => {
+    afficherBreve(data[0] || null);
+    afficherFil(data.slice(1, 5));
+  })
+  .catch(err => {
+    console.error('Erreur chargement brèves:', err);
+    document.getElementById('breve-contenu').innerHTML =
+      '<div class="no-articles">Impossible de charger les brèves.</div>';
+    document.getElementById('fil-contenu').innerHTML = '';
+  });
 </script>
+<!-- NEWSLETTER -->
+<section style="text-align: center; margin: 60px auto 40px; max-width: 600px; padding: 40px 20px; background: #f5f0e8; border-radius: 8px;">
+  <h2 style="font-family: 'Playfair Display', serif; font-size: 28px; color: #1a1714; margin-bottom: 15px;">Recevez Hors Champ 74 chaque semaine</h2>
+  <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; color: #7a736b; margin-bottom: 25px;">Une brève chaque semaine, directement dans votre boîte mail. Sans pub, sans spam.</p>
+  <iframe width="540" height="305" src="https://3e6f4d40.sibforms.com/v2/serve/MUIFAIMbaWQogjU0asan5r0sXzYLahjnkX57-NR-hThCc4i7YzxORddFWTXzpRwLXI82QSQlQURqBqTn_4YPbe3WS3Jos6edWepZt0vNI-ceaF5cYKIP8kasS66iT7qkbBSRavsJGC1Q0gal-uHObuNdypqYv9EuJyIqAJqwmViEM9-n7rREbhGuOgRVu2XTOr6pMA2IMxOxK1pfxw==" frameborder="0" scrolling="auto" allowfullscreen style="display: block; margin-left: auto; margin-right: auto; max-width: 100%; margin-top: 20px;"></iframe>
+</section>
 
-  </main>
-
-  <footer class="site-footer">
-    <img class="logo-mark" src="/astrolabis/assets/logo-medallion.png" alt="" width="32" height="32">
-    Astrolabis — la mémoire du réel. Mille hypothèses. Une preuve fait foi.
-  </footer>
+<!-- STATS — GoatCounter (sans cookies) -->
+<script data-goatcounter="https://horschamp74.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
