@@ -1,5 +1,17 @@
 [
   {
+    "titre": "ANNECY FERME SON LAC AUX BATEAUX : LA VRAIE RAISON N'EST PAS CELLE QU'ON CROIT",
+    "slug": "2026-07-23-a",
+    "date": "2026-07-23T08:01:42.000+02:00",
+    "datePrefix": "2026-07-23",
+    "category": "eau",
+    "source": "L'Essor Savoyard",
+    "image": "https://images.unsplash.com/photo-1717010785689-67b6d77a8f23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ3OTM3MDJ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Trop de planches de SUP, trop de kayaks, trop de jets de cordages ratés à deux mètres d'un nageur ? La Ville d'Annecy vient de décider de limiter les mises à l'eau sur le lac — et la décision est plus tranchée qu'un simple coup de sifflet de plage. Derrière l'annonce officielle, il y a une réalité d",
+    "lieu": "Annecy",
+    "url": "/breves/2026-07-23-a/"
+  },
+  {
     "titre": "L'ALPAGE DE SULENS FORME DES BERGERS QUI N'EXISTENT PLUS NULLE PART AILLEURS",
     "slug": "2026-07-22-a",
     "date": "2026-07-22T07:58:14.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "À 17 ans, une jeune fille haut-savoyarde gère un refuge pour animaux maltraités ou jetés à la rue. Des lapins retrouvés dans des sacs poubelle, des créatures en détresse — elle les recueille, les soigne, leur redonne une chance. Un engagement personnel qui crie ce qu'on ne dit jamais assez : nos déc",
     "lieu": "",
     "url": "/breves/2026-05-27-a/"
-  },
-  {
-    "titre": "RIVIÈRES DE HAUTE-SAVOIE : UN DÉSASTRE DE DÉCHETS",
-    "slug": "rivieres-de-haute-savoie-un-desastre-de-dechets",
-    "date": "2026-05-25T09:40:29.000+02:00",
-    "datePrefix": "2026-05-25",
-    "category": "pollution",
-    "source": "TF1 Info",
-    "image": "https://images.unsplash.com/photo-1663764617546-1b694b3dfc8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk4NjEyNTZ8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Les rivières de Haute-Savoie croulent sous les montagnes de déchets. Une vidéo TF1 a documenté l'ampleur du désastre en avril 2023, mettant en lumière une pollution massive qui « déchire le cœur » des riverains et des environnementalistes. C'est un problème qui touche directement la qualité de vie l",
-    "lieu": "",
-    "url": "/breves/2026-05-25-rivieres-de-haute-savoie-un-desastre-de-dechets/"
   }
 ]
