@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LES BÉNÉVOLES DE THONON PATROUILLENT LE LÉMAN SANS FILET",
+    "slug": "2026-07-24-a",
+    "date": "2026-07-24T07:57:56.000+02:00",
+    "datePrefix": "2026-07-24",
+    "category": "eau",
+    "source": "Le Dauphiné",
+    "image": "https://images.unsplash.com/photo-1779031155216-dcc54790e25c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ4Nzk4NzZ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Soixante-cinq kilomètres de rive française, des plaisanciers qui ignorent les courants, des baigneurs qui surestiment leur souffle : le Léman n'est pas un lac tranquille. À Thonon, une poignée de sauveteurs bénévoles veille — de nuit comme de jour, par brise légère ou grain traître — sur l'un des pl",
+    "lieu": "Thonon-les-Bains",
+    "url": "/breves/2026-07-24-a/"
+  },
+  {
     "titre": "ANNECY FERME SON LAC AUX BATEAUX : LA VRAIE RAISON N'EST PAS CELLE QU'ON CROIT",
     "slug": "2026-07-23-a",
     "date": "2026-07-23T08:01:42.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Des microparticules d'abrasion des pneus de voitures s'accumulent dans le lac d'Annecy. Une contamination silencieuse mais massive qui atteint désormais les eaux — et probablement la chaîne alimentaire aquatique. C'est une forme de pollution que personne ne voit, mais qui s'installe. Ce que les habi",
     "lieu": "",
     "url": "/breves/2026-05-28-a/"
-  },
-  {
-    "titre": "ADOLESCENTE, ELLE SAUVE LES ANIMAUX ABANDONNÉS",
-    "slug": "2026-05-27-a",
-    "date": "2026-05-27T19:01:43.000+02:00",
-    "datePrefix": "2026-05-27",
-    "category": "animaux",
-    "source": "France 3 Régions",
-    "image": "https://images.unsplash.com/photo-1580329127084-7fb80575f5d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk5MDg1MDN8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "À 17 ans, une jeune fille haut-savoyarde gère un refuge pour animaux maltraités ou jetés à la rue. Des lapins retrouvés dans des sacs poubelle, des créatures en détresse — elle les recueille, les soigne, leur redonne une chance. Un engagement personnel qui crie ce qu'on ne dit jamais assez : nos déc",
-    "lieu": "",
-    "url": "/breves/2026-05-27-a/"
   }
 ]
