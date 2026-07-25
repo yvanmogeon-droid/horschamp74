@@ -1,5 +1,17 @@
 [
   {
+    "titre": "DES PÊCHEURS SORTENT DES POISSONS VIVANTS DES RIVIÈRES AVANT QU'ELLES MEURENT",
+    "slug": "2026-07-25-a",
+    "date": "2026-07-25T07:36:32.000+02:00",
+    "datePrefix": "2026-07-25",
+    "category": "eau",
+    "source": "ici.fr",
+    "image": "https://images.unsplash.com/photo-1633966458715-9e3d7ce74b8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ5NjQ5OTJ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Quand le niveau d'une rivière tombe trop bas, les poissons n'ont plus où aller. L'eau se réchauffe, l'oxygène disparaît, et les truites commencent à suffoquer dans quelques centimètres de flotte tiède. En Haute-Savoie cet été, des équipes de pêcheurs — fédérations, gardes-rivière, bénévoles — ont pr",
+    "lieu": "Haute-Savoie",
+    "url": "/breves/2026-07-25-a/"
+  },
+  {
     "titre": "LES BÉNÉVOLES DE THONON PATROUILLENT LE LÉMAN SANS FILET",
     "slug": "2026-07-24-a",
     "date": "2026-07-24T07:57:56.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Les microparticules issues de l'abrasion des pneumatiques finissent dans le lac d'Annecy. Une pollution insidieuse, produite simplement par le freinage et l'usure des pneus lors de la circulation routière. Les chercheurs alertent : c'est l'une des sources majeures de contamination plastique des lacs",
     "lieu": "",
     "url": "/breves/2026-05-28-b/"
-  },
-  {
-    "titre": "LAC D'ANNECY : LES PNEUS NOUS EMPOISONNENT",
-    "slug": "2026-05-28-a",
-    "date": "2026-05-28T09:04:54.000+02:00",
-    "datePrefix": "2026-05-28",
-    "category": "pollution",
-    "source": "Reporterre",
-    "image": "https://images.unsplash.com/photo-1580115037899-6723b3da64f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk5NTkwOTR8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Des microparticules d'abrasion des pneus de voitures s'accumulent dans le lac d'Annecy. Une contamination silencieuse mais massive qui atteint désormais les eaux — et probablement la chaîne alimentaire aquatique. C'est une forme de pollution que personne ne voit, mais qui s'installe. Ce que les habi",
-    "lieu": "",
-    "url": "/breves/2026-05-28-a/"
   }
 ]
