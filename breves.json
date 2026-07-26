@@ -1,5 +1,17 @@
 [
   {
+    "titre": "EN HAUTE-SAVOIE, ALLUMER UN FEU EN ÉTÉ PEUT COÛTER TRÈS CHER",
+    "slug": "2026-07-26-a",
+    "date": "2026-07-26T07:57:23.000+02:00",
+    "datePrefix": "2026-07-26",
+    "category": "montagne",
+    "source": "Le Pays Gessien",
+    "image": "https://images.unsplash.com/photo-1758919679676-012fc96c8fc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUwNTI2NDN8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "C'est l'été, il fait sec, et quelqu'un quelque part dans le 74 s'apprête à brûler des déchets verts au fond de son jardin. Mauvaise idée — et pas seulement à cause du voisin qui tousse. En Haute-Savoie, les usages du feu sont encadrés par des règles qui changent selon la saison, la commune et l'état",
+    "lieu": "Haute-Savoie",
+    "url": "/breves/2026-07-26-a/"
+  },
+  {
     "titre": "DES PÊCHEURS SORTENT DES POISSONS VIVANTS DES RIVIÈRES AVANT QU'ELLES MEURENT",
     "slug": "2026-07-25-a",
     "date": "2026-07-25T07:36:32.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Les particules fines des pneus de voiture finissent dans le lac d'Annecy. Une pollution silencieuse mais massive : chaque freinage, chaque virage relâche des microplastiques qui s'échappent des routes et des parkings pour contaminer l'eau. C'est une réalité dérangeante que personne ne voit arriver. ",
     "lieu": "",
     "url": "/breves/2026-05-29-a/"
-  },
-  {
-    "titre": "LAC D'ANNECY POLLUÉ PAR LES PNEUS DE VOITURE",
-    "slug": "2026-05-28-b",
-    "date": "2026-05-28T16:30:17.000+02:00",
-    "datePrefix": "2026-05-28",
-    "category": "pollution",
-    "source": "Reporterre, le média de l'écologie",
-    "image": "https://images.unsplash.com/photo-1550007488-acbcd2b1be4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk5ODU4MTd8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Les microparticules issues de l'abrasion des pneumatiques finissent dans le lac d'Annecy. Une pollution insidieuse, produite simplement par le freinage et l'usure des pneus lors de la circulation routière. Les chercheurs alertent : c'est l'une des sources majeures de contamination plastique des lacs",
-    "lieu": "",
-    "url": "/breves/2026-05-28-b/"
   }
 ]
