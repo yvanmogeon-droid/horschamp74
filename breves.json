@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LE GLACIER DES BOSSONS FOND SI VITE QU'IL PLEURE EN PLEIN JUILLET",
+    "slug": "2026-07-28-a",
+    "date": "2026-07-28T08:05:35.000+02:00",
+    "datePrefix": "2026-07-28",
+    "category": "energie",
+    "source": "Le Dauphiné",
+    "image": "https://images.unsplash.com/photo-1575928185982-7660337c15e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUyMjU5MzV8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "À Chamonix, le glacier des Bossons ne se contente plus de reculer — il ruisselle. Cet été, les torrents de fonte qui s'échappent de sa langue glaciaire ont atteint des débits que les habitants du vallon n'avaient jamais observés à cette période de l'année. Pas un filet d'eau, pas une source discrète",
+    "lieu": "Chamonix",
+    "url": "/breves/2026-07-28-a/"
+  },
+  {
     "titre": "LES BÉNÉVOLES D'ARÂCHES SORTENT PLUSIEURS MÈTRES CUBES DE DÉCHETS DE LA MONTAGNE",
     "slug": "2026-07-27-a",
     "date": "2026-07-27T08:58:29.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Des microparticules d'abrasion des pneus de voitures s'accumulent dans le lac d'Annecy. Une contamination insidieuse mais massive qui atteint désormais les eaux — et probablement la chaîne alimentaire aquatique. C'est une forme de pollution que personne ne voit, mais qui s'installe chaque jour. Ce q",
     "lieu": "",
     "url": "/breves/2026-05-31-a/"
-  },
-  {
-    "titre": "LAC D'ANNECY : LES PNEUS USÉS ASSASSINENT L'EAU",
-    "slug": "2026-05-30-a",
-    "date": "2026-05-30T08:08:44.000+02:00",
-    "datePrefix": "2026-05-30",
-    "category": "pollution",
-    "source": "Reporterre, le média de l'écologie",
-    "image": "https://images.unsplash.com/photo-1764183122446-4832899429cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAxMjg1MjR8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Les microparticules d'usure des pneumatiques se déversent massivement dans le lac. À chaque freinage, chaque virage, des fragments s'échappent des routes lacustres et finissent en suspension dans ce joyau touristique. Les chercheurs tirent l'alarme : cette pollution invisible s'accumule, s'intègre à",
-    "lieu": "",
-    "url": "/breves/2026-05-30-a/"
   }
 ]
