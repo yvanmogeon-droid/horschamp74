@@ -1,5 +1,17 @@
 [
   {
+    "titre": "DES BÉNÉVOLES COUSENT LES SENTIERS DU HAUT GIFFRE À MAINS NUES",
+    "slug": "2026-07-30-a",
+    "date": "2026-07-30T07:57:20.000+02:00",
+    "datePrefix": "2026-07-30",
+    "category": "montagne",
+    "source": "ffrandonnee.fr",
+    "image": "https://images.unsplash.com/photo-1659375828101-234e95ab300c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUzOTgyNDB8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Le sentier du Bout du Monde, dans le Haut Giffre, porte bien son nom — et pendant un moment, il a failli mériter aussi celui de \"sentier de nulle part\". Érodé, raviné, rendu impraticable par les à-coups climatiques et le passage répété des randonneurs, il a fallu que des bénévoles s'en emparent pour",
+    "lieu": "Haut Giffre",
+    "url": "/breves/2026-07-30-a/"
+  },
+  {
     "titre": "LA FOUDRE RAVAGE L'ALPAGE-ÉCOLE DE SULENS, LE FEU EST MAÎTRISÉ",
     "slug": "2026-07-29-a",
     "date": "2026-07-29T08:10:56.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Un déversement accidentel d'encre rouge dans une rivière de Haute-Savoie a teint le lac Léman sur une immense nappe de 57 000 mètres carrés. L'accident, survenu fin avril, a transformé une portion du lac en mare d'encre industrielle, visible de loin. Les autorités tentent de comprendre l'origine exa",
     "lieu": "Lac Léman",
     "url": "/breves/2026-06-01-a/"
-  },
-  {
-    "titre": "POLLUTION DU THIOU : FIOUL ET SOLVANTS À ANNECY",
-    "slug": "2026-05-31-b",
-    "date": "2026-05-31T08:30:03.000+02:00",
-    "datePrefix": "2026-05-31",
-    "category": "pollution",
-    "source": "Le Dauphiné Libéré",
-    "image": "https://images.unsplash.com/photo-1767677731893-38e6d1a21ebc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAyMTYyMDN8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Le Thiou, rivière emblématique d'Annecy, vire au cauchemar. Fioul, solvants, huiles mécaniques, essence : un cocktail toxique s'est déversé dans ses eaux. Le pôle régional de l'environnement a ouvert une enquête pour identifier la source de cette catastrophe. C'est un coup dur pour une commune qui s",
-    "lieu": "Annecy",
-    "url": "/breves/2026-05-31-b/"
   }
 ]
