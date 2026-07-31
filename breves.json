@@ -1,5 +1,17 @@
 [
   {
+    "titre": "DEUX BASSINS EN CRISE : LA HAUTE-SAVOIE À SEC COMME JAMAIS EN JUILLET",
+    "slug": "2026-07-31-a",
+    "date": "2026-07-31T08:20:31.000+02:00",
+    "datePrefix": "2026-07-31",
+    "category": "eau",
+    "source": "France 3",
+    "image": "https://images.unsplash.com/photo-1780920395638-58077e66cc27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU0ODYwMzF8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Fin juillet, et deux bassins versants de Haute-Savoie viennent de franchir le seuil de crise — le niveau d'alerte maximal prévu par la loi sur l'eau. Pas une vigilance, pas une alerte simple : la crise, celle qui impose des restrictions draconiennes sur les prélèvements, l'irrigation, parfois même l",
+    "lieu": "Haute-Savoie",
+    "url": "/breves/2026-07-31-a/"
+  },
+  {
     "titre": "DES BÉNÉVOLES COUSENT LES SENTIERS DU HAUT GIFFRE À MAINS NUES",
     "slug": "2026-07-30-a",
     "date": "2026-07-30T07:57:20.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Quatre-vingt-cinq volontaires se sont retroussé les manches à Arâches-la-Frasse pour nettoyer leur coin. Résultat : plusieurs mètres cubes de détritus extraits du sol et des zones publiques. Des habitants qui refusent de vivre dans la crasse sans attendre les promesses des élus. C'est un geste qu'on",
     "lieu": "Arâches-la-Frasse",
     "url": "/breves/2026-06-02-a/"
-  },
-  {
-    "titre": "ENCRE ROUGE DANS LE LAC LÉMAN : 57 000 M² POLLUÉS",
-    "slug": "2026-06-01-a",
-    "date": "2026-06-01T10:59:23.000+02:00",
-    "datePrefix": "2026-06-01",
-    "category": "pollution",
-    "source": "Le Dauphiné Libéré",
-    "image": "https://images.unsplash.com/photo-1771533841393-15fee1840f4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAzMTE1NjN8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Un déversement accidentel d'encre rouge dans une rivière de Haute-Savoie a teint le lac Léman sur une immense nappe de 57 000 mètres carrés. L'accident, survenu fin avril, a transformé une portion du lac en mare d'encre industrielle, visible de loin. Les autorités tentent de comprendre l'origine exa",
-    "lieu": "Lac Léman",
-    "url": "/breves/2026-06-01-a/"
   }
 ]
