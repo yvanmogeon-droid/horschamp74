@@ -1,5 +1,17 @@
 [
   {
+    "titre": "UN DATA CENTER BLOQUÉ FAUTE D'ÉTUDE VERTE : L'ENVIRONNEMENT GAGNE UNE MANCHE",
+    "slug": "2026-08-01-a",
+    "date": "2026-08-01T07:51:15.000+02:00",
+    "datePrefix": "2026-08-01",
+    "category": "tech-ia",
+    "source": "France 3",
+    "image": "https://images.unsplash.com/photo-1667372283496-893f0b1e7c16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU1NzA2NzV8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Un projet de data center — l'un des plus puissants de la région Auvergne-Rhône-Alpes — vient de se prendre un mur. Pas un recours d'association militante, pas une mobilisation de riverains : une absence d'étude d'impact environnemental. Simple. Brutal. Et pourtant suffisant pour bloquer la machine. ",
+    "lieu": "Auvergne-Rhône-Alpes",
+    "url": "/breves/2026-08-01-a/"
+  },
+  {
     "titre": "DEUX BASSINS EN CRISE : LA HAUTE-SAVOIE À SEC COMME JAMAIS EN JUILLET",
     "slug": "2026-07-31-a",
     "date": "2026-07-31T08:20:31.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Un déversement accidentel d'encre rouge dans une rivière tributaire a teint le lac Léman sur 57 000 m² fin avril. Une nappe spectaculaire et très visible, qui a déclenché les investigations des autorités pour remonter à la source du sinistre. Ce genre d'accident révèle l'impuissance face aux déverse",
     "lieu": "Lac Léman",
     "url": "/breves/2026-06-03-a/"
-  },
-  {
-    "titre": "CHARRETTES PLEINS DÉCHETS : ARÂCHES-LA-FRASSE BRANDIT LA PELLE",
-    "slug": "2026-06-02-a",
-    "date": "2026-06-02T09:51:37.000+02:00",
-    "datePrefix": "2026-06-02",
-    "category": "dechets",
-    "source": "Le Messager",
-    "image": "https://images.unsplash.com/photo-1730162010187-ee1e8a064d5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAzOTM4OTd8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Quatre-vingt-cinq volontaires se sont retroussé les manches à Arâches-la-Frasse pour nettoyer leur coin. Résultat : plusieurs mètres cubes de détritus extraits du sol et des zones publiques. Des habitants qui refusent de vivre dans la crasse sans attendre les promesses des élus. C'est un geste qu'on",
-    "lieu": "Arâches-la-Frasse",
-    "url": "/breves/2026-06-02-a/"
   }
 ]
