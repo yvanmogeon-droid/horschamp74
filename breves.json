@@ -1,5 +1,17 @@
 [
   {
+    "titre": "57 000 M² DE LÉMAN ROUGE ENCRE : CE QUI S'EST VRAIMENT PASSÉ EN AMONT",
+    "slug": "2026-08-04-a",
+    "date": "2026-08-04T08:08:36.000+02:00",
+    "datePrefix": "2026-08-04",
+    "category": "pollution",
+    "source": "Le Dauphiné Libéré",
+    "image": "https://images.unsplash.com/photo-1764258190421-e0533414a9b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU4MzA5MTZ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Une rivière qui charrie de l'encre rouge jusqu'au Léman, une nappe cramoisie de 57 000 mètres carrés visible depuis les rives — le genre de spectacle qui fait sortir les téléphones et appeler les pompiers. Sauf que l'histoire ne commence pas sur le lac : elle commence quelque part en amont, dans une",
+    "lieu": "Lac Léman",
+    "url": "/breves/2026-08-04-a/"
+  },
+  {
     "titre": "LA COMPAGNIE DES ALPES MISE SUR LE PADEL PENDANT QUE SES GLACIERS FONDENT",
     "slug": "2026-08-03-a",
     "date": "2026-08-03T08:50:39.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Un déversement accidentel d'encre dans une rivière tributaire du Léman a teinté massivement le lac fin avril. La nappe rouge couvre 57 000 m² — visible à l'œil nu, tracée spectaculaire d'une fuite industrielle. Les autorités ont lancé l'enquête pour identifier la source et les responsables. Ce sinis",
     "lieu": "Lac Léman, Haute-Savoie",
     "url": "/breves/2026-06-06-a/"
-  },
-  {
-    "titre": "ADOS FONDENT UN REFUGE POUR LES ANIMAUX EN DÉTRESSE",
-    "slug": "2026-06-05-a",
-    "date": "2026-06-05T08:57:32.000+02:00",
-    "datePrefix": "2026-06-05",
-    "category": "animaux",
-    "source": "Le Messager",
-    "image": "https://images.unsplash.com/photo-1761325307223-a7c7e61be814?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA2NDk4NTJ8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "À 17 ans, une jeune Haut-Savoyarde a créé un refuge accueillant les bêtes abandonnées et maltraitées. Face à l'inaction des structures existantes, elle agit seule, sans attendre les promesses des adultes. Un projet personnel qui dépasse les simples bonnes intentions : nourrir, soigner, placer les an",
-    "lieu": "Haute-Savoie",
-    "url": "/breves/2026-06-05-a/"
   }
 ]
