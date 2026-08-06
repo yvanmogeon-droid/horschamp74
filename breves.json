@@ -1,5 +1,17 @@
 [
   {
+    "titre": "DES CHATS BORGNES EN HAUTE-SAVOIE : LA SPA À BOUT DE RESSOURCES",
+    "slug": "2026-08-06-a",
+    "date": "2026-08-06T08:06:15.000+02:00",
+    "datePrefix": "2026-08-06",
+    "category": "animaux",
+    "source": "L'Essor Savoyard",
+    "image": "https://images.unsplash.com/photo-1589843039488-fde780b37608?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODYwMDM1NzV8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Dans un refuge de Haute-Savoie, des chats arrivent les yeux en moins. Pas des blessures de combat, pas des accidents : une maladie qui progresse si vite que la seule issue médicale, c'est l'énucléation — retirer l'œil avant que l'infection ne gagne le reste. La SPA tire la sonnette d'alarme : les ca",
+    "lieu": "Haute-Savoie",
+    "url": "/breves/2026-08-06-a/"
+  },
+  {
     "titre": "UN TIERS DES RIVIÈRES DU BOURGET À SEC : LA SAVOIE ASSOIFFE SES PROPRES RIVES",
     "slug": "2026-08-05-a",
     "date": "2026-08-05T08:07:53.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "La région Auvergne-Rhône-Alpes est devenue le troisième territoire français de l'intelligence artificielle, avec 46 jeunes pousses recensées par l'étude France Digitale — derrière Paris, évidemment, mais devant tout le reste. Le gros du magot se joue côté Isère : 350 millions d'euros annoncés pour ",
     "lieu": "Grenoble",
     "url": "/breves/2026-06-07-l-ia-pousse-comme-un-champignon-entre-lyon-et-gren/"
-  },
-  {
-    "titre": "SENTIER GÉOLOGIQUE POUR NON-VOYANTS : TOUCHER LA MONTAGNE",
-    "slug": "2026-06-07-a",
-    "date": "2026-06-07T08:39:27.000+02:00",
-    "datePrefix": "2026-06-07",
-    "category": "montagne",
-    "source": "France 3",
-    "image": "https://images.unsplash.com/photo-1730161912775-7af809402558?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA4MjE1NjZ8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Dans un petit village des Alpes, un sentier géologique inédit est en cours d'aménagement pour les personnes non-voyantes. Le projet permet de « ressentir la montagne avec ses doigts » via des installations tactiles et des panneaux en braille, offrant une expérience sensorielle complète de l'environn",
-    "lieu": "Alpes",
-    "url": "/breves/2026-06-07-a/"
   }
 ]
