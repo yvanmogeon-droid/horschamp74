@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LA SAVOIE COUPE L'EAU PLUS FORT : CE QUI CHANGE POUR LES GENS DU COIN",
+    "slug": "2026-08-07-a",
+    "date": "2026-08-07T06:52:52.000+02:00",
+    "datePrefix": "2026-08-07",
+    "category": "eau",
+    "source": "Les services de l'État en Savoie",
+    "image": "https://images.unsplash.com/photo-1550839105-94eabecb46a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODYwODU1NzJ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "En Savoie, les robinets administratifs viennent de se resserrer d'un cran. Les services de l'État ont annoncé un renforcement des mesures de restriction des usages de l'eau — ce qui signifie concrètement : des communes, des agriculteurs et des particuliers qui basculent vers des seuils d'alerte supé",
+    "lieu": "Savoie",
+    "url": "/breves/2026-08-07-a/"
+  },
+  {
     "titre": "DES CHATS BORGNES EN HAUTE-SAVOIE : LA SPA À BOUT DE RESSOURCES",
     "slug": "2026-08-06-a",
     "date": "2026-08-06T08:06:15.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Un aigle royal a survolé Viuz-en-Sallaz ce week-end — silhouette massive, vol plané, le genre de visiteur qu'on ne confond pas avec une buse. Rien d'impossible : la Haute-Savoie compte environ 43 couples, installés dans les grands massifs, Chablais compris. Et chez nous, entre les Brasses, le Môle e",
     "lieu": "Viuz en sallaz",
     "url": "/breves/2026-06-07-un-aigle-royal-en-balade-au-dessus-de-viuz-en-sall/"
-  },
-  {
-    "titre": "L'IA POUSSE COMME UN CHAMPIGNON ENTRE LYON ET GRENOBLE",
-    "slug": "2026-06-07-l-ia-pousse-comme-un-champignon-entre-lyon-et-gren",
-    "date": "2026-06-07T10:57:51.000+02:00",
-    "datePrefix": "2026-06-07",
-    "category": "tech-ia",
-    "source": "France Digitale / France 3",
-    "image": "",
-    "extrait": "La région Auvergne-Rhône-Alpes est devenue le troisième territoire français de l'intelligence artificielle, avec 46 jeunes pousses recensées par l'étude France Digitale — derrière Paris, évidemment, mais devant tout le reste. Le gros du magot se joue côté Isère : 350 millions d'euros annoncés pour ",
-    "lieu": "Grenoble",
-    "url": "/breves/2026-06-07-l-ia-pousse-comme-un-champignon-entre-lyon-et-gren/"
   }
 ]
