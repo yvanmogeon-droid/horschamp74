@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LE LAC D'ANNECY PERD PIED : LES PROS DE L'EAU REGARDENT LE FOND",
+    "slug": "2026-08-08-a",
+    "date": "2026-08-08T06:25:03.000+02:00",
+    "datePrefix": "2026-08-08",
+    "category": "eau",
+    "source": "Le Dauphiné",
+    "image": "https://images.unsplash.com/photo-1542174526133-74cc9fcbed8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODYxNzAzMDN8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Le chiffre claque comme une gifle : le lac d'Annecy est descendu sous son niveau de 2018 — une année que les professionnels du bord de lac avaient déjà gravée dans leurs mauvais souvenirs. Cet été, c'est pire. Les loueurs de bateaux, les plongeurs, les exploitants de plages et de pontons regardent l",
+    "lieu": "Annecy",
+    "url": "/breves/2026-08-08-a/"
+  },
+  {
     "titre": "LA SAVOIE COUPE L'EAU PLUS FORT : CE QUI CHANGE POUR LES GENS DU COIN",
     "slug": "2026-08-07-a",
     "date": "2026-08-07T06:52:52.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "En Haute-Savoie et Savoie, une dermatose contagieuse ravage les troupeaux en alpage. La Coordination rurale demande l'évacuation immédiate des animaux malades : « On ne va pas les laisser crever en montagne. » Les cas se multiplient dans les zones d'estivage, forçant les éleveurs à choisir entre lai",
     "lieu": "Haute-Savoie et Savoie",
     "url": "/breves/2026-06-08-a/"
-  },
-  {
-    "titre": "UN AIGLE ROYAL EN BALADE AU-DESSUS DE VIUZ-EN-SALLAZ",
-    "slug": "2026-06-07-un-aigle-royal-en-balade-au-dessus-de-viuz-en-sall",
-    "date": "2026-06-07T15:41:47.000+02:00",
-    "datePrefix": "2026-06-07",
-    "category": "animaux",
-    "source": "Hors Champ 74",
-    "image": "",
-    "extrait": "Un aigle royal a survolé Viuz-en-Sallaz ce week-end — silhouette massive, vol plané, le genre de visiteur qu'on ne confond pas avec une buse. Rien d'impossible : la Haute-Savoie compte environ 43 couples, installés dans les grands massifs, Chablais compris. Et chez nous, entre les Brasses, le Môle e",
-    "lieu": "Viuz en sallaz",
-    "url": "/breves/2026-06-07-un-aigle-royal-en-balade-au-dessus-de-viuz-en-sall/"
   }
 ]
