@@ -1,5 +1,17 @@
 [
   {
+    "titre": "AU FER-À-CHEVAL, LA RIVIÈRE VIDE FAIT PLUS PEUR QUE LA MONTAGNE",
+    "slug": "2026-08-09-a",
+    "date": "2026-08-09T06:29:01.000+02:00",
+    "datePrefix": "2026-08-09",
+    "category": "eau",
+    "source": "Le Dauphiné Libéré",
+    "image": "https://images.unsplash.com/photo-1783027339341-6f3e22367226?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODYyNTY5NDF8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Une phrase lâchée par un habitué du cirque du Fer-à-Cheval résume tout : « J'ai eu peur de tomber sur un corps dans la rivière. » Pas peur des crues, pas peur des chutes de pierres — peur du silence d'une rivière trop basse, d'un niveau si anormal qu'on craint d'y trouver quelque chose que l'eau aur",
+    "lieu": "Sixt-Fer-à-Cheval",
+    "url": "/breves/2026-08-09-a/"
+  },
+  {
     "titre": "LE LAC D'ANNECY PERD PIED : LES PROS DE L'EAU REGARDENT LE FOND",
     "slug": "2026-08-08-a",
     "date": "2026-08-08T06:25:03.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Annecy lance l'opération « Je nettoie ma ville » : habitants et bénévoles se mobilisent pour récupérer les déchets abandonnés dans les espaces publics. Une initiative citoyenne classique, mais qui revient régulièrement sur le devant de la scène locale — tant la propreté reste une plaie à Annecy. C'e",
     "lieu": "Annecy",
     "url": "/breves/2026-06-09-a/"
-  },
-  {
-    "titre": "CRISE DERMATOSE EN ALPAGE : LES TROUPEAUX DESCENDRONT",
-    "slug": "2026-06-08-a",
-    "date": "2026-06-08T10:08:25.000+02:00",
-    "datePrefix": "2026-06-08",
-    "category": "animaux",
-    "source": "ici.fr",
-    "image": "https://images.unsplash.com/photo-1697704184019-a51998acbb4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA5MTMzMDV8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "En Haute-Savoie et Savoie, une dermatose contagieuse ravage les troupeaux en alpage. La Coordination rurale demande l'évacuation immédiate des animaux malades : « On ne va pas les laisser crever en montagne. » Les cas se multiplient dans les zones d'estivage, forçant les éleveurs à choisir entre lai",
-    "lieu": "Haute-Savoie et Savoie",
-    "url": "/breves/2026-06-08-a/"
   }
 ]
