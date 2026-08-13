@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LE SALON DU 4X4 CREUSE SES ORNIÈRES EN SAVOIE ET ÇA NE PASSE PAS",
+    "slug": "2026-08-13-a",
+    "date": "2026-08-13T07:02:31.000+02:00",
+    "datePrefix": "2026-08-13",
+    "category": "pollution",
+    "source": "RMC",
+    "image": "https://images.unsplash.com/photo-1598967460051-c2ffd802d09e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY2MDQ1NTF8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Chaque été, ils débarquent avec leurs pneus surdimensionnés, leurs treuils chromés et leurs moteurs qui boivent au litre. Le salon du 4x4 tout-terrain de Savoie attire des centaines de passionnés qui viennent tordre leurs véhicules sur des terrains naturels — et cette année, la facture environnement",
+    "lieu": "Savoie",
+    "url": "/breves/2026-08-13-a/"
+  },
+  {
     "titre": "29°C DANS LE LAC D'ANNECY : L'EAU DE BAIGNADE DÉPASSE CELLE DE CERTAINES MERS",
     "slug": "2026-08-12-a",
     "date": "2026-08-12T06:58:18.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Le lac Léman bascule. Dérèglement des écosystèmes, disparition d'espèces, modifications de la température de l'eau : le lac trinque tandis que le climat s'emballe. Mediapart revient sur ce bassin partagé entre la Haute-Savoie et la Suisse, où l'urgence devient palpable. Pour les riverains haut-savoy",
     "lieu": "Lac Léman",
     "url": "/breves/2026-06-11-a/"
-  },
-  {
-    "titre": "DES CHENILLES QUI CAMPENT DANS L'HERBE AU MONT-SAXONNEX",
-    "slug": "2026-06-10-des-chenilles-qui-campent-dans-l-herbe-au-mont-sax",
-    "date": "2026-06-10T18:45:25.000+02:00",
-    "datePrefix": "2026-06-10",
-    "category": "curieux",
-    "source": "Hors Champ 74 — observation de terrain",
-    "image": "",
-    "extrait": "Un nid de soie posé au ras du sol, perlé de rosée, grouillant de chenilles velues : la scène a été observée ce mercredi au Mont-Saxonnex. Pas de panique, ce n'est très probablement pas la processionnaire qu'on redoute tous. Tout indique la livrée des Alpes, un papillon de montagne dont les chenille",
-    "lieu": "Mont-Saxonnex",
-    "url": "/breves/2026-06-10-des-chenilles-qui-campent-dans-l-herbe-au-mont-sax/"
   }
 ]
