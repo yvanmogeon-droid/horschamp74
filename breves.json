@@ -1,5 +1,17 @@
 [
   {
+    "titre": "29°C AU LAC D'ANNECY ET LE RHÔNE EN CRISE : L'ÉTÉ QUI DÉSHYDRATE LA RÉGION",
+    "slug": "2026-08-14-a",
+    "date": "2026-08-14T06:58:51.000+02:00",
+    "datePrefix": "2026-08-14",
+    "category": "animaux",
+    "source": "Le Dauphiné",
+    "image": "https://images.unsplash.com/photo-1697704184019-a51998acbb4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY2OTA3MzF8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Attends — l'article 6 sur le lac d'Annecy est déjà publié. Idem pour les restrictions sécheresse. Cherchons autre chose. L'article 1 : la SPA d'Annecy sauve une cinquantaine d'animaux après un incendie. L'article 7 sur les chats SPA est déjà publié, mais celui-ci parle d'un incendie spécifique, pas ",
+    "lieu": "Annecy",
+    "url": "/breves/2026-08-14-a/"
+  },
+  {
     "titre": "LE SALON DU 4X4 CREUSE SES ORNIÈRES EN SAVOIE ET ÇA NE PASSE PAS",
     "slug": "2026-08-13-a",
     "date": "2026-08-13T07:02:31.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "En cinquante ans, la taille moyenne des populations d'animaux sauvages suivies dans le monde a fondu de 73 %. Un chiffre brutal, souvent mal lu — et dont l'écho résonne jusque dans nos haies et nos berges de Haute-Savoie. Le dernier Living Planet Report du WWF",
     "lieu": "",
     "url": "/breves/2026-06-12-extinction-silencieuse/"
-  },
-  {
-    "titre": "LE LÉMAN ÉTOUFFE SOUS LE CHANGEMENT CLIMATIQUE",
-    "slug": "2026-06-11-a",
-    "date": "2026-06-11T09:54:12.000+02:00",
-    "datePrefix": "2026-06-11",
-    "category": "eau",
-    "source": "Mediapart",
-    "image": "https://images.unsplash.com/photo-1740066293398-ae1b5c33016f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODExNzE2NTJ8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Le lac Léman bascule. Dérèglement des écosystèmes, disparition d'espèces, modifications de la température de l'eau : le lac trinque tandis que le climat s'emballe. Mediapart revient sur ce bassin partagé entre la Haute-Savoie et la Suisse, où l'urgence devient palpable. Pour les riverains haut-savoy",
-    "lieu": "Lac Léman",
-    "url": "/breves/2026-06-11-a/"
   }
 ]
