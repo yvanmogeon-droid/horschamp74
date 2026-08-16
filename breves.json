@@ -1,5 +1,17 @@
 [
   {
+    "titre": "L'ALPAGE DE SULENS FORME LES BERGERS DE DEMAIN, UN SEUL EN FRANCE",
+    "slug": "2026-08-16-a",
+    "date": "2026-08-16T06:01:29.000+02:00",
+    "datePrefix": "2026-08-16",
+    "category": "montagne",
+    "source": "agriculture.gouv.fr",
+    "image": "https://images.unsplash.com/photo-1571596741260-e7aff194deda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY4NjAwODl8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "À 1 500 mètres d'altitude, dans les Aravis, on apprend encore à faire du fromage en alpage, à soigner les bêtes, à lire le temps qui vire. L'alpage-école de Sulens — situé sur la commune de Marlens, en Haute-Savoie — est le seul site de formation de ce type en France. Pas une vitrine, pas un musée v",
+    "lieu": "Marlens",
+    "url": "/breves/2026-08-16-a/"
+  },
+  {
     "titre": "UN GLACIER RECRACHE DEUX ALPINISTES DISPARUS IL Y A 34 ANS",
     "slug": "2026-08-15-a",
     "date": "2026-08-15T05:59:56.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Le lac du Bourget se met au silence. À partir de ce mois, les bateaux à moteur devront rouler au ralenti : vitesse plafonnée à 50 km/h au lieu de 70 km/h, et interdiction pure de diffuser de la musique. Une mesure qui sort tout droit du plan de sauvegarde du lac, lancé après années de surexploitatio",
     "lieu": "Lac du Bourget",
     "url": "/breves/2026-06-13-a/"
-  },
-  {
-    "titre": "RESTAURATION DU SENTIER DU BOUT DU MONDE EN MARCHE",
-    "slug": "2026-06-12-a",
-    "date": "2026-06-12T09:47:31.000+02:00",
-    "datePrefix": "2026-06-12",
-    "category": "montagne",
-    "source": "Fédération Française de la Randonnée Pédestre",
-    "image": "https://images.unsplash.com/photo-1760972571066-222a628d17a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODEyNTc2NTF8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Le sentier du Bout du Monde, en Haut Giffre, se refait une beauté. La Fédération Française de la Randonnée Pédestre coordonne la restauration d'un itinéraire emblématique, dégradé par les années et l'intensité de la fréquentation. Les travaux touchent à la stabilité du tracé, aux escaliers usés et a",
-    "lieu": "Haut Giffre",
-    "url": "/breves/2026-06-12-a/"
   }
 ]
