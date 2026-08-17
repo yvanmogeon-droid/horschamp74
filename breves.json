@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LE LAC D'ANNECY À 29°C ET DES POISSONS QU'ON SORT À LA MAIN DES RIVIÈRES : LA HAUTE-SAVOIE PÊCHE SES DERNIERS SURVIVANTS",
+    "slug": "2026-08-17-a",
+    "date": "2026-08-17T06:04:52.000+02:00",
+    "datePrefix": "2026-08-17",
+    "category": "animaux",
+    "source": "ici.fr",
+    "image": "https://images.unsplash.com/photo-1606307850703-83e8c0c2373f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY5NDY2OTJ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Dans les rivières asséchées de Haute-Savoie, des équipes remontent dans les eaux résiduelles pour sauver les poissons à la main — littéralement. On appelle ça des \"pêches de sauvetage\" : filets, épuisettes, seaux. On attrape les truites, les chabots, les loches, et on les transfère vers des secteurs",
+    "lieu": "Haute-Savoie",
+    "url": "/breves/2026-08-17-a/"
+  },
+  {
     "titre": "L'ALPAGE DE SULENS FORME LES BERGERS DE DEMAIN, UN SEUL EN FRANCE",
     "slug": "2026-08-16-a",
     "date": "2026-08-16T06:01:29.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Savoie bascule en vigilance sécheresse. Les fortes chaleurs du printemps 2026 ont grignoté les réserves hydriques, menaçant l'approvisionnement en eau pour l'été. Les autorités sonnent l'alarme avant que le robinet ne se serre davantage. C'est le moment où les Savoyards réalisent que la neige d'hive",
     "lieu": "Savoie",
     "url": "/breves/2026-06-14-a/"
-  },
-  {
-    "titre": "LAC DU BOURGET : MOTEURS MUSSELÉS À 50 KM/H",
-    "slug": "2026-06-13-a",
-    "date": "2026-06-13T08:40:04.000+02:00",
-    "datePrefix": "2026-06-13",
-    "category": "eau",
-    "source": "ici.fr",
-    "image": "https://images.unsplash.com/photo-1712161898682-f1d061048173?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODEzNDAwMDR8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Le lac du Bourget se met au silence. À partir de ce mois, les bateaux à moteur devront rouler au ralenti : vitesse plafonnée à 50 km/h au lieu de 70 km/h, et interdiction pure de diffuser de la musique. Une mesure qui sort tout droit du plan de sauvegarde du lac, lancé après années de surexploitatio",
-    "lieu": "Lac du Bourget",
-    "url": "/breves/2026-06-13-a/"
   }
 ]
