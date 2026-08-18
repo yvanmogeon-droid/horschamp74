@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LA SPA DE CLUSES AFFICHE COMPLET : DES ANIMAUX QUI ATTENDENT LE BON MATCH",
+    "slug": "2026-08-18-a",
+    "date": "2026-08-18T06:00:58.000+02:00",
+    "datePrefix": "2026-08-18",
+    "category": "animaux",
+    "source": "Le Dauphiné Libéré",
+    "image": "https://images.unsplash.com/photo-1709788938385-7825acfbf7cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODcwMzI4NTh8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Plein à craquer, mais pas question de brader une adoption. À la SPA de Cluses, les cages sont occupées et la liste d'attente s'allonge — pourtant, chaque candidat à l'adoption passe par un vrai processus de sélection. Une bénévole résume sans détour : « C'est comme sur Tinder, il faut que ça matche.",
+    "lieu": "Cluses",
+    "url": "/breves/2026-08-18-a/"
+  },
+  {
     "titre": "LE LAC D'ANNECY À 29°C ET DES POISSONS QU'ON SORT À LA MAIN DES RIVIÈRES : LA HAUTE-SAVOIE PÊCHE SES DERNIERS SURVIVANTS",
     "slug": "2026-08-17-a",
     "date": "2026-08-17T06:04:52.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Depuis combien de temps les PFAS s'infiltrent-ils dans les sols de Rumilly ? La question brûle, et Salomon — le géant du sport de montagne installé en Haute-Savoie — choisit d'y répondre à visage découvert. Face au scandale qui couve autour de ces \"polluants éternels\" détectés sur son site industrie",
     "lieu": "Rumilly",
     "url": "/breves/2026-06-15-a/"
-  },
-  {
-    "titre": "SÉCHERESSE EN SAVOIE : VIGILANCE ACTIVÉE, EAU EN DANGER",
-    "slug": "2026-06-14-a",
-    "date": "2026-06-14T08:55:38.000+02:00",
-    "datePrefix": "2026-06-14",
-    "category": "eau",
-    "source": "France 3 Régions",
-    "image": "https://images.unsplash.com/photo-1620413401105-565a662a4851?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE0MjczMzh8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Savoie bascule en vigilance sécheresse. Les fortes chaleurs du printemps 2026 ont grignoté les réserves hydriques, menaçant l'approvisionnement en eau pour l'été. Les autorités sonnent l'alarme avant que le robinet ne se serre davantage. C'est le moment où les Savoyards réalisent que la neige d'hive",
-    "lieu": "Savoie",
-    "url": "/breves/2026-06-14-a/"
   }
 ]
