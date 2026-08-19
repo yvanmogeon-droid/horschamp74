@@ -1,5 +1,17 @@
 [
   {
+    "titre": "UN SAC-POUBELLE ABANDONNÉ À 100 EUROS : LA VILLE QUI CHASSE LES POLLUEURS AU PORTE-MONNAIE",
+    "slug": "2026-08-19-a",
+    "date": "2026-08-19T06:01:51.000+02:00",
+    "datePrefix": "2026-08-19",
+    "category": "dechets",
+    "source": "Le Messager",
+    "image": "https://images.unsplash.com/photo-1577230552867-0d5afd83c9e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODcxMTkzMTF8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Jeter un sac-poubelle au mauvais endroit, ça peut coûter le prix d'un bon resto. En Haute-Savoie, une commune a décidé d'en finir avec les dépôts sauvages en sortant l'arme de la verbalisation systématique : 100 euros pour un simple sac abandonné hors collecte. Pas un avertissement, pas une mise en ",
+    "lieu": "Haute-Savoie",
+    "url": "/breves/2026-08-19-a/"
+  },
+  {
     "titre": "LA SPA DE CLUSES AFFICHE COMPLET : DES ANIMAUX QUI ATTENDENT LE BON MATCH",
     "slug": "2026-08-18-a",
     "date": "2026-08-18T06:00:58.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Mille mètres d'altitude, un troupeau qui bêle, et des stagiaires qui apprennent à lire le ciel autant que les herbes. L'alpage-école de Sulens, niché dans le massif des Aravis en Haute-Savoie, est le seul site de ce genre en France : un espace pédagogique où l'on transmet le métier d'alpagiste — ges",
     "lieu": "Aravis",
     "url": "/breves/2026-06-21-a/"
-  },
-  {
-    "titre": "SALOMON NOIE SES PFAS DANS LA TRANSPARENCE À RUMILLY",
-    "slug": "2026-06-15-a",
-    "date": "2026-06-15T11:35:15.000+02:00",
-    "datePrefix": "2026-06-15",
-    "category": "pollution",
-    "source": "Le Dauphiné Libéré",
-    "image": "https://images.unsplash.com/photo-1606491520939-c2338f7cdcac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE1MjMzMTV8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Depuis combien de temps les PFAS s'infiltrent-ils dans les sols de Rumilly ? La question brûle, et Salomon — le géant du sport de montagne installé en Haute-Savoie — choisit d'y répondre à visage découvert. Face au scandale qui couve autour de ces \"polluants éternels\" détectés sur son site industrie",
-    "lieu": "Rumilly",
-    "url": "/breves/2026-06-15-a/"
   }
 ]
