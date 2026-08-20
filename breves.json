@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LE LAC D'ANNECY BOIT LA TASSE : LES PNEUS BALANCENT LEURS POISONS DEDANS",
+    "slug": "2026-08-20-a",
+    "date": "2026-08-20T06:02:34.000+02:00",
+    "datePrefix": "2026-08-20",
+    "category": "pollution",
+    "source": "La Relève et La Peste",
+    "image": "https://images.unsplash.com/photo-1754376120301-f38f4ab80b55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODcyMDU3NTR8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Il passe pour le plus pur d'Europe. Sauf que depuis des années, chaque averse charrie depuis les routes riveraines une substance que personne ne voit mais que les analyses commencent à débusquer : le 6PPD-quinone, un dérivé toxique issu de l'usure des pneus. Dans le lac d'Annecy, ce polluant — recon",
+    "lieu": "Annecy",
+    "url": "/breves/2026-08-20-a/"
+  },
+  {
     "titre": "UN SAC-POUBELLE ABANDONNÉ À 100 EUROS : LA VILLE QUI CHASSE LES POLLUEURS AU PORTE-MONNAIE",
     "slug": "2026-08-19-a",
     "date": "2026-08-19T06:01:51.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Le Thiou, ce canal qui traverse Annecy et relie le lac à la Fier, charrie depuis peu autre chose que de l'eau : fioul, solvants, huiles mécaniques, essence. Le cocktail est suffisamment inquiétant pour que le pôle régional de l'environnement ouvre une enquête officielle. Pas une simple surveillance,",
     "lieu": "Annecy",
     "url": "/breves/2026-06-21-b/"
-  },
-  {
-    "titre": "L'ALPAGE DE SULENS FORME LES DERNIERS GARDIENS DE MONTAGNE",
-    "slug": "2026-06-21-a",
-    "date": "2026-06-21T15:52:16.000+02:00",
-    "datePrefix": "2026-06-21",
-    "category": "montagne",
-    "source": "agriculture.gouv.fr",
-    "image": "https://images.unsplash.com/photo-1623482564246-0601b9aa1af1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIwNTcxMzZ8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Mille mètres d'altitude, un troupeau qui bêle, et des stagiaires qui apprennent à lire le ciel autant que les herbes. L'alpage-école de Sulens, niché dans le massif des Aravis en Haute-Savoie, est le seul site de ce genre en France : un espace pédagogique où l'on transmet le métier d'alpagiste — ges",
-    "lieu": "Aravis",
-    "url": "/breves/2026-06-21-a/"
   }
 ]
