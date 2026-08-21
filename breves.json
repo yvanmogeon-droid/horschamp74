@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LA CANICULE FRACASSE LES ALPES : 2026, L'ANNÉE OÙ LA MONTAGNE S'EFFONDRE",
+    "slug": "2026-08-21-a",
+    "date": "2026-08-21T06:03:47.000+02:00",
+    "datePrefix": "2026-08-21",
+    "category": "montagne",
+    "source": "Le Dauphiné",
+    "image": "https://images.unsplash.com/photo-1779715203401-abce77b6f4c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODcyOTIyMjd8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Un bloc de calcaire qui lâche sans prévenir, un sentier barré du jour au lendemain, un refuge évacué en urgence. En 2026, les Alpes accumulent les éboulements à un rythme que les géologues n'avaient jamais vu : c'est une année record, et la cause ne fait plus débat. La canicule prolongée dégèle le p",
+    "lieu": "Alpes",
+    "url": "/breves/2026-08-21-a/"
+  },
+  {
     "titre": "LE LAC D'ANNECY BOIT LA TASSE : LES PNEUS BALANCENT LEURS POISONS DEDANS",
     "slug": "2026-08-20-a",
     "date": "2026-08-20T06:02:34.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Dans les années 1980, le Léman ressemblait à une baignoire crasseuse. Eutrophisation massive, algues en surchauffe, poissons à l'agonie : le plus grand lac d'Europe occidentale craquait sous le poids des phosphates déversés par les détergents et l'agriculture intensive. Puis une loi suisse a tout ch",
     "lieu": "Léman",
     "url": "/breves/2026-06-22-a/"
-  },
-  {
-    "titre": "FIOUL, SOLVANTS, ESSENCE : LE THIOU EMPOISONNÉ SOUS ENQUÊTE",
-    "slug": "2026-06-21-b",
-    "date": "2026-06-21T15:57:11.000+02:00",
-    "datePrefix": "2026-06-21",
-    "category": "pollution",
-    "source": "Le Dauphiné",
-    "image": "https://images.unsplash.com/photo-1764470739547-0d9206e64538?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIwNTc0MzF8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Le Thiou, ce canal qui traverse Annecy et relie le lac à la Fier, charrie depuis peu autre chose que de l'eau : fioul, solvants, huiles mécaniques, essence. Le cocktail est suffisamment inquiétant pour que le pôle régional de l'environnement ouvre une enquête officielle. Pas une simple surveillance,",
-    "lieu": "Annecy",
-    "url": "/breves/2026-06-21-b/"
   }
 ]
