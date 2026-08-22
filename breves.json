@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LE LÉMAN VIRE AU ROUGE : 57 000 M² D'ENCRE DANS LE LAC",
+    "slug": "2026-08-22-a",
+    "date": "2026-08-22T06:00:42.000+02:00",
+    "datePrefix": "2026-08-22",
+    "category": "eau",
+    "source": "Le Dauphiné Libéré",
+    "image": "https://images.unsplash.com/photo-1688144244971-e1e5195612aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODczNzg0NDJ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Imaginez la surface d'environ huit terrains de foot teintée en rouge sang. C'est ce qu'ont découvert les riverains du Léman un matin d'avril : une nappe cramoisie s'étendant sur 57 000 mètres carrés, issue d'un déversement accidentel d'encre dans une rivière affluente. Le liquide a suivi son chemin ",
+    "lieu": "Lac Léman",
+    "url": "/breves/2026-08-22-a/"
+  },
+  {
     "titre": "LA CANICULE FRACASSE LES ALPES : 2026, L'ANNÉE OÙ LA MONTAGNE S'EFFONDRE",
     "slug": "2026-08-21-a",
     "date": "2026-08-21T06:03:47.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Un samedi matin, 85 personnes se lèvent tôt pour ramasser ce que d'autres ont laissé traîner. À Arâches-la-Frasse, station des Carroz d'Arâches dans le massif du Giffre, une opération de nettoyage collectif a mobilisé bénévoles, résidents et associations pour récupérer plusieurs mètres cubes de déch",
     "lieu": "Arâches-la-Frasse",
     "url": "/breves/2026-06-23-a/"
-  },
-  {
-    "titre": "LE LAC LÉMAN A FAILLI MOURIR : LA PREUVE QU'IL PEUT REVENIR",
-    "slug": "2026-06-22-a",
-    "date": "2026-06-22T11:22:15.000+02:00",
-    "datePrefix": "2026-06-22",
-    "category": "eau",
-    "source": "France 3",
-    "image": "",
-    "extrait": "Dans les années 1980, le Léman ressemblait à une baignoire crasseuse. Eutrophisation massive, algues en surchauffe, poissons à l'agonie : le plus grand lac d'Europe occidentale craquait sous le poids des phosphates déversés par les détergents et l'agriculture intensive. Puis une loi suisse a tout ch",
-    "lieu": "Léman",
-    "url": "/breves/2026-06-22-a/"
   }
 ]
