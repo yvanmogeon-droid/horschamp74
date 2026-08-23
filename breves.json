@@ -1,5 +1,17 @@
 [
   {
+    "titre": "À CHAMONIX, UN CYCLISTE PÉDALE 800 KM POUR QUE LES GLACIERS EXISTENT ENCORE",
+    "slug": "2026-08-23-a",
+    "date": "2026-08-23T06:01:32.000+02:00",
+    "datePrefix": "2026-08-23",
+    "category": "montagne",
+    "source": "Le Messager",
+    "image": "https://images.unsplash.com/photo-1717711083399-a0e17695b25b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc0NjQ4OTJ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Il a quitté les Alpes autrichiennes avec un vélo, une tente et une conviction : si personne ne parle du recul des glaciers autrement qu'en graphiques et rapports, ça ne changera rien. Huit cents kilomètres plus tard, il arrive à Chamonix — pas au hasard. La vallée du Mont-Blanc, c'est l'endroit en E",
+    "lieu": "Chamonix",
+    "url": "/breves/2026-08-23-a/"
+  },
+  {
     "titre": "LE LÉMAN VIRE AU ROUGE : 57 000 M² D'ENCRE DANS LE LAC",
     "slug": "2026-08-22-a",
     "date": "2026-08-22T06:00:42.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Une rivière. De l'encre. Et le Léman qui se teinte en rouge sur une surface grande comme sept terrains de foot. L'incident, survenu en Haute-Savoie, a de quoi faire froid dans le dos : un déversement accidentel dans un cours d'eau affluent du lac a suffi à colorer 57 000 m² de sa surface. Le genre d",
     "lieu": "Lac Léman",
     "url": "/breves/2026-06-24-a/"
-  },
-  {
-    "titre": "85 VOLONTAIRES ÉVACUENT DES MÈTRES CUBES DE DÉCHETS À ARÂCHES-LA-FRASSE",
-    "slug": "2026-06-23-a",
-    "date": "2026-06-23T08:47:11.000+02:00",
-    "datePrefix": "2026-06-23",
-    "category": "dechets",
-    "source": "L'Essor Savoyard",
-    "image": "https://images.unsplash.com/photo-1692262653770-f70f236a8fc1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIyMDQ0MzF8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Un samedi matin, 85 personnes se lèvent tôt pour ramasser ce que d'autres ont laissé traîner. À Arâches-la-Frasse, station des Carroz d'Arâches dans le massif du Giffre, une opération de nettoyage collectif a mobilisé bénévoles, résidents et associations pour récupérer plusieurs mètres cubes de déch",
-    "lieu": "Arâches-la-Frasse",
-    "url": "/breves/2026-06-23-a/"
   }
 ]
