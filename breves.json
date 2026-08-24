@@ -1,5 +1,17 @@
 [
   {
+    "titre": "UN BATEAU CHAVIRE SUR LE LÉMAN : 14 PERSONNES À L'EAU UN DIMANCHE MATIN",
+    "slug": "2026-08-24-a",
+    "date": "2026-08-24T06:23:52.000+02:00",
+    "datePrefix": "2026-08-24",
+    "category": "eau",
+    "source": "Lyon Capitale",
+    "image": "https://images.unsplash.com/photo-1760259202091-8e5dc7eded2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc1NTI2MzJ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Quatorze personnes sur un bateau qui se retourne. Pas un récit de vacances qui tourne mal au cinéma — c'est ce qui s'est passé sur le lac Léman un dimanche matin, selon Lyon Capitale. Les secours ont été mobilisés, et si les conditions exactes du chavirement restent à préciser, l'image reste brutale",
+    "lieu": "Lac Léman",
+    "url": "/breves/2026-08-24-a/"
+  },
+  {
     "titre": "À CHAMONIX, UN CYCLISTE PÉDALE 800 KM POUR QUE LES GLACIERS EXISTENT ENCORE",
     "slug": "2026-08-23-a",
     "date": "2026-08-23T06:01:32.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Il y a des décennies, le glacier des Bossons descendait ses langues bleues jusqu'au fond de la vallée. Aujourd'hui, il recule à vue d'œil — et l'été 2026 s'annonce comme un nouveau coup de massue. Les dernières mesures confirment une accélération du retrait : la chaleur, de plus en plus précoce et i",
     "lieu": "Chamonix",
     "url": "/breves/2026-06-25-a/"
-  },
-  {
-    "titre": "LE LAC LÉMAN VIRE AU ROUGE : 57 000 M² D'ENCRE DANS L'EAU",
-    "slug": "2026-06-24-a",
-    "date": "2026-06-24T08:43:23.000+02:00",
-    "datePrefix": "2026-06-24",
-    "category": "eau",
-    "source": "Le Dauphiné",
-    "image": "https://images.unsplash.com/photo-1762513075384-f1645a3f2442?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIyOTA2MDN8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Une rivière. De l'encre. Et le Léman qui se teinte en rouge sur une surface grande comme sept terrains de foot. L'incident, survenu en Haute-Savoie, a de quoi faire froid dans le dos : un déversement accidentel dans un cours d'eau affluent du lac a suffi à colorer 57 000 m² de sa surface. Le genre d",
-    "lieu": "Lac Léman",
-    "url": "/breves/2026-06-24-a/"
   }
 ]
