@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LE LAC D'ANNECY PERD UN CENTIMÈTRE PAR JOUR : LES PLAGES RÉTRÉCISSENT",
+    "slug": "2026-08-26-a",
+    "date": "2026-08-26T06:05:14.000+02:00",
+    "datePrefix": "2026-08-26",
+    "category": "eau",
+    "source": "TF1 Info",
+    "image": "https://images.unsplash.com/photo-1689862234114-b25f2bcaf3f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc3MjQzMTR8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Regardez les photos d'archives de la plage d'Albigny ou des rives de Talloires. Maintenant regardez ce que vous voyez cet été : des cailloux, des bandes de terre sèche là où d'habitude l'eau affleure les pieds. Le lac d'Annecy baisse d'un centimètre par jour — et les habitués le remarquent avant mêm",
+    "lieu": "Annecy",
+    "url": "/breves/2026-08-26-a/"
+  },
+  {
     "titre": "LE GLACIER DES BOSSONS FOND PLUS VITE QUE JAMAIS EN PLEIN ÉTÉ",
     "slug": "2026-08-25-a",
     "date": "2026-08-25T06:03:17.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "L'eau est transparente, presque trop belle. Et c'est exactement le problème. Le Léman affiche une clarté qui rassure — et qui, selon les dernières analyses, masque des contaminations bien réelles : micropolluants, résidus pharmaceutiques, perturbateurs endocriniens. Des substances invisibles à l'œil",
     "lieu": "Lac Léman",
     "url": "/breves/2026-06-27-a/"
-  },
-  {
-    "titre": "LA VOIE ROMAINE DES CONTAMINES CROULE SOUS LES SEMELLES",
-    "slug": "2026-06-26-a",
-    "date": "2026-06-26T08:40:55.000+02:00",
-    "datePrefix": "2026-06-26",
-    "category": "montagne",
-    "source": "ici.fr",
-    "image": "https://images.unsplash.com/photo-1579198049851-dcc53613dece?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI0NjMyNTV8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Ils sont des milliers chaque été à fouler les mêmes dalles que les légionnaires romains. Le sentier de la voie romaine aux Contamines-Montjoie, dans le val Montjoie au pied du Mont-Blanc, figure parmi les itinéraires de randonnée les plus fréquentés de toute la France. Pas un petit chemin de crête c",
-    "lieu": "Les Contamines-Montjoie",
-    "url": "/breves/2026-06-26-a/"
   }
 ]
