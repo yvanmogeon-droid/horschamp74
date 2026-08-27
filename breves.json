@@ -1,5 +1,17 @@
 [
   {
+    "titre": "CHATS ÉNUCLÉÉS EN HAUTE-SAVOIE : LA SPA DE CLUSES À BOUT DE RESSOURCES",
+    "slug": "2026-08-27-a",
+    "date": "2026-08-27T16:49:13.000+02:00",
+    "datePrefix": "2026-08-27",
+    "category": "animaux",
+    "source": "L'Essor Savoyard",
+    "image": "https://images.unsplash.com/photo-1634838786237-4fed85e1e1a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc4NDkzNTN8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Ça n'a rien d'une métaphore : des chats arrivent à la SPA de Haute-Savoie avec les yeux retirés. Une maladie ophtalmique — probablement l'herpèsvirus félin ou une forme sévère de chlamydiose — ronge leurs orbites au point que l'énucléation devient l'unique issue. L'opération coûte plusieurs centaine",
+    "lieu": "Haute-Savoie",
+    "url": "/breves/2026-08-27-a/"
+  },
+  {
     "titre": "LE LAC D'ANNECY PERD UN CENTIMÈTRE PAR JOUR : LES PLAGES RÉTRÉCISSENT",
     "slug": "2026-08-26-a",
     "date": "2026-08-26T06:05:14.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Vingt-quatre équipes, un milliard de téléspectateurs, et à Annecy, une décision aussi étrange qu'elle est concrète : les soirs de match de la Coupe du Monde, plus une poubelle en vue dans le centre-ville. La mairie l'a acté — les bacs sont retirés avant le coup de sifflet, pour ne pas réapparaître a",
     "lieu": "Annecy",
     "url": "/breves/2026-06-28-a/"
-  },
-  {
-    "titre": "LE LAC LÉMAN BRILLE MAIS CACHE DES POISONS QU'ON NE VOIT PAS",
-    "slug": "2026-06-27-a",
-    "date": "2026-06-27T08:16:53.000+02:00",
-    "datePrefix": "2026-06-27",
-    "category": "eau",
-    "source": "Leman bleu",
-    "image": "https://images.unsplash.com/photo-1733950489654-60031eaac25c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI1NDgyMTN8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "L'eau est transparente, presque trop belle. Et c'est exactement le problème. Le Léman affiche une clarté qui rassure — et qui, selon les dernières analyses, masque des contaminations bien réelles : micropolluants, résidus pharmaceutiques, perturbateurs endocriniens. Des substances invisibles à l'œil",
-    "lieu": "Lac Léman",
-    "url": "/breves/2026-06-27-a/"
   }
 ]
