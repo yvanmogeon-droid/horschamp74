@@ -1,5 +1,17 @@
 [
   {
+    "titre": "DES MÉDUSES DANS LE LAC D'ANNECY : L'EAU DOUCE COLONISÉE PAR LA MER",
+    "slug": "2026-08-28-a",
+    "date": "2026-08-28T17:42:53.000+02:00",
+    "datePrefix": "2026-08-28",
+    "category": "animaux",
+    "source": "Le Dauphiné",
+    "image": "https://images.unsplash.com/photo-1721165895545-5508ed9e9eaf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc5Mzg5NzN8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Elles ne piquent pas, elles ne font pas la une des journaux de bord — et pourtant leur présence dans le lac d'Annecy cet été a de quoi faire tiquer. Des méduses d'eau douce, *Craspedacusta sowerbii*, ont été signalées dans le lac. Une espèce originaire du Yangtsé, en Chine, qui s'est glissée dans le",
+    "lieu": "Annecy",
+    "url": "/breves/2026-08-28-a/"
+  },
+  {
     "titre": "CHATS ÉNUCLÉÉS EN HAUTE-SAVOIE : LA SPA DE CLUSES À BOUT DE RESSOURCES",
     "slug": "2026-08-27-a",
     "date": "2026-08-27T16:49:13.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Il n'y a pas si longtemps, les habitants du pourtour du Chéran jetaient leurs ordures directement dans la rivière. Pas une poubelle sauvage ici ou là — une pratique courante, banalisée, comme si ce torrent savoyard n'était qu'un tuyau d'évacuation naturel. L'Essor Savoyard l'a exhumé : le Chéran, au",
     "lieu": "Chéran",
     "url": "/breves/2026-06-29-a/"
-  },
-  {
-    "titre": "ANNECY RETIRE SES POUBELLES LA NUIT : LE FOOT DÉCIDE DE LA COLLECTE",
-    "slug": "2026-06-28-a",
-    "date": "2026-06-28T08:35:26.000+02:00",
-    "datePrefix": "2026-06-28",
-    "category": "dechets",
-    "source": "info.fr",
-    "image": "https://images.unsplash.com/photo-1641078644869-c638ba68e030?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI2MzU3MjZ8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Vingt-quatre équipes, un milliard de téléspectateurs, et à Annecy, une décision aussi étrange qu'elle est concrète : les soirs de match de la Coupe du Monde, plus une poubelle en vue dans le centre-ville. La mairie l'a acté — les bacs sont retirés avant le coup de sifflet, pour ne pas réapparaître a",
-    "lieu": "Annecy",
-    "url": "/breves/2026-06-28-a/"
   }
 ]
