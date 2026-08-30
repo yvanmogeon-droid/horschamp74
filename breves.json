@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LE LAC D'ANNECY MARCHE À PIED : LES PLAGISTES ARPENTENT LE FOND",
+    "slug": "2026-08-30-a",
+    "date": "2026-08-30T10:41:35.000+02:00",
+    "datePrefix": "2026-08-30",
+    "category": "eau",
+    "source": "Le Dauphiné Libéré",
+    "image": "https://images.unsplash.com/photo-1786977092176-7894df2cb617?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODgwODY0OTV8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "On croyait avoir touché le fond la semaine dernière avec un centimètre par jour de baisse. C'était avant que le lac d'Annecy donne l'impression de vouloir disparaître pour de bon. Désormais, des gens se promènent à pied dans l'eau — pas pour nager, mais parce qu'il y a à peine quelques dizaines de c",
+    "lieu": "Annecy",
+    "url": "/breves/2026-08-30-a/"
+  },
+  {
     "titre": "FROMAGE D'ABONDANCE : LE CLIMAT OBLIGE LES ALPAGES À RÉÉCRIRE LEURS RÈGLES",
     "slug": "2026-08-29-a",
     "date": "2026-08-29T11:47:28.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Le Rhône en vigilance sécheresse fin juin, alors que l'été n'a pas encore vraiment montré les dents — ça commence à ressembler à une habitude. Les services de l'État viennent d'activer le niveau d'alerte sur le département : débits en chute, nappes qui ne se sont pas rechargées comme espéré cet hive",
     "lieu": "Rhône",
     "url": "/breves/2026-07-01-a/"
-  },
-  {
-    "titre": "DES VÉLOS SOLAIRES TRAVERSENT LA RÉGION, SANS UNE GOUTTE D'ESSENCE",
-    "slug": "2026-06-30-a",
-    "date": "2026-06-30T08:45:42.000+02:00",
-    "datePrefix": "2026-06-30",
-    "category": "energie",
-    "source": "L'Éveil de la Haute-Loire",
-    "image": "https://images.unsplash.com/photo-1760462167980-08d7e5f571c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI4MDkxNDJ8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Ils sont partis du Puy-en-Velay avec du soleil comme seul carburant. Le Sun Trip Auvergne-Rhône-Alpes a lancé sa première édition régionale : des cyclistes équipés de panneaux photovoltaïques fixés sur leurs vélos couvrent plusieurs centaines de kilomètres à travers la région, alimentés uniquement p",
-    "lieu": "Auvergne-Rhône-Alpes",
-    "url": "/breves/2026-06-30-a/"
   }
 ]
