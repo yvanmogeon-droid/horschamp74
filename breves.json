@@ -1,5 +1,17 @@
 [
   {
+    "titre": "DES POISSONS SAUVÉS À LA MAIN DANS LES RIVIÈRES À SEC DE HAUTE-SAVOIE",
+    "slug": "2026-09-02-a",
+    "date": "2026-09-02T09:55:01.000+02:00",
+    "datePrefix": "2026-09-02",
+    "category": "eau",
+    "source": "ici.fr",
+    "image": "https://images.unsplash.com/photo-1787055479020-806e909a7d28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODgzNDI5MDF8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Juillet, une rivière de Haute-Savoie. Le débit a tellement chuté que les poissons se retrouvent coincés dans des flaques résiduelles, condamnés à suffoquer avant même que la chaleur achève le travail. Alors des équipes se mettent à l'eau — pas pour pêcher, mais pour sauver. Des épuisettes, des seaux",
+    "lieu": "Haute-Savoie",
+    "url": "/breves/2026-09-02-a/"
+  },
+  {
     "titre": "À CHAMONIX, LA FORÊT SAUVAGE DEVIENT UN OUTIL CONTRE LE RÉCHAUFFEMENT",
     "slug": "2026-09-01-a",
     "date": "2026-09-01T10:27:44.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Douze jours. C'est le temps qu'il a fallu à la canicule de juin 2026 pour infliger au glacier du Rhône, dans les Alpes suisses, des dégâts que les glaciologues qualifient de massacre. Le mot n'est pas d'un militant : c'est celui des scientifiques sur place, face à une fonte accélérée qui dépasse les",
     "lieu": "Auvergne-Rhône-Alpes",
     "url": "/breves/2026-07-04-a/"
-  },
-  {
-    "titre": "DANS LA DRÔME, UN SUPERCALCULATEUR IA FAIT TREMBLER LES RIVERAINS",
-    "slug": "2026-07-03-a",
-    "date": "2026-07-03T08:39:54.000+02:00",
-    "datePrefix": "2026-07-03",
-    "category": "tech-ia",
-    "source": "France 3",
-    "image": "https://images.unsplash.com/photo-1680992046615-065f58bcb4d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODMwNjc5OTR8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Un recours juridique. Des riverains qui s'organisent. Et une infrastructure titanesque qui devrait sortir de terre dans la Drôme : c'est le scénario qui se joue autour d'un projet de supercalculateur dédié à l'intelligence artificielle, dont la construction vient d'être contestée devant les tribunau",
-    "lieu": "Drôme",
-    "url": "/breves/2026-07-03-a/"
   }
 ]
