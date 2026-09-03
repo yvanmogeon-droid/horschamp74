@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LE LAC D'ANNECY EN FLAQUE : LES ACTIVITÉS VACANCIÈRES MARCHENT SUR L'EAU",
+    "slug": "2026-09-03-a",
+    "date": "2026-09-03T10:05:30.000+02:00",
+    "datePrefix": "2026-09-03",
+    "category": "dechets",
+    "source": "Le Messager",
+    "image": "https://images.unsplash.com/photo-1758599668337-58bfa42683ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg0Mjk5MzB8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Attendez — cet article traite du même sujet lac d'Annecy niveau bas, déjà publié plusieurs fois. Je cherche un angle vraiment distinct. **ARÂCHES-LA-FRASSE : 85 BÉNÉVOLES SORTENT DES TONNES DE DÉCHETS DE LA MONTAGNE** Quatre-vingt-cinq personnes, des sacs, des gants, un dimanche à arpenter les flanc",
+    "lieu": "Arâches-la-Frasse",
+    "url": "/breves/2026-09-03-a/"
+  },
+  {
     "titre": "DES POISSONS SAUVÉS À LA MAIN DANS LES RIVIÈRES À SEC DE HAUTE-SAVOIE",
     "slug": "2026-09-02-a",
     "date": "2026-09-02T09:55:01.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Un domaine privé, des grilles fermées depuis des années, et un jour de juillet où les habitants d'Annecy-le-Vieux ont enfin pu pousser le portail. Le parc du Domaine de la Tour vient d'ouvrir au public — un espace vert de plein cœur de commune qui, jusqu'ici, restait invisible pour tout le monde sau",
     "lieu": "Annecy-le-Vieux",
     "url": "/breves/2026-07-05-a/"
-  },
-  {
-    "titre": "LE GLACIER DU RHÔNE FOND EN DOUZE JOURS : LES ALPES SUISSES SONNENT L'ALARME",
-    "slug": "2026-07-04-a",
-    "date": "2026-07-04T08:14:04.000+02:00",
-    "datePrefix": "2026-07-04",
-    "category": "energie",
-    "source": "Le Monde",
-    "image": "https://images.unsplash.com/photo-1655186602798-12ad34ad77e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODMxNTI4NDN8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Douze jours. C'est le temps qu'il a fallu à la canicule de juin 2026 pour infliger au glacier du Rhône, dans les Alpes suisses, des dégâts que les glaciologues qualifient de massacre. Le mot n'est pas d'un militant : c'est celui des scientifiques sur place, face à une fonte accélérée qui dépasse les",
-    "lieu": "Auvergne-Rhône-Alpes",
-    "url": "/breves/2026-07-04-a/"
   }
 ]
