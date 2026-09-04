@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LE DATA CENTER PRÈS DE LYON : LES RIVERAINS REFUSENT DE CHAUFFER L'AIR POUR DES SERVEURS",
+    "slug": "2026-09-04-a",
+    "date": "2026-09-04T10:03:20.000+02:00",
+    "datePrefix": "2026-09-04",
+    "category": "tech-ia",
+    "source": "France 3",
+    "image": "https://images.unsplash.com/photo-1507333199169-84fd735371fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg1MTYyMDB8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Un hangar bourdonnant de machines, des milliers de litres d'eau évaporés chaque jour pour refroidir des serveurs, et des voisins qui n'ont rien demandé. Près de Lyon, un projet d'implantation de data center fait sortir de ses gonds un collectif de riverains qui refuse de voir son quartier transformé",
+    "lieu": "Lyon",
+    "url": "/breves/2026-09-04-a/"
+  },
+  {
     "titre": "LE LAC D'ANNECY EN FLAQUE : LES ACTIVITÉS VACANCIÈRES MARCHENT SUR L'EAU",
     "slug": "2026-09-03-a",
     "date": "2026-09-03T10:05:30.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Mille cinq cents mètres d'altitude, un troupeau, et des stagiaires qui apprennent à lire le ciel avant de lire un manuel. L'alpage-école de Sulens, niché dans les Aravis côté Haute-Savoie, est le seul site de ce genre en France : on y enseigne le métier d'alpagiste directement sur le terrain, au ryt",
     "lieu": "Massif des Aravis",
     "url": "/breves/2026-07-06-a/"
-  },
-  {
-    "titre": "ANNECY-LE-VIEUX OUVRE UN PARC PRIVÉ : LA NATURE REPREND SES DROITS EN VILLE",
-    "slug": "2026-07-05-a",
-    "date": "2026-07-05T08:31:18.000+02:00",
-    "datePrefix": "2026-07-05",
-    "category": "good-news",
-    "source": "Le Dauphiné",
-    "image": "https://images.unsplash.com/photo-1760129744668-f85044c37df6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODMyNDAyNzh8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Un domaine privé, des grilles fermées depuis des années, et un jour de juillet où les habitants d'Annecy-le-Vieux ont enfin pu pousser le portail. Le parc du Domaine de la Tour vient d'ouvrir au public — un espace vert de plein cœur de commune qui, jusqu'ici, restait invisible pour tout le monde sau",
-    "lieu": "Annecy-le-Vieux",
-    "url": "/breves/2026-07-05-a/"
   }
 ]
