@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LES ALPES S'EFFRITENT ET EFFACENT LES VOIES MYTHIQUES DU MONT-BLANC",
+    "slug": "2026-09-07-a",
+    "date": "2026-09-07T10:44:25.000+02:00",
+    "datePrefix": "2026-09-07",
+    "category": "montagne",
+    "source": "franceinfo",
+    "image": "https://images.unsplash.com/photo-1763110805338-a13a3f3d68cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg3Nzc4NjV8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Les alpinistes le disent depuis quelques saisons : certains itinéraires classiques du massif du Mont-Blanc ne ressemblent plus à ce que décrivaient les topos. Rochers instables là où il y avait de la glace compacte, couloirs de pierres là où on plantait des broches. L'érosion n'est plus un phénomène",
+    "lieu": "Chamonix",
+    "url": "/breves/2026-09-07-a/"
+  },
+  {
     "titre": "CINQUANTE ANIMAUX SAUVÉS DES FLAMMES EN UNE NUIT À ANNECY",
     "slug": "2026-09-05-a",
     "date": "2026-09-05T09:22:17.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Les filets ne servent pas à pêcher, cette fois — ils servent à sauver. En Haute-Savoie, des équipes de pêcheurs et de bénévoles se déploient sur des cours d'eau dont les niveaux s'effondrent sous l'effet de la sécheresse. La technique : l'électropêche, qui paralyse temporairement les poissons pour l",
     "lieu": "Haute-Savoie",
     "url": "/breves/2026-07-08-a/"
-  },
-  {
-    "titre": "CINQ PERSONNES SAUTENT D'UN BATEAU EN FEU SUR LE BOURGET",
-    "slug": "2026-07-07-a",
-    "date": "2026-07-07T08:54:48.000+02:00",
-    "datePrefix": "2026-07-07",
-    "category": "eau",
-    "source": "ici.fr",
-    "image": "https://images.unsplash.com/photo-1682891683470-1bc935a90a23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM0MTQ0ODh8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Un lac de montagne, un bateau qui s'embrase, cinq personnes à l'eau — dont un enfant. Le scénario du lac du Bourget, survenu ce week-end, n'a rien d'une sortie estivale ordinaire. Le feu s'est déclaré à bord, laissant aux passagers une seule option : sauter. Pas de temps de réfléchir, pas d'autre is",
-    "lieu": "Lac du Bourget",
-    "url": "/breves/2026-07-07-a/"
   }
 ]
