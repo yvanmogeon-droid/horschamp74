@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LE LAC LÉMAN VIRE AU ROUGE SUR 57 000 M² : UNE RIVIÈRE CRACHE DE L'ENCRE",
+    "slug": "2026-09-08-a",
+    "date": "2026-09-08T10:05:20.000+02:00",
+    "datePrefix": "2026-09-08",
+    "category": "eau",
+    "source": "Le Dauphiné",
+    "image": "https://images.unsplash.com/photo-1647577665775-760ac7701550?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg4NjE5MjB8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "57 000 mètres carrés de lac qui vire au rouge sang. Pas une algue, pas une pollution industrielle chronique — juste un accident : de l'encre déversée dans une rivière de Haute-Savoie, et le Léman qui absorbe le choc en pleine face. Le Dauphiné Libéré rapporte un déversement accidentel qui a suffi à ",
+    "lieu": "Lac Léman",
+    "url": "/breves/2026-09-08-a/"
+  },
+  {
     "titre": "LES ALPES S'EFFRITENT ET EFFACENT LES VOIES MYTHIQUES DU MONT-BLANC",
     "slug": "2026-09-07-a",
     "date": "2026-09-07T10:44:25.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Début juillet, et les préfectures dégainent déjà les arrêtés de restriction d'eau. La sécheresse 2026 n'a pas attendu août pour mordre : plusieurs territoires français sont en alerte dès maintenant, avec des nappes phréatiques qui n'ont jamais vraiment récupéré de l'hiver. BFM le résume en une formu",
     "lieu": "Haute-Savoie",
     "url": "/breves/2026-07-09-a/"
-  },
-  {
-    "titre": "DES PÊCHEURS EN CUISSARDES SAUVENT LES TRUITES DES RIVIÈRES À SEC",
-    "slug": "2026-07-08-a",
-    "date": "2026-07-08T07:58:32.000+02:00",
-    "datePrefix": "2026-07-08",
-    "category": "eau",
-    "source": "ici.fr",
-    "image": "https://images.unsplash.com/photo-1712370305685-7420f4490b07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM0OTc1MTJ8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Les filets ne servent pas à pêcher, cette fois — ils servent à sauver. En Haute-Savoie, des équipes de pêcheurs et de bénévoles se déploient sur des cours d'eau dont les niveaux s'effondrent sous l'effet de la sécheresse. La technique : l'électropêche, qui paralyse temporairement les poissons pour l",
-    "lieu": "Haute-Savoie",
-    "url": "/breves/2026-07-08-a/"
   }
 ]
