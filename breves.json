@@ -1,5 +1,17 @@
 [
   {
+    "titre": "GENÈVE BLOQUE L'AUTOROUTE 412 : LE 74 RESPIRE, MAIS POUR COMBIEN DE TEMPS ?",
+    "slug": "2026-09-11-a",
+    "date": "2026-09-11T10:01:09.000+02:00",
+    "datePrefix": "2026-09-11",
+    "category": "mobilite",
+    "source": "Le Messager",
+    "image": "https://images.unsplash.com/photo-1749180879104-b40780f8cc65?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkxMjA4Njl8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "D'un côté du lac, on embouteille. De l'autre, on refuse. Le canton de Genève vient de signifier clairement son opposition au projet d'autoroute A412 — le tronçon qui devait relier le Chablais à la Suisse en traversant la frontière. Bruit, pollution, béton supplémentaire : les Genevois n'en veulent p",
+    "lieu": "Chablais",
+    "url": "/breves/2026-09-11-a/"
+  },
+  {
     "titre": "L'EPFL OUVRE LES YEUX SUR LES MICROPLASTIQUES DU LÉMAN : PLUS QU'ON NE CROYAIT",
     "slug": "2026-09-10-a",
     "date": "2026-09-10T10:02:47.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Emporter son vélo dans un TER cet été en Auvergne-Rhône-Alpes ? Sur le papier, c'est possible. Sur les rails, c'est une autre histoire. Un wagon avec espace vélo, des places limitées, parfois une réservation obligatoire, parfois non, et des règles qui varient selon la ligne, la région traversée, voi",
     "lieu": "Auvergne-Rhône-Alpes",
     "url": "/breves/2026-07-12-a/"
-  },
-  {
-    "titre": "UN SAC-POUBELLE ABANDONNÉ À 100 EUROS : CETTE VILLE DU 74 PASSE AUX AMENDES FERMES",
-    "slug": "2026-07-11-a",
-    "date": "2026-07-11T07:26:53.000+02:00",
-    "datePrefix": "2026-07-11",
-    "category": "dechets",
-    "source": "Le Messager",
-    "image": "https://images.unsplash.com/photo-1731776128627-9dde8efca175?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM3NTQ4MTJ8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "C'est l'été, les terrasses débordent, et quelqu'un pose un sac-poubelle sur le trottoir en dehors des horaires — il lui en coûtera 100 euros. Dans une ville de Haute-Savoie, la tolérance zéro n'est plus un slogan de campagne : c'est désormais une réalité avec des amendes qui tombent pour n'importe q",
-    "lieu": "Haute-Savoie",
-    "url": "/breves/2026-07-11-a/"
   }
 ]
