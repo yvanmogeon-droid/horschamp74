@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LE LAC D'ANNECY PERD 40 CM : LES PÊCHEURS LISENT UN LAC QUI SE RÉTRÉCIT",
+    "slug": "2026-09-12-a",
+    "date": "2026-09-12T09:35:01.000+02:00",
+    "datePrefix": "2026-09-12",
+    "category": "eau",
+    "source": "France 3",
+    "image": "https://images.unsplash.com/photo-1636281501490-206f96119c55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkyMDU3MDF8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Quarante centimètres. C'est la hauteur d'un enfant en bas âge, c'est aussi ce que le lac d'Annecy a perdu depuis le début de l'été. Les platanes des rives n'ont pas bougé, les terrasses de café non plus — mais le rivage, lui, a reculé. Quand les riverains disent \"c'est vraiment très bas\", ils ne jou",
+    "lieu": "Annecy",
+    "url": "/breves/2026-09-12-a/"
+  },
+  {
     "titre": "GENÈVE BLOQUE L'AUTOROUTE 412 : LE 74 RESPIRE, MAIS POUR COMBIEN DE TEMPS ?",
     "slug": "2026-09-11-a",
     "date": "2026-09-11T10:01:09.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Un chemin vieux de deux mille ans, des pierres posées par des légionnaires romains, et aujourd'hui des files de randonneurs qui s'y succèdent jusqu'à l'usure. La voie romaine des Contamines-Montjoie figure parmi les sentiers les plus fréquentés de France — et c'est précisément ce succès qui pose pro",
     "lieu": "Les Contamines-Montjoie",
     "url": "/breves/2026-07-13-a/"
-  },
-  {
-    "titre": "LE VÉLO DANS LE TER : UN BILLET ET DÉJÀ TROIS OBSTACLES",
-    "slug": "2026-07-12-a",
-    "date": "2026-07-12T07:49:17.000+02:00",
-    "datePrefix": "2026-07-12",
-    "category": "mobilite",
-    "source": "La Montagne",
-    "image": "https://images.unsplash.com/photo-1772961554570-75114d85e21f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM4NDI1NTd8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Emporter son vélo dans un TER cet été en Auvergne-Rhône-Alpes ? Sur le papier, c'est possible. Sur les rails, c'est une autre histoire. Un wagon avec espace vélo, des places limitées, parfois une réservation obligatoire, parfois non, et des règles qui varient selon la ligne, la région traversée, voi",
-    "lieu": "Auvergne-Rhône-Alpes",
-    "url": "/breves/2026-07-12-a/"
   }
 ]
