@@ -1,5 +1,17 @@
 [
   {
+    "titre": "DES PARTICULES DE PNEUS TAPISSENT LE FOND DU LAC D'ANNECY",
+    "slug": "2026-09-15-a",
+    "date": "2026-09-15T10:27:43.000+02:00",
+    "datePrefix": "2026-09-15",
+    "category": "pollution",
+    "source": "Le Messager",
+    "image": "https://images.unsplash.com/photo-1666050016698-ba476ed16f53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk0NjgwNjN8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Le lac le plus propre de France — c'est son surnom, son fond de commerce touristique, son argument de vente depuis cinquante ans. Alors quand une enquête révèle que des particules de pneus s'accumulent dans ses eaux, le choc dépasse la simple mauvaise nouvelle environnementale. C'est une identité qu",
+    "lieu": "Annecy",
+    "url": "/breves/2026-09-15-a/"
+  },
+  {
     "titre": "UN SAC-POUBELLE ABANDONNÉ À BONNEVILLE PEUT VOUS COÛTER 100 EUROS CASH",
     "slug": "2026-09-14-a",
     "date": "2026-09-14T10:59:10.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Chaque été, les plages du Léman ferment à la moindre alerte. Mais ce que personne ne mesure vraiment, c'est la prolifération des cyanobactéries — ces algues bleu-vert qui peuvent rendre le lac toxique en quelques heures. Un comble pour le plus grand lac d'Europe occidentale : il n'existe pas, côté f",
     "lieu": "Lac Léman",
     "url": "/breves/2026-07-16-a/"
-  },
-  {
-    "titre": "UN DATA CENTER BLOQUÉ FAUTE D'ÉTUDE D'IMPACT : LA DRÔME RÉSISTE",
-    "slug": "2026-07-15-a",
-    "date": "2026-07-15T07:32:10.000+02:00",
-    "datePrefix": "2026-07-15",
-    "category": "tech-ia",
-    "source": "France 3",
-    "image": "https://images.unsplash.com/photo-1782094673136-5198a372980c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQxMDA3MzB8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Un projet de data center \"puissant\" — les qualificatifs employés sont rarement anodins — vient de se prendre un mur administratif dans la région. Pas de recours citoyen cette fois, pas de pétition en ligne : c'est l'absence pure et simple d'étude d'impact environnemental qui a conduit au retard du c",
-    "lieu": "Auvergne-Rhône-Alpes",
-    "url": "/breves/2026-07-15-a/"
   }
 ]
