@@ -1,5 +1,17 @@
 [
   {
+    "titre": "UN TUNNEL PERCE LE BAS DU LAC D'ANNECY : MAIS POUR QUOI FAIRE ?",
+    "slug": "2026-09-16-a",
+    "date": "2026-09-16T10:18:09.000+02:00",
+    "datePrefix": "2026-09-16",
+    "category": "eau",
+    "source": "L'Essor Savoyard",
+    "image": "https://images.unsplash.com/photo-1571162368502-3c786d9a1371?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk1NTM4ODl8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Creuser un tunnel le long du lac le plus surveillé de France — ça ne s'annonce pas à la légère. Et pourtant, c'est bien ce que prévoit un projet en cours autour du lac d'Annecy : un long ouvrage souterrain, dont les riverains et les usagers du secteur n'ont peut-être pas encore mesuré les implicatio",
+    "lieu": "Annecy",
+    "url": "/breves/2026-09-16-a/"
+  },
+  {
     "titre": "DES PARTICULES DE PNEUS TAPISSENT LE FOND DU LAC D'ANNECY",
     "slug": "2026-09-15-a",
     "date": "2026-09-15T10:27:43.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Chaque matin, 80 000 personnes confient leur journée au Léman Express. Pas à une autoroute, pas à un bus — à un train transfrontalier qui relie la Haute-Savoie à Genève en franchissant une frontière d'État. Depuis son lancement, le RER franco-suisse est devenu le pouls des frontaliers : sans lui, de",
     "lieu": "Haute-Savoie",
     "url": "/breves/2026-07-17-a/"
-  },
-  {
-    "titre": "LES CYANOBACTÉRIES DU LÉMAN RESTENT DANS L'OMBRE FAUTE DE MESURES",
-    "slug": "2026-07-16-a",
-    "date": "2026-07-16T07:47:44.000+02:00",
-    "datePrefix": "2026-07-16",
-    "category": "eau",
-    "source": "bluewin.ch",
-    "image": "https://images.unsplash.com/photo-1776831967295-22b3e179e606?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQxODgwNjR8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Chaque été, les plages du Léman ferment à la moindre alerte. Mais ce que personne ne mesure vraiment, c'est la prolifération des cyanobactéries — ces algues bleu-vert qui peuvent rendre le lac toxique en quelques heures. Un comble pour le plus grand lac d'Europe occidentale : il n'existe pas, côté f",
-    "lieu": "Lac Léman",
-    "url": "/breves/2026-07-16-a/"
   }
 ]
