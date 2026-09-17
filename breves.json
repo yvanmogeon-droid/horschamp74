@@ -1,5 +1,17 @@
 [
   {
+    "titre": "L214 CIBLE CARREFOUR DEPUIS LA HAUTE-SAVOIE : MOITIÉ MOINS D'ANIMAUX TUÉS",
+    "slug": "2026-09-17-a",
+    "date": "2026-09-17T10:26:03.000+02:00",
+    "datePrefix": "2026-09-17",
+    "category": "animaux",
+    "source": "ODS Radio",
+    "image": "https://images.unsplash.com/photo-1697704184019-a51998acbb4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk2NDA3NjN8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Un siège social basé à Annecy, une campagne nationale qui frappe fort : L214 a choisi la Haute-Savoie comme point de départ pour mettre Carrefour sous pression. L'association de défense animale réclame que le géant de la grande distribution divise par deux le nombre d'animaux tués dans ses filières ",
+    "lieu": "Annecy",
+    "url": "/breves/2026-09-17-a/"
+  },
+  {
     "titre": "UN TUNNEL PERCE LE BAS DU LAC D'ANNECY : MAIS POUR QUOI FAIRE ?",
     "slug": "2026-09-16-a",
     "date": "2026-09-16T10:18:09.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "C'est le genre de nuit dont les éleveurs ne parlent qu'à voix basse. À Arenthon, dans la vallée de l'Arve, une ferme entière vient de partir en fumée. Les bâtiments sont perdus. Mais les 200 animaux qui s'y trouvaient — bovins, ovins, volailles, difficile de l'imaginer — ont été sortis vivants. Une ",
     "lieu": "Arenthon",
     "url": "/breves/2026-07-18-a/"
-  },
-  {
-    "titre": "80 000 NAVETTEURS PAR JOUR : LE LÉMAN EXPRESS TIENT-IL VRAIMENT LA CADENCE ?",
-    "slug": "2026-07-17-a",
-    "date": "2026-07-17T07:36:39.000+02:00",
-    "datePrefix": "2026-07-17",
-    "category": "mobilite",
-    "source": "Le Messager",
-    "image": "https://images.unsplash.com/photo-1655173260875-3c4798320007?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQyNzM3OTl8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Chaque matin, 80 000 personnes confient leur journée au Léman Express. Pas à une autoroute, pas à un bus — à un train transfrontalier qui relie la Haute-Savoie à Genève en franchissant une frontière d'État. Depuis son lancement, le RER franco-suisse est devenu le pouls des frontaliers : sans lui, de",
-    "lieu": "Haute-Savoie",
-    "url": "/breves/2026-07-17-a/"
   }
 ]
