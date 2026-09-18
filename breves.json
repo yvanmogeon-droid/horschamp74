@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LA PISCICULTURE DE LA PUYA RETROUVE SES ÉCAILLES À ANNECY",
+    "slug": "2026-09-18-a",
+    "date": "2026-09-18T10:03:35.000+02:00",
+    "datePrefix": "2026-09-18",
+    "category": "animaux",
+    "source": "Savoie News",
+    "image": "https://images.unsplash.com/photo-1586490792202-ebe2f8e90ddc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk3MjU4MTV8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Derrière le nom un peu confidentiel de la Puya se cache un site que beaucoup d'Annéciens connaissent sans vraiment savoir ce qu'il fait : une pisciculture, en pleine ville, qui produit et élève des poissons. L'endroit vient de sortir d'une cure de jouvence — travaux, rénovation, remise à niveau — et",
+    "lieu": "Annecy",
+    "url": "/breves/2026-09-18-a/"
+  },
+  {
     "titre": "L214 CIBLE CARREFOUR DEPUIS LA HAUTE-SAVOIE : MOITIÉ MOINS D'ANIMAUX TUÉS",
     "slug": "2026-09-17-a",
     "date": "2026-09-17T10:26:03.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Un matin d'avril, les riverains du Léman ont vu quelque chose d'inédit : le lac virait au rouge sur une nappe de 57 000 mètres carrés. Pas une algue, pas une pollution industrielle classique — de l'encre, déversée accidentellement dans une rivière affluente du lac, avait voyagé jusqu'au Léman et s'y",
     "lieu": "Lac Léman",
     "url": "/breves/2026-07-19-a/"
-  },
-  {
-    "titre": "ARENTHON : 200 ANIMAUX FUIENT L'INCENDIE QUI AVALE UNE FERME",
-    "slug": "2026-07-18-a",
-    "date": "2026-07-18T07:18:43.000+02:00",
-    "datePrefix": "2026-07-18",
-    "category": "animaux",
-    "source": "INFO.FR",
-    "image": "https://images.unsplash.com/photo-1603648995232-9e0e33e6a6fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQzNTkxMjN8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "C'est le genre de nuit dont les éleveurs ne parlent qu'à voix basse. À Arenthon, dans la vallée de l'Arve, une ferme entière vient de partir en fumée. Les bâtiments sont perdus. Mais les 200 animaux qui s'y trouvaient — bovins, ovins, volailles, difficile de l'imaginer — ont été sortis vivants. Une ",
-    "lieu": "Arenthon",
-    "url": "/breves/2026-07-18-a/"
   }
 ]
