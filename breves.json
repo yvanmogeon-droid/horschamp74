@@ -1,5 +1,17 @@
 [
   {
+    "titre": "L'ALPAGE DE SULENS FORME DES BERGERS COMME NULLE PART AILLEURS EN FRANCE",
+    "slug": "2026-09-20-a",
+    "date": "2026-09-20T10:06:57.000+02:00",
+    "datePrefix": "2026-09-20",
+    "category": "montagne",
+    "source": "agriculture.gouv.fr",
+    "image": "https://images.unsplash.com/photo-1775152052638-18df228cf53d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk4OTg4MTd8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "À 1 500 mètres d'altitude, sur les hauteurs de Faverges-Seythenex, des stagiaires apprennent à traire des vaches, lire le ciel et décider seuls. L'alpage-école de Sulens n'a pas d'équivalent en France : c'est le seul lieu de formation entièrement calé sur le rythme de la montagne, de la montée en al",
+    "lieu": "Faverges-Seythenex",
+    "url": "/breves/2026-09-20-a/"
+  },
+  {
     "titre": "DES POISSONS ÉVACUÉS À LA MAIN DANS LES RIVIÈRES À SEC DU 74",
     "slug": "2026-09-19-a",
     "date": "2026-09-19T09:43:31.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Elle s'appelait Yuna, elle avait quelques semaines, et quelqu'un avait jugé bon de la faire franchir la frontière sans son accord. Le chiot, kidnappé en Suisse, a été retrouvé sain et sauf en Haute-Savoie — ce qui soulève une question que peu de gens posent : combien d'animaux traversent ce couloir ",
     "lieu": "Haute-Savoie",
     "url": "/breves/2026-07-21-a/"
-  },
-  {
-    "titre": "LE GLACIER DU RHÔNE PERD LA MOITIÉ DE SA GLACE EN DOUZE JOURS DE FEU",
-    "slug": "2026-07-20-a",
-    "date": "2026-07-20T08:28:36.000+02:00",
-    "datePrefix": "2026-07-20",
-    "category": "energie",
-    "source": "Le Monde",
-    "image": "https://images.unsplash.com/photo-1515017009449-a8f06a48e26e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ1MzYxMTZ8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Douze jours. C'est le temps qu'il a fallu à la canicule de juillet pour faire saigner le glacier du Rhône, dans les Alpes suisses, à une vitesse que les glaciologues eux-mêmes qualifient de massacre. Pas une métaphore écolo — un constat de terrain, formulé par ceux qui ont les pieds dessus. Ce glaci",
-    "lieu": "Auvergne-Rhône-Alpes",
-    "url": "/breves/2026-07-20-a/"
   }
 ]
