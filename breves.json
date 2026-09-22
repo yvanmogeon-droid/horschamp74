@@ -1,5 +1,17 @@
 [
   {
+    "titre": "THOMAS BRAIL MENOTTÉ SUR LE CHANTIER DE L'A412 : LE BÉTON RÉSISTE",
+    "slug": "2026-09-22-a",
+    "date": "2026-09-22T10:20:36.000+02:00",
+    "datePrefix": "2026-09-22",
+    "category": "montagne",
+    "source": "franceinfo",
+    "image": "https://images.unsplash.com/photo-1544889793-137f9e126fe2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAwNzI0MzZ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Il grimpait aux arbres pour sauver les forêts de l'A69 dans le Tarn. Cette fois, c'est en Haute-Savoie qu'on a mis les menottes à Thomas Brail — sur le chantier même de l'autoroute A412, ce tronçon contesté qui doit relier le Chablais à la Suisse. Le militant écologiste, figure nationale du collecti",
+    "lieu": "Haute-Savoie",
+    "url": "/breves/2026-09-22-a/"
+  },
+  {
     "titre": "UN SOUS-MARIN PLONGE DANS LE LAC DU BOURGET ET REMONTE SIDÉRÉ",
     "slug": "2026-09-21-a",
     "date": "2026-09-21T11:06:35.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Trop de planches de SUP, trop de kayaks, trop de jets de cordages ratés à deux mètres d'un nageur ? La Ville d'Annecy vient de décider de limiter les mises à l'eau sur le lac — et la décision est plus tranchée qu'un simple coup de sifflet de plage. Derrière l'annonce officielle, il y a une réalité d",
     "lieu": "Annecy",
     "url": "/breves/2026-07-23-a/"
-  },
-  {
-    "titre": "L'ALPAGE DE SULENS FORME DES BERGERS QUI N'EXISTENT PLUS NULLE PART AILLEURS",
-    "slug": "2026-07-22-a",
-    "date": "2026-07-22T07:58:14.000+02:00",
-    "datePrefix": "2026-07-22",
-    "category": "montagne",
-    "source": "agriculture.gouv.fr",
-    "image": "https://images.unsplash.com/photo-1731692017808-9c58c66e3cd9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ3MDcwOTR8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "À quelques kilomètres d'Annecy, sur les hauteurs du massif des Bauges, l'alpage de Sulens fait quelque chose que personne d'autre en France ne fait : il enseigne le métier de la montagne à ceux qui veulent encore le faire. Pas dans une salle de cours avec des PowerPoint sur la transhumance — sur le ",
-    "lieu": "Massif des Bauges",
-    "url": "/breves/2026-07-22-a/"
   }
 ]
