@@ -1,5 +1,17 @@
 [
   {
+    "titre": "UNE FOSSE À LISIER EXPLOSE EN HAUTE-SAVOIE ET LES USSES TRINQUENT",
+    "slug": "2026-09-23-a",
+    "date": "2026-09-23T10:17:20.000+02:00",
+    "datePrefix": "2026-09-23",
+    "category": "pollution",
+    "source": "L'Essor Savoyard",
+    "image": "https://images.unsplash.com/photo-1694730652852-9404a2d0214b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAxNTg2NDB8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Les Usses, ce n'est pas le Léman. Personne ne vient les photographier pour un post Instagram. Ces rivières qui coulent dans le genevois haut-savoyard ont la discrétion des endroits que l'on néglige — jusqu'au jour où ça tourne mal. Il y a quelques jours, une fosse à lisier a explosé quelque part dan",
+    "lieu": "Haute-Savoie",
+    "url": "/breves/2026-09-23-a/"
+  },
+  {
     "titre": "THOMAS BRAIL MENOTTÉ SUR LE CHANTIER DE L'A412 : LE BÉTON RÉSISTE",
     "slug": "2026-09-22-a",
     "date": "2026-09-22T10:20:36.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Soixante-cinq kilomètres de rive française, des plaisanciers qui ignorent les courants, des baigneurs qui surestiment leur souffle : le Léman n'est pas un lac tranquille. À Thonon, une poignée de sauveteurs bénévoles veille — de nuit comme de jour, par brise légère ou grain traître — sur l'un des pl",
     "lieu": "Thonon-les-Bains",
     "url": "/breves/2026-07-24-a/"
-  },
-  {
-    "titre": "ANNECY FERME SON LAC AUX BATEAUX : LA VRAIE RAISON N'EST PAS CELLE QU'ON CROIT",
-    "slug": "2026-07-23-a",
-    "date": "2026-07-23T08:01:42.000+02:00",
-    "datePrefix": "2026-07-23",
-    "category": "eau",
-    "source": "L'Essor Savoyard",
-    "image": "https://images.unsplash.com/photo-1717010785689-67b6d77a8f23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ3OTM3MDJ8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Trop de planches de SUP, trop de kayaks, trop de jets de cordages ratés à deux mètres d'un nageur ? La Ville d'Annecy vient de décider de limiter les mises à l'eau sur le lac — et la décision est plus tranchée qu'un simple coup de sifflet de plage. Derrière l'annonce officielle, il y a une réalité d",
-    "lieu": "Annecy",
-    "url": "/breves/2026-07-23-a/"
   }
 ]
