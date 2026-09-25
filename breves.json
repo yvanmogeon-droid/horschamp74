@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LA SÉCHERESSE VIDE UNE RIVIÈRE PRÈS DE GRENOBLE : DES CENTAINES DE POISSONS MORTS",
+    "slug": "2026-09-25-a",
+    "date": "2026-09-25T10:34:27.000+02:00",
+    "datePrefix": "2026-09-25",
+    "category": "animaux",
+    "source": "Actu.fr",
+    "image": "https://images.unsplash.com/photo-1665085376796-16834631fa42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAzMzI0Njd8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Des centaines de cadavres de poissons sur les galets à sec. Ce n'est pas une métaphore — c'est ce qu'ont découvert les riverains d'un cours d'eau en bordure de Grenoble, après que la sécheresse a fait tomber le niveau en dessous du seuil vital. Pas d'électropêche de sauvetage cette fois, pas d'agent",
+    "lieu": "Grenoble",
+    "url": "/breves/2026-09-25-a/"
+  },
+  {
     "titre": "LES BATEAUX DU LAC D'ANNECY CLOUÉS AU PORT PAR LA SÉCHERESSE",
     "slug": "2026-09-24-a",
     "date": "2026-09-24T10:31:05.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "C'est l'été, il fait sec, et quelqu'un quelque part dans le 74 s'apprête à brûler des déchets verts au fond de son jardin. Mauvaise idée — et pas seulement à cause du voisin qui tousse. En Haute-Savoie, les usages du feu sont encadrés par des règles qui changent selon la saison, la commune et l'état",
     "lieu": "Haute-Savoie",
     "url": "/breves/2026-07-26-a/"
-  },
-  {
-    "titre": "DES PÊCHEURS SORTENT DES POISSONS VIVANTS DES RIVIÈRES AVANT QU'ELLES MEURENT",
-    "slug": "2026-07-25-a",
-    "date": "2026-07-25T07:36:32.000+02:00",
-    "datePrefix": "2026-07-25",
-    "category": "eau",
-    "source": "ici.fr",
-    "image": "https://images.unsplash.com/photo-1633966458715-9e3d7ce74b8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ5NjQ5OTJ8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Quand le niveau d'une rivière tombe trop bas, les poissons n'ont plus où aller. L'eau se réchauffe, l'oxygène disparaît, et les truites commencent à suffoquer dans quelques centimètres de flotte tiède. En Haute-Savoie cet été, des équipes de pêcheurs — fédérations, gardes-rivière, bénévoles — ont pr",
-    "lieu": "Haute-Savoie",
-    "url": "/breves/2026-07-25-a/"
   }
 ]
