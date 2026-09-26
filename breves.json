@@ -1,5 +1,17 @@
 [
   {
+    "titre": "57 000 M² DU LÉMAN VIRENT AU ROUGE : UNE RIVIÈRE CRACHE DE L'ENCRE DANS LE LAC",
+    "slug": "2026-09-26-a",
+    "date": "2026-09-26T10:16:46.000+02:00",
+    "datePrefix": "2026-09-26",
+    "category": "eau",
+    "source": "Le Dauphiné Libéré",
+    "image": "https://images.unsplash.com/photo-1777955842913-d5c6ddf1b36d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA0MTc4MDZ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Un matin, des riverains du Léman ont vu l'eau changer de couleur. Pas un reflet, pas une algue — du rouge, épandu sur 57 000 m² de lac. La cause : un déversement accidentel d'encre dans une rivière qui se jette dans le Léman, en Haute-Savoie. L'encre a voyagé jusqu'au lac sans que personne ne puisse",
+    "lieu": "Lac Léman",
+    "url": "/breves/2026-09-26-a/"
+  },
+  {
     "titre": "LA SÉCHERESSE VIDE UNE RIVIÈRE PRÈS DE GRENOBLE : DES CENTAINES DE POISSONS MORTS",
     "slug": "2026-09-25-a",
     "date": "2026-09-25T10:34:27.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Quatre-vingt-cinq personnes. Un dimanche. Et au bout de la journée, plusieurs mètres cubes de déchets arrachés aux pentes et aux sous-bois d'Arâches-la-Frasse, commune perchée au-dessus de Cluses, face au Mont-Blanc. Pas des bénévoles en gilet fluo venus poser pour une photo — des gens du coin qui c",
     "lieu": "Arâches-la-Frasse",
     "url": "/breves/2026-07-27-a/"
-  },
-  {
-    "titre": "EN HAUTE-SAVOIE, ALLUMER UN FEU EN ÉTÉ PEUT COÛTER TRÈS CHER",
-    "slug": "2026-07-26-a",
-    "date": "2026-07-26T07:57:23.000+02:00",
-    "datePrefix": "2026-07-26",
-    "category": "montagne",
-    "source": "Le Pays Gessien",
-    "image": "https://images.unsplash.com/photo-1758919679676-012fc96c8fc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUwNTI2NDN8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "C'est l'été, il fait sec, et quelqu'un quelque part dans le 74 s'apprête à brûler des déchets verts au fond de son jardin. Mauvaise idée — et pas seulement à cause du voisin qui tousse. En Haute-Savoie, les usages du feu sont encadrés par des règles qui changent selon la saison, la commune et l'état",
-    "lieu": "Haute-Savoie",
-    "url": "/breves/2026-07-26-a/"
   }
 ]
