@@ -1,5 +1,17 @@
 [
   {
+    "titre": "DANS LES ALPAGES DE HAUTE-SAVOIE, L'ABONDANCE APPREND À SURVIVRE SANS NEIGE",
+    "slug": "2026-10-01-a",
+    "date": "2026-10-01T11:48:45.000+02:00",
+    "datePrefix": "2026-10-01",
+    "category": "energie",
+    "source": "Ecomnews",
+    "image": "https://images.unsplash.com/photo-1758465915357-85b368938921?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4NTUzMjV8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "L'Abondance, ce n'est pas qu'un fromage à raclette du dimanche soir. C'est une race, un territoire, un AOP construit sur des siècles de transhumance et d'herbe grasse. Problème : l'herbe grasse dépend de la neige qui fond en mai, des pluies de juillet, d'étés qui ne carbonisent pas les alpages. Tout",
+    "lieu": "Haute-Savoie",
+    "url": "/breves/2026-10-01-a/"
+  },
+  {
     "titre": "LE LAC D'ANNECY PERD 1 CM D'EAU PAR JOUR : LE COMPTE À REBOURS",
     "slug": "2026-09-30-a",
     "date": "2026-09-30T11:21:58.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Un projet de data center — l'un des plus puissants de la région Auvergne-Rhône-Alpes — vient de se prendre un mur. Pas un recours d'association militante, pas une mobilisation de riverains : une absence d'étude d'impact environnemental. Simple. Brutal. Et pourtant suffisant pour bloquer la machine. ",
     "lieu": "Auvergne-Rhône-Alpes",
     "url": "/breves/2026-08-01-a/"
-  },
-  {
-    "titre": "DEUX BASSINS EN CRISE : LA HAUTE-SAVOIE À SEC COMME JAMAIS EN JUILLET",
-    "slug": "2026-07-31-a",
-    "date": "2026-07-31T08:20:31.000+02:00",
-    "datePrefix": "2026-07-31",
-    "category": "eau",
-    "source": "France 3",
-    "image": "https://images.unsplash.com/photo-1780920395638-58077e66cc27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU0ODYwMzF8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Fin juillet, et deux bassins versants de Haute-Savoie viennent de franchir le seuil de crise — le niveau d'alerte maximal prévu par la loi sur l'eau. Pas une vigilance, pas une alerte simple : la crise, celle qui impose des restrictions draconiennes sur les prélèvements, l'irrigation, parfois même l",
-    "lieu": "Haute-Savoie",
-    "url": "/breves/2026-07-31-a/"
   }
 ]
