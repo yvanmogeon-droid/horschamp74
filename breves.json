@@ -1,5 +1,17 @@
 [
   {
+    "titre": "UN SAC-POUBELLE ABANDONNÉ À 100 EUROS : LA VILLE QUI SORT LES GRIFFES",
+    "slug": "2026-10-04-a",
+    "date": "2026-10-04T11:17:31.000+02:00",
+    "datePrefix": "2026-10-04",
+    "category": "dechets",
+    "source": "Le Messager",
+    "image": "https://images.unsplash.com/photo-1629374249658-a280c296f504?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTExMTI2NTF8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Poser un sac-poubelle au mauvais endroit, au mauvais moment, et voilà une amende de 100 euros qui tombe. Dans une ville de Haute-Savoie — dont Le Messager révèle la politique musclée — les dépôts sauvages ne sont plus tolérés, même pour un seul sac égaré sur le trottoir. Fini le temps où l'on regard",
+    "lieu": "Haute-Savoie",
+    "url": "/breves/2026-10-04-a/"
+  },
+  {
     "titre": "L'A412 ET FNE : LE SILENCE DES POUVOIRS PUBLICS FACE AUX IRRÉGULARITÉS",
     "slug": "2026-10-03-a",
     "date": "2026-10-03T10:37:28.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Une rivière qui charrie de l'encre rouge jusqu'au Léman, une nappe cramoisie de 57 000 mètres carrés visible depuis les rives — le genre de spectacle qui fait sortir les téléphones et appeler les pompiers. Sauf que l'histoire ne commence pas sur le lac : elle commence quelque part en amont, dans une",
     "lieu": "Lac Léman",
     "url": "/breves/2026-08-04-a/"
-  },
-  {
-    "titre": "LA COMPAGNIE DES ALPES MISE SUR LE PADEL PENDANT QUE SES GLACIERS FONDENT",
-    "slug": "2026-08-03-a",
-    "date": "2026-08-03T08:50:39.000+02:00",
-    "datePrefix": "2026-08-03",
-    "category": "energie",
-    "source": "Le Dauphiné",
-    "image": "https://images.unsplash.com/photo-1418662589339-364ad47f98a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU3NDcwMzl8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "La Compagnie des Alpes, mastodonte du ski alpin qui gère Chamonix, Les Arcs, Tignes ou encore Méribel, vient d'annoncer vouloir devenir numéro un européen du padel. Le groupe qui a bâti sa fortune sur la neige et les remontées mécaniques diversifie à marche forcée — et la raison tient en un mot : le",
-    "lieu": "Auvergne-Rhône-Alpes",
-    "url": "/breves/2026-08-03-a/"
   }
 ]
