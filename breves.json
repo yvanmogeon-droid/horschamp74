@@ -1,5 +1,17 @@
 [
   {
+    "titre": "CHAMONIX LAISSE SES FORÊTS REDEVENIR SAUVAGES, CARRÉ PAR CARRÉ",
+    "slug": "2026-10-10-a",
+    "date": "2026-10-10T11:22:49.000+02:00",
+    "datePrefix": "2026-10-10",
+    "category": "montagne",
+    "source": "Le Dauphiné",
+    "image": "https://images.unsplash.com/photo-1693597548153-41d5cfc9e4e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE2MzEzNjl8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "À Chamonix, on ne coupe plus tout. Délibérément. La commune a décidé de laisser des îlots de forêt à l'abandon — pas par manque de budget, mais par choix. Ces parcelles, volontairement soustraites à la gestion forestière, sont censées redevenir ce qu'elles étaient avant qu'on les optimise : un fouil",
+    "lieu": "Chamonix",
+    "url": "/breves/2026-10-10-a/"
+  },
+  {
     "titre": "70 CM SOUS L'EAU : LE LAC D'ANNECY MANGE LES PONTONS DES RIVERAINS",
     "slug": "2026-10-09-a",
     "date": "2026-10-09T12:06:11.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Il y a une réalité que les touristes qui achètent une meule d'Abondance au marché d'Évian ou de Thonon ne voient pas : derrière l'AOP et la croûte frottée, c'est toute une organisation agricole de montagne qui doit se réinventer à marche forcée. Les étés plus chauds, les sécheresses répétées, l'herb",
     "lieu": "Haute-Savoie",
     "url": "/breves/2026-08-11-a/"
-  },
-  {
-    "titre": "AU FER-À-CHEVAL, LA RIVIÈRE VIDE FAIT PLUS PEUR QUE LA MONTAGNE",
-    "slug": "2026-08-09-a",
-    "date": "2026-08-09T06:29:01.000+02:00",
-    "datePrefix": "2026-08-09",
-    "category": "eau",
-    "source": "Le Dauphiné Libéré",
-    "image": "https://images.unsplash.com/photo-1783027339341-6f3e22367226?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODYyNTY5NDF8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Une phrase lâchée par un habitué du cirque du Fer-à-Cheval résume tout : « J'ai eu peur de tomber sur un corps dans la rivière. » Pas peur des crues, pas peur des chutes de pierres — peur du silence d'une rivière trop basse, d'un niveau si anormal qu'on craint d'y trouver quelque chose que l'eau aur",
-    "lieu": "Sixt-Fer-à-Cheval",
-    "url": "/breves/2026-08-09-a/"
   }
 ]
