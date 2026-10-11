@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LE LAC D'ANNECY À COURT D'EAU : LES BATEAUX COINCÉS, L'ÉCO COULE",
+    "slug": "2026-10-11-a",
+    "date": "2026-10-11T11:36:34.000+02:00",
+    "datePrefix": "2026-10-11",
+    "category": "pollution",
+    "source": "ici.fr",
+    "image": "https://images.unsplash.com/photo-1765988298957-6c44157fbe04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE3MTg1OTN8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Attends. Sujet déjà traité plusieurs fois. Cherchons autre chose. Les PFAS à Renage (art. 9) — pollution éternelle dans les œufs, en Isère, pas encore traité. Angle solide, concret, territoire AURA. Go. DES PFAS DANS LES ŒUFS DE RENAGE : CE QUE MANGEAIENT VOS POULES À Renage, commune iséroise de 4 0",
+    "lieu": "Renage",
+    "url": "/breves/2026-10-11-a/"
+  },
+  {
     "titre": "CHAMONIX LAISSE SES FORÊTS REDEVENIR SAUVAGES, CARRÉ PAR CARRÉ",
     "slug": "2026-10-10-a",
     "date": "2026-10-10T11:22:49.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Poser la main dans le lac d'Annecy cet été, c'est pas vraiment se rafraîchir. 29 degrés Celsius — le chiffre a été relevé dans les eaux du lac, et il dit quelque chose que les discours sur le changement climatique peinent parfois à rendre concret : le lac le plus pur d'Europe occidentale est en trai",
     "lieu": "Annecy",
     "url": "/breves/2026-08-12-a/"
-  },
-  {
-    "titre": "L'ABONDANCE EN CRISE : LE FROMAGE SAVOYARDS'ADAPTE OU DISPARAÎT",
-    "slug": "2026-08-11-a",
-    "date": "2026-08-11T06:35:09.000+02:00",
-    "datePrefix": "2026-08-11",
-    "category": "agriculture",
-    "source": "Ecomnews",
-    "image": "https://images.unsplash.com/photo-1604225188221-3646852dbee6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY0MzAxMDl8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Il y a une réalité que les touristes qui achètent une meule d'Abondance au marché d'Évian ou de Thonon ne voient pas : derrière l'AOP et la croûte frottée, c'est toute une organisation agricole de montagne qui doit se réinventer à marche forcée. Les étés plus chauds, les sécheresses répétées, l'herb",
-    "lieu": "Haute-Savoie",
-    "url": "/breves/2026-08-11-a/"
   }
 ]
