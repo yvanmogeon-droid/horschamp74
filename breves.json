@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LE LÉMAN VIRE AU ROUGE : 57 000 M² D'ENCRE DANS LE LAC",
+    "slug": "2026-10-12-a",
+    "date": "2026-10-12T13:33:10.000+02:00",
+    "datePrefix": "2026-10-12",
+    "category": "eau",
+    "source": "Le Dauphiné",
+    "image": "https://images.unsplash.com/photo-1768582688156-829caadc2c16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE4MTE5OTB8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "57 000 mètres carrés. C'est la surface du lac Léman qui a viré au rouge écarlate après qu'une quantité non précisée d'encre industrielle s'est déversée accidentellement dans une rivière affluente, en Haute-Savoie. Pas un coucher de soleil sur l'eau — une nappe cramoisie qui s'étale, visible à l'œil ",
+    "lieu": "Lac Léman",
+    "url": "/breves/2026-10-12-a/"
+  },
+  {
     "titre": "LE LAC D'ANNECY À COURT D'EAU : LES BATEAUX COINCÉS, L'ÉCO COULE",
     "slug": "2026-10-11-a",
     "date": "2026-10-11T11:36:34.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Chaque été, ils débarquent avec leurs pneus surdimensionnés, leurs treuils chromés et leurs moteurs qui boivent au litre. Le salon du 4x4 tout-terrain de Savoie attire des centaines de passionnés qui viennent tordre leurs véhicules sur des terrains naturels — et cette année, la facture environnement",
     "lieu": "Savoie",
     "url": "/breves/2026-08-13-a/"
-  },
-  {
-    "titre": "29°C DANS LE LAC D'ANNECY : L'EAU DE BAIGNADE DÉPASSE CELLE DE CERTAINES MERS",
-    "slug": "2026-08-12-a",
-    "date": "2026-08-12T06:58:18.000+02:00",
-    "datePrefix": "2026-08-12",
-    "category": "eau",
-    "source": "Le Dauphiné",
-    "image": "https://images.unsplash.com/photo-1580974557238-0084bc9d38d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY1MTc4OTh8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Poser la main dans le lac d'Annecy cet été, c'est pas vraiment se rafraîchir. 29 degrés Celsius — le chiffre a été relevé dans les eaux du lac, et il dit quelque chose que les discours sur le changement climatique peinent parfois à rendre concret : le lac le plus pur d'Europe occidentale est en trai",
-    "lieu": "Annecy",
-    "url": "/breves/2026-08-12-a/"
   }
 ]
