@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LE LAC DU BOURGET VIRE AU TURQUOISE SANS QUE PERSONNE N'AIT RIEN FAIT",
+    "slug": "2026-10-13-a",
+    "date": "2026-10-13T12:57:19.000+02:00",
+    "datePrefix": "2026-10-13",
+    "category": "eau",
+    "source": "Sciencepost",
+    "image": "https://images.unsplash.com/photo-1789684357439-009149904b1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE4OTYyMzl8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Des décennies de phosphore, d'algues et d'eau verdâtre. Et puis, presque sans crier gare, le lac du Bourget s'est mis à briller d'un bleu-vert éclatant. Pas grâce à une station d'épuration dernier cri, pas grâce à une campagne de sensibilisation citoyenne — c'est la conclusion qui surprend dans cet ",
+    "lieu": "Lac du Bourget",
+    "url": "/breves/2026-10-13-a/"
+  },
+  {
     "titre": "LE LÉMAN VIRE AU ROUGE : 57 000 M² D'ENCRE DANS LE LAC",
     "slug": "2026-10-12-a",
     "date": "2026-10-12T13:33:10.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Attends — l'article 6 sur le lac d'Annecy est déjà publié. Idem pour les restrictions sécheresse. Cherchons autre chose. L'article 1 : la SPA d'Annecy sauve une cinquantaine d'animaux après un incendie. L'article 7 sur les chats SPA est déjà publié, mais celui-ci parle d'un incendie spécifique, pas ",
     "lieu": "Annecy",
     "url": "/breves/2026-08-14-a/"
-  },
-  {
-    "titre": "LE SALON DU 4X4 CREUSE SES ORNIÈRES EN SAVOIE ET ÇA NE PASSE PAS",
-    "slug": "2026-08-13-a",
-    "date": "2026-08-13T07:02:31.000+02:00",
-    "datePrefix": "2026-08-13",
-    "category": "pollution",
-    "source": "RMC",
-    "image": "https://images.unsplash.com/photo-1598967460051-c2ffd802d09e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY2MDQ1NTF8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Chaque été, ils débarquent avec leurs pneus surdimensionnés, leurs treuils chromés et leurs moteurs qui boivent au litre. Le salon du 4x4 tout-terrain de Savoie attire des centaines de passionnés qui viennent tordre leurs véhicules sur des terrains naturels — et cette année, la facture environnement",
-    "lieu": "Savoie",
-    "url": "/breves/2026-08-13-a/"
   }
 ]
