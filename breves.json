@@ -1,5 +1,17 @@
 [
   {
+    "titre": "L'ALPAGE DE SULENS FORME LES BERGERS QUE LA MONTAGNE RÉCLAME",
+    "slug": "2026-10-15-a",
+    "date": "2026-10-15T10:18:26.000+02:00",
+    "datePrefix": "2026-10-15",
+    "category": "montagne",
+    "source": "agriculture.gouv.fr",
+    "image": "https://images.unsplash.com/photo-1730161912775-7af809402558?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTIwNTk1MDZ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "C'est un bout d'alpe perché dans les Aravis, entre Thônes et la Clusaz, qui fait figure d'exception nationale. L'alpage-école de Sulens est probablement le seul endroit en France où l'on apprend vraiment le métier de fromager-alpagiste les bottes dans la boue et le foin, pas dans un amphi. Chaque ét",
+    "lieu": "Aravis",
+    "url": "/breves/2026-10-15-a/"
+  },
+  {
     "titre": "LA JUSTICE COUPE LE FEU SUR LES TÉTRAS-LYRES DE HAUTE-SAVOIE",
     "slug": "2026-10-14-a",
     "date": "2026-10-14T10:36:55.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "À 1 500 mètres d'altitude, dans les Aravis, on apprend encore à faire du fromage en alpage, à soigner les bêtes, à lire le temps qui vire. L'alpage-école de Sulens — situé sur la commune de Marlens, en Haute-Savoie — est le seul site de formation de ce type en France. Pas une vitrine, pas un musée v",
     "lieu": "Marlens",
     "url": "/breves/2026-08-16-a/"
-  },
-  {
-    "titre": "UN GLACIER RECRACHE DEUX ALPINISTES DISPARUS IL Y A 34 ANS",
-    "slug": "2026-08-15-a",
-    "date": "2026-08-15T05:59:56.000+02:00",
-    "datePrefix": "2026-08-15",
-    "category": "montagne",
-    "source": "Paris Match",
-    "image": "https://images.unsplash.com/photo-1783610451471-46c460d8fe36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY3NzM1OTZ8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Trente-quatre ans sous la glace. Les corps de deux alpinistes portés disparus en 1992 dans les Alpes viennent d'être découverts après la fonte d'un glacier. Pas de naufrage, pas d'accident de route : la montagne a simplement relâché ce qu'elle avait englouti, lentement, millimètre par millimètre, au",
-    "lieu": "Alpes",
-    "url": "/breves/2026-08-15-a/"
   }
 ]
