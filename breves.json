@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LES ROBINETS DU LAC DU BOURGET SE FERMENT, ET CE N'EST QUE LE DÉBUT",
+    "slug": "2026-10-16-a",
+    "date": "2026-10-16T10:06:33.000+02:00",
+    "datePrefix": "2026-10-16",
+    "category": "eau",
+    "source": "France 3",
+    "image": "https://images.unsplash.com/photo-1783776500391-60d305ae1d25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTIxNDUxOTN8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Autour du lac du Bourget, les panneaux de restriction sont apparus discrètement, presque comme chaque année. Sauf que cette fois, les agriculteurs et les riverains le disent sans détour : \"on fait très attention\". Traduction : l'eau manque, et pas qu'un peu. La sécheresse qui s'étire depuis l'été a ",
+    "lieu": "Lac du Bourget",
+    "url": "/breves/2026-10-16-a/"
+  },
+  {
     "titre": "L'ALPAGE DE SULENS FORME LES BERGERS QUE LA MONTAGNE RÉCLAME",
     "slug": "2026-10-15-a",
     "date": "2026-10-15T10:18:26.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Dans les rivières asséchées de Haute-Savoie, des équipes remontent dans les eaux résiduelles pour sauver les poissons à la main — littéralement. On appelle ça des \"pêches de sauvetage\" : filets, épuisettes, seaux. On attrape les truites, les chabots, les loches, et on les transfère vers des secteurs",
     "lieu": "Haute-Savoie",
     "url": "/breves/2026-08-17-a/"
-  },
-  {
-    "titre": "L'ALPAGE DE SULENS FORME LES BERGERS DE DEMAIN, UN SEUL EN FRANCE",
-    "slug": "2026-08-16-a",
-    "date": "2026-08-16T06:01:29.000+02:00",
-    "datePrefix": "2026-08-16",
-    "category": "montagne",
-    "source": "agriculture.gouv.fr",
-    "image": "https://images.unsplash.com/photo-1571596741260-e7aff194deda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY4NjAwODl8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "À 1 500 mètres d'altitude, dans les Aravis, on apprend encore à faire du fromage en alpage, à soigner les bêtes, à lire le temps qui vire. L'alpage-école de Sulens — situé sur la commune de Marlens, en Haute-Savoie — est le seul site de formation de ce type en France. Pas une vitrine, pas un musée v",
-    "lieu": "Marlens",
-    "url": "/breves/2026-08-16-a/"
   }
 ]
