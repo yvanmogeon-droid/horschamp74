@@ -1,5 +1,17 @@
 [
   {
+    "titre": "SAINT-SORLIN PERD 30 MÈTRES DE GLACE EN UN ÉTÉ, ET CE N'EST QU'UNE SAISON",
+    "slug": "2026-10-18-a",
+    "date": "2026-10-18T09:53:46.000+02:00",
+    "datePrefix": "2026-10-18",
+    "category": "montagne",
+    "source": "Libération",
+    "image": "https://images.unsplash.com/photo-1776580198761-ecee2609fc30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTIzMTcyMjZ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Trente mètres. Pas en dix ans, pas depuis le début du siècle — en un seul été. Le front du glacier de Saint-Sorlin, dans le massif des Grandes Rousses (Isère), a reculé de 30 mètres entre juin et octobre 2026. Les glaciologues qui mesurent ce vestige depuis des décennies le disent sans détour : le r",
+    "lieu": "Auvergne-Rhône-Alpes",
+    "url": "/breves/2026-10-18-a/"
+  },
+  {
     "titre": "LE FROMAGE D'ABONDANCE MONTE SES ALPAGES… ET CRAINT DE NE PLUS POUVOIR",
     "slug": "2026-10-17-a",
     "date": "2026-10-17T09:40:59.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Jeter un sac-poubelle au mauvais endroit, ça peut coûter le prix d'un bon resto. En Haute-Savoie, une commune a décidé d'en finir avec les dépôts sauvages en sortant l'arme de la verbalisation systématique : 100 euros pour un simple sac abandonné hors collecte. Pas un avertissement, pas une mise en ",
     "lieu": "Haute-Savoie",
     "url": "/breves/2026-08-19-a/"
-  },
-  {
-    "titre": "LA SPA DE CLUSES AFFICHE COMPLET : DES ANIMAUX QUI ATTENDENT LE BON MATCH",
-    "slug": "2026-08-18-a",
-    "date": "2026-08-18T06:00:58.000+02:00",
-    "datePrefix": "2026-08-18",
-    "category": "animaux",
-    "source": "Le Dauphiné Libéré",
-    "image": "https://images.unsplash.com/photo-1709788938385-7825acfbf7cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODcwMzI4NTh8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Plein à craquer, mais pas question de brader une adoption. À la SPA de Cluses, les cages sont occupées et la liste d'attente s'allonge — pourtant, chaque candidat à l'adoption passe par un vrai processus de sélection. Une bénévole résume sans détour : « C'est comme sur Tinder, il faut que ça matche.",
-    "lieu": "Cluses",
-    "url": "/breves/2026-08-18-a/"
   }
 ]
