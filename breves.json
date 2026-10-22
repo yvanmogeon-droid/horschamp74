@@ -1,5 +1,17 @@
 [
   {
+    "titre": "L'A412 TRAÎNÉE EN JUSTICE POUR SES ENTAILLES DANS LA TERRE",
+    "slug": "2026-10-22-a",
+    "date": "2026-10-22T10:39:11.000+02:00",
+    "datePrefix": "2026-10-22",
+    "category": "pollution",
+    "source": "La Radio Plus",
+    "image": "https://images.unsplash.com/photo-1589808541688-5e797b17d8ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTI2NjU1NTF8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Un chantier autoroutier, des associations qui tirent la sonnette d'alarme depuis des mois, et un silence des pouvoirs publics qui finit par coûter cher. La procureure d'Annecy vient de saisir la justice pour des \"manquements\" environnementaux liés au chantier de l'A412, cette liaison qui doit relier",
+    "lieu": "Bonneville",
+    "url": "/breves/2026-10-22-a/"
+  },
+  {
     "titre": "DANS LES RIVIÈRES ASSÉCHÉES DU 74, ON PÊCHE LES POISSONS À LA MAIN POUR LES SAUVER",
     "slug": "2026-10-21-a",
     "date": "2026-10-21T10:36:00.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Il a quitté les Alpes autrichiennes avec un vélo, une tente et une conviction : si personne ne parle du recul des glaciers autrement qu'en graphiques et rapports, ça ne changera rien. Huit cents kilomètres plus tard, il arrive à Chamonix — pas au hasard. La vallée du Mont-Blanc, c'est l'endroit en E",
     "lieu": "Chamonix",
     "url": "/breves/2026-08-23-a/"
-  },
-  {
-    "titre": "LE LÉMAN VIRE AU ROUGE : 57 000 M² D'ENCRE DANS LE LAC",
-    "slug": "2026-08-22-a",
-    "date": "2026-08-22T06:00:42.000+02:00",
-    "datePrefix": "2026-08-22",
-    "category": "eau",
-    "source": "Le Dauphiné Libéré",
-    "image": "https://images.unsplash.com/photo-1688144244971-e1e5195612aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODczNzg0NDJ8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Imaginez la surface d'environ huit terrains de foot teintée en rouge sang. C'est ce qu'ont découvert les riverains du Léman un matin d'avril : une nappe cramoisie s'étendant sur 57 000 mètres carrés, issue d'un déversement accidentel d'encre dans une rivière affluente. Le liquide a suivi son chemin ",
-    "lieu": "Lac Léman",
-    "url": "/breves/2026-08-22-a/"
   }
 ]
