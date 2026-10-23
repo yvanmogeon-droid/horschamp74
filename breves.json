@@ -1,5 +1,17 @@
 [
   {
+    "titre": "UN SAC-POUBELLE ABANDONNÉ À 100 EUROS : LA VILLE QUI SORT LES CROCS",
+    "slug": "2026-10-23-a",
+    "date": "2026-10-23T10:31:25.000+02:00",
+    "datePrefix": "2026-10-23",
+    "category": "dechets",
+    "source": "Le Messager",
+    "image": "https://images.unsplash.com/photo-1697279037530-ca81149a080f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTI3NTE0ODV8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Cent euros. C'est le tarif que risque désormais quiconque balance son sac-poubelle n'importe où dans cette ville de Haute-Savoie — et ça ne rigole pas. L'amende, appliquée par des agents assermentés qui patrouillent les rues et les bords de route, cible autant les dépôts sauvages discrets que les gr",
+    "lieu": "Haute-Savoie",
+    "url": "/breves/2026-10-23-a/"
+  },
+  {
     "titre": "L'A412 TRAÎNÉE EN JUSTICE POUR SES ENTAILLES DANS LA TERRE",
     "slug": "2026-10-22-a",
     "date": "2026-10-22T10:39:11.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Quatorze personnes sur un bateau qui se retourne. Pas un récit de vacances qui tourne mal au cinéma — c'est ce qui s'est passé sur le lac Léman un dimanche matin, selon Lyon Capitale. Les secours ont été mobilisés, et si les conditions exactes du chavirement restent à préciser, l'image reste brutale",
     "lieu": "Lac Léman",
     "url": "/breves/2026-08-24-a/"
-  },
-  {
-    "titre": "À CHAMONIX, UN CYCLISTE PÉDALE 800 KM POUR QUE LES GLACIERS EXISTENT ENCORE",
-    "slug": "2026-08-23-a",
-    "date": "2026-08-23T06:01:32.000+02:00",
-    "datePrefix": "2026-08-23",
-    "category": "montagne",
-    "source": "Le Messager",
-    "image": "https://images.unsplash.com/photo-1717711083399-a0e17695b25b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc0NjQ4OTJ8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Il a quitté les Alpes autrichiennes avec un vélo, une tente et une conviction : si personne ne parle du recul des glaciers autrement qu'en graphiques et rapports, ça ne changera rien. Huit cents kilomètres plus tard, il arrive à Chamonix — pas au hasard. La vallée du Mont-Blanc, c'est l'endroit en E",
-    "lieu": "Chamonix",
-    "url": "/breves/2026-08-23-a/"
   }
 ]
