@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LA SÉCHERESSE VIDE LES NAPPES D'AUVERGNE-RHÔNE-ALPES : L'AUTOMNE NE SUFFIT PLUS",
+    "slug": "2026-10-26-a",
+    "date": "2026-10-26T11:32:40.000+02:00",
+    "datePrefix": "2026-10-26",
+    "category": "eau",
+    "source": "Lyon Demain",
+    "image": "https://images.unsplash.com/photo-1758456835467-77fe4a8d742e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTMwMTQzNjB8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Octobre était censé être le mois du rebond. Celui où les pluies de saison rechargent les nappes phréatiques après l'été, où la terre boit enfin. En Auvergne-Rhône-Alpes cette année, le scénario tourne court : les nappes restent au plancher, et personne ne peut dire avec certitude quand le robinet na",
+    "lieu": "Auvergne-Rhône-Alpes",
+    "url": "/breves/2026-10-26-a/"
+  },
+  {
     "titre": "LAC D'ANNECY : EN OCTOBRE, LE NIVEAU CHUTE ET PERSONNE NE SAIT QUAND ÇA REPART",
     "slug": "2026-10-25-a",
     "date": "2026-10-25T10:09:08.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Ça n'a rien d'une métaphore : des chats arrivent à la SPA de Haute-Savoie avec les yeux retirés. Une maladie ophtalmique — probablement l'herpèsvirus félin ou une forme sévère de chlamydiose — ronge leurs orbites au point que l'énucléation devient l'unique issue. L'opération coûte plusieurs centaine",
     "lieu": "Haute-Savoie",
     "url": "/breves/2026-08-27-a/"
-  },
-  {
-    "titre": "LE LAC D'ANNECY PERD UN CENTIMÈTRE PAR JOUR : LES PLAGES RÉTRÉCISSENT",
-    "slug": "2026-08-26-a",
-    "date": "2026-08-26T06:05:14.000+02:00",
-    "datePrefix": "2026-08-26",
-    "category": "eau",
-    "source": "TF1 Info",
-    "image": "https://images.unsplash.com/photo-1689862234114-b25f2bcaf3f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc3MjQzMTR8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Regardez les photos d'archives de la plage d'Albigny ou des rives de Talloires. Maintenant regardez ce que vous voyez cet été : des cailloux, des bandes de terre sèche là où d'habitude l'eau affleure les pieds. Le lac d'Annecy baisse d'un centimètre par jour — et les habitués le remarquent avant mêm",
-    "lieu": "Annecy",
-    "url": "/breves/2026-08-26-a/"
   }
 ]
