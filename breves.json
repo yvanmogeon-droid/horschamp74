@@ -1,5 +1,17 @@
 [
   {
+    "titre": "UN DÉCHET JETÉ À MORZINE PEUT FINIR DANS TON VERRE D'EAU DU LÉMAN",
+    "slug": "2026-10-27-a",
+    "date": "2026-10-27T11:00:14.000+02:00",
+    "datePrefix": "2026-10-27",
+    "category": "eau",
+    "source": "Le Dauphiné",
+    "image": "https://images.unsplash.com/photo-1675000537830-30db43e6e622?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTMwOTg4MTR8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "C'est le genre de phrase qui fait froid dans le dos — et pourtant, c'est celle que lâchent les techniciens de l'usine de potabilisation de Chevilly, sur les rives du Léman. Chaque déchet abandonné dans un torrent de Morzine, chaque canette balancée dans un ruisseau de la Drôme savoyarde, voyage jusq",
+    "lieu": "Chevilly",
+    "url": "/breves/2026-10-27-a/"
+  },
+  {
     "titre": "LA SÉCHERESSE VIDE LES NAPPES D'AUVERGNE-RHÔNE-ALPES : L'AUTOMNE NE SUFFIT PLUS",
     "slug": "2026-10-26-a",
     "date": "2026-10-26T11:32:40.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Elles ne piquent pas, elles ne font pas la une des journaux de bord — et pourtant leur présence dans le lac d'Annecy cet été a de quoi faire tiquer. Des méduses d'eau douce, *Craspedacusta sowerbii*, ont été signalées dans le lac. Une espèce originaire du Yangtsé, en Chine, qui s'est glissée dans le",
     "lieu": "Annecy",
     "url": "/breves/2026-08-28-a/"
-  },
-  {
-    "titre": "CHATS ÉNUCLÉÉS EN HAUTE-SAVOIE : LA SPA DE CLUSES À BOUT DE RESSOURCES",
-    "slug": "2026-08-27-a",
-    "date": "2026-08-27T16:49:13.000+02:00",
-    "datePrefix": "2026-08-27",
-    "category": "animaux",
-    "source": "L'Essor Savoyard",
-    "image": "https://images.unsplash.com/photo-1634838786237-4fed85e1e1a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc4NDkzNTN8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Ça n'a rien d'une métaphore : des chats arrivent à la SPA de Haute-Savoie avec les yeux retirés. Une maladie ophtalmique — probablement l'herpèsvirus félin ou une forme sévère de chlamydiose — ronge leurs orbites au point que l'énucléation devient l'unique issue. L'opération coûte plusieurs centaine",
-    "lieu": "Haute-Savoie",
-    "url": "/breves/2026-08-27-a/"
   }
 ]
