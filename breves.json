@@ -1,5 +1,17 @@
 [
   {
+    "titre": "250 000 TONNES DE GLACE ET DE ROCHE SUSPENDUES AU-DESSUS DU VALAIS",
+    "slug": "2026-10-29-a",
+    "date": "2026-10-29T11:45:53.000+02:00",
+    "datePrefix": "2026-10-29",
+    "category": "montagne",
+    "source": "Nos Alpes",
+    "image": "https://images.unsplash.com/photo-1779185256329-b3175a52e63f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTMyNzQzNTN8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Un glacier qui se gorge de neige fraîche — on pourrait presque y voir une bonne nouvelle. Dans le cas du Weisshorn, en Valais suisse, c'est exactement l'inverse. Les chutes de neige des derniers jours ont alourdi une masse glaciaire déjà déstabilisée, et les géologues tirent la sonnette d'alarme : u",
+    "lieu": "Valais",
+    "url": "/breves/2026-10-29-a/"
+  },
+  {
     "titre": "L'A412 DÉJÀ JUGÉE : LE CHANTIER FORCÉ DE SE METTRE EN RÈGLE",
     "slug": "2026-10-28-a",
     "date": "2026-10-28T11:39:02.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "On croyait avoir touché le fond la semaine dernière avec un centimètre par jour de baisse. C'était avant que le lac d'Annecy donne l'impression de vouloir disparaître pour de bon. Désormais, des gens se promènent à pied dans l'eau — pas pour nager, mais parce qu'il y a à peine quelques dizaines de c",
     "lieu": "Annecy",
     "url": "/breves/2026-08-30-a/"
-  },
-  {
-    "titre": "FROMAGE D'ABONDANCE : LE CLIMAT OBLIGE LES ALPAGES À RÉÉCRIRE LEURS RÈGLES",
-    "slug": "2026-08-29-a",
-    "date": "2026-08-29T11:47:28.000+02:00",
-    "datePrefix": "2026-08-29",
-    "category": "montagne",
-    "source": "Ecomnews",
-    "image": "https://images.unsplash.com/photo-1773453261632-460c829e5312?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODgwMDQwNDh8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "L'AOP Abondance, c'est 700 ans de tradition fromagère dans les vallées de Haute-Savoie — et une charte technique écrite à une époque où personne ne parlait de stress thermique sur les vaches ni de sécheresse en altitude. Aujourd'hui, la filière se retrouve face à une contradiction qui n'est plus thé",
-    "lieu": "Haute-Savoie",
-    "url": "/breves/2026-08-29-a/"
   }
 ]
