@@ -1,5 +1,17 @@
 [
   {
+    "titre": "EN 70 ANS, CHAMONIX A AVALÉ SES PROPRES PÂTURAGES SOUS LES ARBRES",
+    "slug": "2026-10-31-a",
+    "date": "2026-10-31T11:14:28.000+02:00",
+    "datePrefix": "2026-10-31",
+    "category": "montagne",
+    "source": "Le Dauphiné Libéré",
+    "image": "https://images.unsplash.com/photo-1696881343015-98419744dbdc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM0NDUyNjh8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Personne ne l'a vraiment vu venir. Pendant que les glaciers de la vallée fondaient, la forêt, elle, gagnait du terrain à vue d'œil — et pas qu'un peu. En soixante-dix ans, le couvert forestier autour de Chamonix a presque doublé. Des prairies d'altitude, des alpages, des clairières : happés par les ",
+    "lieu": "Chamonix",
+    "url": "/breves/2026-10-31-a/"
+  },
+  {
     "titre": "LE LÉMAN VIRE AU ROUGE : 57 000 M² D'EAU TEINTÉE PAR UNE RIVIÈRE SOUILLÉE",
     "slug": "2026-10-30-a",
     "date": "2026-10-30T11:39:02.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Des arbres morts qu'on ne ramasse plus. Des taillis qu'on laisse pousser en désordre. Des clairières qu'on ne fauche pas. À Chamonix, la commune expérimente quelque chose de contre-intuitif pour un territoire habitué à tout maîtriser : lâcher prise sur des parcelles forestières entières pour laisser",
     "lieu": "Chamonix",
     "url": "/breves/2026-09-01-a/"
-  },
-  {
-    "titre": "LE LAC D'ANNECY SE VIDE, LE LÉMAN EXPRESS SE REMPLIT : MAUVAISE SAISON POUR L'ESPACE",
-    "slug": "2026-08-31-a",
-    "date": "2026-08-31T11:50:38.000+02:00",
-    "datePrefix": "2026-08-31",
-    "category": "mobilite",
-    "source": "Le Dauphiné Libéré",
-    "image": "https://images.unsplash.com/photo-1611765790134-b54fc59dd104?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODgxNzcwMzh8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Cet automne, mieux vaut prévoir une heure de marge si vous prenez le Léman Express. Le réseau ferroviaire transfrontalier qui relie Genève aux gares de Haute-Savoie et du Genevois annonce des perturbations sur plusieurs tronçons — travaux de maintenance, réorganisation du trafic — qui vont forcer le",
-    "lieu": "Grand Genève",
-    "url": "/breves/2026-08-31-a/"
   }
 ]
