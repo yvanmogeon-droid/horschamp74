@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LA DNCB FRAPPE À LA PORTE DES ÉTABLES HAUT-SAVOYARDES",
+    "slug": "2026-11-01-a",
+    "date": "2026-11-01T12:01:49.000+02:00",
+    "datePrefix": "2026-11-01",
+    "category": "animaux",
+    "source": "haute-savoie.gouv.fr",
+    "image": "https://images.unsplash.com/photo-1596208950422-584cb778880a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM1MzQ1MDl8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Une maladie que personne n'avait sur le radar il y a encore deux ans. La dermatose nodulaire contagieuse bovine — la DNCB pour les éleveurs — débarque dans le paysage sanitaire de Haute-Savoie. Transmise par des insectes piqueurs, elle provoque des nodules sur la peau des bovins, chute de production",
+    "lieu": "Haute-Savoie",
+    "url": "/breves/2026-11-01-a/"
+  },
+  {
     "titre": "EN 70 ANS, CHAMONIX A AVALÉ SES PROPRES PÂTURAGES SOUS LES ARBRES",
     "slug": "2026-10-31-a",
     "date": "2026-10-31T11:14:28.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Juillet, une rivière de Haute-Savoie. Le débit a tellement chuté que les poissons se retrouvent coincés dans des flaques résiduelles, condamnés à suffoquer avant même que la chaleur achève le travail. Alors des équipes se mettent à l'eau — pas pour pêcher, mais pour sauver. Des épuisettes, des seaux",
     "lieu": "Haute-Savoie",
     "url": "/breves/2026-09-02-a/"
-  },
-  {
-    "titre": "À CHAMONIX, LA FORÊT SAUVAGE DEVIENT UN OUTIL CONTRE LE RÉCHAUFFEMENT",
-    "slug": "2026-09-01-a",
-    "date": "2026-09-01T10:27:44.000+02:00",
-    "datePrefix": "2026-09-01",
-    "category": "montagne",
-    "source": "Le Dauphiné Libéré",
-    "image": "https://images.unsplash.com/photo-1787422507273-c1520b207794?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODgyNTg0NjR8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Des arbres morts qu'on ne ramasse plus. Des taillis qu'on laisse pousser en désordre. Des clairières qu'on ne fauche pas. À Chamonix, la commune expérimente quelque chose de contre-intuitif pour un territoire habitué à tout maîtriser : lâcher prise sur des parcelles forestières entières pour laisser",
-    "lieu": "Chamonix",
-    "url": "/breves/2026-09-01-a/"
   }
 ]
