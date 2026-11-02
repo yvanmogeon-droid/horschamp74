@@ -1,5 +1,17 @@
 [
   {
+    "titre": "L'ALPAGE DE SULENS FORME LES BERGERS QUE LA MONTAGNE RÉCLAME",
+    "slug": "2026-11-02-a",
+    "date": "2026-11-02T13:51:04.000+02:00",
+    "datePrefix": "2026-11-02",
+    "category": "montagne",
+    "source": "agriculture.gouv.fr",
+    "image": "https://images.unsplash.com/photo-1777395391040-8b919bc39464?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM2Mjc0NjR8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Il n'en existe pas d'autre en France. Sur les hauteurs du massif des Bauges, l'alpage de Sulens — à cheval entre Haute-Savoie et Savoie — fait office de salle de classe grandeur nature pour ceux qui veulent apprendre à vivre et travailler en altitude. On y enseigne la conduite d'un troupeau, la fabr",
+    "lieu": "Massif des Bauges",
+    "url": "/breves/2026-11-02-a/"
+  },
+  {
     "titre": "LA DNCB FRAPPE À LA PORTE DES ÉTABLES HAUT-SAVOYARDES",
     "slug": "2026-11-01-a",
     "date": "2026-11-01T12:01:49.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Attendez — cet article traite du même sujet lac d'Annecy niveau bas, déjà publié plusieurs fois. Je cherche un angle vraiment distinct. **ARÂCHES-LA-FRASSE : 85 BÉNÉVOLES SORTENT DES TONNES DE DÉCHETS DE LA MONTAGNE** Quatre-vingt-cinq personnes, des sacs, des gants, un dimanche à arpenter les flanc",
     "lieu": "Arâches-la-Frasse",
     "url": "/breves/2026-09-03-a/"
-  },
-  {
-    "titre": "DES POISSONS SAUVÉS À LA MAIN DANS LES RIVIÈRES À SEC DE HAUTE-SAVOIE",
-    "slug": "2026-09-02-a",
-    "date": "2026-09-02T09:55:01.000+02:00",
-    "datePrefix": "2026-09-02",
-    "category": "eau",
-    "source": "ici.fr",
-    "image": "https://images.unsplash.com/photo-1787055479020-806e909a7d28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODgzNDI5MDF8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Juillet, une rivière de Haute-Savoie. Le débit a tellement chuté que les poissons se retrouvent coincés dans des flaques résiduelles, condamnés à suffoquer avant même que la chaleur achève le travail. Alors des équipes se mettent à l'eau — pas pour pêcher, mais pour sauver. Des épuisettes, des seaux",
-    "lieu": "Haute-Savoie",
-    "url": "/breves/2026-09-02-a/"
   }
 ]
