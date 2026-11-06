@@ -1,5 +1,17 @@
 [
   {
+    "titre": "DES MAINS DE SOIGNANT POUR PANSER LES BÊTES DE HAUTE-SAVOIE",
+    "slug": "2026-11-06-a",
+    "date": "2026-11-06T13:14:02.000+02:00",
+    "datePrefix": "2026-11-06",
+    "category": "animaux",
+    "source": "Le Dauphiné",
+    "image": "https://images.unsplash.com/photo-1741537262939-ba521b9fcefe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM5NzA4NDJ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Changer de vie à mi-parcours, ça ne s'annonce pas — ça se vit. À Quatre Rivières, en Haute-Savoie, une ancienne professionnelle de l'urgence médicale a tout plaqué pour plonger dans l'univers animalier. Le détail qu'on zappe trop vite : ce n'est pas une reconversion vers la médecine vétérinaire clas",
+    "lieu": "Quatre Rivières",
+    "url": "/breves/2026-11-06-a/"
+  },
+  {
     "titre": "DÉBUT NOVEMBRE, LA NEIGE SE FAIT ATTENDRE ET NOËL INQUIÈTE LES STATIONS",
     "slug": "2026-11-05-a",
     "date": "2026-11-05T13:29:49.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "57 000 mètres carrés de lac qui vire au rouge sang. Pas une algue, pas une pollution industrielle chronique — juste un accident : de l'encre déversée dans une rivière de Haute-Savoie, et le Léman qui absorbe le choc en pleine face. Le Dauphiné Libéré rapporte un déversement accidentel qui a suffi à ",
     "lieu": "Lac Léman",
     "url": "/breves/2026-09-08-a/"
-  },
-  {
-    "titre": "LES ALPES S'EFFRITENT ET EFFACENT LES VOIES MYTHIQUES DU MONT-BLANC",
-    "slug": "2026-09-07-a",
-    "date": "2026-09-07T10:44:25.000+02:00",
-    "datePrefix": "2026-09-07",
-    "category": "montagne",
-    "source": "franceinfo",
-    "image": "https://images.unsplash.com/photo-1763110805338-a13a3f3d68cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg3Nzc4NjV8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Les alpinistes le disent depuis quelques saisons : certains itinéraires classiques du massif du Mont-Blanc ne ressemblent plus à ce que décrivaient les topos. Rochers instables là où il y avait de la glace compacte, couloirs de pierres là où on plantait des broches. L'érosion n'est plus un phénomène",
-    "lieu": "Chamonix",
-    "url": "/breves/2026-09-07-a/"
   }
 ]
