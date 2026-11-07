@@ -1,5 +1,17 @@
 [
   {
+    "titre": "DES SAUVETEURS À LA ÉPUISETTE DANS LES RIVIÈRES À SEC DU 74",
+    "slug": "2026-11-07-a",
+    "date": "2026-11-07T11:55:37.000+02:00",
+    "datePrefix": "2026-11-07",
+    "category": "animaux",
+    "source": "ici.fr",
+    "image": "https://images.unsplash.com/photo-1580668747379-7ab41d08adb7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQwNTI1Mzd8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Juillet. L'eau a disparu. Sur certains cours d'eau de Haute-Savoie, le fond des rivières est visible à l'œil nu — cailloux à l'air, berges sèches, et des poissons coincés dans des flaques résiduelles qui rétrécissent de jour en jour. Face à cette situation, des équipes de pêche de sauvetage ont été ",
+    "lieu": "Haute-Savoie",
+    "url": "/breves/2026-11-07-a/"
+  },
+  {
     "titre": "DES MAINS DE SOIGNANT POUR PANSER LES BÊTES DE HAUTE-SAVOIE",
     "slug": "2026-11-06-a",
     "date": "2026-11-06T13:14:02.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Chaque comprimé avalé au bord du lac, chaque pilule rincée dans l'évier, chaque boîte mal stockée finit quelque part. Ce quelque part a désormais un chiffre : 56 tonnes. C'est la quantité de résidus médicamenteux que le Pays Gessien chiffre dans les eaux du Léman — anticoagulants, antidépresseurs, h",
     "lieu": "Léman",
     "url": "/breves/2026-09-09-a/"
-  },
-  {
-    "titre": "LE LAC LÉMAN VIRE AU ROUGE SUR 57 000 M² : UNE RIVIÈRE CRACHE DE L'ENCRE",
-    "slug": "2026-09-08-a",
-    "date": "2026-09-08T10:05:20.000+02:00",
-    "datePrefix": "2026-09-08",
-    "category": "eau",
-    "source": "Le Dauphiné",
-    "image": "https://images.unsplash.com/photo-1647577665775-760ac7701550?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg4NjE5MjB8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "57 000 mètres carrés de lac qui vire au rouge sang. Pas une algue, pas une pollution industrielle chronique — juste un accident : de l'encre déversée dans une rivière de Haute-Savoie, et le Léman qui absorbe le choc en pleine face. Le Dauphiné Libéré rapporte un déversement accidentel qui a suffi à ",
-    "lieu": "Lac Léman",
-    "url": "/breves/2026-09-08-a/"
   }
 ]
