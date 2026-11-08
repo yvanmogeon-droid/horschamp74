@@ -1,5 +1,17 @@
 [
   {
+    "titre": "UN CHALET, UNE PELLETEUSE, ET LA MONTAGNE QUI SE FÂCHE",
+    "slug": "2026-11-08-a",
+    "date": "2026-11-08T12:12:07.000+02:00",
+    "datePrefix": "2026-11-08",
+    "category": "montagne",
+    "source": "Le Dauphiné",
+    "image": "https://images.unsplash.com/photo-1659886044242-09012be89515?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQxMzk5Mjd8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Il a acheté un chalet d'alpage. Jusque-là, rien d'illégal. Mais pour y accéder plus facilement — avec un engin, une remorque, les commodités modernes —, le nouveau propriétaire a décidé d'élargir le chemin qui monte. Sans demander la permission à personne. Résultat : la commune s'est constituée part",
+    "lieu": "Haute-Savoie",
+    "url": "/breves/2026-11-08-a/"
+  },
+  {
     "titre": "DES SAUVETEURS À LA ÉPUISETTE DANS LES RIVIÈRES À SEC DU 74",
     "slug": "2026-11-07-a",
     "date": "2026-11-07T11:55:37.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "On savait que le Léman n'était pas une eau minérale. On ne savait pas à quel point. Des chercheurs de l'EPFL viennent de publier des mesures qui font l'effet d'une gifle : les microplastiques présents dans le lac et les cours d'eau qui s'y jettent sont bien plus abondants que les estimations précéde",
     "lieu": "Lac Léman",
     "url": "/breves/2026-09-10-a/"
-  },
-  {
-    "titre": "56 TONNES DE MÉDICAMENTS DORMENT AU FOND DU LÉMAN SANS QUE PERSONNE NE S'EN INQUIÈTE",
-    "slug": "2026-09-09-a",
-    "date": "2026-09-09T10:07:53.000+02:00",
-    "datePrefix": "2026-09-09",
-    "category": "eau",
-    "source": "Le Pays Gessien",
-    "image": "https://images.unsplash.com/photo-1662559605027-492ab6747baf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg5NDg0NzN8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Chaque comprimé avalé au bord du lac, chaque pilule rincée dans l'évier, chaque boîte mal stockée finit quelque part. Ce quelque part a désormais un chiffre : 56 tonnes. C'est la quantité de résidus médicamenteux que le Pays Gessien chiffre dans les eaux du Léman — anticoagulants, antidépresseurs, h",
-    "lieu": "Léman",
-    "url": "/breves/2026-09-09-a/"
   }
 ]
