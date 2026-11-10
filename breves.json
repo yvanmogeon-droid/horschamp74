@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LE LAC D'ANNECY BAISSE : LES HABITANTS VOIENT LE FOND",
+    "slug": "2026-11-10-a",
+    "date": "2026-11-10T13:46:44.000+02:00",
+    "datePrefix": "2026-11-10",
+    "category": "eau",
+    "source": "Ouest-France",
+    "image": "https://images.unsplash.com/photo-1598374461265-4be639b18660?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQzMTg0MDR8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Le ponton qui finit dans le vide. L'embarcadère où l'on accroche son bateau qui se retrouve planté dans la boue. Le lac d'Annecy, ce miroir bleu dont tout le monde se glorifie, rétrécit — et pas qu'à la marge. La baisse du niveau d'eau est désormais suffisamment visible et contraignante pour changer",
+    "lieu": "Annecy",
+    "url": "/breves/2026-11-10-a/"
+  },
+  {
     "titre": "LE LÉMAN EXPRESS TIENT BON FACE À LA GRÈVE DU 5 NOVEMBRE",
     "slug": "2026-11-09-a",
     "date": "2026-11-09T14:21:04.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Quarante centimètres. C'est la hauteur d'un enfant en bas âge, c'est aussi ce que le lac d'Annecy a perdu depuis le début de l'été. Les platanes des rives n'ont pas bougé, les terrasses de café non plus — mais le rivage, lui, a reculé. Quand les riverains disent \"c'est vraiment très bas\", ils ne jou",
     "lieu": "Annecy",
     "url": "/breves/2026-09-12-a/"
-  },
-  {
-    "titre": "GENÈVE BLOQUE L'AUTOROUTE 412 : LE 74 RESPIRE, MAIS POUR COMBIEN DE TEMPS ?",
-    "slug": "2026-09-11-a",
-    "date": "2026-09-11T10:01:09.000+02:00",
-    "datePrefix": "2026-09-11",
-    "category": "mobilite",
-    "source": "Le Messager",
-    "image": "https://images.unsplash.com/photo-1749180879104-b40780f8cc65?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkxMjA4Njl8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "D'un côté du lac, on embouteille. De l'autre, on refuse. Le canton de Genève vient de signifier clairement son opposition au projet d'autoroute A412 — le tronçon qui devait relier le Chablais à la Suisse en traversant la frontière. Bruit, pollution, béton supplémentaire : les Genevois n'en veulent p",
-    "lieu": "Chablais",
-    "url": "/breves/2026-09-11-a/"
   }
 ]
