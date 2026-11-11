@@ -1,5 +1,17 @@
 [
   {
+    "titre": "UN CONCILIATEUR DANS LES ALPAGES POUR ARBITRER RANDONNEURS ET ÉLEVEURS",
+    "slug": "2026-11-11-a",
+    "date": "2026-11-11T12:57:43.000+02:00",
+    "datePrefix": "2026-11-11",
+    "category": "montagne",
+    "source": "Le Dauphiné",
+    "image": "https://images.unsplash.com/photo-1791182320765-f0ad04223973?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ0MDE4NjN8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Un randonneur qui traverse un troupeau sans demander. Un berger qui réclame le calme pour ses bêtes. Un vététiste qui déboule sur un sentier de transhumance. En Haute-Maurienne Vanoise, ces frictions sont désormais prises au sérieux : un conciliateur a été mis en place dans les alpages pour désamorc",
+    "lieu": "Haute-Maurienne Vanoise",
+    "url": "/breves/2026-11-11-a/"
+  },
+  {
     "titre": "LE LAC D'ANNECY BAISSE : LES HABITANTS VOIENT LE FOND",
     "slug": "2026-11-10-a",
     "date": "2026-11-10T13:46:44.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "L'uranium, ça évoque Tchernobyl ou les centrales nucléaires — pas le verre d'eau tiré d'un robinet savoyard. Et pourtant. Le Canard Enchaîné révèle que des sources en Savoie affichent des teneurs en uranium préoccupantes. Naturel, certiafinent les experts — le massif cristallin est connu pour lessiv",
     "lieu": "Savoie",
     "url": "/breves/2026-09-13-a/"
-  },
-  {
-    "titre": "LE LAC D'ANNECY PERD 40 CM : LES PÊCHEURS LISENT UN LAC QUI SE RÉTRÉCIT",
-    "slug": "2026-09-12-a",
-    "date": "2026-09-12T09:35:01.000+02:00",
-    "datePrefix": "2026-09-12",
-    "category": "eau",
-    "source": "France 3",
-    "image": "https://images.unsplash.com/photo-1636281501490-206f96119c55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkyMDU3MDF8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Quarante centimètres. C'est la hauteur d'un enfant en bas âge, c'est aussi ce que le lac d'Annecy a perdu depuis le début de l'été. Les platanes des rives n'ont pas bougé, les terrasses de café non plus — mais le rivage, lui, a reculé. Quand les riverains disent \"c'est vraiment très bas\", ils ne jou",
-    "lieu": "Annecy",
-    "url": "/breves/2026-09-12-a/"
   }
 ]
