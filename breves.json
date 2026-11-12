@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LE LÉMAN FRANCO-SUISSE : DEUX PAYS, UN LAC, ZÉRO COORDINATION SUR LES CRUES",
+    "slug": "2026-11-12-a",
+    "date": "2026-11-12T13:59:22.000+02:00",
+    "datePrefix": "2026-11-12",
+    "category": "eau",
+    "source": "Lyon Capitale",
+    "image": "https://images.unsplash.com/photo-1722073653283-b516b43788c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ0OTE5NjJ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Côté français, on gère. Côté suisse, on gère aussi. Mais ensemble ? Presque pas. La Chambre régionale des comptes d'Auvergne-Rhône-Alpes vient de pointer ce qui fait tiquer depuis longtemps ceux qui vivent au bord du Léman ou dans les vallées qui s'y déversent : la gestion de l'eau entre la France e",
+    "lieu": "Auvergne-Rhône-Alpes",
+    "url": "/breves/2026-11-12-a/"
+  },
+  {
     "titre": "UN CONCILIATEUR DANS LES ALPAGES POUR ARBITRER RANDONNEURS ET ÉLEVEURS",
     "slug": "2026-11-11-a",
     "date": "2026-11-11T12:57:43.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Cent euros. Pour un sac-poubelle laissé sur le trottoir au mauvais endroit. À Bonneville — ou dans une autre commune de Haute-Savoie qui vient de muscler son arsenal — la mairie ne rigole plus avec les dépôts sauvages. Un seul acte, une seule verbalisation, et l'amende tombe : le prix d'un plein d'e",
     "lieu": "Bonneville",
     "url": "/breves/2026-09-14-a/"
-  },
-  {
-    "titre": "URANIUM DANS LES SOURCES DE SAVOIE : CE QUE L'EAU DU ROBINET CACHE",
-    "slug": "2026-09-13-a",
-    "date": "2026-09-13T10:37:38.000+02:00",
-    "datePrefix": "2026-09-13",
-    "category": "pollution",
-    "source": "Le Canard enchaîné",
-    "image": "https://images.unsplash.com/photo-1768058239486-ccc86f511730?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkyOTU4NTh8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "L'uranium, ça évoque Tchernobyl ou les centrales nucléaires — pas le verre d'eau tiré d'un robinet savoyard. Et pourtant. Le Canard Enchaîné révèle que des sources en Savoie affichent des teneurs en uranium préoccupantes. Naturel, certiafinent les experts — le massif cristallin est connu pour lessiv",
-    "lieu": "Savoie",
-    "url": "/breves/2026-09-13-a/"
   }
 ]
