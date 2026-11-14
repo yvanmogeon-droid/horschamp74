@@ -1,5 +1,17 @@
 [
   {
+    "titre": "DANS LES FORÊTS DE SAVOIE, UN COLÉOPTÈRE DÉFIE L'INVENTAIRE",
+    "slug": "2026-11-14-a",
+    "date": "2026-11-14T12:30:27.000+02:00",
+    "datePrefix": "2026-11-14",
+    "category": "animaux",
+    "source": "Office national des forêts",
+    "image": "https://images.unsplash.com/photo-1786067167516-641d4fd262eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ2NTk0Mjd8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Ils sont minuscules, discrets, et pourtant capables de raconter l'état de santé d'une forêt entière. L'Office national des forêts a lancé en Savoie un inventaire systématique des coléoptères saproxyliques — ces insectes qui passent tout ou partie de leur vie dans le bois mort. Derrière l'intitulé te",
+    "lieu": "Savoie",
+    "url": "/breves/2026-11-14-a/"
+  },
+  {
     "titre": "DANS LE LAC DU BOURGET, ON VA NOYER LE PROBLÈME PENDANT SEPT MOIS",
     "slug": "2026-11-13-a",
     "date": "2026-11-13T13:26:16.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Creuser un tunnel le long du lac le plus surveillé de France — ça ne s'annonce pas à la légère. Et pourtant, c'est bien ce que prévoit un projet en cours autour du lac d'Annecy : un long ouvrage souterrain, dont les riverains et les usagers du secteur n'ont peut-être pas encore mesuré les implicatio",
     "lieu": "Annecy",
     "url": "/breves/2026-09-16-a/"
-  },
-  {
-    "titre": "DES PARTICULES DE PNEUS TAPISSENT LE FOND DU LAC D'ANNECY",
-    "slug": "2026-09-15-a",
-    "date": "2026-09-15T10:27:43.000+02:00",
-    "datePrefix": "2026-09-15",
-    "category": "pollution",
-    "source": "Le Messager",
-    "image": "https://images.unsplash.com/photo-1666050016698-ba476ed16f53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk0NjgwNjN8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Le lac le plus propre de France — c'est son surnom, son fond de commerce touristique, son argument de vente depuis cinquante ans. Alors quand une enquête révèle que des particules de pneus s'accumulent dans ses eaux, le choc dépasse la simple mauvaise nouvelle environnementale. C'est une identité qu",
-    "lieu": "Annecy",
-    "url": "/breves/2026-09-15-a/"
   }
 ]
