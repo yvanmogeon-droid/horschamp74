@@ -118,7 +118,7 @@ const url = `https://raw.githubusercontent.com/${GITHUB_REPO}/main/breves.json?t
 const res = await axios.get(url, { timeout: 15000 });
 const breves = Array.isArray(res.data) ? res.data : JSON.parse(res.data);
 // On garde les 15 dernières pour le contexte anti-répétition
-return breves.slice(0, 15).map(b => ({ titre: b.titre || '', extrait: b.extrait || '' }));
+return breves.slice(0, 60).map(b => ({ titre: b.titre || '', extrait: b.extrait || '' }));
 } catch (e) {
 console.log('⚠️ Impossible de lire les brèves publiées :', e.message);
 return [];
