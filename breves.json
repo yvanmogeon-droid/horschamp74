@@ -1,5 +1,17 @@
 [
   {
+    "titre": "57 000 M² DE LÉMAN VIRENT AU ROUGE : L'ENCRE QUI NE MENT PAS",
+    "slug": "2026-11-15-a",
+    "date": "2026-11-15T12:57:52.000+02:00",
+    "datePrefix": "2026-11-15",
+    "category": "pollution",
+    "source": "Le Dauphiné Libéré",
+    "image": "https://images.unsplash.com/photo-1697298509841-6bb863a267d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ3NDc0NzJ8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Une rivière qui charrie de l'encre rouge. Le lac Léman qui se teinte sur près de six hectares. L'image est surréaliste, et pourtant elle s'est bel et bien produite en Haute-Savoie : un déversement accidentel dans un cours d'eau a suffi à transformer une portion du Léman en nappe écarlate visible à l",
+    "lieu": "Lac Léman",
+    "url": "/breves/2026-11-15-a/"
+  },
+  {
     "titre": "DANS LES FORÊTS DE SAVOIE, UN COLÉOPTÈRE DÉFIE L'INVENTAIRE",
     "slug": "2026-11-14-a",
     "date": "2026-11-14T12:30:27.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Un siège social basé à Annecy, une campagne nationale qui frappe fort : L214 a choisi la Haute-Savoie comme point de départ pour mettre Carrefour sous pression. L'association de défense animale réclame que le géant de la grande distribution divise par deux le nombre d'animaux tués dans ses filières ",
     "lieu": "Annecy",
     "url": "/breves/2026-09-17-a/"
-  },
-  {
-    "titre": "UN TUNNEL PERCE LE BAS DU LAC D'ANNECY : MAIS POUR QUOI FAIRE ?",
-    "slug": "2026-09-16-a",
-    "date": "2026-09-16T10:18:09.000+02:00",
-    "datePrefix": "2026-09-16",
-    "category": "eau",
-    "source": "L'Essor Savoyard",
-    "image": "https://images.unsplash.com/photo-1571162368502-3c786d9a1371?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk1NTM4ODl8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Creuser un tunnel le long du lac le plus surveillé de France — ça ne s'annonce pas à la légère. Et pourtant, c'est bien ce que prévoit un projet en cours autour du lac d'Annecy : un long ouvrage souterrain, dont les riverains et les usagers du secteur n'ont peut-être pas encore mesuré les implicatio",
-    "lieu": "Annecy",
-    "url": "/breves/2026-09-16-a/"
   }
 ]
