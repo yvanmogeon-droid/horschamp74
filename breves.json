@@ -1,5 +1,17 @@
 [
   {
+    "titre": "CINQ CHIENS TUÉS À LA MORT-AUX-RATS : LE 74 CHERCHE LE POSEUR DE POISON",
+    "slug": "2026-11-16-a",
+    "date": "2026-11-16T14:00:11.000+02:00",
+    "datePrefix": "2026-11-16",
+    "category": "animaux",
+    "source": "Le Messager",
+    "image": "https://images.unsplash.com/photo-1649074717184-0b968b330246?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ4Mzc2MTF8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Un week-end, cinq chiens morts. Pas une maladie, pas un accident de route — du poison délibérément posé quelque part en Haute-Savoie. La mort-aux-rats, rodenticide redoutable, a tué cinq animaux en l'espace de deux jours, selon Le Messager qui relaie l'alerte lancée par la SPA. Ce qui frappe dans ce",
+    "lieu": "Haute-Savoie",
+    "url": "/breves/2026-11-16-a/"
+  },
+  {
     "titre": "57 000 M² DE LÉMAN VIRENT AU ROUGE : L'ENCRE QUI NE MENT PAS",
     "slug": "2026-11-15-a",
     "date": "2026-11-15T12:57:52.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Derrière le nom un peu confidentiel de la Puya se cache un site que beaucoup d'Annéciens connaissent sans vraiment savoir ce qu'il fait : une pisciculture, en pleine ville, qui produit et élève des poissons. L'endroit vient de sortir d'une cure de jouvence — travaux, rénovation, remise à niveau — et",
     "lieu": "Annecy",
     "url": "/breves/2026-09-18-a/"
-  },
-  {
-    "titre": "L214 CIBLE CARREFOUR DEPUIS LA HAUTE-SAVOIE : MOITIÉ MOINS D'ANIMAUX TUÉS",
-    "slug": "2026-09-17-a",
-    "date": "2026-09-17T10:26:03.000+02:00",
-    "datePrefix": "2026-09-17",
-    "category": "animaux",
-    "source": "ODS Radio",
-    "image": "https://images.unsplash.com/photo-1697704184019-a51998acbb4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk2NDA3NjN8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Un siège social basé à Annecy, une campagne nationale qui frappe fort : L214 a choisi la Haute-Savoie comme point de départ pour mettre Carrefour sous pression. L'association de défense animale réclame que le géant de la grande distribution divise par deux le nombre d'animaux tués dans ses filières ",
-    "lieu": "Annecy",
-    "url": "/breves/2026-09-17-a/"
   }
 ]
