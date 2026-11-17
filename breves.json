@@ -1,5 +1,17 @@
 [
   {
+    "titre": "DANS L'AIN, DES RIVERAINS BLOQUENT UN DATA CENTER QUI BOIT ET CHAUFFE",
+    "slug": "2026-11-17-a",
+    "date": "2026-11-17T14:54:25.000+02:00",
+    "datePrefix": "2026-11-17",
+    "category": "tech-ia",
+    "source": "France 3",
+    "image": "https://images.unsplash.com/photo-1711721399281-02806b65d91b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ5MjcyNjV8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Un projet de data center. Des riverains qui s'organisent. Et une question que personne dans l'industrie n'aime entendre formulée trop fort : combien d'eau, combien d'énergie, pour faire tourner des serveurs dont la chaleur part en fumée ? Dans l'Ain, département voisin de la Haute-Savoie, des habita",
+    "lieu": "Ain",
+    "url": "/breves/2026-11-17-a/"
+  },
+  {
     "titre": "CINQ CHIENS TUÉS À LA MORT-AUX-RATS : LE 74 CHERCHE LE POSEUR DE POISON",
     "slug": "2026-11-16-a",
     "date": "2026-11-16T14:00:11.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Juillet, chaleur, et des agents en waders jusqu'aux genoux dans vingt centimètres d'eau — quand il en reste. En Haute-Savoie, les pêches de sauvetage ont repris sur les rivières en voie d'assèchement : des équipes récupèrent à la main, à l'épuisette ou par électropêche, les truites, ombres et autres",
     "lieu": "Haute-Savoie",
     "url": "/breves/2026-09-19-a/"
-  },
-  {
-    "titre": "LA PISCICULTURE DE LA PUYA RETROUVE SES ÉCAILLES À ANNECY",
-    "slug": "2026-09-18-a",
-    "date": "2026-09-18T10:03:35.000+02:00",
-    "datePrefix": "2026-09-18",
-    "category": "animaux",
-    "source": "Savoie News",
-    "image": "https://images.unsplash.com/photo-1586490792202-ebe2f8e90ddc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk3MjU4MTV8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Derrière le nom un peu confidentiel de la Puya se cache un site que beaucoup d'Annéciens connaissent sans vraiment savoir ce qu'il fait : une pisciculture, en pleine ville, qui produit et élève des poissons. L'endroit vient de sortir d'une cure de jouvence — travaux, rénovation, remise à niveau — et",
-    "lieu": "Annecy",
-    "url": "/breves/2026-09-18-a/"
   }
 ]
