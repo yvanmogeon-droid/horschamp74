@@ -1,5 +1,17 @@
 [
   {
+    "titre": "CHAMBÉRY CONNECTE SES TUYAUX ET CHAUFFE PLUS FORT POUR MOINS BRÛLER",
+    "slug": "2026-11-20-a",
+    "date": "2026-11-20T14:22:55.000+02:00",
+    "datePrefix": "2026-11-20",
+    "category": "energie",
+    "source": "Savoie News",
+    "image": "https://images.unsplash.com/photo-1777886441900-eb1882676ebd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUxODQ1NzV8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Sous les rues de Chambéry, des kilomètres de canalisations transportent de la chaleur. Et jusqu'ici, deux réseaux distincts fonctionnaient chacun dans leur coin, sans se parler. C'est ce cloisonnement qui vient de prendre fin : la ville a raccordé ses réseaux de chaleur urbaine entre eux, une interc",
+    "lieu": "Chambéry",
+    "url": "/breves/2026-11-20-a/"
+  },
+  {
     "titre": "L'A412 MANGE SES ARBRES ET CRACHE SES ENGAGEMENTS",
     "slug": "2026-11-19-a",
     "date": "2026-11-19T14:41:43.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Il grimpait aux arbres pour sauver les forêts de l'A69 dans le Tarn. Cette fois, c'est en Haute-Savoie qu'on a mis les menottes à Thomas Brail — sur le chantier même de l'autoroute A412, ce tronçon contesté qui doit relier le Chablais à la Suisse. Le militant écologiste, figure nationale du collecti",
     "lieu": "Haute-Savoie",
     "url": "/breves/2026-09-22-a/"
-  },
-  {
-    "titre": "UN SOUS-MARIN PLONGE DANS LE LAC DU BOURGET ET REMONTE SIDÉRÉ",
-    "slug": "2026-09-21-a",
-    "date": "2026-09-21T11:06:35.000+02:00",
-    "datePrefix": "2026-09-21",
-    "category": "eau",
-    "source": "Le Dauphiné Libéré",
-    "image": "https://images.unsplash.com/photo-1706905980386-0c2ea8702be6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk5ODg3OTV8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Au fond du lac du Bourget, à des profondeurs que seuls les poissons et les vieux souvenirs de noyades connaissaient, quelqu'un a eu l'idée d'envoyer un sous-marin. Pas un engin militaire — une initiative locale, presque artisanale dans l'esprit, qui vise à cartographier ou surveiller les entrailles ",
-    "lieu": "Lac du Bourget",
-    "url": "/breves/2026-09-21-a/"
   }
 ]
