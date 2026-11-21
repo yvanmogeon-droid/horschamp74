@@ -1,5 +1,17 @@
 [
   {
+    "titre": "RTE VEUT CÂBLER AUVERGNE-RHÔNE-ALPES POUR 1,5 MILLIARD : QUI PAIE L'ADDITION ?",
+    "slug": "2026-11-21-a",
+    "date": "2026-11-21T13:42:59.000+02:00",
+    "datePrefix": "2026-11-21",
+    "category": "energie",
+    "source": "La Tribune",
+    "image": "https://images.unsplash.com/photo-1663407266620-64cec6fbd561?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUyNjg1Nzl8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Datacenters en périphérie des métropoles, filières hydrogène à lancer, lignes électriques à renforcer : RTE, le gestionnaire du réseau de transport d'électricité, annonce 1,5 milliard d'euros d'investissements d'ici à 2035 en Auvergne-Rhône-Alpes. Un chiffre qui claque — et qui mérite qu'on s'y arrê",
+    "lieu": "Auvergne-Rhône-Alpes",
+    "url": "/breves/2026-11-21-a/"
+  },
+  {
     "titre": "CHAMBÉRY CONNECTE SES TUYAUX ET CHAUFFE PLUS FORT POUR MOINS BRÛLER",
     "slug": "2026-11-20-a",
     "date": "2026-11-20T14:22:55.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Les Usses, ce n'est pas le Léman. Personne ne vient les photographier pour un post Instagram. Ces rivières qui coulent dans le genevois haut-savoyard ont la discrétion des endroits que l'on néglige — jusqu'au jour où ça tourne mal. Il y a quelques jours, une fosse à lisier a explosé quelque part dan",
     "lieu": "Haute-Savoie",
     "url": "/breves/2026-09-23-a/"
-  },
-  {
-    "titre": "THOMAS BRAIL MENOTTÉ SUR LE CHANTIER DE L'A412 : LE BÉTON RÉSISTE",
-    "slug": "2026-09-22-a",
-    "date": "2026-09-22T10:20:36.000+02:00",
-    "datePrefix": "2026-09-22",
-    "category": "montagne",
-    "source": "franceinfo",
-    "image": "https://images.unsplash.com/photo-1544889793-137f9e126fe2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAwNzI0MzZ8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Il grimpait aux arbres pour sauver les forêts de l'A69 dans le Tarn. Cette fois, c'est en Haute-Savoie qu'on a mis les menottes à Thomas Brail — sur le chantier même de l'autoroute A412, ce tronçon contesté qui doit relier le Chablais à la Suisse. Le militant écologiste, figure nationale du collecti",
-    "lieu": "Haute-Savoie",
-    "url": "/breves/2026-09-22-a/"
   }
 ]
