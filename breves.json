@@ -1,5 +1,17 @@
 [
   {
+    "titre": "À MANIGOD, ON ROULE 34 KM POUR REMPLIR UN BIDON D'EAU",
+    "slug": "2026-11-23-a",
+    "date": "2026-11-23T16:29:39.000+02:00",
+    "datePrefix": "2026-11-23",
+    "category": "eau",
+    "source": "Le Dauphiné Libéré",
+    "image": "https://images.unsplash.com/photo-1781464949139-4c61a3cad5fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTU0NTEzNzl8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Village de montagne, robinets fermés, et des habitants qui chargent des jerricans dans le coffre pour faire le plein d'eau potable à la ville. À Manigod, dans le massif des Aravis, la panne du réseau d'eau potable n'est pas une affaire de quelques heures : elle dure assez longtemps pour que certains",
+    "lieu": "Manigod",
+    "url": "/breves/2026-11-23-a/"
+  },
+  {
     "titre": "DATA CENTERS : TOUTE LA FRANCE CRIE \"DEHORS\", ET LE 74 DEVRAIT ÉCOUTER",
     "slug": "2026-11-22-a",
     "date": "2026-11-22T13:37:01.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Des centaines de cadavres de poissons sur les galets à sec. Ce n'est pas une métaphore — c'est ce qu'ont découvert les riverains d'un cours d'eau en bordure de Grenoble, après que la sécheresse a fait tomber le niveau en dessous du seuil vital. Pas d'électropêche de sauvetage cette fois, pas d'agent",
     "lieu": "Grenoble",
     "url": "/breves/2026-09-25-a/"
-  },
-  {
-    "titre": "LES BATEAUX DU LAC D'ANNECY CLOUÉS AU PORT PAR LA SÉCHERESSE",
-    "slug": "2026-09-24-a",
-    "date": "2026-09-24T10:31:05.000+02:00",
-    "datePrefix": "2026-09-24",
-    "category": "eau",
-    "source": "Le Dauphiné",
-    "image": "https://images.unsplash.com/photo-1529369884398-a4fd1275f542?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAyNDU4NjV8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Quarante centimètres de moins depuis l'été — on en avait parlé. Mais cette fois, la barre est franchie : le niveau du lac d'Annecy est si bas que les bateaux ne naviguent plus. Pas une alerte, pas un avertissement — un arrêt. Les embarcations restent à quai, faute de tirant d'eau suffisant. Ce n'est",
-    "lieu": "Annecy",
-    "url": "/breves/2026-09-24-a/"
   }
 ]
