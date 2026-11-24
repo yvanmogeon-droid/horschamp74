@@ -1,5 +1,17 @@
 [
   {
+    "titre": "AIX-LES-BAINS COUVRE SA HALLE DE SPORT DE 2 066 PANNEAUX SOLAIRES",
+    "slug": "2026-11-24-a",
+    "date": "2026-11-24T16:26:54.000+02:00",
+    "datePrefix": "2026-11-24",
+    "category": "energie",
+    "source": "Savoie News",
+    "image": "https://images.unsplash.com/photo-1726866492047-7f9516558c6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTU1Mzc2MTR8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Deux mille soixante-six panneaux. Sur un toit. À Marlioz, quartier thermal d'Aix-les-Bains, la Halle des Sports vient de se transformer en centrale électrique à ciel ouvert. Ce n'est pas un projet pilote timide — c'est une pièce supplémentaire d'un plan solaire municipal qui avance case par case dep",
+    "lieu": "Aix-les-Bains",
+    "url": "/breves/2026-11-24-a/"
+  },
+  {
     "titre": "À MANIGOD, ON ROULE 34 KM POUR REMPLIR UN BIDON D'EAU",
     "slug": "2026-11-23-a",
     "date": "2026-11-23T16:29:39.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Un matin, des riverains du Léman ont vu l'eau changer de couleur. Pas un reflet, pas une algue — du rouge, épandu sur 57 000 m² de lac. La cause : un déversement accidentel d'encre dans une rivière qui se jette dans le Léman, en Haute-Savoie. L'encre a voyagé jusqu'au lac sans que personne ne puisse",
     "lieu": "Lac Léman",
     "url": "/breves/2026-09-26-a/"
-  },
-  {
-    "titre": "LA SÉCHERESSE VIDE UNE RIVIÈRE PRÈS DE GRENOBLE : DES CENTAINES DE POISSONS MORTS",
-    "slug": "2026-09-25-a",
-    "date": "2026-09-25T10:34:27.000+02:00",
-    "datePrefix": "2026-09-25",
-    "category": "animaux",
-    "source": "Actu.fr",
-    "image": "https://images.unsplash.com/photo-1665085376796-16834631fa42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAzMzI0Njd8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Des centaines de cadavres de poissons sur les galets à sec. Ce n'est pas une métaphore — c'est ce qu'ont découvert les riverains d'un cours d'eau en bordure de Grenoble, après que la sécheresse a fait tomber le niveau en dessous du seuil vital. Pas d'électropêche de sauvetage cette fois, pas d'agent",
-    "lieu": "Grenoble",
-    "url": "/breves/2026-09-25-a/"
   }
 ]
