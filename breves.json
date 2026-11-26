@@ -1,5 +1,17 @@
 [
   {
+    "titre": "2,50 MÈTRES DE NEIGE EN NOVEMBRE : LES ALPES BATTENT UN RECORD D'AVRIL",
+    "slug": "2026-11-26-a",
+    "date": "2026-11-26T15:47:29.000+02:00",
+    "datePrefix": "2026-11-26",
+    "category": "montagne",
+    "source": "Meteo-Paris.com",
+    "image": "https://images.unsplash.com/photo-1763803489056-8286d033b484?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTU3MDgwNDl8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Fin novembre, les nivomètres s'affolent. Sur certains secteurs des Alpes, le cumul de neige fraîche dépasse déjà 2,50 mètres — un chiffre qu'on n'atteint habituellement qu'en plein cœur de l'hiver, voire au moment des dernières bourrasques d'avril. C'est Meteo-Paris.com qui a posé le chiffre sur la ",
+    "lieu": "Alpes",
+    "url": "/breves/2026-11-26-a/"
+  },
+  {
     "titre": "AIX-LES-BAINS COUVRE SA HALLE DE SPORT DE 2 066 PANNEAUX SOLAIRES",
     "slug": "2026-11-24-a",
     "date": "2026-11-24T16:26:54.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Un berger monte à l'alpage pour les bêtes. Un randonneur monte pour lui. Quand les deux se croisent sur le même sentier — et que le chien de protection fonce sur le second — ça finit rarement en poignée de main. En Haute-Maurienne Vanoise, on a décidé de ne plus attendre l'incident : un conciliateur",
     "lieu": "Haute-Maurienne Vanoise",
     "url": "/breves/2026-09-27-a/"
-  },
-  {
-    "titre": "57 000 M² DU LÉMAN VIRENT AU ROUGE : UNE RIVIÈRE CRACHE DE L'ENCRE DANS LE LAC",
-    "slug": "2026-09-26-a",
-    "date": "2026-09-26T10:16:46.000+02:00",
-    "datePrefix": "2026-09-26",
-    "category": "eau",
-    "source": "Le Dauphiné Libéré",
-    "image": "https://images.unsplash.com/photo-1777955842913-d5c6ddf1b36d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA0MTc4MDZ8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Un matin, des riverains du Léman ont vu l'eau changer de couleur. Pas un reflet, pas une algue — du rouge, épandu sur 57 000 m² de lac. La cause : un déversement accidentel d'encre dans une rivière qui se jette dans le Léman, en Haute-Savoie. L'encre a voyagé jusqu'au lac sans que personne ne puisse",
-    "lieu": "Lac Léman",
-    "url": "/breves/2026-09-26-a/"
   }
 ]
