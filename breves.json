@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LA FOIRE AVICOLE DE HAUTE-SAVOIE RASSEMBLE PLUS DE 500 BÊTES LE TEMPS D'UN WEEK-END",
+    "slug": "2026-11-27-a",
+    "date": "2026-11-27T15:35:45.000+02:00",
+    "datePrefix": "2026-11-27",
+    "category": "animaux",
+    "source": "Le Messager",
+    "image": "https://images.unsplash.com/photo-1632341198257-bf5b859a56bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTU3OTM3NDV8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Coqs de Marans, poules de Bresse, canards de Barbarie, pintades : plus de 500 animaux réunis en un même endroit pour un week-end, quelque part en Haute-Savoie. La foire avicole du département, c'est l'un de ces événements qui passent sous le radar médiatique mais qui dit beaucoup sur ce qui reste vi",
+    "lieu": "Haute-Savoie",
+    "url": "/breves/2026-11-27-a/"
+  },
+  {
     "titre": "2,50 MÈTRES DE NEIGE EN NOVEMBRE : LES ALPES BATTENT UN RECORD D'AVRIL",
     "slug": "2026-11-26-a",
     "date": "2026-11-26T15:47:29.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Cent mille personnes se douchent, font leur vaisselle, tirent la chasse — et tout ça finit dans le lac du Bourget. Pas à cause d'une avarie, pas d'un accident industriel : c'est le système qui fonctionne exactement comme prévu. Les eaux usées traitées des agglomérations de Chambéry et d'Aix-les-Bain",
     "lieu": "Lac du Bourget",
     "url": "/breves/2026-09-28-a/"
-  },
-  {
-    "titre": "DANS LES ALPAGES DE HAUTE-MAURIENNE, UN ARBITRE ENTRE VACHES ET RANDONNEURS",
-    "slug": "2026-09-27-a",
-    "date": "2026-09-27T10:45:17.000+02:00",
-    "datePrefix": "2026-09-27",
-    "category": "montagne",
-    "source": "Le Dauphiné",
-    "image": "https://images.unsplash.com/photo-1590657726039-c11882f13142?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA1MDU5MTd8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Un berger monte à l'alpage pour les bêtes. Un randonneur monte pour lui. Quand les deux se croisent sur le même sentier — et que le chien de protection fonce sur le second — ça finit rarement en poignée de main. En Haute-Maurienne Vanoise, on a décidé de ne plus attendre l'incident : un conciliateur",
-    "lieu": "Haute-Maurienne Vanoise",
-    "url": "/breves/2026-09-27-a/"
   }
 ]
