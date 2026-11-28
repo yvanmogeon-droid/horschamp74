@@ -1,5 +1,17 @@
 [
   {
+    "titre": "LE FIER ET LE LAC D'ANNECY SIGNENT UN PACTE CLIMATIQUE INÉDIT",
+    "slug": "2026-11-28-a",
+    "date": "2026-11-28T14:31:45.000+02:00",
+    "datePrefix": "2026-11-28",
+    "category": "eau",
+    "source": "Département de la Haute-Savoie",
+    "image": "https://images.unsplash.com/photo-1684513307368-ee498954739b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTU4NzYzMDV8&ixlib=rb-4.1.0&q=80&w=1080",
+    "extrait": "Un contrat. Pas une déclaration de bonne intention, pas une charte de plus à encadrer dans un couloir de préfecture — un vrai engagement juridique entre acteurs du bassin versant du Fier et du lac d'Annecy, signé par le Département de Haute-Savoie. C'est ce que recouvre le \"contrat Eau et Climat\" qu",
+    "lieu": "Annecy",
+    "url": "/breves/2026-11-28-a/"
+  },
+  {
     "titre": "LA FOIRE AVICOLE DE HAUTE-SAVOIE RASSEMBLE PLUS DE 500 BÊTES LE TEMPS D'UN WEEK-END",
     "slug": "2026-11-27-a",
     "date": "2026-11-27T15:35:45.000+02:00",
@@ -706,17 +718,5 @@
     "extrait": "Fin septembre, et toujours pas de répit. La Savoie vient de prolonger ses mesures de restriction des usages de l'eau, alors que la région Auvergne-Rhône-Alpes fait face à des niveaux de sécheresse qualifiés d'historiques. Pas un épisode passager : une installation durable qui oblige les préfectures ",
     "lieu": "Savoie",
     "url": "/breves/2026-09-29-a/"
-  },
-  {
-    "titre": "DANS LE LAC DU BOURGET, LES ÉGOUTS DE CHAMBÉRY DÉBORDENT EN CLAIR",
-    "slug": "2026-09-28-a",
-    "date": "2026-09-28T11:59:56.000+02:00",
-    "datePrefix": "2026-09-28",
-    "category": "eau",
-    "source": "ici.fr",
-    "image": "https://images.unsplash.com/photo-1743921341427-333d8f318c1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjE3MDB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA1OTY3OTZ8&ixlib=rb-4.1.0&q=80&w=1080",
-    "extrait": "Cent mille personnes se douchent, font leur vaisselle, tirent la chasse — et tout ça finit dans le lac du Bourget. Pas à cause d'une avarie, pas d'un accident industriel : c'est le système qui fonctionne exactement comme prévu. Les eaux usées traitées des agglomérations de Chambéry et d'Aix-les-Bain",
-    "lieu": "Lac du Bourget",
-    "url": "/breves/2026-09-28-a/"
   }
 ]
